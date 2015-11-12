@@ -1,0 +1,191 @@
+/*------------------------------------*\
+    #SITE-NAV
+\*------------------------------------*/
+
+.site-nav {
+    @extend %clearfix;
+    text-align: center;
+
+
+}
+    
+    .nav-menu{
+        display:none; // Mobile First Default Hidden
+        
+
+         .toggled &{
+            display:block;
+         }
+
+         @include media-query(lap-and-up) {
+            display:block;
+         }
+    }
+
+    
+
+    .site-nav__toggler{
+        display:block;
+        margin:0 auto;
+        @include media-query(lap-and-up) {
+            @include hide();
+        }
+
+    }
+
+    .site-nav__list {
+        @extend %clearfix;
+        margin:  0;
+        padding: 0;
+        list-style: none;
+        overflow: hidden;
+
+
+        @include media-query(lap-and-up) {
+            overflow: visible;
+
+
+        }
+
+    }
+        .site-nav__item {
+            position:relative;
+
+            @include media-query(lap-and-up) {
+                display:inline-block;
+
+            }
+
+            //Nested menus
+            //  Top menu 
+            //   L Sub Menu
+            .site-nav__item{                                                  
+
+                 @include media-query(lap-and-up) {                  
+                        text-align: left; 
+                  
+                }
+            }
+
+        }
+
+        //SITELINK a -tag
+
+        .site-nav__link {
+                display: block;
+                padding:6px 12px;
+                padding:0.575rem 0.75rem;
+                line-height:$inuit-base-spacing-unit;
+                
+                &:hover{
+                    text-decoration: none;
+                    
+                }              
+
+                //Sub menu link style
+                ul ul &{                    
+                        font-weight: 300;
+
+                }
+        }
+
+        //Reset first element Padding
+        //.site-nav__list > .site-nav__item:first-child .site-nav__link{
+        //         
+        //}
+
+        //Reset last element Padding
+        //.site-nav__list .site-nav__item:last-child .site-nav__link{
+        //       
+        //}
+
+    @include media-query(lap-and-up) {
+        .site-nav{
+            text-align: left;
+           
+        }
+            
+
+
+        .site-nav__item > .site-nav__list{
+            display:none;
+            position:absolute;
+            overflow-wrap: nowrap;
+            z-index:9999;
+
+            
+            // 3rd Level Menu Items
+            & .site-nav__list{
+                top: 0;
+                margin-left:240px;
+                margin-left:15rem;
+
+            }
+
+
+            .site-nav__item{
+                min-width:240px;
+                max-width:240px;
+                min-width:15rem;
+                max-width:15rem;
+                background:$color-body;     
+            }
+        }
+
+            .site-nav__item:hover > .site-nav__list{
+                display:block;
+            }
+
+           
+            
+    }
+
+/* Modifiers */
+
+.site-nav--solid{
+
+     .site-nav__list{
+         background: $color-btn-background;
+     }
+      .site-nav__item {        
+
+            @include media-query(lap-and-up) {
+                 .site-nav__item {
+                    background:$brand-color; 
+                  border-top:1px solid darken($brand-color,5.5%);
+              }
+            // 3rd Level Menu Items        
+                & > .site-nav__list{
+                     // 3rd Level Menu Items
+                     // Compensate 1px border
+                     & .site-nav__list{
+                         top: -1px;
+                
+                     }
+                }
+            }
+        }
+
+
+
+     .site-nav__link{
+         color: $color-body; 
+         &:hover{
+             background-color: darken($brand-color,5%);
+         }
+     }
+
+}
+
+
+.site-nav__item--promo{      
+    background-color:$color-menu-promo;
+       
+    .site-nav__link{
+        color:$color-body;        
+    }
+    
+    &:hover .site-nav__link{
+       background-color:darken($color-menu-promo,5%);  
+    }
+}

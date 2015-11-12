@@ -1,0 +1,32 @@
+{
+  "name": "inuit-responsive-spacing",
+  "version": "0.0.6",
+  "authors": [
+    "Harry Roberts <harry@csswizardry.com>"
+  ],
+  "description": "Responsively controlled width classes for the inuitcss framework",
+  "main": "_trumps.spacing-responsive.scss",
+  "keywords": [
+    "inuitcss",
+    "oocss",
+    "css",
+    "rwd"
+  ],
+  "license": "Apache 2",
+  "homepage": "https://github.com/inuitcss/trumps.spacing-responsive",
+  "dependencies": {
+    "inuit-defaults": "~0.2.1",
+    "inuit-responsive-settings": "~0.1.2",
+    "inuit-responsive-tools": "~0.1.1",
+    "inuit-spacing": "~0.6.1"
+  },
+  "_release": "0.0.6",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.0.6",
+    "commit": "0db8f20eee10ae5c8f7eb5e9b84a2af6ebde6781"
+  },
+  "_source": "git://github.com/inuitcss/trumps.spacing-responsive.git",
+  "_target": "~0.0.4",
+  "_originalSource": "inuit-spacing-responsive"
+}

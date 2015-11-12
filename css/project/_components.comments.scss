@@ -1,0 +1,34 @@
+/*------------------------------------*\
+    #ICONIC
+\*------------------------------------*/
+.comment-list{
+	margin-left:0;
+
+}
+
+.comment-author.vcard{
+	
+}
+
+.comment-respond{
+    border-top: 1px solid $color-box-highlight-border;
+    border-bottom: 1px solid $color-box-highlight-border;
+    padding: $inuit-base-spacing-unit/2 0;
+    margin-bottom: $inuit-base-spacing-unit;
+
+}
+
+.form-submit{
+    .submit{
+        @extend %btn;
+        @extend %btn--small;
+    }
+}
+.comment-form__label{
+   
+}
+.comment-form__field{
+    display:block;
+    width:100%;
+    @extend %form-adjust;
+}

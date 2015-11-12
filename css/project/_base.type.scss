@@ -1,0 +1,71 @@
+/*------------------------------------*\
+    #BASE TYPE
+\*------------------------------------*/
+
+html {
+    font-family: "Raleway", sans-serif;
+    font-weight: 300;
+}
+h1,h2,h3,h4,h5,h6{
+	font-weight:300;
+	color:$color-headings;
+}
+
+
+/**
+ * Emboldened elements.
+ */
+a,
+strong, b,
+dt{
+	font-weight:600;
+}
+
+/**
+ * Code-like elements.
+ */
+code, kbd, samp {
+    color: $color-code;
+    font-family: Inconsolata, Monaco, Consolas, "Andale Mono", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+}
+
+pre {
+    white-space: pre;
+    word-wrap: normal;
+    overflow: auto;
+    padding: $spacing-unit--small;
+    background-color: $color-pre-background;
+    border-radius: $base-round;
+
+    &,
+    code, kbd, samp {
+        color: $color-pre;
+    }
+
+}
+
+/**
+ * Horizontal rules.
+ */
+hr {
+    border: none;
+    border-bottom: 1px solid $color-gray-ui;
+    margin-bottom: $spacing-unit - 1px;
+}
+
+
+
+
+
+/**
+ * Highlighted text.
+ */
+mark {
+
+    pre & {
+        background: none;
+        border-bottom: 1px solid;
+        color: inherit;
+    }
+
+}

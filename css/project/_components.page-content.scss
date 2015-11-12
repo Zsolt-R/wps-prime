@@ -1,0 +1,10 @@
+/*------------------------------------*\
+    #PAGE CONTENT
+\*------------------------------------*/
+
+.entry-content{
+    @extend %clearfix;
+}
+.entry-title>a{
+    font-weight:300;
+}

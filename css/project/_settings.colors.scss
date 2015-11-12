@@ -1,0 +1,106 @@
+///*------------------------------------*\
+//    #COLORS
+//\*------------------------------------*/
+
+// Literal color variables.
+// Ref: http://flatuicolors.com/
+// Ref: http://designmodo.com/flat-free/
+$color-turquoise:     #1abc9c;
+$color-green-sea:     #16a085;
+$color-sun-flower:    #f1c40f;
+$color-orange:        #f39c12;
+$color-emerald:       #2ecc71;
+$color-nephritis:     #27ae60;
+$color-carrot:        #e67e22;
+$color-pumpkin:       #d35400;
+$color-peter-river:   #3498db;
+$color-belize-hole:   #2980b9;
+$color-alizarin:      #e74c3c;
+$color-pomegrante:    #c0392b;
+$color-amethyst:      #9b59b6;
+$color-wisteria:      #8e44ad;
+$color-clouds:        #ecf0f1;
+$color-silver:        #bdc3c7;
+$color-wet-asphalt:   #34495e;
+$color-midnight-blue: #2c3e50;
+$color-concrete:      #95a5a6;
+$color-asbestos:      #7f8c8d;
+
+// Others
+// #F6F8F8
+// #446CB3
+// #FF858D
+// #9E8CFF
+
+// For More flat colors visit
+// Ref: http://www.flatuicolorpicker.com/
+// Ref: http://bootflat.github.io/color-picker.html
+//
+
+
+
+$color-brand:       $brand-color;
+$color-blue:		$color-brand;
+$color-gray:        #444;
+$color-white:       #fff;
+$color-gray-dark:       #424242;
+$color-gray-light:      #f7f6f6;
+$color-gray-light:  #999;
+$color-gray-ui:     #ddd;
+$color-green:       $color-emerald;
+$color-highlight:   #fff;
+$color-tint:        #f2f2f2;
+$color-positive:    $color-nephritis;
+$color-negative:    $color-pomegrante;
+
+
+// Assign colors to more meaningful variables.
+
+// Main Body
+$color-body:            $color-white;
+
+// Text-level
+$color-text:            $color-gray-dark;
+$color-links:           $color-blue;
+
+// Text
+$color-code:            $color-green;
+$color-pre-background:  $color-gray;
+$color-pre:             $color-white;
+
+// Quotes
+$color-quote:           $color-gray-light;
+$color-quote--banner:   $color-gray;
+
+// Buttons
+$color-btn-text:        $color-white;
+$color-btn-background:  $color-blue;
+
+// Icons
+$color-iconic:          $color-gray-light;
+
+// Heading colors
+$color-headings:        $color-blue;
+
+// Boxes
+$color-box-highlight-background:    $color-highlight;
+$color-box-highlight-border:        $color-gray-ui;
+$color-box-tint-background:         $color-tint;
+
+// Page foot
+$color-page-foot:              $color-white;
+
+
+// Page micro
+$color-page-micro:              $color-white;
+$color-page-micro-background:   $color-gray;
+
+
+
+// Bands
+$color-band-highlight-background:   $color-highlight;
+$color-band-tint-background:        $color-tint;
+$color-band-dark-background:        $color-asbestos;
+$color-band-dark-text-color:        $color-tint;
+//Promos
+$color-menu-promo: $color-negative;

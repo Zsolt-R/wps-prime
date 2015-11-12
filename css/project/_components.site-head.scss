@@ -1,0 +1,17 @@
+/*------------------------------------*\
+    #SITE-HEAD
+\*------------------------------------*/
+
+.entry-header__entry-title{
+
+    @include font-size(22px);
+
+    @include media-query(lap-and-up) {
+        @include font-size(28px);
+    }
+
+    @include media-query(desk) {
+        @include font-size(36px);
+    }
+
+}

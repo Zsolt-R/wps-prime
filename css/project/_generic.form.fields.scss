@@ -1,0 +1,41 @@
+/*------------------------------------*\
+    #Generic Input Fields
+\*------------------------------------*/
+
+//vars defined in Global Settings 
+
+.form-adjust,
+%form-adjust{
+
+    padding: $inuit-base-spacing-unit/5;
+    padding: ($inuit-base-spacing-unit / $inuit-base-font-size) * 0.2rem;
+
+    -moz-border-radius: $brand-round;
+    -webkit-border-radius: $brand-round;
+    border-radius: $brand-round;
+
+
+}
+
+input[type="text"],
+input[type="search"],
+input[type="email"],
+input[type="url"],
+input[type="tel"],
+input[type="number"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+select,
+textarea{
+    @extend %form-adjust;    
+
+    margin-bottom: $inuit-base-spacing-unit/3;
+    margin-bottom: ($inuit-base-spacing-unit / $inuit-base-font-size) * 0.33rem;
+    border:1px solid $color-gray-ui;    
+}

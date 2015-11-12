@@ -1,0 +1,14 @@
+/*------------------------------------*\
+    #COMPONENT SCARCITY
+\*------------------------------------*/
+.scarcity{
+    display:none;
+    background-color:$color-brand;
+    color:$color-highlight;
+    text-align:center;
+    padding:$inuit-base-spacing-unit/2 0;
+    margin-bottom:$inuit-base-spacing-unit;
+    @include media-query(lap-and-up){
+        display: block;
+    }
+}

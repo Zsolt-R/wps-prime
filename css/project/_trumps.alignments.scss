@@ -1,0 +1,35 @@
+/*------------------------------------*\
+    #ALIGNMENTS
+\*------------------------------------*/
+.aligncenter{
+    margin:0 auto;   
+    clear: both;
+    display: block;
+}
+
+.alignleft{
+    float: left;
+    margin-right: $inuit-base-spacing-unit;
+}
+
+.alignright{
+    float: right;
+    margin-left: $inuit-base-spacing-unit;
+}
+
+.right,
+%right{
+	float:right;
+}
+
+.left,
+%left{
+	float:left;
+}
+
+.center
+%center{
+	margin:0 auto;   
+    clear: both;
+    display: block;	
+}
