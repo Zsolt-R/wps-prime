@@ -219,3 +219,4 @@ pip-log.txt
 .dat
 #Prepros config
 prepros.cfg
+*.dat
