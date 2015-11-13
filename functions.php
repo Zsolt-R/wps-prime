@@ -83,6 +83,24 @@ function wps_prime_setup() {
 		'default-image' => '',
 	) ) );	
 
+	// Theme hook-functions
+	require get_template_directory() . '/theme-hooks/theme-hook-functions.php';
+
+	// Themne filter-functions
+	require get_template_directory() . '/theme-filters/theme-filter-functions.php';
+
+	// Shortcodes to generate markup for content layout, media-objects, slider, buttons
+	require get_template_directory() . '/inc/shortcodes.php';
+
+	// WP Fine Tune Module   
+	// 	- Remove all the version numers from the end of css/js enqueued files added to <head> (suggested by pingdom.com)
+	// 	- Remove Comment Form Allowed Tags
+	// 	- Customize Comment Form Place Holder Input Text Fields & Labels http://wpsites.net/web-design/customize-comment-form-place-holder-input-text-fields-labels/
+	// 	- Customize Comment Form Text Area & Label http://wpsites.net/web-design/customize-comment-field-text-area-label/
+
+	require get_template_directory() . '/inc/wps-theme-fine-tune.php';
+
+
 	///////////////////////////////////////////////////////////////////////////////////////////////
 	// Defer or async this WordPress javascript snippet to load lastly for faster page load times
 	// DOC: http://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html
@@ -114,6 +132,13 @@ function wps_prime_setup() {
 	        return str_replace('#deferload', '', $url)."' defer='defer"; 
 	}
 	add_filter( 'clean_url','add_defer_forscript', 11, 1 );
+
+	// Theme Main nav default class
+	add_filter('main_nav_class','add_theme_main_nav_class');
+	function add_theme_main_nav_class($classes){
+		$classes[] = 'site-nav';
+		return $classes;
+	}
 
 }
 endif; // wps_prime_setup
@@ -264,15 +289,6 @@ require get_template_directory() . '/inc/comment-list.php';
 require get_template_directory() . '/inc/favicon.php';
 
 
-/**
-*
-* Layout Classes
-*
-*/
-require get_template_directory() . '/inc/layout_class_processor.php';
-require get_template_directory() . '/layouts/layout_controller.php';
-
-
 
 // Allow shortcode in text widget
 add_filter('widget_text', 'do_shortcode');
@@ -285,16 +301,12 @@ add_filter( 'widget_title', 'do_shortcode' );
 *
 *  THEME DEPENDENCIES
 *
-* Theme hooks
-* Theme filters
 * Theme parts
+* Theme frontend layout class functions
 *
 **************************************/
-
-require get_template_directory() . '/theme-hooks/theme-hooks-init.php';
-require get_template_directory() . '/theme-filters/theme-filters.php';
 require get_template_directory() . '/theme-parts/theme-parts-init.php';
-
+require get_template_directory() . '/layouts/frontend-layout-class-functions.php';
 
 
 /**************************************
@@ -305,8 +317,8 @@ require get_template_directory() . '/theme-parts/theme-parts-init.php';
 require get_template_directory() . '/theme-hook-build.php';
 
 //Plugin activator
-// PIKLIST /  Contact Form 7 / Contact Form DB / Leadin Pro v-3.1.3 / Simple Image Sizes / Online Backup for WordPress / WordPress Backup to Dropbox / WP Migrate DB
+// PIKLIST / Simple Image Sizes / Online Backup for WordPress / WordPress Backup to Dropbox / WP Migrate DB
 require_once get_template_directory() . '/inc/tgm-theme-plugins.php';
 
-// Deregister Cf7 styles (included in main.css)
+// Deregister Cf7 styles (included in style.css)
 require get_template_directory() . '/inc/cf7_finetune.php';

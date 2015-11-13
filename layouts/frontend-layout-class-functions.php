@@ -6,18 +6,21 @@
  */
 
 
-//  Header
-//  Main
-
-add_filter( 'wp_head', 'main_layout' );
-add_filter( 'main_class', 'main_layout' );
-
-//Sidebar
-add_filter( 'sidebar_class', 'sidebar_layout' );
-
-//Content
+//HTML Page Content Wrappers
 add_action( 'content_start' , 'page_top',0 );
 add_action( 'content_end' , 'page_end',0 );
+
+//  Header
+
+add_filter( 'wp_head', 'main_layout' );
+
+//  Main Content Area Classes
+add_filter( 'main_class', 'main_layout' );
+
+//  Sidebar Area Classes
+add_filter( 'sidebar_class', 'sidebar_layout' );
+
+
 
 
 if(!function_exists('main_layout')){
@@ -66,7 +69,7 @@ if(!function_exists('sidebar_layout')){
 }
 
 
-
+//Page html Wrappers
 if(!function_exists('page_top')){
 
     function page_top(){
@@ -82,5 +85,3 @@ if(!function_exists('page_end')){
     }
 
 }
-
-?>
