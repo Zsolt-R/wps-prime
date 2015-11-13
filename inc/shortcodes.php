@@ -1,11 +1,7 @@
 <?php
 /**
- *
  *  Shortcodes
- *  Module
- *   
  *  Version: 1.0
- *  
  *  Author: Zsolt Revay
  */
 
@@ -20,55 +16,43 @@
 *  5  Media / Flag Object - media/flag(OOCSS Markup Items) - [object type="media/flag"] ... [/object]
 *  6  Media / Flag Object inners -media/flag __img, __body (OOCSS Markup Items) - [object_item type="media__img/flag__img,media__img/media__body"]...[/object_item]
 *  7  Shortcode for icons - [ico]fa fa-home[/ico]
-*  8  Developr Data for icons - [dev_data]
+*  8  Main Phone number - [phone_nr]
+*  9  Main Email address - [email]
 *
 *************************************/
 
+/* 1 */ // Layout Wrapper Markup
+add_shortcode( 'layout','wps_layout' );    
 
-// Helper Function
-function is_child( $theme_data ) {
-    // For limitation of empty() write in var
-    $parent = $theme_data->parent();
-    if ( ! empty( $parent ) ) {
-        return TRUE;
-    }
-    return FALSE;
-}
+/* 2 */ // Layout Item Markup   
+add_shortcode( 'item','wps_layout_inner_block' ); 
 
-// End Helper Function
-
-/* 1 */ // Remove wp version param from any enqueued scripts 
-add_shortcode( 'layout','cc_custom_layout' );    //Backward compatibility   
-
-/* 2 */ // Remove wp version param from any enqueued scripts   
-add_shortcode( 'item','cc_custom_layout_inner_block' ); //Backward compatibility
-
-
-/* 3 */ //Full Width Slider
-add_shortcode( 'slider','cc_fw_slider' ); //Backward compatibility
+/* 3 */ // Full Width Slider
+add_shortcode( 'slider','wps_fw_slider' ); 
 
 /* 4 */ // Custom Buttons
-add_shortcode('cc_button', 'cc_custom_buttons');
+add_shortcode('button', 'wps_buttons');
 
-/* 5 */ // Custom Buttons
-add_shortcode('object', 'cc_custom_css_objects');
+/* 5 */ // Media / Flag Object
+add_shortcode('object', 'wps_css_objects');
 
-/* 6 */ // Custom Buttons
-add_shortcode('object_item', 'cc_custom_css_objects_item');
+/* 6 */ // Media / Flag Object inners
+add_shortcode('object_item', 'wps_css_objects_item');
 
 /* 7 */ // Shortcode for icons
-add_shortcode( 'ico', 'ico_shortcode' );
+add_shortcode( 'ico', 'wps_ico_shortcode' );
 
-/* 8 */ // Shortcode for dev Data
-add_shortcode( 'dev_data', 'get_development_data' );
+/* 8 */ // Get theme option phone nr
+add_shortcode('phone_nr','wps_main_phone_nr');
 
-/////////////////////////////////
-// LAYOUT SHORTCODES
-////////////////////////////////////
+/* 9 */ // Get theme option email
+add_shortcode('email','wps_main_email');
+
+
 
 /* 1 */ // Layout Item Markup
 // ex. [layout class="lap-and-up..." wrapper="false"]
-function cc_custom_layout( $atts, $content = null ){ 
+function wps_layout( $atts, $content = null ){ 
     extract( shortcode_atts( array(
         'class' => '',
         'wrapper'=> false
@@ -84,7 +68,7 @@ function cc_custom_layout( $atts, $content = null ){
 
 /* 2 */ // Layout Wrapper Markup
 // ex: [item class="lap-and-up..."] ...content... [/item]
-function cc_custom_layout_inner_block( $atts, $content = null ){ 
+function wps_layout_inner_block( $atts, $content = null ){ 
     extract( shortcode_atts( array(
         'class' => '',       
     ), $atts ) ); 
@@ -93,16 +77,9 @@ function cc_custom_layout_inner_block( $atts, $content = null ){
     return '<div class="layout__item'. $class .'">' . do_shortcode($content) . '</div>';
 }
 
-
-
-/////////////////////////////////
-// SLIDER
-////////////////////////////////////
-
-
 /* 3 */ // Full width slider 
 // ex: [slider images="1,2,3...(image id's)" links="56,78,99...(page/post id's)" size="converter_full"]
-function cc_fw_slider($atts){
+function wps_fw_slider($atts){
     extract( shortcode_atts( array(
         'images' => '',
         'links' =>'',        
@@ -203,15 +180,10 @@ function cc_fw_slider($atts){
         return $constructor;
 }
 
-/////////////////////////////////
-// Buttons
-////////////////////////////////////
-
-
 /* 4 */ // Custom Buttons
-//ex:  [cc_button class="btn--small,btn--large,btn--primary,btn--secondary,btn--tertiary" link="http://www...." label="button label"]
+//ex:  [button class="btn--small,btn--large,btn--primary,btn--secondary,btn--tertiary" link="http://www...." label="button label"]
 
-function cc_custom_buttons($atts){
+function wps_buttons($atts){
     extract( shortcode_atts( array(
         'class' => '',    
         'label' => 'Please add label',
@@ -231,7 +203,7 @@ function cc_custom_buttons($atts){
 /* 5 */ // Media / Flag Object (OOCSS Markup Items)
 //ex:  [object type="media/flag"] ... [/object]
 
-function cc_custom_css_objects($atts, $content = null){
+function wps_css_objects($atts, $content = null){
     extract( shortcode_atts( array(
         'type' => ''
     ), $atts ) ); 
@@ -247,7 +219,7 @@ function cc_custom_css_objects($atts, $content = null){
 /* 6 */ // Media / Flag Object inners - __img, __body (OOCSS Markup Items) 
 //ex: [object_item type="media__img/flag__img,media__img/media__body"]...[/object_item]
 
-function cc_custom_css_objects_item($atts, $content = null){
+function wps_css_objects_item($atts, $content = null){
     extract( shortcode_atts( array(
         'type' => ''
     ), $atts ) ); 
@@ -263,7 +235,7 @@ function cc_custom_css_objects_item($atts, $content = null){
 /* 7 */ // Shortcode for icons
 //ex: [ico]fa fa-home[/ico] 
 
-function ico_shortcode( $atts, $content ) {
+function wps_ico_shortcode( $atts, $content ) {
     $atts = shortcode_atts(
         array(
             'class' => ''
@@ -274,106 +246,23 @@ function ico_shortcode( $atts, $content ) {
     return '<i class="ico '. $content . ''. $class .'"></i>';
 }
 
-/* 8 */ // Get development data
-//ex: [dev_data] 
+/* 8 */ // Main Phone number 
+//ex: [phone_nr] 
 
-function get_development_data(){
-
-    $current_theme = '';
-    $parent_theme = '';
-    $wp_data ='';
-    $converter_plugin = 'Converter Plugin not found';
-    $plugin_location = WP_PLUGIN_DIR.'/converter-modules/modules-init.php';  //Get Plugin Directory
-    $theme = wp_get_theme();
-    $is_child = is_child( $theme );
-
-    $short_data = '<h3>Overview</h3>';
-
-    //Wp Data 
+function function_phone_nr(){
     
-    $short_data .= '<strong>Site Title</strong>: '.get_bloginfo( 'name' ) .'<br/>';  
-    $short_data .= '<strong>Tagline</strong>: '.get_bloginfo( 'description' ) .'<br/>';
-    $short_data .= '<strong>SiteUrl</strong>: '.get_bloginfo('wpurl') .'<br/>';
-    $short_data .= '<strong>Stylesheet Directory</strong>: '.get_stylesheet_directory_uri() .'<br/>';
-    $short_data .= '<strong>Template directory</strong>: '.get_template_directory_uri() .'<br/>';
-    $short_data .= '<hr/>';
-    $short_data .= '<strong>WordPress</strong>: '.get_bloginfo( 'version' ) .'<br/>';
+    $phone_nr = wps_get_theme_option('company_phone_nr');
 
+    return $phone_nr;
 
-    //////////////////////    
-    //Current theme data
-    //////////////////////
+}
 
-    //Overview Part
-    $short_data .= '<strong>C Theme</strong>: '. $theme->get( 'Name' ) .' v.<strong>'.$theme->get( 'Version' ).'</strong><br/>';
+/* 9 */ // Main Email address
+//ex: [email]
 
-    $current_theme .= '<h3>Current Theme Data</h3>';
-    $current_theme .= '<ul>';
-    $current_theme .= '<li><strong>Theme name:</strong> '.$theme->get( 'Name' ).'</li>';
-    $current_theme .= '<li><strong>Theme URI:</strong> '.$theme->get( 'ThemeURI' ).'</li>';
-    $current_theme .= '<li><strong>Text Domain:</strong> '.$theme->get( 'TextDomain' ).'</li>';
-    $current_theme .= '<li><strong>Description:</strong> '.$theme->get( 'Description' ).'</li>';
-    $current_theme .= '<li><strong>Theme author:</strong> '.$theme->get( 'Author' ).'</li>'; 
-    $current_theme .= '<li><strong>AuthorURI:</strong> '.$theme->get( 'AuthorURI' ).'</li>';
-    $current_theme .= '<li><strong>The version of the theme:</strong> '.$theme->get( 'Version' ).'</li>'; 
-    $current_theme .= '<li><strong>(Optional — used in a child theme) The folder name of the parent theme:</strong> '.$theme->get( 'Template' ).'</li>'; 
-    $current_theme .= '<li><strong>If the theme is published:</strong> '.$theme->get( 'Status' ).'</li>';   
-    $current_theme .= '</ul>';
-
-
-    ///////////////////////
-    //Parent theme Data
-    //////////////////////
-
-    if ( $is_child ) {
-
-        $parent_t = $theme->parent();
-
-        //Overview Part
-        $short_data .= '<strong>C Parent</strong>: '. $parent_t->get( 'Name' ) .' v.<strong>'.$parent_t->get( 'Version' ).'</strong><br/>';
-
-        $parent_theme .= '<h3>Parent Theme Data</h3>';
-        $parent_theme .= '<ul>';
-        $parent_theme .= '<li><strong>Theme name:</strong> '.$parent_t->get( 'Name' ).'</li>';
-        $parent_theme .= '<li><strong>Theme name:</strong> '.$parent_t->get( 'Name' ).'</li>';
-        $parent_theme .= '<li><strong>Theme URI:</strong> '.$parent_t->get( 'ThemeURI' ).'</li>';
-        $parent_theme .= '<li><strong>Text Domain:</strong> '.$parent_t->get( 'TextDomain' ).'</li>';
-        $parent_theme .= '<li><strong>Description:</strong> '.$parent_t->get( 'Description' ).'</li>';
-        $parent_theme .= '<li><strong>Theme author:</strong> '.$parent_t->get( 'Author' ).'</li>'; 
-        $parent_theme .= '<li><strong>AuthorURI:</strong> '.$parent_t->get( 'AuthorURI' ).'</li>';
-        $parent_theme .= '<li><strong>The version of the theme:</strong> '.$parent_t->get( 'Version' ).'</li>'; 
-        $parent_theme .= '<li><strong>(Optional — used in a child theme) The folder name of the parent theme:</strong> '.$parent_t->get( 'Template' ).'</li>'; 
-        $parent_theme .= '<li><strong>If the theme is published:</strong> '.$parent_t->get( 'Status' ).'</li>';   
-        $parent_theme .= '</ul>';       
-    }
-
-    //////////////////////
-    //Plugin Data
-    /////////////////////
-
-    if (file_exists($plugin_location)) {
-
-    $plugin = get_plugin_data($plugin_location);
-
-    //Overview Part
-    $short_data .= '<strong>C Plugin</strong>: '. $plugin['Name'] .' v.<strong>'.$plugin['Version'].'</strong><br/>';
+function function_email(){
    
+    $email = wps_get_theme_option('company_contact_email_address');
 
-    $converter_plugin = '<h3>Plugin Data</h3>';
-    $converter_plugin .= '<ul>';
-
-    foreach($plugin as $key=>$value){
-
-        $converter_plugin .= '<li><strong>'.$key.':</strong> '.$value.'</li>';
-    }  
-
-    $converter_plugin .= '</ul>';
-    }
-
-    $wp_data .= '<h3>Wordpress Data</h3>';
-    $wp_data .= '<ul>';
-    $wp_data .= '<li><strong>Site Title</strong>'. get_bloginfo( 'name' ) .'</li>';
-    $wp_data .= '</ul>';
-    
-    return $short_data.'<br/><hr/>'.$current_theme.$parent_theme.$converter_plugin;
+    return $email;
 }
