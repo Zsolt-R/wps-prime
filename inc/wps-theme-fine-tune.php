@@ -122,6 +122,3 @@ function remove_empty_tags_around_shortcodes($content) {
     $content = strtr($content, $tags);
     return $content;
 }
- 
-
-?>

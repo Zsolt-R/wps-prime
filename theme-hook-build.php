@@ -117,6 +117,3 @@ function conditional_remove_site_nav(){
 
 /* Footer Parts */
 add_action( 'footer_end','footer_micro', 69 );
-
-
-?>
