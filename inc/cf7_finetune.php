@@ -40,3 +40,14 @@ if ( function_exists('wpcf7_contact_form') ) {
     add_filter('wpcf7_ajax_loader', 'my_wpcf7_ajax_loader');
 
 }
+
+/*
+*	Allow other shortcodes in Contact Form 7
+*/
+add_filter( 'wpcf7_form_elements', 'wps_wpcf7_form_elements' );
+
+function wps_wpcf7_form_elements( $form ) {
+$form = do_shortcode( $form );
+
+return $form;
+}
