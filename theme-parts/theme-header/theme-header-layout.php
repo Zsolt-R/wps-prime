@@ -7,24 +7,25 @@
  * @package wps_prime
  */
 
-//Site header Layout
-function layout_header(){ ?>
-<?php 
+/**
+ * Site header Layout
+ */
+function layout_header() {
 
-//if hook doesn't has action hide the html 
-if(has_action('layout_header__img') == true){ 
+	/**
+ * If hook doesn't has action hide the html
+ */
+	if ( has_action( 'layout_header__img' ) === true ) {
 
-	echo '<div class="layout__item lap-and-up-3/10">';
-			layout_header__img(); 
-	echo '</div>';
+		echo '<div class="layout__item lap-and-up-3/10">';
+			layout_header__img();
+		echo '</div>';
+	}
 
-} 
+	if ( has_action( 'layout_header__body' ) === true ) {
 
-if(has_action('layout_header__body') == true){
-	
-	echo '<div class="layout__item lap-and-up-7/10">';
+		echo '<div class="layout__item lap-and-up-7/10">';
 			layout_header__body();
-	echo '</div>';
-
-	}  
+		echo '</div>';
+	}
 }

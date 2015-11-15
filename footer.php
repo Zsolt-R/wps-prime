@@ -2,22 +2,25 @@
 /**
  * The template for displaying the footer.
  *
- * Contains the closing of the #content div and all content after
+ * Contains the closing of the #content div and all content after.
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
  * @package wps_prime
  */
+
 ?>
-		<?php content_end();?>
-	</div><!-- #content -->
+	<?php content_end();?>
+    </div><!-- #content -->
 
-		<?php footer_start(); ?>
+	<?php footer_start(); ?>
 
-	<footer id="colophon" class="site-footer band band--tint" role="contentinfo">		
-		<div class="wrapper">
-		<?php get_sidebar('footer');?>
-		</div><!-- wrapper -->
-	</footer><!-- #colophon -->
-	
+    <footer id="colophon" class="site-footer band band--tint" role="contentinfo">       
+        <div class="wrapper">
+		<?php get_sidebar( 'footer' );?>
+        </div><!-- wrapper -->
+    </footer><!-- #colophon -->
+    
 		<?php footer_end(); ?>
 
 </div><!-- #page -->
