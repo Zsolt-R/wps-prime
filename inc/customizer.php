@@ -1,6 +1,6 @@
 <?php
 /**
- * wps_prime Theme Customizer
+ * Theme Customizer
  *
  * @package wps_prime
  */

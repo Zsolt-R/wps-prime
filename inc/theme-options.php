@@ -1,49 +1,54 @@
 <?php
 /**
- * wps_prime Theme Options
+ * WPS Prime - theme options
  *
+ * @link https://piklist.com/user-guide/docs/settings-admin-page-parameters/
  * @package wps_prime
  */
 
+add_filter( 'piklist_admin_pages', 'wps_theme_setting_pages' );
 
-add_filter('piklist_admin_pages', 'piklist_theme_setting_pages');
-  function piklist_theme_setting_pages($pages)
-  {
-     $pages[] = array(
-      'page_title' => __('Theme Settings','piklist')
-      ,'menu_title' => __('Theme Settings', 'piklist')
-      ,'menu' => 'admin.php' //Under Appearance menu
-      ,'capability' => 'manage_options'
-      ,'menu_slug' => 'theme_settings'
-      ,'setting' => 'wps_prime_settings'
-      ,'menu_icon' => 'dashicons-desktop'
-      ,'page_icon' => 'dashicons-desktop'
-      ,'single_line' => true
-      ,'default_tab' => 'Basic'
-      ,'save_text' => 'Save Settings'
-    );
- 
-    return $pages;
-  }
+/**
+ * Creates admin page // Under Appearance menu
+ * @param array $pages All pages from the piklist_admin_pages() function.
+ */
+function wps_theme_setting_pages( $pages ) {
+	$pages[] = array(
+	'page_title' => __( 'Theme Settings','piklist' ),
+	'menu_title' => __( 'Theme Settings', 'piklist' ),
+	'menu' => 'admin.php',
+	'capability' => 'manage_options',
+	'menu_slug' => 'theme_settings',
+	'setting' => 'wps_prime_settings',
+	'menu_icon' => 'dashicons-desktop',
+	'page_icon' => 'dashicons-desktop',
+	'single_line' => true,
+	'default_tab' => 'Basic',
+	'save_text' => 'Save Settings',
+	);
 
+	return $pages;
+}
 
-// Get theme options function
+/**
+ * Get theme options helper function
+ *
+ * @param string $option_name this keeps the name o the option called via wps_get_theme_option() function.
+ */
+function wps_get_theme_option( $option_name = null ) {
 
-function wps_get_theme_option($option_name = null){ 
+	$theme_options = get_option( 'wps_prime_settings' );
+	$result = null;
 
-  $theme_options = get_option('wps_prime_settings');
-  $result = null;
+	if ( ! is_string( $option_name ) ) {
 
-  if(!is_string($option_name)){
+		return;
 
-    return;
+	} else {
 
-  }else{
+		// Check if option is set!
+		$result = isset( $theme_options[ $option_name ] ) ? $theme_options[ $option_name ] : null;
 
-  // check if option is set
-  $result = isset($theme_options[$option_name]) ? $theme_options[$option_name] : null;
-
-  }
-  return $result;
-
+	}
+	return $result;
 }

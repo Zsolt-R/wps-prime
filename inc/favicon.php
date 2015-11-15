@@ -3,24 +3,27 @@
  *  Favicon
  *
  * @package wps_prime
- *
  */
 
-add_action('wp_head','add_fav_ico');
-add_action('admin_head','add_fav_ico');
+add_action( 'wp_head','add_fav_ico' );
+add_action( 'admin_head','add_fav_ico' );
 
-function add_fav_ico(){    
-    
-    $file = get_stylesheet_directory_uri() .'/favicon.ico';
+/**
+ * Create favicon html link
+ */
+function add_fav_ico() {
 
-    // Function to check if a file exists defined in inc/extras.php
-    // is_url_exist($url); returns true or false 
+	$file = get_stylesheet_directory_uri() .'/favicon.ico';
 
-    if(is_url_exist( $file ) == false ) {
-        return;        
-    }else{
-        echo '<link rel="shortcut icon" href="'. $file .'" />';
+	/**
+	* Function to check if a file exists defined in inc/extras.php
+	* wps_url_exist($url); returns true or false
+	*/
+	if ( false === wps_url_exist( $file ) ) {
+		return;
+	} else {
+		echo '<link rel="shortcut icon" href="'. esc_url( $file ) .'" />';
 
-        }    
+	}
 
 }

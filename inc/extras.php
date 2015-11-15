@@ -7,27 +7,31 @@
  * @package wps_prime
  */
 
-// Function to check if a particular file exists
-// ref. http://stackoverflow.com/questions/7684771/how-check-if-file-exists-from-web-address-url-in-php
+/**
+ * Function to check if a particular file exists
+ * @link ref. http://stackoverflow.com/questions/7684771/how-check-if-file-exists-from-web-address-url-in-php
+ * @param string $url file location.
+ * @return bool
+ */
+function wps_url_exist( $url ) {
+	$ch = curl_init( $url );
+	curl_setopt( $ch, CURLOPT_NOBODY, true );
+	curl_exec( $ch );
+	$code = curl_getinfo( $ch, CURLINFO_HTTP_CODE );
 
-function is_url_exist($url){
-    $ch = curl_init($url);    
-    curl_setopt($ch, CURLOPT_NOBODY, true);
-    curl_exec($ch);
-    $code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-
-    if($code == 200){
-       $status = true;
-    }else{
-      $status = false;
-    }
-    curl_close($ch);
-   return $status;
+	if ( 200 === $code ) {
+		$status = true;
+	} else {
+		$status = false;
+	}
+	curl_close( $ch );
+	return $status;
 }
 
-
-// allow shortcode in text widget
-add_filter('widget_text', 'do_shortcode');
+/**
+ * Allow shortcode in text widget
+ */
+add_filter( 'widget_text', 'do_shortcode' );
 
 
 /**
@@ -54,41 +58,14 @@ function wps_prime_body_classes( $classes ) {
 		$classes[] = 'group-blog';
 	}
 
+	// Adds a class of hfeed to non-singular pages.
+	if ( ! is_singular() ) {
+		$classes[] = 'hfeed';
+	}
+
 	return $classes;
 }
 add_filter( 'body_class', 'wps_prime_body_classes' );
-
-/**
- * Filters wp_title to print a neat <title> tag based on what is being viewed.
- *
- * @param string $title Default title text for current view.
- * @param string $sep Optional separator.
- * @return string The filtered title.
- */
-function wps_prime_wp_title( $title, $sep ) {
-	if ( is_feed() ) {
-		return $title;
-	}
-
-	global $page, $paged;
-
-	// Add the blog name
-	$title .= get_bloginfo( 'name', 'display' );
-
-	// Add the blog description for the home/front page.
-	$site_description = get_bloginfo( 'description', 'display' );
-	if ( $site_description && ( is_home() || is_front_page() ) ) {
-		$title .= " $sep $site_description";
-	}
-
-	// Add a page number if necessary:
-	if ( ( $paged >= 2 || $page >= 2 ) && ! is_404() ) {
-		$title .= " $sep " . sprintf( __( 'Page %s', 'wps-prime' ), max( $paged, $page ) );
-	}
-
-	return $title;
-}
-add_filter( 'wp_title', 'wps_prime_wp_title', 10, 2 );
 
 /**
  * Sets the authordata global when viewing an author archive.
@@ -110,5 +87,3 @@ function wps_prime_setup_author() {
 	}
 }
 add_action( 'wp', 'wps_prime_setup_author' );
-
-?>
