@@ -61,40 +61,40 @@
  */
 
  /* THEME DATA  - Wordpress Theme Data Style */
-@import "css/theme-data";
+@import "sass/theme-data";
 
  /* SETTINGS             GLOBAL CONFIG AND SETTINGS */
-@import "css/bower_components/inuit-defaults/settings.defaults";
-@import "css/bower_components/inuit-responsive-settings/settings.responsive";
-@import "css/project/settings.global";
-@import "css/project/settings.colors";
+@import "sass/bower_components/inuit-defaults/settings.defaults";
+@import "sass/bower_components/inuit-responsive-settings/settings.responsive";
+@import "sass/project/settings.global";
+@import "sass/project/settings.colors";
 
 
  /* TOOLS                GLOBAL PREPROCESSOR TOOLING */
  
-@import "css/bower_components/inuit-functions/tools.functions";
-@import "css/bower_components/inuit-mixins/tools.mixins";
+@import "sass/bower_components/inuit-functions/tools.functions";
+@import "sass/bower_components/inuit-mixins/tools.mixins";
 
 $inuit-responsive-settings: true;
-@import "css/bower_components/inuit-responsive-tools/tools.responsive";
-@import "css/project/tools.aliases";
-@import "css/project/tools.project.mixins";
+@import "sass/bower_components/inuit-responsive-tools/tools.responsive";
+@import "sass/project/tools.aliases";
+@import "sass/project/tools.project.mixins";
 
 
  /* GENERIC              SITE-WIDE STARTING-POINT STYLES */
 
-@import "css/bower_components/inuit-box-sizing/generic.box-sizing";
-@import "css/bower_components/inuit-normalize/generic.normalize";
-@import "css/bower_components/inuit-reset/generic.reset";
-@import "css/bower_components/inuit-shared/generic.shared";
-@import "css/project/generic.inline-block-whitespace";
-@import "css/project/generic.form.fields";
+@import "sass/bower_components/inuit-box-sizing/generic.box-sizing";
+@import "sass/bower_components/inuit-normalize/generic.normalize";
+@import "sass/bower_components/inuit-reset/generic.reset";
+@import "sass/bower_components/inuit-shared/generic.shared";
+@import "sass/project/generic.inline-block-whitespace";
+@import "sass/project/generic.form.fields";
 
 
 
  /* BASE                 TYPE (I.E. BARE ELEMENT) SELECTORS */
 
-@import "css/bower_components/inuit-page/base.page";
+@import "sass/bower_components/inuit-page/base.page";
 
 $inuit-heading-size-1:  28px;
 $inuit-heading-size-2:  22px;
@@ -102,12 +102,12 @@ $inuit-heading-size-3:  18px;
 $inuit-heading-size-4:  16px;
 $inuit-heading-size-5:  14px;
 $inuit-heading-size-6:  12px;
-@import "css/bower_components/inuit-headings/base.headings";
-@import "css/bower_components/inuit-paragraphs/base.paragraphs";
-@import "css/bower_components/inuit-lists/base.lists";
-@import "css/project/base.links";
-//@import "css/project/base.icons";
-@import "css/project/base.type";
+@import "sass/bower_components/inuit-headings/base.headings";
+@import "sass/bower_components/inuit-paragraphs/base.paragraphs";
+@import "sass/bower_components/inuit-lists/base.lists";
+@import "sass/project/base.links";
+//@import "sass/project/base.icons";
+@import "sass/project/base.type";
 
  /* OBJECTS              DESIGN-FREE DESIGN PATTERNS */
 
@@ -127,18 +127,18 @@ $inuit-heading-size-6:  12px;
  $inuit-enable-btn--full:    true;
  $inuit-enable-btn--pill:    true;
  
-@import "css/bower_components/inuit-buttons/objects.buttons";
-@import "css/bower_components/inuit-box/objects.box";
+@import "sass/bower_components/inuit-buttons/objects.buttons";
+@import "sass/bower_components/inuit-box/objects.box";
 
 
 $inuit-enable-flag--tiny:       true;
 $inuit-enable-flag--small:      true;
 $inuit-enable-flag--flush:      true;
 $inuit-enable-flag--responsive: true;
-@import "css/bower_components/inuit-flag/objects.flag";
-@import "css/bower_components/inuit-list-bare/objects.list-bare";
-@import "css/bower_components/inuit-list-inline/objects.list-inline";
-@import "css/bower_components/inuit-list-ui/objects.list-ui";
+@import "sass/bower_components/inuit-flag/objects.flag";
+@import "sass/bower_components/inuit-list-bare/objects.list-bare";
+@import "sass/bower_components/inuit-list-inline/objects.list-inline";
+@import "sass/bower_components/inuit-list-ui/objects.list-ui";
 
  $inuit-enable-media--tiny:         true;  
  $inuit-enable-media--small:        true; 
@@ -147,7 +147,7 @@ $inuit-enable-flag--responsive: true;
  $inuit-enable-media--rev:          true; 
  $inuit-enable-media--flush:        true; 
  $inuit-enable-media--responsive:   true; 
-@import "css/bower_components/inuit-media/objects.media";
+@import "sass/bower_components/inuit-media/objects.media";
 
 $inuit-table-border-color:      #f0f0f0;
 
@@ -156,49 +156,49 @@ $inuit-enable-table--comfy: true;
 $inuit-enable-table--cells: true;
 $inuit-enable-table--columns: true;
 $inuit-enable-table--rows: true;
-@import "css/bower_components/inuit-tables/objects.tables";
-@import "css/bower_components/inuit-tabs/objects.tabs";
-@import "css/bower_components/inuit-pack/objects.pack";
+@import "sass/bower_components/inuit-tables/objects.tables";
+@import "sass/bower_components/inuit-tabs/objects.tabs";
+@import "sass/bower_components/inuit-pack/objects.pack";
 
  $inuit-enable-layout--center: true;
-@import "css/bower_components/inuit-layout/objects.layout";
-@import "css/project/objects.wrappers";
+@import "sass/bower_components/inuit-layout/objects.layout";
+@import "sass/project/objects.wrappers";
 
  /* COMPONENTS           DESIGNED, COMPLETE COMPONENTS */
-@import "css/project/components.page-head";
-@import "css/project/components.site-head";
-@import "css/project/components.site-nav";
+@import "sass/project/components.page-head";
+@import "sass/project/components.site-head";
+@import "sass/project/components.site-nav";
 
-@import "css/project/components.promo-block";
-@import "css/project/components.icons";
-@import "css/project/components.pull-quote";
+@import "sass/project/components.promo-block";
+@import "sass/project/components.icons";
+@import "sass/project/components.pull-quote";
 
-@import "css/project/components.box";
-@import "css/project/components.band";
-@import "css/project/components.page-micro";
+@import "sass/project/components.box";
+@import "sass/project/components.band";
+@import "sass/project/components.page-micro";
 
 
-@import "css/project/components.comments";
-@import "css/project/components.cf7_form";
-@import "css/project/components.page-content";
-@import "css/project/components.product-content";
+@import "sass/project/components.comments";
+@import "sass/project/components.cf7_form";
+@import "sass/project/components.page-content";
+@import "sass/project/components.product-content";
 
-@import "css/project/components.galleries";
-@import "css/project/components.slider";
-@import "css/project/components.scarcity";
-@import "css/project/components.nav-links";
+@import "sass/project/components.galleries";
+@import "sass/project/components.slider";
+@import "sass/project/components.scarcity";
+@import "sass/project/components.nav-links";
 
-@import "css/project/components.buttons";
-@import "css/project/components.table";
-@import "css/project/components.widget";
+@import "sass/project/components.buttons";
+@import "sass/project/components.table";
+@import "sass/project/components.widget";
 
  /* TRUMPS               HELPERS AND OVERRIDES */
-@import "css/bower_components/inuit-clearfix/trumps.clearfix";
-@import "css/project/trumps.show.hide";
-@import "css/project/trumps.screen.reader.text";
+@import "sass/bower_components/inuit-clearfix/trumps.clearfix";
+@import "sass/project/trumps.show.hide";
+@import "sass/project/trumps.screen.reader.text";
 
  $inuit-use-fractions: true;
-@import "css/bower_components/inuit-widths/trumps.widths";
+@import "sass/bower_components/inuit-widths/trumps.widths";
 
  $inuit-enable-margins:                  true;
  $inuit-enable-margins--tiny:            true;
@@ -221,7 +221,7 @@ $inuit-enable-table--rows: true;
  $inuit-enable-paddings--huge:           true;
  
  $inuit-enable-paddings--none:           true;
-@import "css/bower_components/inuit-spacing/trumps.spacing";
+@import "sass/bower_components/inuit-spacing/trumps.spacing";
  
  $inuit-enable-responsive-margins:                   true;
  $inuit-enable-responsive-margins--tiny:             true;
@@ -244,9 +244,9 @@ $inuit-enable-table--rows: true;
  $inuit-enable-responsive-paddings--huge:            true;
  
  $inuit-enable-responsive-paddings--none:            true;
-@import "css/bower_components/inuit-spacing-responsive/trumps.spacing-responsive";
-@import "css/bower_components/inuit-widths-responsive/trumps.widths-responsive";
-@import "css/project/trumps.responsive.media";
-@import "css/project/trumps.alignments";
-@import "css/project/trumps.typography";
-@import "css/bower_components/inuit-print/trumps.print";
+@import "sass/bower_components/inuit-spacing-responsive/trumps.spacing-responsive";
+@import "sass/bower_components/inuit-widths-responsive/trumps.widths-responsive";
+@import "sass/project/trumps.responsive.media";
+@import "sass/project/trumps.alignments";
+@import "sass/project/trumps.typography";
+@import "sass/bower_components/inuit-print/trumps.print";
