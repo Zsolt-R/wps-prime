@@ -20,7 +20,7 @@ A lightweight WordPress master theme based on _s and extended with simple and us
 - **Theme Shortcodes**
   - 1  Layout Wrapper Markup - [layout class="lap-and-up..." wrapper="false"]
   - 2  Layout Item Markup - [item class="lap-and-up..."] ...content... [/item]
-  - 3  Full Width Slider - [slider images="1,2,3...(image id's)" links="56,78,99...(page/post id's)" size="wps_prime_full"]
+  - 3  Full Width Slider - [slider images="1,2,3...(image id's)" links="56,78,98...(page/post id's)" size="wps_prime_full"]
   - 4  Custom Buttons - [button class="btn--small,btn--large,btn--primary,btn--secondary,btn--tertiary" link="..." label="button label"]
   - 5  Media / Flag Object - media/flag(OOCSS Markup Items) - [object type="media/flag"] ... [/object]
   - 6  Media / Flag Object inners -media/flag (OOCSS Markup Items) - [object_item type="media__img/flag__img,media__img/media__body"]...[/object_item]
