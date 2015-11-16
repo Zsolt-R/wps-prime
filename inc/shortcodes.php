@@ -10,20 +10,20 @@
  *
  * 1  Layout Wrapper Markup - [layout class="lap-and-up..." wrapper="false"]
  * 2  Layout Item Markup - [item class="lap-and-up..."] ...content... [/item]
- * 3  Full Width Slider - [slider images="1,2,3...(image id's)" links="56,78,99...(page/post id's)" size="converter_full"]
+ * 3  Full Width Slider - [slider images="1,2,3...(image id's)" links="56,78,99...(page/post id's)" size="wps_prime_full"]
  * 4  Custom Buttons - [button class="btn--small,btn--large,btn--primary,btn--secondary,btn--tertiary" link="http://www...." label="button label"]
  * 5  Media / Flag Object - media/flag(OOCSS Markup Items) - [object type="media/flag"] ... [/object]
  * 6  Media / Flag Object inners -media/flag __img, __body (OOCSS Markup Items) - [object_item type="media__img/flag__img,media__img/media__body"]...[/object_item]
  * 7  Shortcode for icons - [ico]fa fa-home[/ico]
- * 8  Main Phone number - [phone_nr]
- * 9  Main Email address - [email]
+ * 8  Main Phone number - [main_phone_nr]
+ * 9  Main Email address - [main_email]
  */
 
 /* 1 Layout Wrapper Markup */
 add_shortcode( 'layout', 'wps_layout' );
 
 /* 2 Layout Item Markup */
-add_shortcode( 'item',' wps_layout_inner_block' );
+add_shortcode( 'item','wps_layout_inner_block' );
 
 /* 3 Full Width Slider */
 add_shortcode( 'slider', 'wps_fw_slider' );
@@ -41,10 +41,10 @@ add_shortcode( 'object_item' , 'wps_css_objects_item' );
 add_shortcode( 'ico', 'wps_ico_shortcode' );
 
 /* 8 Get theme option phone nr */
-add_shortcode( 'phone_nr', 'wps_main_phone_nr' );
+add_shortcode( 'main_phone_nr', 'wps_main_phone_nr' );
 
 /* 9 Get theme option email */
-add_shortcode( 'email', 'wps_main_email' );
+add_shortcode( 'main_email', 'wps_main_email' );
 
 /**
  * 1 Layout Item Markup
@@ -54,15 +54,15 @@ add_shortcode( 'email', 'wps_main_email' );
  * @param str   $content the enclosed content.
  */
 function wps_layout( $atts, $content = null ) {
-	extract( shortcode_atts( array(
+	$options = shortcode_atts( array(
 		'class' => '',
 		'wrapper' => false,
-	), $atts ) );
-	$class = $class ? ' '.$class : '';
+	), $atts );
+	$class = $options['class'] ? ' '.$options['class'] : '';
 
-	$layout = '<div class="layout'. $class .'">' . do_shortcode( $content ) . '</div>';
+	$layout = '<div class="layout'. $options['class'] .'">' . do_shortcode( $content ) . '</div>';
 
-	$output = $wrapper ? '<div class="wrapper">'. $layout .'</div>' : $layout;
+	$output = $options['wrapper'] ? '<div class="wrapper">'. $layout .'</div>' : $layout;
 
 	return  $output;
 }
@@ -75,28 +75,30 @@ function wps_layout( $atts, $content = null ) {
  * @param str   $content the enclosed content.
  */
 function wps_layout_inner_block( $atts, $content = null ) {
-	extract( shortcode_atts( array(
+	$options = shortcode_atts( array(
 		'class' => '',
-	), $atts ) );
-	$class = $class ?  ' '.$class : '';
+	), $atts );
+	$class = $options['class'] ?  ' '.$options['class'] : '';
 
-	return '<div class="layout__item'. $class .'">' . do_shortcode( $content ) . '</div>';
+	$output = '<div class="layout__item'. $class .'">' . do_shortcode( $content ) . '</div>';
+
+	return  $output;
 }
 
 /**
  * 3 Full width slider
- * ex: [slider images="1,2,3...(image id's)" links="56,78,99...(page/post id's)" size="converter_full"]
+ * ex: [slider images="1,2,3...(image id's)" links="56,78,99...(page/post id's)" size="wps_prime_full"]
  *
  * @param array $atts an associative array of attributes, or an empty string if no attributes are given.
  */
 function wps_fw_slider( $atts ) {
-	extract( shortcode_atts( array(
+	$options = shortcode_atts( array(
 		'images' => '',
 		'links' => '',
 		'min' => '22.51em',
-		'size' => 'converter_full',
-		'size_mobile' => 'converter_medium',
-	), $atts ) );
+		'size' => 'wps_prime_full',
+		'size_mobile' => 'wps_prime_medium',
+	), $atts );
 
 	$constructor = 'Add image id\'s to shortcode to use slider ex. images="1,2,3,4..."';
 
@@ -105,30 +107,30 @@ function wps_fw_slider( $atts ) {
 
 	// Start ID Check.
 	// Check for Images.
-	if ( $images ) {
-		$images_id_array = explode( ',', $images );
+	if ( $options['images'] ) {
+		$images_id_array = explode( ',', $options['images'] );
 		$arrays = $images_id_array;
 	}
 
 	// Check for Links.
-	if ( $links ) {
-		$page_id_array = explode( ',', $links );
+	if ( $options['links'] ) {
+		$page_id_array = explode( ',', $options['links'] );
 		if ( count( $images_id_array ) === count( $page_id_array ) ) {
 			$arrays = array_combine( $images_id_array,$page_id_array );
 		}
 	}
 
 	// If only image id's are avaliable.
-	if ( $images && ! $links ) {
+	if ( $options['images'] && ! $options['links'] ) {
 
 		foreach ( $arrays as $image_id ) {
 
-			$image_large = wp_get_attachment_image_src( $image_id , $size );
-			$image_small = wp_get_attachment_image_src( $image_id , $size_mobile );
+			$image_large = wp_get_attachment_image_src( $image_id , $options['size'] );
+			$image_small = wp_get_attachment_image_src( $image_id , $options['size_mobile'] );
 
 			// Check if image id is valid.
 			if ( '' !== $image_large ) {
-				$slide_content = '<picture><source media="(min-width:'. $min .')" srcset="'. $image_large[0] .'"><img src="'. $image_small[0] .'" class="aligncenter"/></picture>';
+				$slide_content = '<picture><source media="(min-width:'. $options['min'] .')" srcset="'. $image_large[0] .'"><img src="'. $image_small[0] .'" class="aligncenter"/></picture>';
 			}
 
 			$image_list_constructor .= '<div class="swiper-slide">'. $slide_content .'</div>';
@@ -136,22 +138,22 @@ function wps_fw_slider( $atts ) {
 		}
 
 		// If image Id's and Link id's.
-	} elseif ( $images && $links ) {
+	} elseif ( $options['images'] && $options['links'] ) {
 
 		// Check to have equal number of image id's and link id's.
 		if ( count( $images_id_array ) === count( $page_id_array ) ) {
 
 			foreach ( $arrays as $image_id => $page_links_id ) {
 
-				$image_large = wp_get_attachment_image_src( $image_id , $size );
-				$image_small = wp_get_attachment_image_src( $image_id , 'converter_medium' );
+				$image_large = wp_get_attachment_image_src( $image_id , $options['size'] );
+				$image_small = wp_get_attachment_image_src( $image_id , $options['size_mobile'] );
 
 				// Setup Default slide content.
 				$slide_content = current_user_can( 'moderate_comments' ) ? 'Image ID- "'. $image_id.'" not valid' : '';
 
 				// Check if image id is valid.
 				if ( '' !== $image_large ) {
-						$slide_content = '<img src="'. $image_large[0] .'" srcset="'. $image_small[0] .' '.$image_small[1].'w, '. $image_large[0] .' 720w">';
+						$slide_content = '<picture><source media="(min-width:'. $options['min'] .')" srcset="'. $image_large[0] .'"><img src="'. $image_small[0] .'" class="aligncenter"/></picture>';
 				}
 
 				$image_list_constructor .= '<div class="swiper-slide"><a href="'. get_permalink( $page_links_id )  .'">'. $slide_content .'</a></div>';
@@ -162,7 +164,7 @@ function wps_fw_slider( $atts ) {
 
 		}
 	}
-	if ( $images ) {
+	if ( $options['images'] ) {
 
 		 $constructor = '<div class="swiper">        
                 <div class="swiper-container">
@@ -186,15 +188,15 @@ function wps_fw_slider( $atts ) {
  * @param array $atts an associative array of attributes, or an empty string if no attributes are given.
  */
 function wps_buttons( $atts ) {
-	extract( shortcode_atts( array(
+	$options = shortcode_atts( array(
 		'class' => '',
 		'label' => 'Please add label',
 		'link'  => '',
-	), $atts ) );
+	), $atts );
 
-	$styleClass = $class ? ' '.$class : '';
-	$btnLabel = $label ? ' '.$label : '';
-	$btnLink = $link ? $link : '#';
+	$styleClass = $options['class'] ? ' '.$options['class'] : '';
+	$btnLabel = $options['label'] ? ' '.$options['label'] : '';
+	$btnLink = $options['link'] ? $options['link'] : '#';
 
 	$output = '<a class="btn'. $styleClass .'"" href="'.$btnLink.'">'. $btnLabel .'</a>';
 
@@ -210,11 +212,11 @@ function wps_buttons( $atts ) {
  * @param str   $content the enclosed content.
  */
 function wps_css_objects( $atts, $content = null ) {
-	extract( shortcode_atts( array(
+	$options = shortcode_atts( array(
 		'type' => '',
-	), $atts ) );
+	), $atts );
 
-	$class = $type;
+	$class = $options['type'];
 
 	$output = '<div class="'. $class .'">'. do_shortcode( $content ) .'</div>';
 
@@ -230,11 +232,11 @@ function wps_css_objects( $atts, $content = null ) {
  * @param str   $content the enclosed content.
  */
 function wps_css_objects_item( $atts, $content = null ) {
-	extract( shortcode_atts( array(
+	$options = shortcode_atts( array(
 		'type' => '',
-	), $atts ) );
+	), $atts );
 
-	$class = $type;
+	$class = $options['type'];
 
 	$output = '<div class="'. $class .'">'. do_shortcode( $content ) .'</div>';
 
@@ -250,20 +252,24 @@ function wps_css_objects_item( $atts, $content = null ) {
  * @param str   $content the enclosed content.
  */
 function wps_ico_shortcode( $atts, $content = null ) {
-	extract( shortcode_atts(array(
+	$options = shortcode_atts(array(
 		'class' => '',
-	), $atts ) );
-		$ico_class = $class ? ''.$class : $class;
-	return '<i class="ico '. $content . ''. $ico_class .'"></i>';
+	), $atts );
+
+	$ico_class = $options['class'] ? ' '.$options['class'] : '';
+
+	$output = '<i class="ico '. $content . ''. $ico_class .'"></i>';
+
+	return $output;
 }
 
 /**
  * 8 Main Phone number
  * ex: [phone_nr]
  */
-function function_phone_nr() {
+function wps_main_phone_nr() {
 
-	$phone_nr = wps_get_theme_option( 'company_phone_nr' );
+	$phone_nr = wps_get_theme_option( 'company_phone_nr' ) ? wps_get_theme_option( 'company_phone_nr' ) : 'No phone number set';
 
 	return $phone_nr;
 
@@ -273,9 +279,9 @@ function function_phone_nr() {
  * 9 Main Email address
  * ex: [email]
  */
-function function_email() {
+function wps_main_email() {
 
-	$email = wps_get_theme_option( 'company_contact_email_address' );
+	$email = wps_get_theme_option( 'company_contact_email_address' ) ? wps_get_theme_option( 'company_contact_email_address' ) : 'No email set';
 
 	return $email;
 }
