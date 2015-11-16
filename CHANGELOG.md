@@ -1,6 +1,9 @@
 ## [WPS Prime Framework 1.1.0]
 ==============================
 
+**1.1.1**
+- Changed shortcode from [email] to [main_email], [phone_nr] to [main_phone_nr]
+
 **1.1.0**
 - Theme files/functions update according to latest _s changes
 - Extend Code documentation
