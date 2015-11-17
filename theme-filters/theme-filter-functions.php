@@ -18,7 +18,7 @@ function main_nav_class( $class = '' ) {
 
 	$classes = get_main_nav_class( $class );
 
-	return 'class="' . join( ' ', $classes ) . '"';
+	echo 'class="' . join( ' ', $classes ) . '"';
 }
 
 /**
