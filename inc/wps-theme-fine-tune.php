@@ -2,51 +2,25 @@
 /**
  *  WPS THEME FINETUNES
  *
- * Remove all the version numers from the end of css/js enqueued files added to <head> (suggested by pingdom.com)
- * Remove Comment Form Allowed Tags
- * Customize Comment Form Place Holder Input Text Fields & Labels http://wpsites.net/web-design/customize-comment-form-place-holder-input-text-fields-labels/
- * Customize Comment Form Text Area & Label http://wpsites.net/web-design/customize-comment-field-text-area-label/
- * Removes empty paragraph tags (<p></p>) and line break tags (<br>) from shortcodes caused by WordPress's wpautop function.
- * Allow shortcode in text widget
- * Allow shortcode in widget title
- *
- * @package wps_prime
- */
-
-/* Remove wp version param from any enqueued styles */
-add_filter( 'style_loader_src', 'wps_prime_remove_wp_ver_css_js', 10, 2 );
-
-/* Remove wp version param from any enqueued scripts */
-add_filter( 'script_loader_src', 'wps_prime_remove_wp_ver_css_js', 10, 2 );
-
-/* Remove Comment Form Allowed Tags */
-add_filter( 'comment_form_defaults', 'remove_comment_form_allowed_tags' );
-
-/* Customize Comment Form Place Holder Input Text Fields & Labels */
-add_filter( 'comment_form_default_fields','modify_comment_form_fields' );
-
-/* Customize Comment Form Text Area & Label */
-add_filter( 'comment_form_defaults', 'customize_comment_form_text_area' );
-
-/* Removes empty paragraph tags (<p></p>) and line break tags (<br>) from shortcodes caused by WordPress's wpautop function. */
-add_filter( 'the_content', 'remove_empty_tags_around_shortcodes' );
-
-/* Allow shortcode in text widget */
-add_filter( 'widget_text', 'do_shortcode' );
-
-/* Allow shortcode in widget title */
-add_filter( 'widget_title', 'do_shortcode' );
-
-/**
-*  1  Remove all the version numers from the end of css/js enqueued files added to <head> (suggested by pingdom.com)
+ *  1  Remove all the version numers from the end of css/js enqueued files added to <head> (suggested by pingdom.com)
  *  2  Remove Comment Form Allowed Tags
  *  3  Customize Comment Form Place Holder Input Text Fields & Labels http://wpsites.net/web-design/customize-comment-form-place-holder-input-text-fields-labels/
  *  4  Customize Comment Form Text Area & Label http://wpsites.net/web-design/customize-comment-field-text-area-label/
  *  5  Removes empty paragraph tags (<p></p>) and line break tags (<br>) from shortcodes caused by WordPress's wpautop function.
+ *
+ * @package wps_prime
  */
 
+add_filter( 'style_loader_src', 'wps_prime_remove_wp_ver_css_js', 10, 2 );
+add_filter( 'script_loader_src', 'wps_prime_remove_wp_ver_css_js', 10, 2 );
+add_filter( 'comment_form_defaults', 'remove_comment_form_allowed_tags' );
+add_filter( 'comment_form_default_fields','modify_comment_form_fields' );
+add_filter( 'comment_form_defaults', 'customize_comment_form_text_area' );
+add_filter( 'the_content', 'remove_empty_tags_around_shortcodes' );
+
+
 /**
- * 1 Remove wp version param from any enqueued scripts/scripts
+ * 1 Remove wp version param from any enqueued scripts
  *
  * @param string $src Scripts and styles.
  */
