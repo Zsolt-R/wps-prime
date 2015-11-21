@@ -17,14 +17,14 @@ function layout_header() {
  */
 	if ( has_action( 'layout_header__img' ) === true ) {
 
-		echo '<div class="layout__item lap-and-up-3/10">';
+		echo '<div '. header_layout_left_class() .'>';
 			layout_header__img();
 		echo '</div>';
 	}
 
 	if ( has_action( 'layout_header__body' ) === true ) {
 
-		echo '<div class="layout__item lap-and-up-7/10">';
+		echo '<div '. header_layout_right_class() .'>';
 			layout_header__body();
 		echo '</div>';
 	}
