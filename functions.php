@@ -322,14 +322,6 @@ require get_template_directory() . '/inc/comment-list.php';
 require get_template_directory() . '/inc/favicon.php';
 
 
-
-/* Allow shortcode in text widget */
-add_filter( 'widget_text', 'do_shortcode' );
-
-/* Allow shortcode in widget title */
-add_filter( 'widget_title', 'do_shortcode' );
-
-
 /**
 * THEME DEPENDENCIES
 *
