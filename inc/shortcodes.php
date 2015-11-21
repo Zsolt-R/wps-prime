@@ -56,15 +56,13 @@ add_shortcode( 'main_email', 'wps_main_email' );
 function wps_layout( $atts, $content = null ) {
 	$options = shortcode_atts( array(
 		'class' => '',
-		'class_wrapper' => '',
 		'wrapper' => false,
 	), $atts );
 	$class = $options['class'] ? ' '.$options['class'] : '';
-	$class_w = $options['class_wrapper'] ? ' '.$options['class_wrapper'] : '';
 
-	$layout = '<div class="layout'. $class .'">' . do_shortcode( $content ) . '</div>';
+	$layout = '<div class="layout'. $options['class'] .'">' . do_shortcode( $content ) . '</div>';
 
-	$output = $options['wrapper'] ? '<div class="wrapper'. $class_w .'">'. $layout .'</div>' : $layout;
+	$output = $options['wrapper'] ? '<div class="wrapper">'. $layout .'</div>' : $layout;
 
 	return  $output;
 }

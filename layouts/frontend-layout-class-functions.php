@@ -19,16 +19,6 @@ add_action( 'content_end' , 'page_end',0 );
 add_filter( 'wp_head', 'main_layout' );
 
 /**
- * Header layout left Classes
- */
-add_filter( 'header_layout_left_class', 'header_layout_left' );
-
-/**
- * Header layout right Classes
- */
-add_filter( 'header_layout_right_class', 'header_layout_right' );
-
-/**
  * Main Content Area Classes
  */
 add_filter( 'main_class', 'main_layout' );
@@ -37,38 +27,6 @@ add_filter( 'main_class', 'main_layout' );
  * Sidebar Area Classes
  */
 add_filter( 'sidebar_class', 'sidebar_layout' );
-
-
-if( ! function_exists( 'header_layout_left' ) ){
-
-	/**
-	 * Setting for theme header layout left area
-	 * @param array $classes Storred css classes.
-	 */
-	function header_layout_left( $classes ) {
-
-		$classes[] = 'layout__item';
-		$classes[] = 'lap-and-up-3/10';
-		return $classes;
-	}
-
-}
-
-if( ! function_exists( 'header_layout_right' ) ){
-
-	/**
-	 * Setting for theme header layout right area
-	 * @param array $classes Storred css classes.
-	 */
-	function header_layout_right( $classes ) {
-
-		$classes[] = 'layout__item';
-		$classes[] = 'lap-and-up-7/10';
-		return $classes;
-	}
-
-}
-
 
 if ( ! function_exists( 'main_layout' ) ) {
 
@@ -89,14 +47,9 @@ if ( ! function_exists( 'main_layout' ) ) {
 		$classes[] = 'content-area';
 
 		// Whitelist Elements to be removed upon condition!
-		if ( is_page_template( 'templates/template-nosidebar.php' ) ) {
+		if ( is_page_template( 'templates/template-full.php' ) || is_page_template( 'templates/template-cleanpage.php' ) ) {
 			$whitelist[] = 'lap-and-up-7/10';
 
-		}
-		if ( is_page_template( 'templates/template-fullwidth.php' ) ) {
-
-			$whitelist[] = 'lap-and-up-7/10';
-			$whitelist[] = 'layout__item';
 		}
 
 		// Remove Classes!
@@ -128,21 +81,13 @@ if ( ! function_exists( 'sidebar_layout' ) ) {
 /**
  * Page html Wrappers
  */
-if ( ! function_exists( 'page_top' ) ) {	
+if ( ! function_exists( 'page_top' ) ) {
 
 	/**
 	 * Add page wrapper html element
 	 */
 	function page_top() {
-
-		global $wp_query, $wpdb;
-
-		// Whitelist Elements to be removed upon condition!
-		if ( is_page_template( 'templates/template-fullwidth.php' ) ) {
-			return;
-		}else{
-			echo'<div class="wrapper"><div class="layout">';
-		}
+		echo'<div class="wrapper"><div class="layout">';
 	}
 }
 
@@ -152,14 +97,6 @@ if ( ! function_exists( 'page_end' ) ) {
 	 * Add page wrapper html element
 	 */
 	function page_end() {
-
-		global $wp_query, $wpdb;
-
-		// Whitelist Elements to be removed upon condition!
-		if ( is_page_template( 'templates/template-fullwidth.php' ) ) {
-			return;
-		}else{
-			echo '</div></div>';
-		}
+		echo '</div></div>';
 	}
 }
