@@ -220,3 +220,4 @@ pip-log.txt
 #Prepros config
 prepros.cfg
 *.dat
+CHANGELOG.html

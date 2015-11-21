@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Full Page
+ * Template Name: Full Width
  *
  * @package wps_prime
  */

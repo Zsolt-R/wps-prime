@@ -19,7 +19,7 @@ function theme_site_logo() {
 		/**
 			 * Logo HTML wrapper
 			 */
-		$output .= ! is_singular() ? '<h1 data-ui-component="branding">' : '<h2 data-ui-component="branding">';
+		$output .= '<div data-ui-component="branding">';
 
 	if ( wps_get_theme_option( 'logo_setting' ) === 'brand_title' ) {
 
@@ -45,7 +45,7 @@ function theme_site_logo() {
 		}
 	}
 
-	$output .= ! is_singular() ? '</h1>' : '</h2>';
+	$output .= '</div>';
 
 	$allowed_html  = array(
 					    'a' => array(

@@ -1,6 +1,10 @@
-## [WPS Prime Framework 1.1.1]
+## [WPS Prime Framework 1.2.0]
 ==============================
 
+**1.2.0**
+- 
+
+- Fix main nav class filter.
 **1.1.1**
 - Changed shortcode from [email] to [main_email], [phone_nr] to [main_phone_nr]
 - Fix main nav class filter.

@@ -34,11 +34,13 @@ A lightweight WordPress master theme based on _s and extended with simple and us
   - WordPress Backup to Dropbox
   - WP Migrate DB
 - **Theme fine tunes**
-  - 1  Remove all the version numers from the end of css/js enqueued files added to <head> (suggested by pingdom.com)
-  - 2  Remove Comment Form Allowed Tags
-  - 3  Customize Comment Form Place Holder Input Text Fields & Labels [source](http://wpsites.net/web-design/customize-comment-form-place-holder-input-text-fields-labels/)
-  - 4  Customize Comment Form Text Area & Label [source](http://wpsites.net/web-design/customize-comment-field-text-area-label/)
-  - 5  Removes empty paragraph tags p-tags and line break tags br-tags from shortcodes caused by WordPress's wpautop function.
+  - Remove all the version numers from the end of css/js enqueued files added to <head> (suggested by pingdom.com)
+  - Remove Comment Form Allowed Tags
+  - Customize Comment Form Place Holder Input Text Fields & Labels [source](http://wpsites.net/web-design/customize-comment-form-place-holder-input-text-fields-labels/)
+  - Customize Comment Form Text Area & Label [source](http://wpsites.net/web-design/customize-comment-field-text-area-label/)
+  - Removes empty paragraph tags p-tags and line break tags br-tags from shortcodes caused by WordPress's wpautop function.
+  - Allow shortcode in text widget
+  - Allow shortcode in widget title
 - **Theme settings**
   - **Blog settings**
   - Archive article display mode, set article display type on archive pages (Blog / Archives) - options -> full / excerpt
