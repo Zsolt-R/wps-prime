@@ -13,3 +13,13 @@
     clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
     clip: rect(1px, 1px, 1px, 1px);
 }
+/*
+ * #break long words taht would overflow from container
+ */
+@mixin contain-text() {
+       word-break: break-word;
+       word-wrap: break-word;
+           -webkit-hyphens: auto;
+       -moz-hyphens: auto;
+       hyphens: auto;
+}

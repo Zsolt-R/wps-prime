@@ -106,7 +106,6 @@ $inuit-heading-size-6:  12px;
 @import "sass/bower_components/inuit-paragraphs/base.paragraphs";
 @import "sass/bower_components/inuit-lists/base.lists";
 @import "sass/project/base.links";
-//@import "sass/project/base.icons";
 @import "sass/project/base.type";
 
  /* OBJECTS              DESIGN-FREE DESIGN PATTERNS */
@@ -115,7 +114,7 @@ $inuit-heading-size-6:  12px;
  $inuit-btn-padding:         halve($inuit-base-spacing-unit);    // => class="btn" to class="{namespace}btn"
  //$inuit-btn-padding--small:  halve($inuit-btn-padding) !default;
  //$inuit-btn-padding--large:  double($inuit-btn-padding) !default;
- $inuit-btn-background:      $color-blue;
+ $inuit-btn-background:      $color-brand;
  $inuit-btn-color:           #fff;
  $inuit-btn-border-width:    1px;
  $inuit-btn-border-style:    solid;
@@ -168,26 +167,16 @@ $inuit-enable-table--rows: true;
 @import "sass/project/components.page-head";
 @import "sass/project/components.site-head";
 @import "sass/project/components.site-nav";
-
-@import "sass/project/components.promo-block";
-@import "sass/project/components.icons";
 @import "sass/project/components.pull-quote";
-
 @import "sass/project/components.box";
 @import "sass/project/components.band";
 @import "sass/project/components.page-micro";
-
-
 @import "sass/project/components.comments";
 @import "sass/project/components.cf7_form";
 @import "sass/project/components.page-content";
-@import "sass/project/components.product-content";
-
 @import "sass/project/components.galleries";
 @import "sass/project/components.slider";
-@import "sass/project/components.scarcity";
 @import "sass/project/components.nav-links";
-
 @import "sass/project/components.buttons";
 @import "sass/project/components.table";
 @import "sass/project/components.widget";

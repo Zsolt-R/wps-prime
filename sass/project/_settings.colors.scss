@@ -5,6 +5,10 @@
 // Literal color variables.
 // Ref: http://flatuicolors.com/
 // Ref: http://designmodo.com/flat-free/
+// For More flat colors visit
+// Ref: http://www.flatuicolorpicker.com/
+// Ref: http://bootflat.github.io/color-picker.html
+//
 $color-turquoise:     #1abc9c;
 $color-green-sea:     #16a085;
 $color-sun-flower:    #f1c40f;
@@ -32,19 +36,12 @@ $color-asbestos:      #7f8c8d;
 // #FF858D
 // #9E8CFF
 
-// For More flat colors visit
-// Ref: http://www.flatuicolorpicker.com/
-// Ref: http://bootflat.github.io/color-picker.html
-//
-
-
-
+// Theme Color definitions
 $color-brand:       $brand-color;
-$color-blue:		$color-brand;
 $color-gray:        #444;
 $color-white:       #fff;
-$color-gray-dark:       #424242;
-$color-gray-light:      #f7f6f6;
+$color-gray-dark:   #424242;
+$color-gray-light:  #f7f6f6;
 $color-gray-light:  #999;
 $color-gray-ui:     #ddd;
 $color-green:       $color-emerald;
@@ -61,7 +58,7 @@ $color-body:            $color-white;
 
 // Text-level
 $color-text:            $color-gray-dark;
-$color-links:           $color-blue;
+$color-links:           $color-brand;
 
 // Text
 $color-code:            $color-green;
@@ -74,13 +71,11 @@ $color-quote--banner:   $color-gray;
 
 // Buttons
 $color-btn-text:        $color-white;
-$color-btn-background:  $color-blue;
-
-// Icons
-$color-iconic:          $color-gray-light;
+$color-btn-background:  $color-brand;
+$color-btn-primary:		$color-alizarin;
 
 // Heading colors
-$color-headings:        $color-blue;
+$color-headings:        $color-brand;
 
 // Boxes
 $color-box-highlight-background:    $color-highlight;
@@ -102,5 +97,6 @@ $color-band-highlight-background:   $color-highlight;
 $color-band-tint-background:        $color-tint;
 $color-band-dark-background:        $color-asbestos;
 $color-band-dark-text-color:        $color-tint;
+
 //Promos
 $color-menu-promo: $color-negative;

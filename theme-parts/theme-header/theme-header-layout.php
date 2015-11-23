@@ -13,8 +13,8 @@
 function layout_header() {
 
 	/**
- * If hook doesn't has action hide the html
- */
+	 * If hook doesn't has action hide the html
+	 */
 	if ( has_action( 'layout_header__img' ) === true ) {
 
 		echo '<div '. header_layout_left_class() .'>';

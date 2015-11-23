@@ -87,6 +87,9 @@
 /**
  * #SHOW-HIDE
  */
+/*
+ * #break long words taht would overflow from container
+ */
 /* GENERIC              SITE-WIDE STARTING-POINT STYLES */
 /*------------------------------------*    #BOX-SIZING
 \*------------------------------------*/
@@ -561,8 +564,7 @@ blockquote, p, address,
 hr,
 table,
 fieldset, figure,
-pre,
-.promo__block {
+pre {
   margin-bottom: 24px;
   margin-bottom: 1.5rem;
 }
@@ -795,7 +797,6 @@ h1, h2, h3, h4, h5, h6 {
 /**
  * Emboldened elements.
  */
-a,
 strong, b,
 dt {
   font-weight: 600;
@@ -830,6 +831,17 @@ hr {
   border: none;
   border-bottom: 1px solid #ddd;
   margin-bottom: 23px;
+}
+
+/*
+* Beak superlong text
+*/
+p, a, td {
+  word-break: break-word;
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
 }
 
 /**
@@ -1546,12 +1558,6 @@ pre mark {
   margin-bottom: 12px;
 }
 
-@media screen and (min-width: 45em) {
-  .site-header h2, .site-header h1 {
-    margin-bottom: 0;
-  }
-}
-
 @media screen and (max-width: 44.9375em) {
   .brand-logo {
     margin: 0 auto;
@@ -1724,40 +1730,6 @@ ul ul .site-nav__link {
 
 .site-nav__item--promo:hover .site-nav__link {
   background-color: #ab3326;
-}
-
-/*------------------------------------*    #PROMO
-\*------------------------------------*/
-.promo {
-  padding-bottom: 0;
-}
-
-@media screen and (min-width: 64em) {
-  .promo {
-    padding-bottom: 24px;
-  }
-}
-
-.promo__links {
-  text-align: center;
-}
-
-@media screen and (min-width: 45em) {
-  .promo__links {
-    word-spacing: 1.5em;
-  }
-  .promo__links > .btn {
-    word-spacing: normal;
-  }
-}
-
-/*------------------------------------*    #ICONIC
-\*------------------------------------*/
-.icons {
-  font-size: 64px;
-  font-size: 4rem;
-  line-height: 1.125;
-  color: #999;
 }
 
 /*------------------------------------*    #PULL-QUOTE
@@ -2004,8 +1976,6 @@ span.wpcf7-form-control-wrap {
   font-weight: 300;
 }
 
-/*------------------------------------*    #PRODUCT CONTENT
-\*------------------------------------*/
 /*------------------------------------*    #GALLERIES
 \*------------------------------------*/
 .gallery {
@@ -2535,23 +2505,6 @@ span.wpcf7-form-control-wrap {
   }
 }
 
-/*------------------------------------*    #COMPONENT SCARCITY
-\*------------------------------------*/
-.scarcity {
-  display: none;
-  background-color: #2980b9;
-  color: #fff;
-  text-align: center;
-  padding: 12px 0;
-  margin-bottom: 24px;
-}
-
-@media screen and (min-width: 45em) {
-  .scarcity {
-    display: block;
-  }
-}
-
 /*------------------------------------*    #NAV LINKS
 \*------------------------------------*/
 .nav-links {
@@ -2561,13 +2514,13 @@ span.wpcf7-form-control-wrap {
 }
 
 .btn--primary {
-  background-color: orange;
-  border-color: orange;
+  background-color: #e74c3c;
+  border-color: #e74c3c;
 }
 
 .btn--primary:hover {
-  background-color: #FB3203;
-  border-color: #FB3203;
+  background-color: #e43725;
+  border-color: #e43725;
 }
 
 /*------------------------------------*    #COMPONENTS TABLE
@@ -2679,7 +2632,7 @@ table th {
   }
 }
 
-/*------------------------------------*    #SCREEN REDAR TEXT
+/*------------------------------------*    #SCREEN READER TEXT
 \*------------------------------------*/
 .screen-reader-text {
   position: absolute !important;
@@ -5611,7 +5564,7 @@ table th {
   }
 }
 
-/*------------------------------------*    #SITE-NAV
+/*------------------------------------*    #RESPONSIVE IMAGES
 \*------------------------------------*/
 img {
   max-width: 100%;

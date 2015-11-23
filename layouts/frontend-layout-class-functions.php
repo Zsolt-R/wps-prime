@@ -39,7 +39,7 @@ add_filter( 'main_class', 'main_layout' );
 add_filter( 'sidebar_class', 'sidebar_layout' );
 
 
-if( ! function_exists( 'header_layout_left' ) ){
+if ( ! function_exists( 'header_layout_left' ) ) {
 
 	/**
 	 * Setting for theme header layout left area
@@ -51,10 +51,9 @@ if( ! function_exists( 'header_layout_left' ) ){
 		$classes[] = 'lap-and-up-3/10';
 		return $classes;
 	}
-
 }
 
-if( ! function_exists( 'header_layout_right' ) ){
+if ( ! function_exists( 'header_layout_right' ) ) {
 
 	/**
 	 * Setting for theme header layout right area
@@ -66,7 +65,6 @@ if( ! function_exists( 'header_layout_right' ) ){
 		$classes[] = 'lap-and-up-7/10';
 		return $classes;
 	}
-
 }
 
 
@@ -128,7 +126,7 @@ if ( ! function_exists( 'sidebar_layout' ) ) {
 /**
  * Page html Wrappers
  */
-if ( ! function_exists( 'page_top' ) ) {	
+if ( ! function_exists( 'page_top' ) ) {
 
 	/**
 	 * Add page wrapper html element
@@ -140,7 +138,7 @@ if ( ! function_exists( 'page_top' ) ) {
 		// Whitelist Elements to be removed upon condition!
 		if ( is_page_template( 'templates/template-fullwidth.php' ) ) {
 			return;
-		}else{
+		} else {
 			echo'<div class="wrapper"><div class="layout">';
 		}
 	}
@@ -158,7 +156,7 @@ if ( ! function_exists( 'page_end' ) ) {
 		// Whitelist Elements to be removed upon condition!
 		if ( is_page_template( 'templates/template-fullwidth.php' ) ) {
 			return;
-		}else{
+		} else {
 			echo '</div></div>';
 		}
 	}

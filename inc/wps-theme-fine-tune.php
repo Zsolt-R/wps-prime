@@ -38,7 +38,7 @@ add_filter( 'widget_text', 'do_shortcode' );
 add_filter( 'widget_title', 'do_shortcode' );
 
 /**
-*  1  Remove all the version numers from the end of css/js enqueued files added to <head> (suggested by pingdom.com)
+ *  1  Remove all the version numers from the end of css/js enqueued files added to <head> (suggested by pingdom.com)
  *  2  Remove Comment Form Allowed Tags
  *  3  Customize Comment Form Place Holder Input Text Fields & Labels http://wpsites.net/web-design/customize-comment-form-place-holder-input-text-fields-labels/
  *  4  Customize Comment Form Text Area & Label http://wpsites.net/web-design/customize-comment-field-text-area-label/

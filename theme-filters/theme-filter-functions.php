@@ -12,11 +12,10 @@
  * Theme main navigation css class function
  * Separates classes with a single space, collates classes for element
  * @param array $class CSS Classes for element.
- * @return string
  */
 function main_nav_class( $class = '' ) {
 
-	$classes = join( ' ', get_css_class( $class , 'main_nav_class') );
+	$classes = join( ' ', get_css_class( $class , 'main_nav_class' ) );
 
 	echo 'class="' . esc_attr( $classes ) . '"';
 }
@@ -75,15 +74,15 @@ function header_layout_right_class( $class = '' ) {
 
 /**
  * Create class array to be used as css classes for frontent components
- * @param array $class CSS Classes for element.
+ * @param array  $class CSS Classes for element.
  * @param string $filter_name Filter function name.
  * @return array
  */
-function get_css_class($class = '', $filter_name = ''){
+function get_css_class( $class = '', $filter_name = '' ) {
 
 	$classes = array();
 
-	if ( ! empty( $class ) && ! empty ($filter_function) ) {
+	if ( ! empty( $class ) && ! empty( $filter_function ) ) {
 		if ( ! is_array( $class ) ) {
 				$class = preg_split( '#\s+#', $class ); }
 				$classes = array_merge( $classes, $class );

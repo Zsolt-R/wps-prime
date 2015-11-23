@@ -15,7 +15,7 @@ h1,h2,h3,h4,h5,h6{
 /**
  * Emboldened elements.
  */
-a,
+
 strong, b,
 dt{
 	font-weight:600;
@@ -54,7 +54,12 @@ hr {
 }
 
 
-
+/*
+* Beak superlong text
+*/
+p,a,td {
+    @include contain-text();
+}
 
 
 /**
