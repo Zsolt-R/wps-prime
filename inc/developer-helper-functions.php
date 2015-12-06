@@ -51,3 +51,35 @@ function get_image_sizes( $size = '' ) {
 
 		return $sizes;
 }
+
+/**
+ *	Function to reveal hook positions
+ */
+
+function revealhooks(){
+	echo '<div style="letter-spacing:normal;"><code>'. current_filter() .'</code></div>';
+}
+
+add_action( 'theme_header', 'revealhooks',10 );
+
+add_action( 'body_start', 'revealhooks',10 );
+
+add_action( 'wp_footer', 'revealhooks',10 );
+
+add_action( 'layout_header__img', 'revealhooks',10 );
+
+add_action( 'layout_header__body', 'revealhooks',10 );
+
+add_action( 'before_content', 'revealhooks',10 );
+
+add_action( 'content_start', 'revealhooks',10 );
+
+add_action( 'content_end', 'revealhooks',10 );
+
+add_action( 'footer_start', 'revealhooks',10 );
+
+add_action( 'footer_end', 'revealhooks',10 );
+
+add_action( 'entry_content_media_img', 'revealhooks',10 );
+
+add_action( 'entry_content_media_body', 'revealhooks',10 );

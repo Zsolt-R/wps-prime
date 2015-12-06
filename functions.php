@@ -98,6 +98,7 @@ if ( ! function_exists( 'wps_prime_setup' ) ) :
 			'default-image' => '',
 		) ) );
 
+
 		/**
 		 * Theme hook-functions
 		 */
@@ -169,6 +170,40 @@ if ( ! function_exists( 'wps_prime_setup' ) ) :
 			return $classes;
 		}
 		add_filter( 'main_nav_class','add_theme_main_nav_class' );
+
+		/**
+ 		 * Function that creates <link> and <style> font definitions to added to theme head
+ 		 * Calls the settings from theme options panel and maps with the multidimensional array served by base_typo();
+ 		 * Creates inline style for main font
+ 		 *
+ 		 */
+		function add_theme_fonts() {
+			$fonts = new wps_themeFonts;
+			$theme_fonts = $fonts->getFonts(); // Get registered fonts.
+			$font_main = wps_get_theme_option( 'main_font_family' ); // Get selected font family option.
+	
+			/* If no font is set return */
+			if( !isset($font_main)){
+				return;
+			}else{	
+	
+				/**
+				* Follow definition format
+				* font[0] = Font Name
+				* font[1] = font css style
+				* font[2] = font http:// link
+				*/
+				echo '<link href="'. esc_url_raw( $theme_fonts[$font_main][2] ) .'" rel="stylesheet" type="text/css"/>';
+				echo '<style>html{font-family:\''. esc_attr( $theme_fonts[$font_main][0] ) . '\',' .  esc_attr( $theme_fonts[$font_main][1] ) .';}</style>';
+			}
+
+		}
+		add_action( 'wp_head', 'add_theme_fonts' );
+
+		/**
+		 * Theme Developer functions
+		 */
+		//	require get_template_directory() . '/inc/developer-helper-functions.php';
 
 	}
 endif; // End wps_prime_setup.
@@ -275,6 +310,17 @@ add_action( 'wp_enqueue_scripts','add_main_css' );
  * require get_template_directory() . '/inc/custom-header.php';
  */
 
+/**
+ * Include the wps_generateThemeFonts class.
+ * Include the  wps_themeFonts class.
+ */
+require_once get_template_directory() . '/inc/class-wps-theme-typography.php';
+
+/**
+ * Plugin activator
+ * PIKLIST / Simple Image Sizes / Online Backup for WordPress / WordPress Backup to Dropbox / WP Migrate DB
+*/
+require_once get_template_directory() . '/inc/wps-theme-plugins.php';
 
 /**
  * Custom template tags for this theme.
@@ -321,7 +367,6 @@ require get_template_directory() . '/inc/comment-list.php';
  */
 require get_template_directory() . '/inc/favicon.php';
 
-
 /**
 * THEME DEPENDENCIES
 *
@@ -331,18 +376,11 @@ require get_template_directory() . '/inc/favicon.php';
 require get_template_directory() . '/theme-parts/theme-parts-init.php';
 require get_template_directory() . '/layouts/frontend-layout-class-functions.php';
 
-
 /**
  * HOOK OBJECTS TO THEME
  * always load after theme parts and modules
  */
 require get_template_directory() . '/theme-hook-build.php';
-
-/**
- * Plugin activator
- * PIKLIST / Simple Image Sizes / Online Backup for WordPress / WordPress Backup to Dropbox / WP Migrate DB
-*/
-require_once get_template_directory() . '/inc/wps-theme-plugins.php';
 
 /**
  * Deregister Cf7 styles (included in style.css)

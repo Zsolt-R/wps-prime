@@ -11,22 +11,9 @@
 
 /**
  * Get typography settings from theme typography.php
- * Refactor Later
  */
-$theme_fonts = base_typo();
+$fonts = new wps_themeFonts;
 
-$fontlist = array();
-
-foreach ( $theme_fonts as $font => $screen ) {
-
-	// $screen[0] = Font Name
-	// $screen[1] = font css style
-	// $screen[2] = font http:// link
-	$fontlist[ $font ] = $screen[0];
-
-}
-
-// /var_dump($fontlist);
 piklist('field', array(
 	'type' => 'select',
 	'field' => 'main_font_family',
@@ -36,5 +23,5 @@ piklist('field', array(
 	'attributes' => array(
 	'class' => 'text',
 	),
-	'choices' => $fontlist,
+	'choices' => $fonts->getFontsName(),
 ));
