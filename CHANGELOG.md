@@ -12,7 +12,8 @@
 - Updated frontend layout class funtions to adapt wrappers to the new templates
 - Changed version number
 - Streamlined theme filter function creation
-- Added layout header filters to ease definitions of css classes 
+- Added layout header filters to ease definitions of css classes
+- Rewrite theme typography engine to simplify adding and removing main font
 
 - Fix main nav class filter.
 **1.1.1**
