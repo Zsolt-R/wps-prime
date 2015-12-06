@@ -806,7 +806,7 @@ dt {
  * Code-like elements.
  */
 code, kbd, samp {
-  color: #2ecc71;
+  color: #c0392b;
   font-family: Inconsolata, Monaco, Consolas, "Andale Mono", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
 }
 
@@ -2534,7 +2534,7 @@ table th {
   font-weight: 600;
 }
 
-/*------------------------------------*    #WIDEGTS
+/*------------------------------------*    #WIDGETS
 \*------------------------------------*/
 .widget {
   margin-bottom: 24px;
