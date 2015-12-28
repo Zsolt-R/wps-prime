@@ -136,6 +136,7 @@ if ( ! function_exists( 'wps_prime_setup' ) ) :
 		 * Async
 		 *
 		 * @param string $url Link to script.
+		 * @return mixed|string
 		 */
 		function add_async_forscript( $url ) {
 
@@ -150,6 +151,7 @@ if ( ! function_exists( 'wps_prime_setup' ) ) :
 		 * Defer
 		 *
 		 * @param string $url Link to script.
+		 * @return mixed|string
 		 */
 		function add_defer_forscript( $url ) {
 
@@ -164,6 +166,7 @@ if ( ! function_exists( 'wps_prime_setup' ) ) :
 		 * Theme Main nav default class
 		 *
 		 * @param array $classes Holds the classes of the main navigation.
+		 * @return array
 		 */
 		function add_theme_main_nav_class( $classes ) {
 			$classes[] = 'site-nav';
@@ -199,11 +202,6 @@ if ( ! function_exists( 'wps_prime_setup' ) ) :
 
 		}
 		add_action( 'wp_head', 'add_theme_fonts' );
-
-		/**
-		 * Theme Developer functions
-		 */
-		//	require get_template_directory() . '/inc/developer-helper-functions.php';
 
 	}
 endif; // End wps_prime_setup.
