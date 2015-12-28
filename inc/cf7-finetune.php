@@ -31,6 +31,7 @@ function my_wpcf7_ajax_loader() {
 /**
  * Allow other shortcodes in Contact Form 7
  * @param obj $form Contact form object.
+ * @return obj
  */
 function wps_wpcf7_form_elements( $form ) {
 	$form = do_shortcode( $form );

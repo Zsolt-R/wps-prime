@@ -11,6 +11,7 @@ add_filter( 'piklist_admin_pages', 'wps_theme_setting_pages' );
 /**
  * Creates admin page // Under Appearance menu
  * @param array $pages All pages from the piklist_admin_pages() function.
+ * @return array
  */
 function wps_theme_setting_pages( $pages ) {
 	$pages[] = array(
@@ -34,6 +35,7 @@ function wps_theme_setting_pages( $pages ) {
  * Get theme options helper function
  *
  * @param string $option_name this keeps the name o the option called via wps_get_theme_option() function.
+ * @return null
  */
 function wps_get_theme_option( $option_name = null ) {
 
@@ -42,7 +44,7 @@ function wps_get_theme_option( $option_name = null ) {
 
 	if ( ! is_string( $option_name ) ) {
 
-		return;
+		return $result;
 
 	} else {
 

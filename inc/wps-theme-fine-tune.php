@@ -49,6 +49,7 @@ add_filter( 'widget_title', 'do_shortcode' );
  * 1 Remove wp version param from any enqueued scripts/scripts
  *
  * @param string $src Scripts and styles.
+ * @return string
  */
 function wps_prime_remove_wp_ver_css_js( $src ) {
 	if ( strpos( $src, '?rev=' ) ) {
@@ -62,6 +63,7 @@ function wps_prime_remove_wp_ver_css_js( $src ) {
  * 2  Remove Comment Form Allowed Tags
  *
  * @param array $defaults All the parameters of allowed form tags.
+ * @return array
  */
 function remove_comment_form_allowed_tags( $defaults ) {
 
@@ -74,6 +76,7 @@ function remove_comment_form_allowed_tags( $defaults ) {
  * 3  Customize Comment Form Place Holder Input Text Fields & Labels
  *
  * @param array $fields All the parameters of the comment form fields.
+ * @return array
  */
 function modify_comment_form_fields( $fields ) {
 
@@ -114,6 +117,7 @@ function modify_comment_form_fields( $fields ) {
 /**
  * 4  Customize Comment Form Text Area & Label
  * @param array $args All the comment form html elements.
+ * @return array
  */
 function customize_comment_form_text_area( $args ) {
 
@@ -128,6 +132,7 @@ function customize_comment_form_text_area( $args ) {
  * from shortcodes caused by WordPress's wpautop function.
  * https://www.twirlingumbrellas.com/wordpress/remove-empty-paragraph-tags-around-shortcodes/
  * @param string $content Holds the content that need to be filtered.
+ * @return string
  */
 function remove_empty_tags_around_shortcodes( $content ) {
 	$tags = array(

@@ -51,7 +51,8 @@ add_shortcode( 'main_email', 'wps_main_email' );
  * ex. [layout class="lap-and-up..." wrapper="false"]
  *
  * @param array $atts an associative array of attributes, or an empty string if no attributes are given.
- * @param str   $content the enclosed content.
+ * @param str $content the enclosed content.
+ * @return string
  */
 function wps_layout( $atts, $content = null ) {
 	$options = shortcode_atts( array(
@@ -74,7 +75,8 @@ function wps_layout( $atts, $content = null ) {
  * ex: [item class="lap-and-up..."] ...content... [/item]
  *
  * @param array $atts an associative array of attributes, or an empty string if no attributes are given.
- * @param str   $content the enclosed content.
+ * @param str $content the enclosed content.
+ * @return string
  */
 function wps_layout_inner_block( $atts, $content = null ) {
 	$options = shortcode_atts( array(
@@ -92,6 +94,7 @@ function wps_layout_inner_block( $atts, $content = null ) {
  * ex: [slider images="1,2,3...(image id's)" links="56,78,99...(page/post id's)" size="wps_prime_full"]
  *
  * @param array $atts an associative array of attributes, or an empty string if no attributes are given.
+ * @return string
  */
 function wps_fw_slider( $atts ) {
 	$options = shortcode_atts( array(
@@ -188,6 +191,7 @@ function wps_fw_slider( $atts ) {
  * ex:  [button class="btn--small,btn--large,btn--primary,btn--secondary,btn--tertiary" link="http://www...." label="button label"]
  *
  * @param array $atts an associative array of attributes, or an empty string if no attributes are given.
+ * @return string
  */
 function wps_buttons( $atts ) {
 	$options = shortcode_atts( array(
@@ -211,7 +215,8 @@ function wps_buttons( $atts ) {
  * ex:  [object type="media/flag"] ... [/object]
  *
  * @param array $atts an associative array of attributes, or an empty string if no attributes are given.
- * @param str   $content the enclosed content.
+ * @param str $content the enclosed content.
+ * @return string
  */
 function wps_css_objects( $atts, $content = null ) {
 	$options = shortcode_atts( array(
@@ -231,7 +236,8 @@ function wps_css_objects( $atts, $content = null ) {
  * ex: [object_item type="media__img/flag__img,media__img/media__body"]...[/object_item]
  *
  * @param array $atts an associative array of attributes, or an empty string if no attributes are given.
- * @param str   $content the enclosed content.
+ * @param str $content the enclosed content.
+ * @return string
  */
 function wps_css_objects_item( $atts, $content = null ) {
 	$options = shortcode_atts( array(
@@ -251,7 +257,8 @@ function wps_css_objects_item( $atts, $content = null ) {
  * ex: [ico]fa fa-home[/ico]
  *
  * @param array $atts an associative array of attributes, or an empty string if no attributes are given.
- * @param str   $content the enclosed content.
+ * @param str $content the enclosed content.
+ * @return string
  */
 function wps_ico_shortcode( $atts, $content = null ) {
 	$options = shortcode_atts(array(

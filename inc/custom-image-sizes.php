@@ -17,6 +17,7 @@ add_filter( 'image_size_names_choose', 'custom_image_sizes_choose' );
 /**
  * Add image sizes to content insert image size list
  * @param array $sizes Image sizes array.
+ * @return array
  */
 function custom_image_sizes_choose( $sizes ) {
 	$custom_sizes = array(

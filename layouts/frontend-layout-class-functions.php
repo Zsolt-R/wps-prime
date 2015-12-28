@@ -44,6 +44,7 @@ if ( ! function_exists( 'header_layout_left' ) ) {
 	/**
 	 * Setting for theme header layout left area
 	 * @param array $classes Storred css classes.
+	 * @return array
 	 */
 	function header_layout_left( $classes ) {
 
@@ -58,6 +59,7 @@ if ( ! function_exists( 'header_layout_right' ) ) {
 	/**
 	 * Setting for theme header layout right area
 	 * @param array $classes Storred css classes.
+	 * @return array
 	 */
 	function header_layout_right( $classes ) {
 
@@ -73,6 +75,7 @@ if ( ! function_exists( 'main_layout' ) ) {
 	/**
 	 * Setting for id="primary"
 	 * @param array $classes Storred css classes.
+	 * @return array
 	 */
 	function main_layout( $classes ) {
 
@@ -110,6 +113,7 @@ if ( ! function_exists( 'sidebar_layout' ) ) {
 	/**
 	 * Setting for id="secondary"
 	 * @param array $classes Storred css classes.
+	 * @return array
 	 */
 	function sidebar_layout( $classes ) {
 

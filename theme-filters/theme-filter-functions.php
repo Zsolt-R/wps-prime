@@ -11,7 +11,7 @@
 /**
  * Theme main navigation css class function
  * Separates classes with a single space, collates classes for element
- * @param array $class CSS Classes for element.
+ * @param array|string $class CSS Classes for element.
  */
 function main_nav_class( $class = '' ) {
 
@@ -23,7 +23,7 @@ function main_nav_class( $class = '' ) {
 /**
  * Theme Main Content layout css class function
  * Separates classes with a single space, collates classes for element
- * @param array $class CSS Classes for element.
+ * @param array|string $class CSS Classes for element.
  */
 function main_class( $class = '' ) {
 
@@ -50,6 +50,7 @@ function sidebar_class( $class = '' ) {
  * uses return and not echo because it is being called in an echo statement
  * and would result in double echo
  * @param array $class CSS Classes for element.
+ * @return string
  */
 function header_layout_left_class( $class = '' ) {
 
@@ -64,6 +65,7 @@ function header_layout_left_class( $class = '' ) {
  * uses return and not echo because it is being called in an echo statement
  * and would result in double echo
  * @param array $class CSS Classes for element.
+ * @return string
  */
 function header_layout_right_class( $class = '' ) {
 
