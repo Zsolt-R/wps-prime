@@ -14,6 +14,7 @@
 - Streamlined theme filter function creation
 - Added layout header filters to ease definitions of css classes
 - Rewrite theme typography engine to simplify adding and removing main font
+- Move developer helper functions to standalone plugin
 
 - Fix main nav class filter.
 **1.1.1**
