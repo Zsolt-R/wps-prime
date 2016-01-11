@@ -19,6 +19,9 @@ local.properties
 # External tool builders
 .externalToolBuilders/
 
+# External sync program
+.dat
+
 # Locally stored "Eclipse launch configurations"
 *.launch
 
