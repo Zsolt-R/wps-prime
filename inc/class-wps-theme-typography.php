@@ -37,12 +37,13 @@ class wps_generateThemeFonts{
 	}
 
 	/**
-	* Create font definition array
-	* @param string $fontName Then name of the font-family ex.'Raleway';
-	* @param string $fontStyle CSS default definition for selected font ex. 'sans-serif;font-weight: 300';
-	* @param string $fontLink Link to font ex. 'http://fonts.googleapis.com/css?family=Raleway:200,300,400,600,900&subset=latin,latin-ext';
-	*
-	*/
+	 * Create font definition array
+	 * @param string $fontName Then name of the font-family ex.'Raleway';
+	 * @param string $fontStyle CSS default definition for selected font ex. 'sans-serif;font-weight: 300';
+	 * @param string $fontLink Link to font ex. 'http://fonts.googleapis.com/css?family=Raleway:200,300,400,600,900&subset=latin,latin-ext';
+	 *
+	 * @return array
+	 */
 	public function addFont($fontName,$fontStyle,$fontLink){
 
 		$font = array($fontName,$fontStyle,$fontLink);
