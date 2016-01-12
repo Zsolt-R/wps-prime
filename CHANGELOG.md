@@ -1,5 +1,10 @@
-## [WPS Prime Framework 1.2.0]
+## [WPS Prime Framework 1.3.0]
 ==============================
+
+**1.3.0**
+- Create a better theme file hierarchy
+- Streamline functions.php
+- Remove never unused custom header functionality
 
 **1.2.0**
 - Updated [layout] shortcode
