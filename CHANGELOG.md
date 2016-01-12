@@ -21,7 +21,7 @@
 - Rewrite theme typography engine to simplify adding and removing main font
 - Move developer helper functions to standalone plugin
 - Fix main nav class filter.
-- 
+
 **1.1.1**
 - Changed shortcode from [email] to [main_email], [phone_nr] to [main_phone_nr]
 - Fix main nav class filter.
