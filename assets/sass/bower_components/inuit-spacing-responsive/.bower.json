@@ -1,6 +1,6 @@
 {
-  "name": "inuit-responsive-spacing",
-  "version": "0.0.6",
+  "name": "inuit-spacing-responsive",
+  "version": "0.0.8",
   "authors": [
     "Harry Roberts <harry@csswizardry.com>"
   ],
@@ -20,11 +20,11 @@
     "inuit-responsive-tools": "~0.1.1",
     "inuit-spacing": "~0.6.1"
   },
-  "_release": "0.0.6",
+  "_release": "0.0.8",
   "_resolution": {
     "type": "version",
-    "tag": "0.0.6",
-    "commit": "0db8f20eee10ae5c8f7eb5e9b84a2af6ebde6781"
+    "tag": "0.0.8",
+    "commit": "01cb8a4b71db26c2d598072e5b3061ab59dd108a"
   },
   "_source": "git://github.com/inuitcss/trumps.spacing-responsive.git",
   "_target": "~0.0.4",

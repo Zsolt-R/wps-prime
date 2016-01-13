@@ -2,9 +2,9 @@
   "name": "wps_prime",
   "version": "0.0.2",
   "authors": [
-    "Zsolt Revay <recadesign@gmail.com>"
+    "Zsolt Revay <zsolt.revay@wpshapers.com>"
   ],
-  "description": "Solid startet theme usingtcss framework and _s wordpress theme",
+  "description": "InuitUI ui framework and _s wordpress theme",
   "main": "index",
   "moduleType": [
     "globals",
@@ -19,7 +19,7 @@
     "inuitcss"
   ],
   "license": "MIT",
-  "homepage": "www.siteparticles.com",
+  "homepage": "www.wpshapers.com",
   "ignore": [
     "**/.*",
     "node_modules",
