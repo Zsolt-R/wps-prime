@@ -4,7 +4,7 @@
   "authors": [
     "Zsolt Revay <zsolt.revay@wpshapers.com>"
   ],
-  "description": "InuitUI ui framework and _s wordpress theme",
+  "description": "WPS InuitUI CSS framework base setup",
   "main": "index",
   "moduleType": [
     "globals",
