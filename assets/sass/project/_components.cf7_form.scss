@@ -79,9 +79,7 @@ span.wpcf7-form-control-wrap {
     color: $color-highlight;
     display: block;
     padding: $inuit-base-spacing-unit/4 $inuit-base-spacing-unit/4;
-
 }
-
 
 .wpcf7-display-none {
     display: none;
@@ -95,33 +93,3 @@ span.wpcf7-form-control-wrap {
 .wpcf7 .placeheld {
     color: #888;
 }
-
-/* Modifiers */
-
-//Custom  Addon cf7 widget wrapper class
-//.cf7ct_widget{
-//     padding:0.5em;  
-//     border:1px solid $color-gray-light;
-
-//}
-
-//.cf7ct_widget .widget-title{
-//    text-align:center;
-//    font-weight:600;
-//    margin:0.5em 0 1em 0;
-//}
-
-//.use-floating-validation-tip span.wpcf7-not-valid-tip { 
-//    position: absolute;
-//    top: 20%;
-//    left: 20%;
-//    z-index: 100;
-//    border: 1px solid #ff0000;
-//    background: #fff;
-//    padding: .2em .8em;
-//}
-//
-//span.wpcf7-list-item {
-//    margin-left: 0.5em;
-//}
-//
