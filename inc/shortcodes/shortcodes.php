@@ -66,8 +66,8 @@ function wps_layout( $atts, $content = null ) {
 
 	$layout = '<div class="layout'. $class .'">' . do_shortcode( $content ) . '</div>';
 
-	// Check for string value false.
-	$output = $options['wrapper'] && $options['wrapper'] !== 'false' ? '<div class="wrapper'. $class_w .'">'. $layout .'</div>' : $layout;
+	// Check for string value false (confront with string 'false').
+	$output = 'false' !== $options['wrapper'] && $options['wrapper'] ? '<div class="wrapper'. $class_w .'">'. $layout .'</div>' : $layout;
 
 	return  $output;
 }
