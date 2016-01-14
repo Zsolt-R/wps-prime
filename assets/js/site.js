@@ -81,18 +81,18 @@
 } )();
 
 /**
- * skip-link-focus-fix.js
+ * Makes "skip to content" link work correctly in IE9, Chrome, and Opera
+ * for better accessibility.
  *
- * Helps with accessibility for keyboard only users.
- *
- * Learn more: https://git.io/vWdr2
+ * @link http://www.nczonline.net/blog/2013/01/15/fixing-skip-to-content-links/
  */
-( function() {
-  var is_webkit = navigator.userAgent.toLowerCase().indexOf( 'webkit' ) > -1,
-      is_opera  = navigator.userAgent.toLowerCase().indexOf( 'opera' )  > -1,
-      is_ie     = navigator.userAgent.toLowerCase().indexOf( 'msie' )   > -1;
 
-  if ( ( is_webkit || is_opera || is_ie ) && document.getElementById && window.addEventListener ) {
+ ( function() {
+  var isWebkit = navigator.userAgent.toLowerCase().indexOf( 'webkit' ) > -1,
+    isOpera  = navigator.userAgent.toLowerCase().indexOf( 'opera' )  > -1,
+    isIE     = navigator.userAgent.toLowerCase().indexOf( 'msie' )   > -1;
+
+  if ( ( isWebkit || isOpera || isIE ) && document.getElementById && window.addEventListener ) {
     window.addEventListener( 'hashchange', function() {
       var id = location.hash.substring( 1 ),
         element;
@@ -109,10 +109,50 @@
         }
 
         element.focus();
+
+        // Repositions the window on jump-to-anchor to account for admin bar and border height.
+        window.scrollBy( 0, -53 );
       }
     }, false );
   }
-})();
+} )();
+
+/**
+ * Makes "skip to content" link work correctly in IE9, Chrome, and Opera
+ * for better accessibility.
+ *
+ * @link http://www.nczonline.net/blog/2013/01/15/fixing-skip-to-content-links/
+ */
+
+ ( function() {
+  var isWebkit = navigator.userAgent.toLowerCase().indexOf( 'webkit' ) > -1,
+      isOpera  = navigator.userAgent.toLowerCase().indexOf( 'opera' )  > -1,
+      isIE     = navigator.userAgent.toLowerCase().indexOf( 'msie' )   > -1;
+
+  if ( ( isWebkit || isOpera || isIE ) && document.getElementById && window.addEventListener ) {
+    window.addEventListener( 'hashchange', function() {
+      var id = location.hash.substring( 1 ),
+        element;
+
+      if ( ! ( /^[A-z0-9_-]+$/.test( id ) ) ) {
+        return;
+      }
+
+      element = document.getElementById( id );
+
+      if ( element ) {
+        if ( ! ( /^(?:a|select|input|button|textarea)$/i.test( element.tagName ) ) ) {
+          element.tabIndex = -1;
+        }
+
+        element.focus();
+
+        // Repositions the window on jump-to-anchor to account for admin bar and border height.
+        window.scrollBy( 0, -53 );
+      }
+    }, false );
+  }
+} )();
 
 
 /**
@@ -123,28 +163,6 @@
 
 // Full width slider
 jQuery(document).ready(function($) { 
-//FULL width Slider
-//  var FW_Slider = $('.fw_slider__container').swiper({
-//    wrapperClass : 'fw_slider__wrapper',
-//    slideClass : 'fw_slider__slide',
-//    pagination: '.fw_slider__pagination',
-//    autoplay: 4000,
-//    loop:true,
-//    grabCursor: true,
-//    paginationClickable: true,
-//    calculateHeight: true
-//  })
-//
-//  $('.fw_slider__arrow-left').on('click', function(e){
-//    e.preventDefault()
-//    FW_Slider.swipePrev()
-//  })
-//
-//  $('.fw_slider__arrow-right').on('click', function(e){
-//    e.preventDefault()
-//    FW_Slider.swipeNext()
-//  })
-
 
 //var mySwiper = new Swiper ('.swiper-container');
   var mySwiper = new Swiper ('.swiper-container', {
@@ -162,15 +180,7 @@ jQuery(document).ready(function($) {
     prevButton: '.swiper-button-prev',
     
     // And if we need scrollbar
-    scrollbar: '.swiper-scrollbar',
-    // /effect: 'cube',
-    // /    grabCursor: true,
-    // /    cube: {
-    // /        shadow: true,
-    // /        slideShadows: true,
-    // /        shadowOffset: 20,
-    // /        shadowScale: 0.94
-    // /    }
+    scrollbar: '.swiper-scrollbar'   
    })  
 });
 
