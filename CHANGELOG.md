@@ -5,6 +5,11 @@
 - Create a better theme file hierarchy
 - Streamline functions.php
 - Remove never unused custom header functionality
+- Added performance settings to theme options
+- Added theme option to disable WP dashicons (for logged out users)
+- Added theme option to disable WP emoji and all sripts related
+- Update swiper Slider Core from 3.1.2 to 3.3.0
+- Cleaup unused .js libraries
 
 **1.2.0**
 - Updated [layout] shortcode
