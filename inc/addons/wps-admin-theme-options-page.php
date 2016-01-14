@@ -24,8 +24,8 @@ function wps_theme_setting_pages( $pages ) {
 	'setting' => 'wps_prime_settings',
 	'menu_icon' => 'dashicons-desktop',
 	'page_icon' => 'dashicons-desktop',
-	'single_line' => true,
-	'default_tab' => 'Basic',
+	'single_line' => false,
+	'default_tab' => 'General Options',
 	'save_text' => 'Save Settings',
 	);
 
