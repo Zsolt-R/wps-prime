@@ -9,6 +9,10 @@
  * Removes empty paragraph tags (<p></p>) and line break tags (<br>) from shortcodes caused by WordPress's wpautop function.
  * Allow shortcode in text widget
  * Allow shortcode in widget title
+ * Disable WP dashicons (for logged out users)
+ * Disable WP emoji and all sripts related
+ * Sets the authordata global when viewing an author archive
+ * Ad custom classes to the array of body classes | is_multi_author() group-blog ; ! is_singular() 'hfeed';
  *
  * @package wps_prime
  */
@@ -36,6 +40,16 @@ add_filter( 'widget_text', 'do_shortcode' );
 
 /* Allow shortcode in widget title */
 add_filter( 'widget_title', 'do_shortcode' );
+
+/* Get option from settings */
+if( 'disable' === wps_get_theme_option('wps_front_dashicons_use') ){
+	add_action('wp_enqueue_scripts','wps_prime_disable_wp_styles');
+}
+
+/* Get option from settings */
+if( 'disable' === wps_get_theme_option('wps_front_emoji_use') ){
+	add_action('init','disable_wp_emojicons');
+}
 
 /**
  *  1  Remove all the version numers from the end of css/js enqueued files added to <head> (suggested by pingdom.com)
@@ -178,12 +192,6 @@ function wps_url_exist( $url ) {
 }
 
 /**
- * Allow shortcode in text widget
- */
-add_filter( 'widget_text', 'do_shortcode' );
-
-
-/**
  * Get our wp_nav_menu() fallback, wp_page_menu(), to show a home link.
  *
  * @param array $args Configuration arguments.
@@ -193,7 +201,7 @@ function wps_prime_page_menu_args( $args ) {
 	$args['show_home'] = true;
 	return $args;
 }
-add_filter( 'wp_page_menu_args', 'wps_prime_page_menu_args' );
+
 
 /**
  * Adds custom classes to the array of body classes.
@@ -236,3 +244,33 @@ function wps_prime_setup_author() {
 	}
 }
 add_action( 'wp', 'wps_prime_setup_author' );
+
+/**
+ * Disable WP default dashicons
+ * disabled only for logged out users
+ */
+function wps_prime_disable_wp_styles(){
+	
+	if ( !is_user_logged_in() && !in_array( $_SERVER['PHP_SELF'], array( '/wp-login.php', '/wp-register.php' )) ){
+		wp_deregister_style('dashicons');
+		wp_deregister_style('editor');
+	}
+}
+
+/**
+ * Disable WP default emoji
+ */
+function disable_wp_emojicons() {
+
+  // all actions related to emojis
+  remove_action( 'admin_print_styles', 'print_emoji_styles' );
+  remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+  remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+  remove_action( 'wp_print_styles', 'print_emoji_styles' );
+  remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
+  remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
+  remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
+
+  // filter to remove TinyMCE emojis
+  add_filter( 'tiny_mce_plugins', 'disable_emojicons_tinymce' );
+}

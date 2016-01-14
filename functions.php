@@ -9,10 +9,16 @@
 /* Set up global var of the class */
 global $wps_theme_setup;
 
-/* Start up class */
+/**
+ * Start up class
+ */
 class WPS_Theme_Setup {
 
-	/* Setup variable global */
+	/**
+	 * Setup variable global
+	 *
+	 * @var string
+	 */
 	private $template_dir;
 
 	/**
@@ -41,7 +47,8 @@ class WPS_Theme_Setup {
 		/* Load all the theme addons */
 		add_action( 'after_setup_theme', array( $this, 'addons' ), 3 );
 
-		/** Load configuration classes (post types & 3rd party plugins)
+		/** 
+		 * Load configuration classes (post types & 3rd party plugins)
 		 * Must load first so it can use hooks defined in the classes
 		 */
 		add_action( 'after_setup_theme', array( $this, 'configs' ), 4 );
@@ -105,16 +112,6 @@ class WPS_Theme_Setup {
 	 */
 	public function include_functions() {
 
-		/**
-		 * WP Fine Tune
-		 *
-		 * - Remove all the version numers from the end of css/js enqueued files added to <head> (suggested by pingdom.com)
-		 * - Remove Comment Form Allowed Tags
-		 * - Customize Comment Form Place Holder Input Text Fields & Infotexts http://wpsites.net/web-design/customize-comment-form-place-holder-input-text-fields-labels/
-		 * - Customize Comment Form Text Area & Infotext http://wpsites.net/web-design/customize-comment-field-text-area-label/
-		 * - Custom functions that act independently of the theme templates.
-		 */
-		require( WPS_ENGINE_DIR .'functions/wps-admin-theme-fine-tune.php' );
 
 		/* Defer or Async this WordPress javascript snippet to load lastly for faster page load times */
 		require( WPS_ENGINE_DIR .'functions/wps-admin-async-defer.php' );
@@ -226,6 +223,21 @@ class WPS_Theme_Setup {
 	 * @since 2.0.0
 	 */
 	public function configs() {
+
+		/**
+		 *	WordPress admin/front-end custom configurations
+		 */
+
+		/**
+		 * WP Fine Tune
+		 *
+		 * - Remove all the version numers from the end of css/js enqueued files added to <head> (suggested by pingdom.com)
+		 * - Remove Comment Form Allowed Tags
+		 * - Customize Comment Form Place Holder Input Text Fields & Infotexts http://wpsites.net/web-design/customize-comment-form-place-holder-input-text-fields-labels/
+		 * - Customize Comment Form Text Area & Infotext http://wpsites.net/web-design/customize-comment-field-text-area-label/
+		 * - Custom functions that act independently of the theme templates.
+		 */
+		require( WPS_ENGINE_DIR .'settings/wps-admin-theme-fine-tune.php' );
 
 		/**
 		 *	3rd integrations
