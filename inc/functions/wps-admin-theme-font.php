@@ -1,5 +1,11 @@
 <?php
 /**
+ * Register and add theme fonts to header
+ *
+ * @package wps_prime
+ */
+
+/**
  * Function that creates <link> and <style> font definitions to added to theme head
  * Calls the settings from theme options panel and maps with the multidimensional array served by base_typo();
  * Creates inline style for main font
@@ -20,8 +26,10 @@ function add_theme_fonts() {
 		* font[1] = font css style
 		* font[2] = font http:// link
 		*/
-		echo '<link href="'. esc_url_raw( $theme_fonts[ $font_main ][2] ) .'" rel="stylesheet" type="text/css"/>';
-		echo '<style>html{font-family:\''. esc_attr( $theme_fonts[ $font_main ][0] ) . '\',' .  esc_attr( $theme_fonts[ $font_main ][1] ) .';}</style>';
+		wp_register_style( 'theme_main_font', esc_url_raw( $theme_fonts[ $font_main ][2] ) );
+		wp_enqueue_style( 'theme_main_font' );
+
+		wp_add_inline_style( 'theme_main_font','html{font-family:\''. esc_attr( $theme_fonts[ $font_main ][0] ) . '\',' .  esc_attr( $theme_fonts[ $font_main ][1] ) .';}' );
 	}
 }
-add_action( 'wp_head', 'add_theme_fonts' );
+add_action( 'wp_enqueue_scripts', 'add_theme_fonts' );
