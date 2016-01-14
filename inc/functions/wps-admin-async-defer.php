@@ -2,6 +2,8 @@
 /**
  * Defer or async this WordPress javascript snippet to load lastly for faster page load times
  *
+ * @package wps_prime
+ *
  * @see http://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html
  *
  * @link http://stackoverflow.com/questions/18944027/how-do-i-defer-or-async-this-wordpress-javascript-snippet-to-load-lastly-for-fas
