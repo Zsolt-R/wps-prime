@@ -32,4 +32,4 @@ function add_theme_fonts() {
 		wp_add_inline_style( 'theme_main_font','html{font-family:\''. esc_attr( $theme_fonts[ $font_main ][0] ) . '\',' .  esc_attr( $theme_fonts[ $font_main ][1] ) .';}' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'add_theme_fonts' );
+add_action( 'wp_enqueue_scripts', 'add_theme_fonts', 99 ); // Add last in style chain.
