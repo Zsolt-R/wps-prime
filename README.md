@@ -1,7 +1,7 @@
 ##WPS-Prime##
 
 A lightweight WordPress master theme based on _s and extended with simple and useful add ons that speeds up child theme development
-[link to demo](http://themes.wpshapers.com/wps-prime/) | [link to docs](https://github.com/Zsolt-R/wps-prime.wiki.git)
+[link to demo](http://themes.wpshapers.com/wps-prime/) | [link to docs](https://github.com/Zsolt-R/wps-prime/wiki)
 
 - **Contact from 7 plugin adjustments:**
   - Disable scripts 
