@@ -47,7 +47,7 @@ class WPS_Theme_Setup {
 		/* Load all the theme addons */
 		add_action( 'after_setup_theme', array( $this, 'addons' ), 3 );
 
-		/** 
+		/**
 		 * Load configuration classes (post types & 3rd party plugins)
 		 * Must load first so it can use hooks defined in the classes
 		 */
@@ -111,7 +111,6 @@ class WPS_Theme_Setup {
 	 * @since 2.0.0
 	 */
 	public function include_functions() {
-
 
 		/* Defer or Async this WordPress javascript snippet to load lastly for faster page load times */
 		require( WPS_ENGINE_DIR .'functions/wps-admin-async-defer.php' );
@@ -384,8 +383,12 @@ class WPS_Theme_Setup {
 		/* Load theme fonts */
 		require( WPS_ENGINE_DIR .'functions/wps-admin-theme-font.php' );
 
+		/* Add theme fonts to editor */
+		require( WPS_ENGINE_DIR .'functions/wps-editor-styles.php' );
+
 		/* Shortcodes, generate markup for content layout, media-objects, slider, buttons, etc */
 		require( WPS_ENGINE_DIR .'shortcodes/shortcodes.php' );
+		require( WPS_ENGINE_DIR .'shortcodes/admin/wps-shortcodes-admin-buttons.php' );
 	}
 
 	/**
