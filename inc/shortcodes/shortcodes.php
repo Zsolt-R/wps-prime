@@ -189,7 +189,6 @@ function wps_fw_slider( $atts ) {
 }
 
 /**
- =========
  * 4 Custom Buttons
  * ex:  [button class="btn--small,btn--large,btn--primary,btn--secondary,btn--tertiary" link="http://www...." label="button label"]
  *
