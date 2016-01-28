@@ -11,8 +11,8 @@
  * Creates inline style for main font
  */
 function add_theme_fonts() {
-	$fonts = new wps_themeFonts;
-	$theme_fonts = $fonts->getFonts(); // Get registered fonts.
+	$fonts = new WpsGetThemeFonts;
+
 	$font_main = wps_get_theme_option( 'main_font_family' ); // Get selected font family option.
 
 	/* If no font is set return */
@@ -20,16 +20,10 @@ function add_theme_fonts() {
 		return;
 	} else {
 
-		/**
-		* Follow definition format
-		* font[0] = Font Name
-		* font[1] = font css style
-		* font[2] = font http:// link
-		*/
-		wp_register_style( 'theme_main_font', esc_url_raw( $theme_fonts[ $font_main ][2] ) );
+		wp_register_style( 'theme_main_font',  $fonts->get_theme_fonts_link() );
 		wp_enqueue_style( 'theme_main_font' );
 
-		wp_add_inline_style( 'theme_main_font','html{font-family:\''. esc_attr( $theme_fonts[ $font_main ][0] ) . '\',' .  esc_attr( $theme_fonts[ $font_main ][1] ) .';}' );
+		wp_add_inline_style( 'theme_main_font',  $fonts->get_theme_font_style() );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'add_theme_fonts', 99 ); // Add last in style chain.

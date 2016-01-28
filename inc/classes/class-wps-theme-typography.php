@@ -5,16 +5,34 @@
  * @package wps_prime
  */
 
+// Helper function .
+function connect_fs( $url, $method, $context, $fields = null ) {
+	global $wp_filesystem;
+	if ( false === ($credentials = request_filesystem_credentials( $url, $method, false, $context, $fields )) ) {
+		return false;
+	}
+
+	// check if credentials are correct or not.
+	if ( ! WP_Filesystem( $credentials ) ) {
+		request_filesystem_credentials( $url, $method, true, $context );
+		return false;
+	}
+
+	return true;
+}
+
+
+
 /**
  *  Class to generate a list of fonts (add/remove)
  *  We need the list to be accessible globally (Singleton approach)
  *
- * @example $myfont = wps_generateThemeFonts::getInstance();
- * @example $myfont->assFont('Open Sans', 'sans-serif;font-weight: 300', 'http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,800&subset=latin,latin-ext');
- * @example $myfontChild =wps_generateThemeFonts::getInstance();
- * @example $myfontChild ->removeFont('Open Sans');
+ * @example $myfont = WpsGenerateThemeFonts::get_instance();
+ * @example $myfont->add_font('Open Sans', 'sans-serif;font-weight: 300', 'http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,800&subset=latin,latin-ext');
+ * @example $myfontChild = WpsGenerateThemeFonts::get_instance();
+ * @example $myfontChild ->remove_font('Open Sans');
  */
-class wps_generateThemeFonts{
+class WpsGenerateThemeFonts{
 
 	private $fontList = array();
 
@@ -25,12 +43,12 @@ class wps_generateThemeFonts{
 	/**
 	 * Use a static method and a static property to mediate object instantiation
 	 * The $instance property is private and static, so it cannot be accessed from outside the class. The
-	 * getInstance() method has access though. Because getInstance() is public and static, it can be called via
+	 * get_instance() method has access though. Because get_instance() is public and static, it can be called via
 	 * the class from anywhere in a script.
 	 */
-	public static function getInstance() {
+	public static function get_instance() {
 		if ( empty( self::$instance ) ) {
-			self::$instance = new wps_generateThemeFonts();
+			self::$instance = new WpsGenerateThemeFonts();
 		}
 		return self::$instance;
 	}
@@ -42,9 +60,9 @@ class wps_generateThemeFonts{
 	 * @param string $fontStyle CSS default definition for selected font ex. 'sans-serif;font-weight: 300';
 	 * @param string $fontLink Link to font ex. 'http://fonts.googleapis.com/css?family=Raleway:200,300,400,600,900&subset=latin,latin-ext';
 	 */
-	public function addFont( $fontName, $fontStyle, $fontLink ) {
+	public function add_font( $fontName, $fontStyle, $fontLink ) {
 
-		$font = array( $fontName,$fontStyle,$fontLink );
+		$font = array( $fontName, $fontStyle, $fontLink );
 
 		$this->fontList[] = $font;
 
@@ -57,10 +75,9 @@ class wps_generateThemeFonts{
 	 * If found unset the single font definition array from the multi-array
 	 *
 	 * @param string $fontName Font family name ex. 'Raleway'
-	 * @example $myfont = themeFonts::getInstance(); $myfont->removeFont('Raleway');
+	 * @example $myfont = WpsGenerateThemeFonts::get_instance(); $myfont->remove_font('Raleway');
 	 */
-
-	public function removeFont( $fontName ) {
+	public function remove_font( $fontName ) {
 
 		$fonts = $this->fontList;
 
@@ -79,18 +96,18 @@ class wps_generateThemeFonts{
 		$this->fontList = $newfontList;
 	}
 
-	public function returnFontList() {
+	public function return_font_list() {
 		return $this->fontList;
 	}
 }
 /**
  * Call theme font list
  *
- * @example $theme_fonts = new wps_themeFonts;
- * @example $list_fonts = $theme_fonts->getFonts();
- * @example $list_fonts = $theme_fonts->getFontsName();
+ * @example $theme_fonts = new WpsGetThemeFonts;
+ * @example $list_fonts = $theme_fonts->get_fonts();
+ * @example $list_fonts = $theme_fonts->get_fonts_name();
  */
-class wps_themeFonts{
+class WpsGetThemeFonts{
 	/**
 	 * Need to implement the following check before this class executes
 	 *
@@ -98,22 +115,24 @@ class wps_themeFonts{
 	 */
 
 	private $fontList;
+	private $fontNameList;
+	private $font_link;
 
 	public function __construct() {
-		$this->fontList = wps_generateThemeFonts::getInstance()->returnFontList();
+		$this->fontList = WpsGenerateThemeFonts::get_instance()->return_font_list();
 	}
 
 	/**
 	 * Return a multidimensional array of fonts avaliable
 	 */
-	public function getFonts() {
+	public function get_fonts() {
 		 return $this->fontList;
 	}
 
 	/**
 	 * Return a simple array of fonts names avaliable
 	 */
-	public function getFontsName() {
+	public function get_fonts_name() {
 
 	 	foreach ( $this->fontList as $key => $font ) {
 		 	/*
@@ -121,8 +140,63 @@ class wps_themeFonts{
 			 * $font[1] = font css style
 			 * $font[2] = font http:// link
 			 */
-		 	$this->fontList[ $key ] = $font[0];
+		 	$this->fontNameList[ $key ] = $font[0];
 		}
-		return $this->fontList;
+		return $this->fontNameList;
+	}
+
+
+	public function get_theme_fonts_link() {
+
+		$theme_fonts = $this->get_fonts(); // Get registered fonts.
+
+		$font_main = wps_get_theme_option( 'main_font_family' );
+
+		$subset = wps_get_theme_option( 'font_family_subset' ) ? '&subset=latin,latin-ext' : '';
+
+		$font_second = '';
+		$font_second_prep = '';
+
+		$this->font_link = $theme_fonts[ $font_main ][2];
+
+		if ( wps_get_theme_option( 'second_font_family_status' ) === 'enabled' ) {
+			$font_second = wps_get_theme_option( 'secondary_font_family' ); // Get selected font family option.
+			$font_second_prep = str_replace( 'http://fonts.googleapis.com/css?family=','|',$theme_fonts[ $font_second ][2] );
+
+		}
+
+		if ( $font_main !== $font_second ) {
+
+			$this->font_link = $theme_fonts[ $font_main ][2].$font_second_prep;
+		}
+
+		return $this->font_link.$subset;
+	}
+
+	public function get_theme_font_style() {
+
+		$theme_fonts = $this->get_fonts(); // Get registered fonts.
+
+		$font_main   = wps_get_theme_option( 'main_font_family' );
+		$font_second = wps_get_theme_option( 'secondary_font_family' );
+
+		$font_second_status = wps_get_theme_option( 'second_font_family_status' ) === 'enabled' ? true : false;
+
+		$select_b = 'html,body,.font-body';
+		$select_h = 'h1,h2,h3,h4,h5,h6,.font-heading';
+
+		$style = '';
+
+		// If there is secondary font and it is the same as the body font, concatenate the body and heading selectors.
+		$selector = $font_second_status && $font_second !== $font_main ? $select_b : $select_b.','.$select_h;
+
+		$style .= $selector.'{font-family:\''. esc_attr( $theme_fonts[ $font_main ][0] ) . '\',' .  esc_attr( $theme_fonts[ $font_main ][1] ) .';}';
+
+		// If secondary font is enabled and is not the same as the main font.
+		if ( $font_second_status && $font_second !== $font_main ) {
+			$style .= $select_h.'{font-family:\''. esc_attr( $theme_fonts[ $font_second ][0] ) . '\',' .  esc_attr( $theme_fonts[ $font_second ][1] ) .';}';
+		}
+
+		return $style;
 	}
 }

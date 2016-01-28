@@ -42,13 +42,13 @@ add_filter( 'widget_text', 'do_shortcode' );
 add_filter( 'widget_title', 'do_shortcode' );
 
 /* Get option from settings */
-if( 'disable' === wps_get_theme_option('wps_front_dashicons_use') ){
-	add_action('wp_enqueue_scripts','wps_prime_disable_wp_styles');
+if ( 'disable' === wps_get_theme_option( 'wps_front_dashicons_use' ) ) {
+	add_action( 'wp_enqueue_scripts','wps_prime_disable_wp_styles' );
 }
 
 /* Get option from settings */
-if( 'disable' === wps_get_theme_option('wps_front_emoji_use') ){
-	add_action('init','disable_wp_emojicons');
+if ( 'disable' === wps_get_theme_option( 'wps_front_emoji_use' ) ) {
+	add_action( 'init','disable_wp_emojicons' );
 }
 
 /**
@@ -249,11 +249,11 @@ add_action( 'wp', 'wps_prime_setup_author' );
  * Disable WP default dashicons
  * disabled only for logged out users
  */
-function wps_prime_disable_wp_styles(){
-	
-	if ( !is_user_logged_in() && !in_array( $_SERVER['PHP_SELF'], array( '/wp-login.php', '/wp-register.php' )) ){
-		wp_deregister_style('dashicons');
-		wp_deregister_style('editor');
+function wps_prime_disable_wp_styles() {
+
+	if ( ! is_user_logged_in() && ! in_array( $_SERVER['PHP_SELF'], array( '/wp-login.php', '/wp-register.php' ) ) ) {
+		wp_deregister_style( 'dashicons' );
+		wp_deregister_style( 'editor' );
 	}
 }
 
@@ -262,36 +262,26 @@ function wps_prime_disable_wp_styles(){
  */
 function disable_wp_emojicons() {
 
-  // all actions related to emojis
-  remove_action( 'admin_print_styles', 'print_emoji_styles' );
-  remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
-  remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
-  remove_action( 'wp_print_styles', 'print_emoji_styles' );
-  remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
-  remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
-  remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
+	// all actions related to emojis
+	remove_action( 'admin_print_styles', 'print_emoji_styles' );
+	remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+	remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+	remove_action( 'wp_print_styles', 'print_emoji_styles' );
+	remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
+	remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
+	remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
 
-  // filter to remove TinyMCE emojis
-  add_filter( 'tiny_mce_plugins', 'disable_emojicons_tinymce' );
+	// filter to remove TinyMCE emojis
+	add_filter( 'tiny_mce_plugins', 'disable_emojicons_tinymce' );
 }
 
 /**
  * We will need the following filter function to disable TinyMCE emojicons
  */
 function disable_emojicons_tinymce( $plugins ) {
-  if ( is_array( $plugins ) ) {
-    return array_diff( $plugins, array( 'wpemoji' ) );
-  } else {
-    return array();
-  }
-}
-/**
- * We will need the following filter function to disable TinyMCE emojicons
- */
-function disable_emojicons_tinymce( $plugins ) {
-  if ( is_array( $plugins ) ) {
-    return array_diff( $plugins, array( 'wpemoji' ) );
-  } else {
-    return array();
-  }
+	if ( is_array( $plugins ) ) {
+		return array_diff( $plugins, array( 'wpemoji' ) );
+	} else {
+		return array();
+	}
 }
