@@ -1,5 +1,9 @@
 ## [WPS Prime Framework 1.3.0]
 ==============================
+**1.3.1**
+- Integrated theme shortcode admin helper buttons
+- Enhanced theme typography options ( added heading font option )
+- Added editor style generation from scss /assets/editor-style.scss
 
 **1.3.0**
 - Create a better theme file hierarchy
