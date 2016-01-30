@@ -6,3 +6,21 @@
     	border-color:darken($color-btn-primary,5);
     }
 }
+
+.btn--secondary{
+	background-color: $color-btn-secondary;
+	border-color:$color-btn-secondary;
+	&:hover{
+    	background-color:darken($color-btn-secondary,5);
+    	border-color:darken($color-btn-secondary,5);
+    }
+}
+
+.btn--tertiary{
+	background-color: $color-btn-tertiary;
+	border-color:$color-btn-tertiary;
+	&:hover{
+    	background-color:darken($color-btn-tertiary,5);
+    	border-color:darken($color-btn-tertiary,5);
+    }
+}
