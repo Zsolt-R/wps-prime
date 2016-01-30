@@ -11,7 +11,7 @@
 
 get_header(); ?>
 
-	<section id="primary"  <?php main_class(); ?> data-ui-components="content-area">
+	<section id="primary" <?php echo main_class(); ?> data-ui-components="content-area">
         <main id="main" class="site-main" role="main">
 
 		<?php if ( have_posts() ) : ?>
