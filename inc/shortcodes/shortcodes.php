@@ -17,6 +17,7 @@
  * 7  Shortcode for icons - [ico]fa fa-home[/ico]
  * 8  Main Phone number - [main_phone_nr]
  * 9  Main Email address - [main_email]
+ * 10 List styles [s_list class="list-style--one custom--class"]<ul><li>List item</li> .... </ul>[/s_list]
  */
 
 /* 1 Layout Wrapper Markup */
@@ -45,6 +46,9 @@ add_shortcode( 'main_phone_nr', 'wps_main_phone_nr' );
 
 /* 9 Get theme option email */
 add_shortcode( 'main_email', 'wps_main_email' );
+
+/* 9 Get theme option email */
+add_shortcode( 's_list', 'wps_styled_list' );
 
 /**
  * 1 Layout Item Markup
@@ -295,4 +299,27 @@ function wps_main_email() {
 	$email = wps_get_theme_option( 'company_contact_email_address' ) ? wps_get_theme_option( 'company_contact_email_address' ) : 'No email set';
 
 	return $email;
+}
+
+/**
+ * 10 Styled List
+ * ex: [s_list class="list-style--one custom--class"]<ul><li>List item</li> .... </ul>[/s_list]
+ *
+ * @param array $atts an associative array of attributes, or an empty string if no attributes are given.
+ * @param str   $content the enclosed content.
+ * @return string
+ */
+function wps_styled_list( $atts, $content = null ) {
+	$options = shortcode_atts( array(
+		'class' => '',		
+	), $atts );
+
+	$list_style = '';
+
+	$list_style = $options['class'] ? ' '.'class="list-style '. $options['class'] .'"' : '';
+
+	$output = '<div'. $list_style .'>'. do_shortcode( $content ) .'</div>';
+
+	return $output;
+
 }

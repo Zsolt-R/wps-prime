@@ -1,0 +1,45 @@
+/*------------------------------------*\
+    #STYLED LISTS
+\*------------------------------------*/
+
+.list-style{
+	> ul{
+		list-style: none;
+		margin-left: 0;
+	}
+}
+
+.list-style--one,
+.list-style--two,
+.list-style--three,
+.list-style--four,
+.list-style--five,
+.list-style--six,
+.list-style--seven,
+.list-style--eight,
+.list-style--nine,
+.list-style--ten{
+	> ul > li{
+		&::before{
+			font-family:$brand-ico-family;
+			margin-right:0.2em;
+		}
+	}
+}
+
+.list-style--one > ul > li::before{ content:'\f00c';}
+.list-style--two > ul > li::before{ content:'\f00d';}
+.list-style--three > ul > li::before{ content:'\f0da';}
+.list-style--four > ul > li::before{ content:'\f105';}
+.list-style--five > ul > li::before{ content:'\f0a9';}
+.list-style--six > ul > li::before{ content:'\f061';}
+.list-style--seven > ul > li::before{ content:'\f18e';}
+.list-style--eight > ul > li::before{ content:'\f058';}
+.list-style--nine > ul > li::before{ content:'\f05d';}
+.list-style--ten > ul > li::before{ content:'\f055';}
+
+.list-style--lines{
+	> ul > li{
+		border-bottom:1px solid $color-gray-ui;
+	}
+}
