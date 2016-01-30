@@ -1,5 +1,8 @@
-## [WPS Prime Framework 1.3.0]
+## [WPS Prime Framework 1.3]
 ==============================
+**1.3.1.1**
+- Added list style shortcode
+
 **1.3.1**
 - Integrated theme shortcode admin helper buttons
 - Enhanced theme typography options ( added heading font option )
