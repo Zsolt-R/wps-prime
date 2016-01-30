@@ -6,6 +6,7 @@
  * Used to add dynamic classes to main-navigation sidebar and main content via filter functions
  *
  * @package wps_prime
+ * @return string
  */
 
 /**
@@ -13,12 +14,13 @@
  * Separates classes with a single space, collates classes for element
  *
  * @param array|string $class CSS Classes for element.
+ * @return string
  */
 function main_nav_class( $class = '' ) {
 
 	$classes = join( ' ', get_css_class( $class , 'main_nav_class' ) );
 
-	echo 'class="' . esc_attr( $classes ) . '"';
+	return 'class="' . esc_attr( $classes ) . '"';
 }
 
 /**
@@ -26,12 +28,13 @@ function main_nav_class( $class = '' ) {
  * Separates classes with a single space, collates classes for element
  *
  * @param array|string $class CSS Classes for element.
+ * @return string
  */
 function main_class( $class = '' ) {
 
 	$classes = join( ' ', get_css_class( $class, 'main_class' ) );
 
-	echo 'class="' . esc_attr( $classes ) . '"';
+	return 'class="' . esc_attr( $classes ) . '"';
 }
 
 /**
@@ -44,11 +47,11 @@ function sidebar_class( $class = '' ) {
 
 	$classes = join( ' ', get_css_class( $class, 'sidebar_class' ) );
 
-	echo 'class="' . esc_attr( $classes ) . '"';
+	return 'class="' . esc_attr( $classes ) . '"';
 }
 
 /**
- * Theme Main Sheader layout left side classes
+ * Theme Main Header layout left side classes
  * Separates classes with a single space, collates classes for element
  * uses return and not echo because it is being called in an echo statement
  * and would result in double echo

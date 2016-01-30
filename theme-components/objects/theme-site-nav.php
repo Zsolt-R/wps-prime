@@ -14,9 +14,7 @@ if ( ! function_exists( 'theme_site_navigation' ) ) {
 	 */
 	function theme_site_navigation() {
 
-		echo '<nav id="site-navigation"';
-		main_nav_class();
-		echo ' role="navigation" data-ui-component="site-main-navigation">';
+		echo '<nav id="site-navigation"'. main_nav_class() .' role="navigation" data-ui-component="site-main-navigation">';
 
 		echo '<button class="site-nav__toggler" data-ui-component="menu-toggle-button">';
 		echo esc_html( 'Menu', 'wps-prime' );
