@@ -80,6 +80,26 @@
         return values;
     }; 
 
+    // Predefined button classes
+    var predefinedListStyles = function(){
+
+        var values = { listtypes: [
+                            {text:'Style None',value:''},
+                            {text:'Style One',value:'list-style--one'},
+                            {text:'Style two',value:'list-style--two'},
+                            {text:'Style three',value:'list-style--three'},
+                            {text:'Style four',value:'list-style--four'},
+                            {text:'Style five',value:'list-style--five'},
+                            {text:'Style six',value:'list-style--six'},
+                            {text:'Style seven',value:'list-style--seven'},
+                            {text:'Style eight',value:'list-style--eight'},
+                            {text:'Style nine',value:'list-style--nine'},
+                            {text:'Style ten',value:'list-style--ten'}
+                        ]
+                    };
+        return values;
+    }; 
+
     // Return classes based on options
     var getCssClass = function(options){
 
@@ -285,6 +305,31 @@
                                     return false;
                                 }
                                 editor.insertContent('[ico]'+ e.data.iconClass +'[/ico]');
+                            }
+                        });
+                    }
+                },
+                {
+                text:'Styled list',
+                icon: 'icon dashicons-editor-ul',
+                onclick: function() {
+                        editor.windowManager.open( {
+                            title: 'Add style to lists',                         
+                            body: [{
+                                type: 'listbox',
+                                name: 'listType',
+                                label: 'List Type',
+                                values: predefinedListStyles().listtypes,
+                                },
+                                { type: 'textbox',
+                                  name: 'listClass',
+                                  label: 'Custom list class',
+                                }],
+                            onsubmit: function( e ) {
+
+                                var options = [e.data.listType,e.data.listClass];
+                                
+                                editor.insertContent('[s_list'+ getCssClass(options) + ']' + editor.selection.getContent() +'[/s_list]');
                             }
                         });
                     }
