@@ -8,7 +8,7 @@
 /**
  *  WPS SHORTCODES
  *
- * 1  Layout Wrapper Markup - [layout class="lap-and-up..." wrapper="false"]
+ * 1  Layout Wrapper Markup - [layout class="lap-and-up..." wrapper="false" wrapper_class="custom-class"]
  * 2  Layout Item Markup - [item class="lap-and-up..."] ...content... [/item]
  * 3  Full Width Slider - [slider images="1,2,3...(image id's)" links="56,78,99...(page/post id's)" size="wps_prime_full"]
  * 4  Custom Buttons - [button class="btn--small,btn--large,btn--primary,btn--secondary,btn--tertiary" link="http://www...." label="button label"]
@@ -52,7 +52,7 @@ add_shortcode( 's_list', 'wps_styled_list' );
 
 /**
  * 1 Layout Item Markup
- * ex. [layout class="lap-and-up..." wrapper="false"]
+ * ex. [layout class="lap-and-up..." wrapper="false" wrapper_class="custom-class"]
  *
  * @param array $atts an associative array of attributes, or an empty string if no attributes are given.
  * @param str   $content the enclosed content.
@@ -61,12 +61,12 @@ add_shortcode( 's_list', 'wps_styled_list' );
 function wps_layout( $atts, $content = null ) {
 	$options = shortcode_atts( array(
 		'class' => '',
-		'class_wrapper' => '',
+		'wrapper_class' => '',
 		'wrapper' => false,
 	), $atts );
 
 	$class = $options['class'] ? ' '.$options['class'] : '';
-	$class_w = $options['class_wrapper'] ? ' '.$options['class_wrapper'] : '';
+	$class_w = $options['wrapper_class'] ? ' '.$options['wrapper_class'] : '';
 
 	$layout = '<div class="layout'. $class .'">' . do_shortcode( $content ) . '</div>';
 
