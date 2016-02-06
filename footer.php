@@ -13,15 +13,17 @@
 	<?php content_end();?>
     </div><!-- #content -->
 
-	<?php footer_start(); ?>
+    <?php after_content(); ?>
 
-    <footer id="colophon" class="site-footer band band--tint" role="contentinfo">       
+	<?php before_footer(); ?>
+
+    <footer id="colophon" <?php echo site_footer_class(); ?> role="contentinfo">       
         <div class="wrapper">
 		<?php get_sidebar( 'footer' );?>
         </div><!-- wrapper -->
     </footer><!-- #colophon -->
     
-		<?php footer_end(); ?>
+		<?php after_footer(); ?>
 
 </div><!-- #page -->
 

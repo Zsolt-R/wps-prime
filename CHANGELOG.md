@@ -1,5 +1,10 @@
 ## [WPS Prime Framework 1.3]
 ==============================
+**1.3.1.2**
+- Added hooks after_content();
+- Renamed hook old-> footer_start/footer_end | new-> before_footer/after_footer
+- Added class filters: site_footer_class();(id="colophon") site_content_class();(id="content")
+
 **1.3.1.1**
 - Added list style shortcode
 

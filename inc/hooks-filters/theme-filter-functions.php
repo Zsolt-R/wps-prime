@@ -67,7 +67,7 @@ function header_layout_left_class( $class = '' ) {
 }
 
 /**
- * Theme Main Sheader layout right side classes
+ * Theme Main Header layout right side classes
  * Separates classes with a single space, collates classes for element
  * uses return and not echo because it is being called in an echo statement
  * and would result in double echo
@@ -78,6 +78,36 @@ function header_layout_left_class( $class = '' ) {
 function header_layout_right_class( $class = '' ) {
 
 	$classes = join( ' ', get_css_class( $class, 'header_layout_right_class' ) );
+
+	return 'class="' . esc_attr( $classes ) . '"';
+}
+
+/**
+ * Theme Main Site content class
+ * Separates classes with a single space, collates classes for element
+ * uses return and not echo because it is being called in an echo statement
+ * and would result in double echo
+ *
+ * @param array $class CSS Classes for element.
+ * @return string
+ */
+function site_content_class( $class = '' ) {
+	$classes = join( ' ', get_css_class( $class, 'site_content_class' ) );
+
+	return 'class="' . esc_attr( $classes ) . '"';
+}
+
+/**
+ * Theme Main Site footer class
+ * Separates classes with a single space, collates classes for element
+ * uses return and not echo because it is being called in an echo statement
+ * and would result in double echo
+ *
+ * @param array $class CSS Classes for element.
+ * @return string
+ */
+function site_footer_class( $class = '' ) {
+	$classes = join( ' ', get_css_class( $class, 'site_footer_class' ) );
 
 	return 'class="' . esc_attr( $classes ) . '"';
 }

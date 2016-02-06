@@ -18,19 +18,23 @@
  *       - layout_header__img
  *       - layout_header__body
  *
- *  MAIN CONTENT Hooks layout
+ *  - before_content 	
  *
- *   - before_content
+ *  MAIN CONTENT Hooks layout 
+ *   
  *   - content_start
  *   - content_end
  *
  *  MAIN SIDEBAR Hooks layout
  *
  *
+ *
+ *  - after_content
+ *
  *  FOOTER Hooks layout
  *
- *   - footer_start
- *   - footer_end
+ *   - before_footer
+ *   - after_footer
  */
 
 /**
@@ -112,23 +116,35 @@ function content_end() {
 }
 
 /**
- * WP HOOK after end of footer </footer>
+ * WP HOOK on the end o the main content and sidebar
+ * just before the footer starts
+ *        </div><!-- wrapper -->
+ *  </div><!-- #content -->
+ *	<?php after_content(); ?>
+ *
+*/
+function after_content() {
+	do_action( 'after_content' );
+}
+
+/**
+ * WP HOOK before the footer </footer>
  *        </div><!-- wrapper -->
  *  </div><!-- #content -->
  *
- *      <?php footer_start(); ?>
+ *      <?php before_footer(); ?>
  *  <footer ...
  */
-function footer_start() {
-	do_action( 'footer_start' );
+function before_footer() {
+	do_action( 'before_footer' );
 }
 
 /**
  * WP HOOK after end of footer </footer>
  *        </footer><!-- #colophon -->
- *      <?php footer_end(); ?>
+ *      <?php after_footer(); ?>
  *  </div><!-- #page -->
  */
-function footer_end() {
-	do_action( 'footer_end' );
+function after_footer() {
+	do_action( 'after_footer' );
 }

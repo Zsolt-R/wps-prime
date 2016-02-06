@@ -8,7 +8,7 @@
  */
 
 /**
- * BODY Hooks
+ *  BODY Hooks
  *  - body_start
  *    ....
  *  - wp_footer
@@ -19,22 +19,28 @@
  *       - layout_header__img
  *       - layout_header__body
  *
- *  MAIN CONTENT Hooks layout
+ *  - before_content 	
  *
- *   - before_content
+ *  MAIN CONTENT Hooks layout 
+ *   
  *   - content_start
  *   - content_end
  *
  *  MAIN SIDEBAR Hooks layout
  *
  *
+ *
+ *  - after_content
+ *
  *  FOOTER Hooks layout
  *
- *   - footer_start
- *   - footer_end
+ *   - before_footer
+ *   - after_footer
  */
 
-// Hook Header Layout to theme header!
+/**
+* Hook Header Layout to theme header
+*/
 add_action( 'theme_header', 'layout_header',1 );
 
 /**
@@ -49,8 +55,7 @@ add_action( 'layout_header__img', 'theme_site_logo',10 );
  */
 add_action( 'layout_header__body', 'theme_site_navigation',10 );
 
-
 /**
  *  Footer Parts
  */
-add_action( 'footer_end','footer_micro', 69 );
+add_action( 'after_footer','footer_micro', 69 );

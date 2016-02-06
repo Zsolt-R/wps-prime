@@ -29,6 +29,11 @@ add_filter( 'header_layout_left_class', 'header_layout_left' );
 add_filter( 'header_layout_right_class', 'header_layout_right' );
 
 /**
+*	Main Site Content class
+*/
+add_filter( 'site_content_class', 'site_content_layout' );
+
+/**
  * Main Content Area Classes
  */
 add_filter( 'main_class', 'main_layout' );
@@ -43,6 +48,11 @@ add_filter( 'sidebar_class', 'sidebar_layout' );
  */
 add_filter( 'main_nav_class','theme_main_nav_class' );
 
+
+/**
+ * Themefooter default class
+ */
+add_filter( 'site_footer_class','site_footer_layout' );
 
 if ( ! function_exists( 'header_layout_left' ) ) {
 
@@ -135,6 +145,44 @@ if ( ! function_exists( 'sidebar_layout' ) ) {
 		return $classes;
 	}
 }
+
+if ( ! function_exists( 'site_content_layout' ) ) {
+
+	/**
+	 * Setting for id="content"
+	 *
+	 * @param array $classes Storred css classes.
+	 * @return array
+	 */
+	function site_content_layout( $classes ) {
+
+		// Add 'class-name' to the $classes array!
+		$classes[] = 'site-content';
+
+		// Return the $classes array.
+		return $classes;
+	}
+}
+
+
+if ( ! function_exists( 'site_footer_layout' ) ) {
+
+	/**
+	 * Setting for id="colophon"
+	 *
+	 * @param array $classes Storred css classes.
+	 * @return array
+	 */
+	function site_footer_layout( $classes ) {
+
+		// Add 'class-name' to the $classes array!
+		$classes[] = 'site-footer';
+
+		// Return the $classes array.
+		return $classes;
+	}
+}
+
 
 /**
  * Page html Wrappers

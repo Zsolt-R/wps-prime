@@ -28,5 +28,5 @@
 	<div class="wrapper"><div class="layout"><?php theme_header(); ?></div><!--layout--></div><!--wrapper-->
     </header><!-- #masthead -->
 	<?php before_content();?>
-    <div id="content" class="site-content">
+    <div id="content" <?php echo site_content_class(); ?>>
 			<?php content_start(); ?>
