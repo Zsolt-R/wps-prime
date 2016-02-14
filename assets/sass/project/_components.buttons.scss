@@ -1,26 +1,67 @@
+/*------------------------------------*\
+    #BUTTONS
+\*------------------------------------*/
+
+.btn{
+     &:hover{
+        background-color:darken($inuit-btn-background,5);
+        background-color:darken($inuit-btn-background,5);
+     }
+}
+
 .btn--primary{
-	background-color: $color-btn-primary;
-	border-color:$color-btn-primary;
-	&:hover{
+    background-color: $color-btn-primary;
+    border-color: $color-btn-primary;
+    &:hover{
     	background-color:darken($color-btn-primary,5);
     	border-color:darken($color-btn-primary,5);
     }
 }
 
 .btn--secondary{
-	background-color: $color-btn-secondary;
-	border-color:$color-btn-secondary;
-	&:hover{
+    background-color: $color-btn-secondary;
+    border-color: $color-btn-secondary;
+    &:hover{
     	background-color:darken($color-btn-secondary,5);
     	border-color:darken($color-btn-secondary,5);
     }
 }
 
 .btn--tertiary{
-	background-color: $color-btn-tertiary;
-	border-color:$color-btn-tertiary;
-	&:hover{
+    background-color: $color-btn-tertiary;
+    border-color: $color-btn-tertiary;
+    &:hover{
     	background-color:darken($color-btn-tertiary,5);
     	border-color:darken($color-btn-tertiary,5);
     }
+}
+
+.btn--positive{
+    background-color: $color-btn-positive;
+    border-color: $color-btn-positive;
+       &:hover{
+    	background-color:darken($color-btn-positive,5);
+    	border-color:darken($color-btn-positive,5);
+    }
+
+}
+
+.btn--negative{
+    background-color: $color-btn-negative;
+    border-color: $color-btn-negative;
+    &:hover{
+    	background-color:darken($color-btn-negative,5);
+    	border-color:darken($color-btn-negative,5);
+    }
+
+}
+
+.btn--neutral{
+    background-color: $color-btn-neutral;
+    border-color: $color-btn-neutral;
+    &:hover{
+    	background-color:darken($color-btn-neutral,5);
+    	border-color:darken($color-btn-neutral,5);
+    }
+
 }
