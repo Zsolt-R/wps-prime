@@ -1,9 +1,18 @@
 ## [WPS Prime Framework 1.3]
 ==============================
+**1.3.2**
+- Extended typography options
+- Added 4 new shortcodes Content Highlight | Content Divider | List styler | Mediabox
+- Added class filters: site_footer_class();(id="colophon") site_content_class();(id="content")
+- Extanded/Normalized CSS classes Buttons | Layout Alignment | Mixins | Typography highlights | Show Hide | Shadows | Normalize color settings
+- SCSS cleanup
+- Added Setting to disable URL in comment form
+
 **1.3.1.2**
 - Added hooks after_content();
 - Renamed hook old-> footer_start/footer_end | new-> before_footer/after_footer
 - Added class filters: site_footer_class();(id="colophon") site_content_class();(id="content")
+- Extended Layout shortcode options
 
 **1.3.1.1**
 - Added list style shortcode
