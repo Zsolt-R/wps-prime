@@ -1,12 +1,9 @@
 /*------------------------------------*\
     #BUTTONS
 \*------------------------------------*/
-
-.btn{
-     &:hover{
+.btn:hover{
         background-color:darken($inuit-btn-background,5);
         background-color:darken($inuit-btn-background,5);
-     }
 }
 
 .btn--primary{
