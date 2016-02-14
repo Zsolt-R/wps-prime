@@ -51,6 +51,11 @@ if ( 'disable' === wps_get_theme_option( 'wps_front_emoji_use' ) ) {
 	add_action( 'init','disable_wp_emojicons' );
 }
 
+/* Get option from settings */
+if ( 'disable' === wps_get_theme_option( 'wps_diasble_comment_url' ) ) {
+	add_filter('comment_form_default_fields','unset_url_field_in_comment');
+}
+
 /**
  *  1  Remove all the version numers from the end of css/js enqueued files added to <head> (suggested by pingdom.com)
  *  2  Remove Comment Form Allowed Tags
@@ -285,3 +290,12 @@ function disable_emojicons_tinymce( $plugins ) {
 		return array();
 	}
 }
+
+/**
+*	Disable Comment form URL
+*/
+function unset_url_field_in_comment( $fields ){
+	if ( isset( $fields['url'] ) ) { unset( $fields['url'] ); }
+	return $fields;
+}
+
