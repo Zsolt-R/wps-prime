@@ -3,7 +3,15 @@
 \*------------------------------------*/
 
 .nav-links{
-    padding: $inuit-base-spacing-unit/2 0;
+    padding: halve($inuit-base-spacing-unit) 0;
     margin-bottom: $inuit-base-spacing-unit;
-    border-bottom: 1px solid $color-box-highlight-border;
+   border-top: 1px solid $color-box-highlight-border;
+}
+@include media-query(lap-and-up){
+	.nav-previous{
+		float:left;
+	}
+	.nav-next{
+		float:right;
+	}
 }
