@@ -36,34 +36,75 @@ $color-asbestos:      #7f8c8d;
 // #FF858D
 // #9E8CFF
 
+
+
+
+
 // Theme Color definitions
 $color-brand:       $brand-color;
 $color-gray:        #444;
 $color-white:       #fff;
 $color-gray-dark:   #424242;
 $color-gray-light:  #f7f6f6;
-$color-gray-light:  #999;
 $color-gray-ui:     #ddd;
-$color-green:       $color-emerald;
 $color-highlight:   #fff;
 $color-tint:        #f2f2f2;
-$color-positive:    $color-nephritis;
-$color-negative:    $color-pomegrante;
+$color-tint-2:      #F2DBBF;
 
 
 // Assign colors to more meaningful variables.
+
+// Theme Pallete
+$color-theme-1: $color-nephritis;
+$color-theme-2: $color-orange;
+$color-theme-3: $color-alizarin;
+$color-theme-4: $color-peter-river;
+$color-theme-5: $color-amethyst;
+$color-theme-6: $color-tint-2;
+
+// Main call to action color
+$color-main-ca: $color-theme-2;
+
+// Positive and negative
+$color-positive:    $color-theme-1;
+$color-negative:    $color-theme-3;
+
+//Promos
+$color-menu-promo: $color-main-ca;
 
 // Main Body
 $color-body:            $color-white;
 
 // Text-level
 $color-text:            $color-gray-dark;
-$color-links:           $color-brand;
+$color-text-links:      $color-brand;
 
-// Text
-$color-code:            $color-pomegrante;
+$color-text-invert:		$color-body;
+$color-text-contrast:	$color-body;
+$color-text-primary:    $color-brand;
+$color-text-secondary:  $color-theme-3;
+$color-text-tertiary:   $color-theme-2;
+
+// Backgounds
+$color-bg-light: 		$color-body;
+$color-bg-dark:			$color-gray-dark;
+$color-highlights-1: 	$color-tint;
+$color-highlights-2: 	$color-tint-2;
+
+//Background text adjustments
+$color-bg-dark-text:    $color-tint;
+$color-bg-dark-link:    $color-tint-2;
+$color-bg-1:			darken($color-theme-1,15);
+$color-bg-2:			darken($color-theme-2,15);
+$color-bg-3:			darken($color-theme-3,15);
+$color-bg-4:			darken($color-theme-4,15);
+$color-bg-5:			darken($color-theme-5,15);
+$color-bg-6:			darken($color-theme-6,15);
+
+// Code
+$color-text-code:       $color-nephritis;
 $color-pre-background:  $color-gray;
-$color-pre:             $color-white;
+$color-pre:				$color-white;
 
 // Quotes
 $color-quote:           $color-gray-light;
@@ -71,13 +112,21 @@ $color-quote--banner:   $color-gray;
 
 // Buttons
 $color-btn-text:        $color-white;
-$color-btn-background:  $color-brand;
-$color-btn-primary:		$color-alizarin;
-$color-btn-secondary:   $color-emerald; 
-$color-btn-tertiary:    $color-concrete;
+$color-btn-background:  $color-brand; //Default
+$color-btn-primary:		$color-theme-3;
+$color-btn-secondary:   $color-theme-2; 
+$color-btn-tertiary:    $color-theme-5;
+$color-btn-positive:	$color-theme-1;
+$color-btn-negative:	$color-gray-dark;
+$color-btn-neutral:	    $color-concrete;
 
 // Heading colors
-$color-headings:        $color-brand;
+$color-headings:        $color-text;
+
+
+//Cards
+$color-card-bg-1: $color-highlights-1;
+$color-card-bg-2: $color-highlights-2;
 
 // Boxes
 $color-box-highlight-background:    $color-highlight;
@@ -87,18 +136,12 @@ $color-box-tint-background:         $color-tint;
 // Page foot
 $color-page-foot:              $color-white;
 
-
 // Page micro
 $color-page-micro:              $color-white;
 $color-page-micro-background:   $color-gray;
-
-
 
 // Bands
 $color-band-highlight-background:   $color-highlight;
 $color-band-tint-background:        $color-tint;
 $color-band-dark-background:        $color-asbestos;
 $color-band-dark-text-color:        $color-tint;
-
-//Promos
-$color-menu-promo: $color-negative;
