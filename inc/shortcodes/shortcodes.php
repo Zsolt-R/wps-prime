@@ -17,7 +17,11 @@
  * 7  Shortcode for icons - [ico]fa fa-home[/ico]
  * 8  Main Phone number - [main_phone_nr]
  * 9  Main Email address - [main_email]
- * 10 List styles [s_list class="list-style--one custom--class"]<ul><li>List item</li> .... </ul>[/s_list]
+ * 10 List styles [s_list class="list--style-one custom--class"]<ul><li>List item</li> .... </ul>[/s_list]
+ * 11 Media Box [mediabox]...content...[/mediabox]
+ * 12 Highlight [hglt class="" html_tag=""]...content...[/hglt]
+ * 13 Divider [divider]
+ *
  */
 
 /* 1 Layout Wrapper Markup */
@@ -47,8 +51,17 @@ add_shortcode( 'main_phone_nr', 'wps_main_phone_nr' );
 /* 9 Get theme option email */
 add_shortcode( 'main_email', 'wps_main_email' );
 
-/* 9 Get theme option email */
+/* 10 Creates a custom bulleted list */
 add_shortcode( 's_list', 'wps_styled_list' );
+
+/* 11 Generate a complex Media Box */
+add_shortcode( 'mediabox', 'wps_media_box' );
+
+/* 12 Content highlight Markup */
+add_shortcode( 'hglt', 'wps_content_highlight' );
+
+/* 13 Content divider */
+add_shortcode( 'divider', 'wps_content_divider' );
 
 /**
  * 1 Layout Item Markup
@@ -62,18 +75,39 @@ function wps_layout( $atts, $content = null ) {
 	$options = shortcode_atts( array(
 		'class' => '',
 		'wrapper_class' => '',
-		'wrapper' => false,
+		'holder_class' => '',
+        'wrapper' => false,
+        'holder_img'=>'',
+        'holder_img_size'=>'full'
 	), $atts );
+
+	$holder_start = '';
+    $holder_end = '';
+    $style = '';
+    
 
 	$class = $options['class'] ? ' '.$options['class'] : '';
 	$class_w = $options['wrapper_class'] ? ' '.$options['wrapper_class'] : '';
+	$class_h = $options['holder_class'] ? ' '.$options['holder_class'] : '';
+
+
+	if($options['holder_img']){
+            $image = wp_get_attachment_image_src($options['holder_img'],$options['holder_img_size'],false);
+            $style = $image[0] ? " style='background-image:url({$image[0]});'" : '';
+        }
+
+        if($style || $options['holder_class']){
+
+            $holder_start = '<div class="holder'.$class_h.'"'.$style.'>';
+            $holder_end = '</div>';
+    }
 
 	$layout = '<div class="layout'. $class .'">' . do_shortcode( $content ) . '</div>';
 
 	// Check for string value false (confront with string 'false').
 	$output = 'false' !== $options['wrapper'] && $options['wrapper'] ? '<div class="wrapper'. $class_w .'">'. $layout .'</div>' : $layout;
 
-	return  $output;
+	return  $holder_start.$output.$holder_end;
 }
 
 /**
@@ -316,10 +350,117 @@ function wps_styled_list( $atts, $content = null ) {
 
 	$list_style = '';
 
-	$list_style = $options['class'] ? ' '.'class="list-style '. $options['class'] .'"' : '';
+	$list_style = $options['class'] ? ' '.'class="list--style '. $options['class'] .'"' : '';
 
 	$output = '<div'. $list_style .'>'. do_shortcode( $content ) .'</div>';
 
 	return $output;
 
+}
+
+/**
+ * 11 Media Box
+ * ex: [mediabox image_id="1038" image_class="aligncenter img--round img--border" image_size="thumbnail" ico_class="fa fa-envelope fa-4x" class="bg--color-one p- txt--color-invert" type="flag" type_class="flag--responsive" title="Contact our experts today!" divider="true" divider_class="mb-" title_class="txt--bold mb-"]...content...[/mediabox]
+ *
+ * @param array $atts an associative array of attributes, or an empty string if no attributes are given.
+ * @param str $content the enclosed content.
+ * @return string
+ */
+function wps_media_box($atts, $content = null){
+
+        $args = shortcode_atts(array(
+        'image_id'=>'',
+        'image_class'=>'',
+        'image_size'=>'medium',
+        'ico_class'=>'',
+        'type'=>'',
+        'type_class'=>'',
+        'type_body_class'=>'',
+        'type_img_class'=>'',
+        'title' => '',
+        'title_class'=>'',
+        'class'=>'',
+        'divider'=>false,
+        'divider_class'=>''
+        ),$atts);
+        
+        $output ='';
+        $image_args = array();
+
+        $content =  do_shortcode($content);
+
+        $class = '';
+
+        //Mediabox class.
+        $class = $args['class'] ?  ' '.$args['class'] : '';
+
+        // Divider.
+        $divider_class = $args['divider_class'] ?  ' '.$args['divider_class'] : '';
+        $divider = $args['divider'] ? "<hr class=\"divider{$divider_class}\"/>" : '';
+
+
+        // Symbol image/ico.
+        if($args['image_class'] !=='' ){
+            $image_args['class'] = $args['image_class'];
+        }
+
+        $ico = $args['ico_class']  !== '' ? "<i class=\"{$args['ico_class']}\"></i>" :'';
+
+        $image = $args['image_id'] !== '' ?wp_get_attachment_image($args['image_id'],$args['image_size'],false,$image_args) :'';
+
+        $symbol = $image ? $image : $ico;
+
+        // Title.
+        $title_class = $args['title_class'] !=='' ?  ' '.$args['title_class'] : '';
+        $title = $args['title'] !=='' ? "<h2 class=\"mediabox__title{$title_class}\"/>{$args['title']}</h2>" : '';
+
+        // Type.
+        $type_class = $args['type_class'] !=='' ?  ' '.$args['type_class'] : '';
+        $type_body_class = $args['type_body_class'] !=='' ?  ' '.$args['type_body_class'] : ''; 
+        $type_img_class = $args['type_img_class'] !=='' ?  ' '.$args['type_img_class'] : ''; 
+
+        if($args['type'] !=='' ){
+
+             $output = "<div class=\"mediabox{$class}\">{$title}{$divider}<div class=\"{$args['type']}{$type_class}\"><div class=\"{$args['type']}__img{$type_img_class}\">{$symbol}</div><div class=\"{$args['type']}__body{$type_body_class}\">{$content}</div></div></div>";
+        }else{
+
+             $output = "<div class=\"mediabox{$class}\">{$symbol}{$title}{$divider}{$content}</div>";
+        }        
+
+        return $output;
+}
+
+/**
+ * 12 Content Highlight
+ */
+function wps_content_highlight($atts, $content = null){
+
+	$args = shortcode_atts(array(
+		'class'=>'',
+		'html_tag'=>'span'
+		),$atts);
+
+	$class = $args['class'] ? ' '.$args['class'] : '';
+	$tag = $args['html_tag'] ? $args['html_tag'] : 'span'; // Prevent empty.
+
+	$output = "<{$tag} class=\"highlight{$class}\">{$content}</{$tag}>";
+
+	return $output;
+
+}
+
+/**
+ * 13 Content Divider
+ */
+function wps_content_divider($atts){
+
+    $args = shortcode_atts(array(
+        'class'=>''
+        ),$atts);
+
+        $class = $args['class'] ? ' '.$args['class'] : '';
+
+        $output = "<hr class=\"divider{$class}\"/>";   
+
+    return $output;
 }
