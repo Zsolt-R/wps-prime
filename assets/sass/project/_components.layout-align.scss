@@ -1,0 +1,20 @@
+.layout--right{text-align:right;}
+
+.layout--full-height{
+	min-height: 100vh;
+}
+
+
+@include project-generate-classes() {
+	.#{$inuit-generate-spacing-alias}-layout--center{text-align:center;}
+	.#{$inuit-generate-spacing-alias}-layout--right{text-align:right;}
+}
+
+/*
+* Reset text align
+*/
+[class*="layout--center"] > .layout__item,
+[class*="layout--right"] > .layout__item{
+	text-align:left;
+}
+
