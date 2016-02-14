@@ -86,7 +86,7 @@ $inuit-responsive-settings: true;
 @import "sass/bower_components/inuit-box-sizing/generic.box-sizing";
 @import "sass/bower_components/inuit-normalize/generic.normalize";
 @import "sass/bower_components/inuit-reset/generic.reset";
-@import "sass/bower_components/inuit-shared/generic.shared";
+@import "sass/project/generic.shared";
 @import "sass/project/generic.inline-block-whitespace";
 @import "sass/project/generic.form.fields";
 
@@ -107,6 +107,7 @@ $inuit-heading-size-6:  12px;
 @import "sass/bower_components/inuit-lists/base.lists";
 @import "sass/project/base.links";
 @import "sass/project/base.type";
+@import "sass/project/base.form.elements";
 
  /* OBJECTS              DESIGN-FREE DESIGN PATTERNS */
 
@@ -175,6 +176,7 @@ $inuit-enable-table--rows: true;
 @import "sass/project/components.comments";
 @import "sass/project/components.cf7_form";
 @import "sass/project/components.page-content";
+@import "sass/project/components.divider";
 @import "sass/project/components.galleries";
 @import "sass/project/components.slider";
 @import "sass/project/components.nav-links";
@@ -184,8 +186,12 @@ $inuit-enable-table--rows: true;
 
  /* TRUMPS               HELPERS AND OVERRIDES */
 @import "sass/bower_components/inuit-clearfix/trumps.clearfix";
+@import "sass/project/components.shadow";
+@import "sass/project/components.card";
+
 @import "sass/project/trumps.show.hide";
 @import "sass/project/trumps.screen.reader.text";
+
 
  $inuit-use-fractions: true;
 @import "sass/bower_components/inuit-widths/trumps.widths";
@@ -238,5 +244,8 @@ $inuit-enable-table--rows: true;
 @import "sass/bower_components/inuit-widths-responsive/trumps.widths-responsive";
 @import "sass/project/trumps.responsive.media";
 @import "sass/project/trumps.alignments";
+@import "sass/project/components.layout-align";
 @import "sass/project/trumps.typography";
+@import "sass/project/trumps.bg-highlights";
 @import "sass/bower_components/inuit-print/trumps.print";
+
