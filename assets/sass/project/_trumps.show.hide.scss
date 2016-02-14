@@ -5,24 +5,10 @@
 /**
  * Mixin hide(); in _tools.custom.mixin 
  */
-.hide { @include hide(); }
+.hide,
+%hide { @include hide(); }
 
-@include media-query(palm) {
-    .hide-palm { @include hide(); }
-}
+@include project-generate-classes(){
 
-@include media-query(lap) {
-    .hide-lap { @include hide(); }
-}
-
-@include media-query(lap-and-up) {
-    .hide-lap-and-up { @include hide(); }
-}
-
-@include media-query(portable) {
-    .hide-portable { @include hide(); }
-}
-
-@include media-query(desk) {
-    .hide-desk { @include hide(); }
+	.#{$inuit-generate-spacing-alias}--hide{ @include hide();}
 }
