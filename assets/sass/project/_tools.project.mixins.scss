@@ -19,7 +19,43 @@
 @mixin contain-text() {
        word-break: break-word;
        word-wrap: break-word;
-           -webkit-hyphens: auto;
+       -webkit-hyphens: auto;
        -moz-hyphens: auto;
        hyphens: auto;
+}
+
+@mixin box-shadow-2($args1, $args2) {
+    -webkit-box-shadow: $args1, $args2;
+    -moz-box-shadow: $args1, $args2;
+    box-shadow: $args1, $args2;
+}
+
+@mixin rgba-background($hexcolor, $opacity) {
+  background-color: $hexcolor;
+  background-color: rgba($hexcolor, $opacity); 
+}
+
+@mixin project-generate-classes() {
+
+    // Loop through our previously-defined breakpoints.
+    @each $breakpoint in $breakpoints {
+
+        $inuit-generate-spacing-alias:      nth($breakpoint, 1) !global;
+        $inuit-generate-spacing-condition:  nth($breakpoint, 2);
+
+        // This isn’t ideal, but we definitely don’t want to generate widths
+        // for retina devices. Exclude retina media-qeuries manually.
+        @if ($inuit-generate-spacing-alias != "retina") {
+    
+            @include media-query($inuit-generate-spacing-alias) {
+                @content;
+            } // Close media query.
+
+        } // Close retina check.
+
+        // Take the global variable back out of scope.
+        $inuit-generate-spacing-alias: null !global;
+
+    } // Close breakpoints loop.
+
 }
