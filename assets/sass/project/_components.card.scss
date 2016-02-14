@@ -1,0 +1,46 @@
+/*------------------------------------*\
+    #CARD
+\*------------------------------------*/
+
+.card{
+	@extend %z-depth-0;
+	padding:$inuit-base-spacing-unit;
+	margin-bottom: $inuit-base-spacing-unit;
+	@extend %clearfix;
+}
+.card--flush{
+	padding:0;
+}
+.card__title{
+
+}
+.card__image{
+	border-bottom: 1px solid $color-gray-ui;
+	margin-bottom:$inuit-base-spacing-unit;
+	overflow: hidden;
+
+	&--flush{
+		margin-top:-$inuit-base-spacing-unit;
+		margin-left:-$inuit-base-spacing-unit;
+		margin-right:-$inuit-base-spacing-unit;
+	}
+	
+
+}
+
+.card--hover{
+	transition: all .5s ease;
+	&:hover{
+	@extend %z-depth-1-half;
+	}
+}
+.card__content{
+	@extend %clearfix;
+}
+.card--bg-1{
+	background-color:$color-card-bg-1;
+
+}
+.card--bg-2{
+	background-color:$color-card-bg-2;
+}
