@@ -1,6 +1,8 @@
 /*------------------------------------*\
     #ALIGNMENTS
 \*------------------------------------*/
+
+// Use on images
 .aligncenter{
     margin:0 auto;   
     clear: both;
@@ -9,14 +11,15 @@
 
 .alignleft{
     float: left;
-    margin-right: $inuit-base-spacing-unit;
+    margin-right: $inuit-base-spacing-unit; // add margin to images
 }
 
 .alignright{
     float: right;
-    margin-left: $inuit-base-spacing-unit;
+    margin-left: $inuit-base-spacing-unit; // add margin to images
 }
 
+// Use on all
 .right,
 %right{
 	float:right;
@@ -27,9 +30,15 @@
 	float:left;
 }
 
-.center
+.center,
 %center{
 	margin:0 auto;   
     clear: both;
     display: block;	
+}
+
+@include project-generate-classes() {
+  .#{$inuit-generate-spacing-alias}--left      {float:left;}
+  .#{$inuit-generate-spacing-alias}--center    {margin:0 auto; display: block; clear: both;}
+  .#{$inuit-generate-spacing-alias}--right     {float:right;}
 }
