@@ -1,7 +1,7 @@
 ##WPS-Prime##
 
 A lightweight WordPress master theme based on _s and extended with simple and useful add ons that speeds up child theme development
-[link to demo](http://themes.wpshapers.com/wps-prime/) | [link to docs](https://github.com/Zsolt-R/wps-prime/wiki)
+[link to demo](http://themes.wpshapers.com/wps-prime/)
 
 - **Contact from 7 plugin adjustments:**
   - Disable scripts 
@@ -28,6 +28,10 @@ A lightweight WordPress master theme based on _s and extended with simple and us
   - 7  Shortcode for icons - [ico]fa fa-home[/ico]
   - 8  Main Phone number - [main_phone_nr]
   - 9  Main Email address - [main_email]"
+  - 10 List styles [s_list class="list--style-one custom--class"]<ul><li>List item</li> .... </ul>[/s_list]
+  - 11 Media Box [mediabox]...content...[/mediabox]
+  - 12 Highlight [hglt class="" html_tag=""]...content...[/hglt]
+  - 13 Divider [divider]
 - **Recommended plugins activator** _speeds up wp-setup making esential plugins more accessable_
   - PIKLIST 
   - Simple Image Sizes
