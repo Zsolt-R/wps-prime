@@ -22,13 +22,12 @@ function connect_fs( $url, $method, $context, $fields = null ) {
 }
 
 
-
 /**
  *  Class to generate a list of fonts (add/remove)
  *  We need the list to be accessible globally (Singleton approach)
  *
  * @example $myfont = WpsGenerateThemeFonts::get_instance();
- * @example $myfont->add_font('Open Sans', 'sans-serif;font-weight: 300', 'http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,800&subset=latin,latin-ext');
+ * @example $myfont->add_font('Open Sans', 'sans-serif', 'http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,800','font-weight: 300','font-weight: 600');
  * @example $myfontChild = WpsGenerateThemeFonts::get_instance();
  * @example $myfontChild ->remove_font('Open Sans');
  */
@@ -57,12 +56,14 @@ class WpsGenerateThemeFonts{
 	 * Create font definition array
 	 *
 	 * @param string $fontName Then name of the font-family ex.'Raleway';
-	 * @param string $fontStyle CSS default definition for selected font ex. 'sans-serif;font-weight: 300';
+	 * @param string $fontStyle CSS default definition for selected font ex. 'sans-serif';
 	 * @param string $fontLink Link to font ex. 'http://fonts.googleapis.com/css?family=Raleway:200,300,400,600,900&subset=latin,latin-ext';
+	 * @param string $fontWeightBody body-font-weight';
+	 * @param string $fontWeightHeading heading-font-weight';
 	 */
-	public function add_font( $fontName, $fontStyle, $fontLink ) {
+	public function add_font( $fontName, $fontStyle, $fontLink, $fontWeightBody = 'font-weight:300', $fontWeightHeading = 'font-weight:600' ) {
 
-		$font = array( $fontName, $fontStyle, $fontLink );
+		$font = array( $fontName, $fontStyle, $fontLink, $fontWeightBody, $fontWeightHeading );
 
 		$this->fontList[] = $font;
 
@@ -187,14 +188,29 @@ class WpsGetThemeFonts{
 
 		$style = '';
 
+		// If no secondary font.
+		if(!$font_second_status){
+			$style = $select_b.','.$select_h.'{font-family:\''. esc_attr( $theme_fonts[ $font_main ][0] ) . '\';'. $theme_fonts[ $font_main ][3] .';}';
+
+			// If font weight is not the same add heading font weight.
+			$style .= $theme_fonts[ $font_main ][3] !== $theme_fonts[ $font_main ][4] ? $select_h.'{'.$theme_fonts[ $font_main ][4].';}' : '';
+		}
+
 		// If there is secondary font and it is the same as the body font, concatenate the body and heading selectors.
-		$selector = $font_second_status && $font_second !== $font_main ? $select_b : $select_b.','.$select_h;
+		if($font_second_status && $font_second === $font_main){
 
-		$style .= $selector.'{font-family:\''. esc_attr( $theme_fonts[ $font_main ][0] ) . '\',' .  esc_attr( $theme_fonts[ $font_main ][1] ) .';}';
+			$style = $select_b.','.$select_h.'{font-family:\''. esc_attr( $theme_fonts[ $font_main ][0] ) . '\';'. $theme_fonts[ $font_main ][3] .';}';
 
-		// If secondary font is enabled and is not the same as the main font.
-		if ( $font_second_status && $font_second !== $font_main ) {
-			$style .= $select_h.'{font-family:\''. esc_attr( $theme_fonts[ $font_second ][0] ) . '\',' .  esc_attr( $theme_fonts[ $font_second ][1] ) .';}';
+			// If font weight is not the same add heading font weight.
+			$style .= $theme_fonts[ $font_main ][3] !== $theme_fonts[ $font_main ][4] ? $select_h.'{'.$theme_fonts[ $font_main ][4].';}' : '';
+		}
+
+		// If there is secondary font and it is NOT the same as the body font.
+		if($font_second_status && $font_second !== $font_main){
+
+			$style = $select_b.'{font-family:\''. esc_attr( $theme_fonts[ $font_main ][0] ) . '\';'. $theme_fonts[ $font_main ][3] .';}';
+
+			$style .= $select_h.'{font-family:\''. esc_attr( $theme_fonts[ $font_second ][0] ) . '\';'. $theme_fonts[ $font_second ][4] .';}';
 		}
 
 		return $style;
