@@ -2,6 +2,7 @@
     #TRUMPS TYPOGRAPHY
 \*------------------------------------*/
 
+//Font Weight
 .txt--bolder{
     font-weight: 900;
 }
@@ -26,14 +27,54 @@
     text-align: right;
 
 }
-.subhead{
-    @include font-size(16px); 
 
-    @include media-query(lap-and-up) {
-        @include font-size(20px);
+// Required
+.req{
+    &::before{
+        font-family: $brand-ico-family;
+        content:'\f069';
+        margin: 0.3em 0 0 -1.2em;
+        font-size:10px;
+        color:$color-negative;
+        float: left;
     }
+}
 
-    @include media-query(desk) {
-        @include font-size(28px);
+//  Text Colors
+.txt--color-invert{
+    color:$color-text-contrast; // invert text color to body color //
+    h1,h2,h3,h4,h5,h6,a{
+       color:$color-text-contrast; // invert text color to body color // 
     }
+       
+}
+
+.txt--color-light{
+    color:$color-gray-ui;
+    h1,h2,h3,h4,h5,h6,a{
+    color:$color-gray-ui;
+    }
+}
+
+.txt--color-primary{
+    color:$color-text-primary; 
+    h1,h2,h3,h4,h5,h6,a{
+        color:$color-text-primary;
+    }   
+
+}
+
+.txt--color-secondary{
+    color:$color-text-secondary;
+    h1,h2,h3,h4,h5,h6,a{
+    color:$color-text-secondary;
+    }
+}
+
+.txt--color-tertiary{
+    color:$color-text-tertiary; 
+    h1,h2,h3,h4,h5,h6,a{
+        color:$color-text-tertiary;
+    }   
+
 }
