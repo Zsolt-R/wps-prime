@@ -181,20 +181,30 @@ function remove_empty_tags_around_shortcodes( $content ) {
  * @param string $url file location.
  * @return bool
  */
-function wps_url_exist( $url ) {
-	$ch = curl_init( $url );
-	curl_setopt( $ch, CURLOPT_NOBODY, true );
-	curl_exec( $ch );
-	$code = curl_getinfo( $ch, CURLINFO_HTTP_CODE );
+function wps_file_exist( $file ) {
 
-	if ( 200 === $code ) {
-		$status = true;
-	} else {
-		$status = false;
-	}
-	curl_close( $ch );
+	$status = file_exists($file);
+
 	return $status;
 }
+
+
+/**
+* Helper function to check if we are in the child theme
+*/
+function is_child() {
+
+	// Gets a WP_Theme object for the current theme.
+	$current_theme = wp_get_theme();
+
+    // For limitation of empty() write in var.
+    $parent = $current_theme->parent();
+    if ( ! empty( $parent ) ) {
+        return TRUE;
+    }
+    return FALSE;
+}
+
 
 /**
  * Get our wp_nav_menu() fallback, wp_page_menu(), to show a home link.
