@@ -5,25 +5,58 @@
  * @package wps_prime
  */
 
-add_action( 'wp_head','add_fav_ico' );
-add_action( 'admin_head','add_fav_ico' );
+add_action( 'wp_head','get_favicon' );
+add_action( 'admin_head','get_favicon' );
+add_action( 'admin_init','update_favicon');
 
 /**
- * Create favicon html link
+ * Set favicon link in transient
  */
-function add_fav_ico() {
+function set_favicon() {
 
-	$file = get_stylesheet_directory_uri() .'/favicon.ico';
+	// Check if ico exist.
+	$icon_path = get_stylesheet_directory() .'/favicon.ico';	
 
-	/**
-	* Function to check if a file exists defined in inc/extras.php
-	* wps_url_exist($url); returns true or false
-	*/
-	if ( false === wps_url_exist( $file ) ) {
+	$file_status = wps_file_exist( $icon_path );
+
+	$icon_url =  esc_url( get_stylesheet_directory_uri().'/favicon.ico' );
+
+
+
+	// Check if favico exist in the theme root.
+	if( $file_status ){
+		 set_transient( 'site_favicon',$icon_url, YEAR_IN_SECONDS ); // store for a year	
+	}	
+}
+
+/*
+ * Update favicon transient
+ */
+function update_favicon(){
+
+	$reset = isset($_GET["settings-updated"]) ? false : true;
+
+	if($reset){
+
+		// Delete transient.
+		delete_transient( 'site_favicon' );	
+	
+		// Store favico link in transient.
+		return set_favicon();
+	}
+}
+
+/**
+ *	Retrieve function for favicon.
+ */
+function get_favicon(){
+
+	$favicon = get_transient('site_favicon');
+	
+	// If no transient set don't display the favicon.
+	if ( false === $favicon) {
 		return;
 	} else {
-		echo '<link rel="shortcut icon" href="'. esc_url( $file ) .'" />';
-
+		echo '<link rel="shortcut icon" href="'. esc_url( $favicon ) .'" />';
 	}
-
 }
