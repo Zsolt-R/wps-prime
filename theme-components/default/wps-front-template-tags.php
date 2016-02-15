@@ -41,7 +41,7 @@ if ( ! function_exists( 'wps_prime_paging_nav' ) ) {
 			$output = paginate_links();
 
 		}
-			echo $output;
+			echo esc_html( $output );
 	}
 }
 
