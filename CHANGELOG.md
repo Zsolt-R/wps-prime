@@ -7,6 +7,7 @@
 - Extanded/Normalized CSS classes Buttons | Layout Alignment | Mixins | Typography highlights | Show Hide | Shadows | Normalize color settings
 - SCSS cleanup
 - Added Setting to disable URL in comment form
+- Added system status to theme settings panel
 
 **1.3.1.2**
 - Added hooks after_content();
