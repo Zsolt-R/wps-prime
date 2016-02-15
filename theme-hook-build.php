@@ -19,10 +19,10 @@
  *       - layout_header__img
  *       - layout_header__body
  *
- *  - before_content 	
+ *  - before_content
  *
- *  MAIN CONTENT Hooks layout 
- *   
+ *  MAIN CONTENT Hooks layout
+ *
  *   - content_start
  *   - content_end
  *
@@ -39,8 +39,8 @@
  */
 
 /**
-* Hook Header Layout to theme header
-*/
+ * Hook Header Layout to theme header
+ */
 add_action( 'theme_header', 'layout_header',1 );
 
 /**

@@ -189,7 +189,7 @@ class WpsGetThemeFonts{
 		$style = '';
 
 		// If no secondary font.
-		if(!$font_second_status){
+		if ( ! $font_second_status ) {
 			$style = $select_b.','.$select_h.'{font-family:\''. esc_attr( $theme_fonts[ $font_main ][0] ) . '\';'. $theme_fonts[ $font_main ][3] .';}';
 
 			// If font weight is not the same add heading font weight.
@@ -197,7 +197,7 @@ class WpsGetThemeFonts{
 		}
 
 		// If there is secondary font and it is the same as the body font, concatenate the body and heading selectors.
-		if($font_second_status && $font_second === $font_main){
+		if ( $font_second_status && $font_second === $font_main ) {
 
 			$style = $select_b.','.$select_h.'{font-family:\''. esc_attr( $theme_fonts[ $font_main ][0] ) . '\';'. $theme_fonts[ $font_main ][3] .';}';
 
@@ -206,7 +206,7 @@ class WpsGetThemeFonts{
 		}
 
 		// If there is secondary font and it is NOT the same as the body font.
-		if($font_second_status && $font_second !== $font_main){
+		if ( $font_second_status && $font_second !== $font_main ) {
 
 			$style = $select_b.'{font-family:\''. esc_attr( $theme_fonts[ $font_main ][0] ) . '\';'. $theme_fonts[ $font_main ][3] .';}';
 

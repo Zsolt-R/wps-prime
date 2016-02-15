@@ -18,10 +18,10 @@
  *       - layout_header__img
  *       - layout_header__body
  *
- *  - before_content 	
+ *  - before_content
  *
- *  MAIN CONTENT Hooks layout 
- *   
+ *  MAIN CONTENT Hooks layout
+ *
  *   - content_start
  *   - content_end
  *
@@ -121,8 +121,7 @@ function content_end() {
  *        </div><!-- wrapper -->
  *  </div><!-- #content -->
  *	<?php after_content(); ?>
- *
-*/
+ */
 function after_content() {
 	do_action( 'after_content' );
 }
