@@ -48,6 +48,9 @@ add_filter( 'sidebar_class', 'sidebar_layout' );
  */
 add_filter( 'main_nav_class','theme_main_nav_class' );
 
+/* Title Visibility */
+add_filter('body_class','theme_page_title_visibility_body_class');
+
 
 /**
  * Themefooter default class
@@ -235,4 +238,30 @@ if ( ! function_exists( 'theme_main_nav_class' ) ) {
 		$classes[] = 'site-nav';
 		return $classes;
 	}
+}
+
+if ( ! function_exists( 'theme_page_title_visibility_body_class' ) ) {
+
+	/**
+	 * Function to add body class based on page meta option "Show/Hide" Title
+	 *
+	 * @param array $classes Holds all the body classes in an array.
+	 */
+	function theme_page_title_visibility_body_class($classes){
+		global $post;
+				
+		if(is_page()){
+			$page_option = get_post_meta($post->ID,'page_title_visibility',true);
+		
+				if(isset($page_option)){
+		
+						$class = $page_option  == 'hide' ?  'hide-title' : '';
+		
+			$classes[] = $class;
+			
+			}	
+		}
+		return $classes;
+	}
+	
 }
