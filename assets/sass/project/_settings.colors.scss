@@ -85,6 +85,12 @@ $color-text-primary:    $color-brand;
 $color-text-secondary:  $color-theme-3;
 $color-text-tertiary:   $color-theme-2;
 
+// Navigation
+$color-nav-link: 		$color-brand;
+$color-nav-bg:			$color-brand;
+$color-subnav-bg:		$color-body;
+
+
 // Backgounds
 $color-bg-light: 		$color-body;
 $color-bg-dark:			$color-gray-dark;
@@ -122,7 +128,6 @@ $color-btn-neutral:	    $color-concrete;
 
 // Heading colors
 $color-headings:        $color-text;
-
 
 //Cards
 $color-card-bg-1: $color-highlights-1;
