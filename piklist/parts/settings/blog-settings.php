@@ -51,3 +51,17 @@ piklist('field', array(
 	'hide' => 'Hide',
 	),
 ));
+
+piklist('field', array(
+	'type' => 'checkbox',
+	'scope' => 'post_meta',
+	'field' => 'u_time_visibility',
+	'value' => '',
+	'label' => 'Updated article timestamp visibility',
+	'description' => 'Show article updated time. Default - \'hide\'',
+	'attributes' => array(
+	'class' => 'text',
+	),'choices' => array(
+	'show' => 'Show',
+	),
+));
