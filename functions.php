@@ -416,10 +416,12 @@ class WPS_Theme_Setup {
 		/* Custom Objects */
 		require_once( WPS_COMPONENTS_DIR .'objects/theme-site-nav.php' );
 		require_once( WPS_COMPONENTS_DIR .'objects/theme-site-logo.php' );
+		require_once( WPS_COMPONENTS_DIR .'objects/theme-page-pre-content.php' );
+		require_once( WPS_COMPONENTS_DIR .'objects/theme-global-content.php' );
 
 		/* Theme Parts */
 		require_once( WPS_COMPONENTS_DIR .'layout-elements/theme-header-layout.php' );
-		require_once( WPS_COMPONENTS_DIR .'layout-elements/theme-footer-parts.php' );
+		require_once( WPS_COMPONENTS_DIR .'layout-elements/theme-footer-parts.php' );  		
 
 	}
 

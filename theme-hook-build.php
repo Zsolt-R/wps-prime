@@ -56,6 +56,16 @@ add_action( 'layout_header__img', 'theme_site_logo',10 );
 add_action( 'layout_header__body', 'theme_site_navigation',10 );
 
 /**
+ * Page pre content 
+ */
+add_action('before_content','theme_page_pre_content');
+
+/**
+ * Add Global Content Object 
+ */
+add_action( 'before_footer', 'theme_global_content_area' );
+
+/**
  *  Footer Parts
  */
 add_action( 'after_footer','footer_micro', 69 );
