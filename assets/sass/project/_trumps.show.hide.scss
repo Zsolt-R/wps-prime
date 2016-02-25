@@ -12,3 +12,9 @@
 
 	.#{$inuit-generate-spacing-alias}--hide{ @include hide();}
 }
+
+.hide-title{
+	.entry-title{
+		@extend %hide;
+	}
+}
