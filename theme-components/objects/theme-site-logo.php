@@ -16,6 +16,8 @@ function theme_site_logo() {
 
 	$output = '';
 
+	$default = 	'<a href="'. get_home_url() .'">'. get_bloginfo( 'name' ) .'</a><br/><small>'. get_bloginfo( 'description' ).'</small>';
+
 		/**
 			 * Logo HTML wrapper
 			 */
@@ -23,8 +25,7 @@ function theme_site_logo() {
 
 	if ( wps_get_theme_option( 'logo_setting' ) === 'brand_title' ) {
 
-		$output .= '<a href="'. get_home_url() .'">'. get_bloginfo( 'name' ) .'</a>';
-		$output .= '<span>'. get_bloginfo( 'description' ).'</span>';
+		$output .= $default;
 
 	} else {
 
@@ -39,8 +40,7 @@ function theme_site_logo() {
 
 		} else {
 
-			$output .= '<a href="'. home_url() .'">'. get_bloginfo( 'name' ) .'</a>';
-			$output .= '<span>'. get_bloginfo( 'description' ) .'</span>';
+			$output .= $default;
 
 		}
 	}
@@ -55,6 +55,9 @@ function theme_site_logo() {
 					    'h1' => array(),
 					    'h2' => array(),
 					    'span' => array(),
+					    'small' => array(),
+					    'br'=> array(),
+					    'div' => array(),
 					    'img' => array(
 					    	'src' => array(),
 					    	'alt' => array(),
