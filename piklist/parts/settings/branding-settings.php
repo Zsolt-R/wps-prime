@@ -106,3 +106,13 @@ piklist('field', array(
 	'class' => 'text',
 	),
 ));
+
+piklist('field', array(
+ 'type' => 'text'
+ ,'field' => 'site_disclaimer'
+ ,'label' => 'Site Disclaimer'
+ ,'description' => 'Disclaimer text will appear in the footer.'
+ ,'attributes' => array(
+   'class' => 'text'
+ )
+ ));

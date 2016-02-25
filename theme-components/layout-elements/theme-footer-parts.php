@@ -19,13 +19,15 @@ if ( ! function_exists( 'footer_micro' ) ) {
 		// If no option found set to Site Name!
 		$name = wps_get_theme_option( 'company_name' ) ? wps_get_theme_option( 'company_name' ) : get_bloginfo( 'name' );
 
+        $disclaimer = wps_get_theme_option('site_disclaimer') ? wps_get_theme_option('site_disclaimer').' -' :''; 
+
 	?>
     
     <div class="page-micro">
         <div class="wrapper">
             <div class="layout layout--center">
                 <div class="layout__item">
-    				<small class="page-micro__copy txt--center"><?php echo esc_html( $name ); ?> <?php echo esc_html( $date ); ?> - <?php echo esc_html( date( 'Y' ) ); ?></small>
+    				<small class="page-micro__copy txt--center"><?php echo wp_kses_post( $disclaimer ); ?> <?php echo esc_html( $name ); ?> <?php echo esc_html( $date ); ?> - <?php echo esc_html( date( 'Y' ) ); ?></small>
                 </div>
             </div>
         </div><!-- wrapper -->
