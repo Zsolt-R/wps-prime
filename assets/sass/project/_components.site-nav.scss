@@ -5,13 +5,10 @@
 .site-nav {
     @extend %clearfix;
     text-align: center;
-
-
 }
     
     .nav-menu{
-        display:none; // Mobile First Default Hidden
-        
+        display:none; // Mobile First Default Hidden        
 
          .toggled &{
             display:block;
@@ -20,9 +17,7 @@
          @include media-query(lap-and-up) {
             display:block;
          }
-    }
-
-    
+    }    
 
     .site-nav__toggler{
         display:block;
@@ -43,8 +38,7 @@
 
         @include media-query(lap-and-up) {
             overflow: visible;
-
-
+            text-align: right;
         }
 
     }
@@ -53,7 +47,6 @@
 
             @include media-query(lap-and-up) {
                 display:inline-block;
-
             }
 
             //Nested menus
@@ -62,15 +55,12 @@
             .site-nav__item{                                                  
 
                  @include media-query(lap-and-up) {                  
-                        text-align: left; 
-                  
+                        text-align: left;                   
                 }
             }
-
         }
 
         //SITELINK a -tag
-
         .site-nav__link {
                 display: block;
                 padding:6px 12px;
@@ -78,8 +68,7 @@
                 line-height:$inuit-base-spacing-unit;
                 
                 &:hover{
-                    text-decoration: none;
-                    
+                    text-decoration: none;                    
                 }              
 
                 //Sub menu link style
@@ -89,23 +78,11 @@
                 }
         }
 
-        //Reset first element Padding
-        //.site-nav__list > .site-nav__item:first-child .site-nav__link{
-        //         
-        //}
-
-        //Reset last element Padding
-        //.site-nav__list .site-nav__item:last-child .site-nav__link{
-        //       
-        //}
-
     @include media-query(lap-and-up) {
         .site-nav{
             text-align: left;
            
         }
-            
-
 
         .site-nav__item > .site-nav__list{
             display:none;
@@ -119,16 +96,14 @@
                 top: 0;
                 margin-left:240px;
                 margin-left:15rem;
-
             }
-
 
             .site-nav__item{
                 min-width:240px;
                 max-width:240px;
                 min-width:15rem;
                 max-width:15rem;
-                background:$color-body;     
+                background:$color-subnav-bg;     
             }
         }
 
@@ -166,17 +141,13 @@
             }
         }
 
-
-
      .site-nav__link{
          color: $color-body; 
          &:hover{
              background-color: darken($brand-color,5%);
          }
      }
-
 }
-
 
 .site-nav__item--promo{      
     background-color:$color-menu-promo;
