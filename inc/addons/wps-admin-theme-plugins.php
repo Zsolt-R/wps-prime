@@ -51,31 +51,7 @@ function my_theme_register_required_plugins() {
 			'name'      => 'PIKLIST | Rapid development framework',
 			'slug'      => 'piklist',
 			'required'  => true,
-		),
-
-		array(
-			'name'      => 'Simple Image Sizes',
-			'slug'      => 'simple-image-sizes',
-			'required'  => false,
-		),
-
-		array(
-			'name'      => 'BackUpWordPress',
-			'slug'      => 'backupwordpress',
-			'required'  => false,
-		),
-
-		array(
-			'name'      => 'WordPress Backup to Dropbox',
-			'slug'      => 'wordpress-backup-to-dropbox',
-			'required'  => false,
-		),
-
-		array(
-			'name'      => 'WP Migrate DB',
-			'slug'      => 'wp-migrate-db',
-			'required'  => false,
-		),
+		)		
 	);
 	/**
 	 * Array of configuration settings. Amend each line as needed.
