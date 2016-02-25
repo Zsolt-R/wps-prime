@@ -12,6 +12,7 @@
     overflow: hidden;
     clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
     clip: rect(1px, 1px, 1px, 1px);
+    left: 0; // hack to move the element so it doesn't take up any space
 }
 /*
  * #break long words taht would overflow from container
