@@ -118,10 +118,27 @@ function wps_layout( $atts, $content = null ) {
 function wps_layout_inner_block( $atts, $content = null ) {
 	$options = shortcode_atts( array(
 		'class' => '',
+		'inner'=>true,
+		'inner_class'=>''
 	), $atts );
-	$class = $options['class'] ?  ' '.$options['class'] : '';
 
-	$output = '<div class="layout__item'. $class .'">' . do_shortcode( $content ) . '</div>';
+	$inner_start = '';
+	$inner_end = '';
+
+	$class = $options['class'] ?  ' '.$options['class'] : '';
+	$inner_class = $options['inner_class'] ?  ' '.$options['inner_class'] : '';
+	
+	/* Just fill the inner_class argument to activate, and deactivate by setting inner 
+	*  to false this way you can deactivate the inner element 
+	*  whithout deleting the inner_class argument
+	*/
+	if ( true === $options['inner'] && $options['inner_class'] ) {
+
+		$inner_start = '<div class="layout__item_inner'.$inner_class.'">';
+		$inner_end = '</div>';
+	}
+
+	$output = '<div class="layout__item'. $class .'">'.$inner_start .'' . do_shortcode( $content ) . ''.$inner_end.'</div>';
 
 	return  $output;
 }
