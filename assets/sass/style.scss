@@ -183,6 +183,7 @@ $inuit-enable-table--rows: true;
 @import "project/components.buttons";
 @import "project/components.table";
 @import "project/components.widget";
+@import "project/components.accordion";
 
  /* TRUMPS               HELPERS AND OVERRIDES */
 @import "bower_components/inuit-clearfix/trumps.clearfix";
@@ -203,8 +204,8 @@ $inuit-enable-table--rows: true;
  $inuit-enable-margins--huge:            true;
  
  $inuit-enable-margins--negative:        true;
- //$inuit-enable-margins--negative-tiny:   true;
- //$inuit-enable-margins--negative-small:  true;
+ $inuit-enable-margins--negative-tiny:   true;
+ $inuit-enable-margins--negative-small:  true;
  //$inuit-enable-margins--negative-large:  true;
  //$inuit-enable-margins--negative-huge:   true;
  
@@ -226,8 +227,8 @@ $inuit-enable-table--rows: true;
  $inuit-enable-responsive-margins--huge:             true;
  
  $inuit-enable-responsive-margins--negative:         true;
- //$inuit-enable-responsive-margins--negative-tiny:    true;
- //$inuit-enable-responsive-margins--negative-small:   true;
+ $inuit-enable-responsive-margins--negative-tiny:    true;
+ $inuit-enable-responsive-margins--negative-small:   true;
  //$inuit-enable-responsive-margins--negative-large:   true;
  //$inuit-enable-responsive-margins--negative-huge:    true;
  
