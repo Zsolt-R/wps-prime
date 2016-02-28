@@ -21,6 +21,8 @@
  * 11 Media Box [mediabox]...content...[/mediabox]
  * 12 Highlight [hglt class="" html_tag=""]...content...[/hglt]
  * 13 Divider [divider]
+ * 14 Divider [accordion]
+ * 15 Divider [accprdion_item]
  */
 
 /* 1 Layout Wrapper Markup */
@@ -252,13 +254,15 @@ function wps_buttons( $atts ) {
 		'class' => '',
 		'label' => 'Please add label',
 		'link'  => '',
+		'target'=> ''
 	), $atts );
 
 	$styleClass = $options['class'] ? ' '.$options['class'] : '';
 	$btnInfotext = $options['label'] ? $options['label'] : '';
 	$btnLink = $options['link'] ? $options['link'] : '#';
+	$btnTarget = $options['target'] ? ' target="'.$options['target'].'"' : '';
 
-	$output = '<a class="btn'. $styleClass .'" href="'.$btnLink.'">'. $btnInfotext .'</a>';
+	$output = '<a class="btn'. $styleClass .'" href="'.$btnLink.'"'.$btnTarget.'>'. $btnInfotext .'</a>';
 
 	return $output;
 
@@ -477,3 +481,5 @@ function wps_content_divider( $atts ) {
 
 	return $output;
 }
+
+require_once('shortcode_classes/wps_acc_shortcode.php');
