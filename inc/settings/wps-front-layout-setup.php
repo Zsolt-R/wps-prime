@@ -90,7 +90,7 @@ if ( ! function_exists( 'header_layout_left' ) ) {
 	function header_layout_left( $classes ) {
 
 		$classes[] = 'layout__item';
-		$classes[] = 'lap-and-up-3/10';
+		$classes[] = 'lap-and-up-2/10';
 		return $classes;
 	}
 }
@@ -106,7 +106,7 @@ if ( ! function_exists( 'header_layout_right' ) ) {
 	function header_layout_right( $classes ) {
 
 		$classes[] = 'layout__item';
-		$classes[] = 'lap-and-up-7/10';
+		$classes[] = 'lap-and-up-8/10';
 		return $classes;
 	}
 }
