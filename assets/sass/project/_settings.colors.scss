@@ -56,7 +56,7 @@ $color-tint-2:      #F2DBBF;
 
 // Theme Pallete
 $color-theme-1: $color-nephritis;
-$color-theme-2: $color-orange;
+$color-theme-2: $color-carrot;
 $color-theme-3: $color-alizarin;
 $color-theme-4: $color-peter-river;
 $color-theme-5: $color-amethyst;
@@ -100,12 +100,12 @@ $color-highlights-2: 	$color-tint-2;
 //Background text adjustments
 $color-bg-dark-text:    $color-tint;
 $color-bg-dark-link:    $color-tint-2;
-$color-bg-1:			darken($color-theme-1,15);
-$color-bg-2:			darken($color-theme-2,15);
-$color-bg-3:			darken($color-theme-3,15);
-$color-bg-4:			darken($color-theme-4,15);
-$color-bg-5:			darken($color-theme-5,15);
-$color-bg-6:			darken($color-theme-6,15);
+$color-bg-1:			darken($color-theme-1,5);
+$color-bg-2:			darken($color-theme-2,5);
+$color-bg-3:			darken($color-theme-3,5);
+$color-bg-4:			darken($color-theme-4,5);
+$color-bg-5:			darken($color-theme-5,5);
+$color-bg-6:			darken($color-theme-6,5);
 
 // Code
 $color-text-code:       $color-nephritis;
@@ -148,5 +148,5 @@ $color-page-micro-background:   $color-gray;
 // Bands
 $color-band-highlight-background:   $color-highlight;
 $color-band-tint-background:        $color-tint;
-$color-band-dark-background:        $color-asbestos;
+$color-band-dark-background:        $color-bg-dark;
 $color-band-dark-text-color:        $color-tint;
