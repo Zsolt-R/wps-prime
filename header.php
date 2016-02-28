@@ -24,7 +24,7 @@
 <?php body_start();?>
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'wps-prime' ); ?></a>
-    <header id="masthead" class="site-header" role="banner">
+    <header id="masthead" <?php echo site_header_class(); ?> role="banner">
 	<div class="wrapper"><div class="layout"><?php theme_header(); ?></div><!--layout--></div><!--wrapper-->
     </header><!-- #masthead -->
 	<?php before_content();?>

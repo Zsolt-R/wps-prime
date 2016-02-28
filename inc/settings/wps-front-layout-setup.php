@@ -19,6 +19,11 @@ add_action( 'content_end' , 'page_end',0 );
 add_filter( 'wp_head', 'main_layout' );
 
 /**
+ * Header Class
+ */
+add_filter( 'site_header_class', 'site_main_header' );
+
+/**
  * Header layout left Classes
  */
 add_filter( 'header_layout_left_class', 'header_layout_left' );
@@ -56,6 +61,23 @@ add_filter('body_class','theme_page_title_visibility_body_class');
  * Themefooter default class
  */
 add_filter( 'site_footer_class','site_footer_layout' );
+
+if ( ! function_exists( 'site_main_header' ) ) {
+
+	/**
+	 * Setting for theme header layout left area
+	 *
+	 * @param array $classes Storred css classes.
+	 * @return array
+	 */
+	function site_main_header( $classes ) {
+
+		$classes[] = 'site-header';
+		return $classes;
+	}
+}
+
+
 
 if ( ! function_exists( 'header_layout_left' ) ) {
 

@@ -10,6 +10,20 @@
  */
 
 /**
+ * Theme Header css class function
+ * Separates classes with a single space, collates classes for element
+ *
+ * @param array $class CSS Classes for element.
+ */
+function site_header_class( $class = '' ) {
+
+	$classes = join( ' ', get_css_class( $class, 'site_header_class' ) );
+
+	return 'class="' . esc_attr( $classes ) . '"';
+}
+
+
+/**
  * Theme main navigation css class function
  * Separates classes with a single space, collates classes for element
  *
@@ -49,6 +63,7 @@ function sidebar_class( $class = '' ) {
 
 	return 'class="' . esc_attr( $classes ) . '"';
 }
+
 
 /**
  * Theme Main Header layout left side classes
