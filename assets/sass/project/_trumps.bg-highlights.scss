@@ -1,6 +1,7 @@
 /*------------------------------------*\
-    #TRUMP BG-HIGHLIGHTS
+    #TRUMPS BG-HIGHLIGHTS
 \*------------------------------------*/
+
 .bg--body{
     background-color:$color-bg-light;     
 }
@@ -11,16 +12,23 @@
 	.widget-title{
 		color: $color-bg-dark-text;
 	}
+}
+
+.bg--opaq,
+%bg--opaq{
+	@include rgba-background($color-gray-dark,.8);
+	color:$color-bg-dark-text;
+}
+
+.bg--opaq,
+.bg--dark,
+%bg--opaq{
 	a{
 		color:$color-bg-dark-link;		
 	}
 	h1,h2,h3,h4,h5,h6{
 		color: $color-bg-dark-text;
 	}
-}
-
-.bg--opaq{
-	background-color: rgba(000,000,000,.5);	
 }
 
 .bg--light{

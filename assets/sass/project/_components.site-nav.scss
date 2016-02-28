@@ -1,5 +1,5 @@
 /*------------------------------------*\
-    #SITE-NAV
+    #COMPONENTS SITE-NAV
 \*------------------------------------*/
 
 .site-nav {
@@ -20,7 +20,17 @@
     }    
 
     .site-nav__toggler{
+        @include inuit-font-size(14px,1);
+        background-color: transparent;
+        border:1px solid $color-nav-link;
+        color:$color-nav-link;
+        outline: none;
         display:block;
+        border-radius: $brand-round;
+        padding:halve($inuit-base-spacing-unit);
+        overflow: hidden;
+        white-space: nowrap;
+        border-radius: $brand-round;
         margin:0 auto;
         @include media-query(lap-and-up) {
             @include hide();
@@ -159,4 +169,30 @@
     &:hover .site-nav__link{
        background-color:darken($color-menu-promo,5%);  
     }
+}
+
+
+.bg--opaq{  
+  .site-nav__item > .site-nav__list .site-nav__link{
+    @include media-query(lap-and-up){
+      @include rgba-background($color-bg-dark,.8);
+    }
+  }
+  
+}
+.bg--dark{
+  .site-nav__item > .site-nav__list .site-nav__link{
+    @include media-query(lap-and-up){
+      background:$color-bg-dark;
+    }
+
+  }
+}
+
+.bg--dark,
+.bg--opaq{
+  .site-nav__toggler{
+      border-color:$color-bg-dark-link;
+      color:$color-bg-dark-link;
+  }
 }

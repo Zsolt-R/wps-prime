@@ -1,6 +1,6 @@
-///*------------------------------------*\
-//    #COLORS
-//\*------------------------------------*/
+/*------------------------------------*\
+    #COLORS
+\*------------------------------------*/
 
 // Literal color variables.
 // Ref: http://flatuicolors.com/
@@ -8,7 +8,7 @@
 // For More flat colors visit
 // Ref: http://www.flatuicolorpicker.com/
 // Ref: http://bootflat.github.io/color-picker.html
-//
+
 $color-turquoise:     #1abc9c;
 $color-green-sea:     #16a085;
 $color-sun-flower:    #f1c40f;
@@ -49,7 +49,7 @@ $color-gray-light:  #f7f6f6;
 $color-gray-ui:     #ddd;
 $color-highlight:   #fff;
 $color-tint:        #f2f2f2;
-$color-tint-2:      #F2DBBF;
+$color-tint-2:      lighten($brand-color,50);
 
 
 // Assign colors to more meaningful variables.
