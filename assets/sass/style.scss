@@ -185,10 +185,12 @@ $inuit-enable-table--rows: true;
 @import "project/components.widget";
 @import "project/components.accordion";
 
+
  /* TRUMPS               HELPERS AND OVERRIDES */
 @import "bower_components/inuit-clearfix/trumps.clearfix";
 @import "project/components.shadow";
 @import "project/components.card";
+@import "project/components.images";
 
 @import "project/trumps.show.hide";
 @import "project/trumps.screen.reader.text";
