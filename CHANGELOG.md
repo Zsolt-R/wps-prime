@@ -8,6 +8,7 @@
 - SCSS cleanup
 - Added Setting to disable URL in comment form
 - Added system status to theme settings panel
+- Added accordion shortcode
 
 **1.3.1.2**
 - Added hooks after_content();
