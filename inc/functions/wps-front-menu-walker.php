@@ -42,6 +42,7 @@ class Theme_Menu_Object extends Walker_Nav_Menu {
 	 */
 	function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
 		global $wp_query;
+
 		$indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
 
 		$class_names = $value = '';
@@ -58,12 +59,14 @@ class Theme_Menu_Object extends Walker_Nav_Menu {
 		$attributes .= ! empty( $item->xfn ) ? ' rel="' . esc_attr( $item->xfn ) .'"' : '';
 		$attributes .= ! empty( $item->url ) ? ' href="' . esc_attr( $item->url ) .'"' : '';
 
-		$item_output = $args->before;
+		$item_output = ! empty( $args->before ) ? $args->before : '' ;
 		$item_output .= '<a class="site-nav__link" '. $attributes .'>';
-		$item_output .= $args->link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after;
+		$item_output .= ! empty( $args->link_before ) ? $args->link_before : '' ;
+		$item_output .= apply_filters( 'the_title', $item->title, $item->ID );
+		$item_output .= ! empty( $args->link_after ) ? $args->link_after : '' ;
 		// Add description $item_output .= '<br /><span class="sub">' . $item->description . '</span>';!
 		$item_output .= '</a>';
-		$item_output .= $args->after;
+		$item_output .= ! empty( $args->after) ? $args->after: '' ;
 
 		$output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
 	}
