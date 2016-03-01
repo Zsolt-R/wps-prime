@@ -14,10 +14,11 @@
  *
  *  HEADER Hooks layout
  *
+ *   - before_header
  *   - theme_header
  *       - layout_header__img
  *       - layout_header__body
- *
+ *  - after_header
  *  - before_content
  *
  *  MAIN CONTENT Hooks layout
@@ -38,6 +39,28 @@
  */
 
 /**
+ * WP HOOK to add after the opening body tag <body>
+ */
+function body_start() {
+	do_action( 'body_start' );
+}
+
+/**
+* Before Header Hook	
+*/
+function before_header() {
+	do_action( 'before_header' );
+}
+
+/**
+* After Header Hook	
+*/
+function after_header() {
+	do_action( 'after_header' );
+}
+
+
+/**
  * WP HOOK to add in the head before the main nav <div class="header-content">
  */
 function theme_header() {
@@ -56,13 +79,6 @@ function layout_header__img() {
  */
 function layout_header__body() {
 	do_action( 'layout_header__body' );
-}
-
-/**
- * WP HOOK to add after the opening body tag <body>
- */
-function body_start() {
-	do_action( 'body_start' );
 }
 
 /**

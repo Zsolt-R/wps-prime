@@ -15,10 +15,11 @@
  *
  *  HEADER Hooks layout
  *
+ *   - before_header
  *   - theme_header
  *       - layout_header__img
  *       - layout_header__body
- *
+ *  - after_header
  *  - before_content
  *
  *  MAIN CONTENT Hooks layout
