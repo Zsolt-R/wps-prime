@@ -78,3 +78,15 @@
     }   
 
 }
+
+.txt--xl{
+    @include media-query(lap-and-up){
+        @include inuit-font-size(32px);
+    }
+}   
+
+.txt--xxl{
+    @include media-query(lap-and-up){
+        @include inuit-font-size(48px);
+    }
+}
