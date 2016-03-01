@@ -459,6 +459,7 @@ function wps_content_highlight( $atts, $content = null ) {
 
 	$class = $args['class'] ? ' '.$args['class'] : '';
 	$tag = $args['html_tag'] ? $args['html_tag'] : 'span'; // Prevent empty.
+	$content = do_shortcode( $content );
 
 	$output = "<{$tag} class=\"highlight{$class}\">{$content}</{$tag}>";
 
