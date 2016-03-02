@@ -153,3 +153,7 @@ $color-band-highlight-background:   $color-highlight;
 $color-band-tint-background:        $color-tint;
 $color-band-dark-background:        $color-bg-dark;
 $color-band-dark-text-color:        $color-tint;
+
+//Slider Colors
+$color-arrow: '2980b9'; //Use hex color without # value is interpolated in svg
+$color-bullet: $color-brand;
