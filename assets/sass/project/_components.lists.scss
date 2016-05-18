@@ -5,7 +5,7 @@
 .list--style{
 	> ul{
 		list-style: none;
-		margin-left: 0;
+      margin-bottom: 0;
 	}
 }
 
@@ -23,6 +23,7 @@
 		&::before{
 			font-family:$brand-ico-family;
 			margin-right:0.4em;
+         margin-left: -$inuit-base-spacing-unit;
 		}
 	}
 }

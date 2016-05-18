@@ -40,7 +40,7 @@ piklist('field', array(
 piklist('field', array(
 	'type' => 'checkbox',
 	'scope' => 'post_meta',
-	'field' => 'wps_diasble_comment_url',
+	'field' => 'wps_disable_comment_url',
 	'value' => '',
 	'label' => 'Comment form URL field',
 	'description' => 'Disable the url field in the comment form section',

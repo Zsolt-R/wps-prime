@@ -302,7 +302,7 @@ class WPS_Theme_Setup {
 
 		/* Enque main style */
 		wp_enqueue_style( 'wps_prime-style', WPS_THEME_STYLE_URI );
-		wp_enqueue_style( 'wps_prime-icon-fonts', WPS_ASSETS_URI .'fonts/iconfont/font-awesome-4.5.0/css/font-awesome.min.css' );
+		wp_enqueue_style( 'wps_prime-icon-fonts', WPS_ASSETS_URI .'fonts/iconfont/font-awesome-4.6.3/css/font-awesome.min.css' );
 	}
 
 	/**
@@ -395,6 +395,9 @@ class WPS_Theme_Setup {
 
 		/* Add theme fonts to editor */
 		require( WPS_ENGINE_DIR .'functions/wps-editor-styles.php' );
+
+		/* Front end custom widget classes */
+		require( WPS_ENGINE_DIR .'functions/wps-admin-widget-options.php' );
 
 		/* Shortcodes, generate markup for content layout, media-objects, slider, buttons, etc */
 		require( WPS_ENGINE_DIR .'shortcodes/shortcodes.php' );

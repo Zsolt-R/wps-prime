@@ -21,8 +21,10 @@
  * 11 Media Box [mediabox]...content...[/mediabox]
  * 12 Highlight [hglt class="" html_tag=""]...content...[/hglt]
  * 13 Divider [divider]
- * 14 Divider [accordion]
- * 15 Divider [accprdion_item]
+ * 14 Accordion [accordion]
+ * 15 Accordion item [accordion_item]
+ * 16 WPS Anything slider [wps-slider]
+ * 17 WPS Anything slider slide [wps-slider-item]
  */
 
 /* 1 Layout Wrapper Markup */
@@ -63,6 +65,16 @@ add_shortcode( 'hglt', 'wps_content_highlight' );
 
 /* 13 Content divider */
 add_shortcode( 'divider', 'wps_content_divider' );
+
+/* 14 Accordion */
+/* 15 Accordion item */
+/* see wps_acc_shortcode.php */
+
+/* 16 WPS Anything slider */
+add_shortcode('wps-slider','wps_slider_shortcode');
+
+/* 17 WPS Anything slider slide */
+add_shortcode('wps-slider-item','wps_slider_item_shortcode');
 
 /**
  * 1 Layout Item Markup
@@ -159,11 +171,14 @@ function wps_fw_slider( $atts ) {
 		'min' => '22.51em',
 		'size' => 'wps_prime_full',
 		'size_mobile' => 'wps_prime_medium',
+		'scrollbar' => false,
+		'pagination' => false
 	), $atts );
 
 	$constructor = 'Add image id\'s to shortcode to use slider ex. images="1,2,3,4..."';
 
 	$image_list_constructor = '';
+	$constructor = '';
 	$arrays = array();
 
 	// Start ID Check.
@@ -227,16 +242,13 @@ function wps_fw_slider( $atts ) {
 	}
 	if ( $options['images'] ) {
 
-		 $constructor = '<div class="swiper">        
-                <div class="swiper-container">
-                    <div class="swiper-wrapper">'. $image_list_constructor .'</div>                    
-                
-                <div class="swiper-pagination"></div>
-                <div class="swiper-button-prev"></div><div class="swiper-button-next"></div>
-                        <!-- Add Scrollbar -->
-                 <div class="swiper-scrollbar"></div>
-             </div><!--swiper-container-->
-            </div>';
+		$constructor .= '<div class="swiper"><div class="swiper-container">';
+		$constructor .= '<div class="swiper-wrapper">'. $image_list_constructor .'</div>';
+		$constructor .= $options['pagination'] ? '<div class="swiper-pagination"></div>' : '<!--<div class="swiper-pagination"></div>-->';
+        $constructor .= '<div class="swiper-button-prev"></div><div class="swiper-button-next"></div>';
+		$constructor .= $options['scrollbar'] ? '<div class="swiper-scrollbar"></div>' : '<div class="swiper-scrollbar hide"></div>';
+        $constructor .= '</div></div>';
+        
 	}
 
 		return $constructor;
@@ -483,4 +495,54 @@ function wps_content_divider( $atts ) {
 	return $output;
 }
 
+/* 14 15 */
 require_once('shortcode_classes/wps_acc_shortcode.php');
+
+/**
+ *	16 WPS Anything slider
+ */
+function wps_slider_shortcode($atts,$content = null){
+	$options = shortcode_atts( array( 
+		'scrollbar' => false,
+		'pagination' => false
+		), $atts );
+
+	$output = '';
+
+	$inner = '';
+
+	$output .= '<div class="swiper"><div class="wps-anything-swiper-container"><div class="swiper-wrapper">';
+	$output .= do_shortcode($content);
+	$output .= '</div>';
+	
+	$output .= $options['pagination'] ? '<div class="swiper-pagination"></div>' : '<!--<div class="swiper-pagination"></div>-->';
+	$output .= '<div class="wps-anything-swiper-button-prev"></div><div class="wps-anything-swiper-button-next"></div>';
+	$output .= $options['scrollbar'] ? '<div class="swiper-scrollbar"></div>' : '<div class="swiper-scrollbar hide"></div>';
+	$output .= '</div></div>';
+
+	return $output;
+}
+
+/**
+ *	17 WPS Anything slider
+ */
+function wps_slider_item_shortcode($atts,$content = null){
+	$options = shortcode_atts( array( 
+		'class' => '',
+		'img' => '',
+		'img_size' => 'full'
+		), $atts );
+
+	$output = '';
+	$style = '';
+	$inner = '';
+	$class = $options['class'] ? ' '.$options['class'] : '';
+
+	if ( $options['img'] ) {
+			$image = wp_get_attachment_image_src( $options['img'],$options['img_size'],false );
+			$style = $image[0] ? " style='background-image:url({$image[0]});'" : '';
+	}
+	
+	$output = '<div class="swiper-slide'. $class .'"'.$style.'>'. do_shortcode($content) .'</div>';
+	return $output;
+}

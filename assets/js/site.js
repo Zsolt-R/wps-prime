@@ -51,19 +51,36 @@ jQuery(document).ready(function($) {
     // Optional parameters
     loop: true,
     autoplayDisableOnInteraction:false,
-    autoplay: 3000,
-    slidesPerView: 1,
-    
-    // If we need pagination
-    pagination: '.swiper-pagination',
-    
+    autoplay: 4000,
+    slidesPerView: 1,    
     // Navigation arrows
     nextButton: '.swiper-button-next',
     prevButton: '.swiper-button-prev',
-    
+
+    // If we need pagination
+    pagination: '.swiper-pagination',
+    paginationClickable:true,    
     // And if we need scrollbar
     scrollbar: '.swiper-scrollbar'   
-   })  
+   }) ;
+  
+  // Anything Slider
+  var wpsAnySwiper = new Swiper ('.wps-anything-swiper-container', {
+    // Optional parameters
+    loop: true,
+    autoplayDisableOnInteraction:false,
+    autoplay: 4000,
+    slidesPerView: 1,    
+    // Navigation arrows
+    nextButton: '.wps-anything-swiper-button-next',
+    prevButton: '.wps-anything-swiper-button-prev',
+  
+    // If we need pagination
+    pagination: '.swiper-pagination',
+    paginationClickable:true,
+    // And if we need scrollbar
+    scrollbar: '.swiper-scrollbar'   
+   });
 });
 
 // http://scottjehl.github.io/picturefill/#getting-started

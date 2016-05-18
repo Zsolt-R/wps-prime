@@ -1,5 +1,11 @@
 ## [WPS Prime Framework 1.3]
 ==============================
+**1.3.3**
+- Added Widget CSS option
+- Bugfix (rename option "wps_disable_comment_url")
+- Update Swiper Slider core .js from 3.3.0 to 3.3.1
+- Added WPS Anything slider shortcode [wps-slider][wps-slider-item]
+
 **1.3.2**
 - Extended typography options
 - Added 4 new shortcodes Content Highlight | Content Divider | List styler | Mediabox

@@ -52,7 +52,7 @@ if ( 'disable' === wps_get_theme_option( 'wps_front_emoji_use' ) ) {
 }
 
 /* Get option from settings */
-if ( 'disable' === wps_get_theme_option( 'wps_diasble_comment_url' ) ) {
+if ( 'disable' === wps_get_theme_option( 'wps_disable_comment_url' ) ) {
 	add_filter('comment_form_default_fields','unset_url_field_in_comment');
 }
 

@@ -6,6 +6,19 @@
 * Setting: wps_prime_settings
 * Tab: Content
 */
+piklist('field', array(
+     'type' => 'checkbox',
+     'scope' => 'post_meta',
+     'field' => 'wps_admin_widget_options',
+     'value' => '',
+     'label' => 'Widget custom CSS class',
+     'description' => 'Enable custom CSS field option on site widgets',
+     'attributes' => array(
+     'class' => 'text',
+     ),'choices' => array(
+          'enable' => 'Enable',
+     ),
+));
 
 piklist('field', array(
  'type' => 'editor',
