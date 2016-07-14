@@ -1,0 +1,61 @@
+@import "bower_components/inuit-defaults/settings.defaults";
+@import "bower_components/inuit-responsive-settings/settings.responsive";
+@import "project/settings.global";
+@import "project/settings.colors";
+/*
+* Custom WPS Visual composer CSS
+*/
+.wps_vc_icon{
+	width:30px;
+	height:25px;
+	display: block;
+	margin: 5px auto;
+}
+.wps_vc_column-offset-table .wps_vc_screen-size .wps_vc_icon{
+	background: transparent url('inc/integrations/visual-composer/img/width-sprite.png') 0 0 no-repeat;
+}
+
+.wps_vc_column-offset-table .wps_vc_screen-size-desk .wps_vc_icon{	
+
+}
+.wps_vc_column-offset-table .wps_vc_screen-size-portable .wps_vc_icon{
+	background-position:0px -25px;
+
+}
+.wps_vc_column-offset-table .wps_vc_screen-size-lap-and-up .wps_vc_icon{
+	background-position:0px -50px;
+}
+.wps_vc_column-offset-table .wps_vc_screen-size-lap .wps_vc_icon{
+	background-position:0px -75px;
+}
+.wps_vc_column-offset-table .wps_vc_screen-size-palm .wps_vc_icon{
+	background-position:0px -100px;
+}
+
+.vc_ui-panel-content-container{
+
+	select{
+		height: auto !important;
+	}
+}
+
+
+
+.ico--color-one{
+	color: $color-theme-1;
+}
+.ico--color-two{
+	color: $color-theme-2;
+}
+.ico--color-three{
+	color: $color-theme-3;
+}
+.ico--color-four{
+	color: $color-theme-4;
+}
+.ico--color-five{
+	color: $color-theme-5;
+}
+.ico--color-six{
+	color: $color-theme-6;	
+}
