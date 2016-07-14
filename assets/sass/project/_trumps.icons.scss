@@ -1,0 +1,44 @@
+/*------------------------------------*\
+    #ICON MODIFIERS
+\*------------------------------------*/
+
+.ico.ico--sm{
+	@include inuit-font-size(12px);    
+}
+.ico.ico--m{
+
+}
+.ico.ico--l{
+	@include inuit-font-size(20px); 
+}
+.ico.ico--xl{
+	@include inuit-font-size(26px);
+    @include media-query(lap-and-up){
+        @include inuit-font-size(32px);
+    }
+}
+.ico.ico--xxl{
+	@include inuit-font-size(32px);
+    @include media-query(lap-and-up){
+        @include inuit-font-size(48px);
+    }
+}
+
+.ico--color-one{
+	color: $color-theme-1;
+}
+.ico--color-two{
+	color: $color-theme-2;
+}
+.ico--color-three{
+	color: $color-theme-3;
+}
+.ico--color-four{
+	color: $color-theme-4;
+}
+.ico--color-five{
+	color: $color-theme-5;
+}
+.ico--color-six{
+	color: $color-theme-6;	
+}
