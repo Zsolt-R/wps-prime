@@ -1,5 +1,17 @@
-## [WPS Prime Framework 1.3]
+## [WPS Prime Framework 1.4]
 ==============================
+**1.4.0**
+- MAJOR CHANGES
+- Prefixed shortcodes with "wps_"
+- Changed shortcode s_slist to wps_list
+- Expanded icon shortcode options
+- Added icon Css modifiers
+- Added Visual Composer integration
+
+**1.3.4**
+- Update TGM-Plugin-Activation from 2.5.2 to 2.6.0
+- Update FontAwesome from 2.5.0 to 2.6.3
+
 **1.3.3**
 - Added Widget CSS option
 - Bugfix (rename option "wps_disable_comment_url")
