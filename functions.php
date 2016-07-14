@@ -57,7 +57,7 @@ class WPS_Theme_Setup {
 		add_action( 'widgets_init',  array( $this, 'theme_setup_defaults' ), 1 );
 
 		/* Enqueue scripts and styles. */
-		add_action( 'wp_enqueue_scripts', array( $this, 'theme_js' ) );
+		add_action( 'wp_enqueue_scripts', array( $this, 'theme_js' ) );		
 
 		/* Enqueue main style. */
 		add_action( 'wp_enqueue_scripts',array( $this, 'theme_css' ) );
@@ -248,6 +248,15 @@ class WPS_Theme_Setup {
 		/* Deregister Cf7 styles (included in style.css) */
 		require( WPS_ENGINE_DIR .'integrations/cf7-finetune.php' );
 
+		/* Visual Composer */
+		if ( class_exists( 'WPBakeryShortCode' ) ) {
+  		  require ( WPS_ENGINE_DIR .'integrations/visual-composer/wps-vc-integration.php' );
+		}
+
+		if ( !class_exists( 'WPBakeryShortCode' ) ) {
+		  require ( WPS_ENGINE_DIR .'integrations/visual-composer/shortcodes/wps-vc-shortcode-fallbacks.php');
+		}
+
 		/**
 		 *	Theme configurations
 		 */
@@ -302,7 +311,11 @@ class WPS_Theme_Setup {
 
 		/* Enque main style */
 		wp_enqueue_style( 'wps_prime-style', WPS_THEME_STYLE_URI );
-		wp_enqueue_style( 'wps_prime-icon-fonts', WPS_ASSETS_URI .'fonts/iconfont/font-awesome-4.6.3/css/font-awesome.min.css' );
+
+		wp_register_style( 'wps_prime-font-awesome', WPS_ASSETS_URI .'fonts/iconfont/wps-font-awesome/css/font-awesome.min.css' );
+		wp_register_style( 'wps_prime-typicons', WPS_ASSETS_URI .'fonts/iconfont/wps-typicons/fonts/typicons.min.css' );
+		wp_register_style( 'wps_prime-linecons', WPS_ASSETS_URI .'fonts/iconfont/wps-linecons/linecons.css' );
+		wp_register_style( 'wps_prime-woo-ecom', WPS_ASSETS_URI .'fonts/iconfont/wps-woothemes-e-commerce-icons/fonts/woothemes_ecommerce.css' );
 	}
 
 	/**
@@ -400,7 +413,8 @@ class WPS_Theme_Setup {
 		require( WPS_ENGINE_DIR .'functions/wps-admin-widget-options.php' );
 
 		/* Shortcodes, generate markup for content layout, media-objects, slider, buttons, etc */
-		require( WPS_ENGINE_DIR .'shortcodes/shortcodes.php' );
+		require( WPS_ENGINE_DIR .'shortcodes/wps-shortcode-helpers.php' );
+		require( WPS_ENGINE_DIR .'shortcodes/wps-shortcodes.php' );
 		require( WPS_ENGINE_DIR .'shortcodes/admin/wps-shortcodes-admin-buttons.php' );
 	}
 
