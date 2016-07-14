@@ -1,64 +1,90 @@
 /*------------------------------------*\
-    #COMPONENTS BUTTONS
+    #BUTTONS
 \*------------------------------------*/
-.btn:hover{
+.btn:hover,
+%btn:hover{
         background-color:darken($inuit-btn-background,5);
         background-color:darken($inuit-btn-background,5);
 }
 
-.btn--primary{
+.btn--primary,
+%btn--primary{
     background-color: $color-btn-primary;
     border-color: $color-btn-primary;
     &:hover{
-    	background-color:darken($color-btn-primary,5);
-    	border-color:darken($color-btn-primary,5);
+        background-color:darken($color-btn-primary,5);
+        border-color:darken($color-btn-primary,5);
     }
 }
 
-.btn--secondary{
+.btn--secondary,
+%btn--secondary{
     background-color: $color-btn-secondary;
     border-color: $color-btn-secondary;
     &:hover{
-    	background-color:darken($color-btn-secondary,5);
-    	border-color:darken($color-btn-secondary,5);
+        background-color:darken($color-btn-secondary,5);
+        border-color:darken($color-btn-secondary,5);
     }
 }
 
-.btn--tertiary{
+.btn--tertiary,
+%btn--tertiary{
     background-color: $color-btn-tertiary;
     border-color: $color-btn-tertiary;
     &:hover{
-    	background-color:darken($color-btn-tertiary,5);
-    	border-color:darken($color-btn-tertiary,5);
+        background-color:darken($color-btn-tertiary,5);
+        border-color:darken($color-btn-tertiary,5);
     }
 }
 
-.btn--positive{
+.btn--positive,
+%btn--positive{
     background-color: $color-btn-positive;
     border-color: $color-btn-positive;
        &:hover{
-    	background-color:darken($color-btn-positive,5);
-    	border-color:darken($color-btn-positive,5);
+        background-color:darken($color-btn-positive,5);
+        border-color:darken($color-btn-positive,5);
     }
 
 }
 
-.btn--negative{
+.btn--negative,
+%btn--negative{
     background-color: $color-btn-negative;
     border-color: $color-btn-negative;
     &:hover{
-    	background-color:darken($color-btn-negative,5);
-    	border-color:darken($color-btn-negative,5);
+        background-color:darken($color-btn-negative,5);
+        border-color:darken($color-btn-negative,5);
     }
 
 }
 
-.btn--neutral{
+.btn--neutral,
+%btn--neutral{
     background-color: $color-btn-neutral;
     border-color: $color-btn-neutral;
     &:hover{
-    	background-color:darken($color-btn-neutral,5);
-    	border-color:darken($color-btn-neutral,5);
+        background-color:darken($color-btn-neutral,5);
+        border-color:darken($color-btn-neutral,5);
     }
 
+}
+
+.btn--ghost,
+%btn--ghost{
+    background-color: transparent;
+    color:$color-text;
+}
+
+
+/** Alignments **/
+.btn--center,
+%btn--center{
+    display: table;  
+    margin:0 auto;
+}
+.btn--right,
+%btn--right{
+    display: table;  
+    margin:0 0 0 auto;
 }
