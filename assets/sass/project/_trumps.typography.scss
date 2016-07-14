@@ -80,14 +80,14 @@
 }
 
 .txt--xl{
-    @include inuit-font-size(22px);
+    @include inuit-font-size(28px);
     @include media-query(lap-and-up){
         @include inuit-font-size(32px);
     }
 }   
 
 .txt--xxl{
-    @include inuit-font-size(38px);
+    @include inuit-font-size(42px);
     @include media-query(lap-and-up){
         @include inuit-font-size(48px);
     }
