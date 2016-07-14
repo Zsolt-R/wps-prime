@@ -79,8 +79,8 @@ class WPS_Accordion_Shortcodes {
 		// Register JavaScript
 		add_action('wp_enqueue_scripts', array($this, 'register_script'));
 
-		add_shortcode('accordion', array($this, 'accordion_shortcode'));
-		add_shortcode('accordion_item', array($this, 'accordion_item_shortcode'));
+		add_shortcode('wps_accordion', array($this, 'accordion_shortcode'));
+		add_shortcode('wps_accordion_item', array($this, 'accordion_item_shortcode'));
 
 		// Print script in wp_footer
 		add_action('wp_footer', array($this, 'print_script'));
