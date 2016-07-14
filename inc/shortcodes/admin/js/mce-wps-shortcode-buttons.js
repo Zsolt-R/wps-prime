@@ -184,7 +184,7 @@
                        
                                     // Return the shortcode to editor.
                                     // Check if there is a valid css declaration and trim first and last space using trim
-                                    editor.insertContent('[item' + getCssClass(options) +']'+ editor.selection.getContent() +'[/item]');
+                                    editor.insertContent('[wps_item' + getCssClass(options) +']'+ editor.selection.getContent() +'[/wps_item]');
                             }
 
                      });                    
@@ -212,7 +212,7 @@
 
                         }],
                         onsubmit: function( e ) {
-                            editor.insertContent('[layout wrapper="'+ e.data.layoutWrapperState +'"'+ (e.data.layoutWrapperClass !== '' ? ' class="'+ e.data.layoutWrapperClass +'"' : '') + ']' + editor.selection.getContent() +'[/layout]');
+                            editor.insertContent('[wps_layout wrapper="'+ e.data.layoutWrapperState +'"'+ (e.data.layoutWrapperClass !== '' ? ' class="'+ e.data.layoutWrapperClass +'"' : '') + ']' + editor.selection.getContent() +'[/wps_layout]');
                         }
                     });
                 }              
@@ -274,7 +274,7 @@
 
                              var options = [e.data.buttonClassImp,e.data.buttonClassSize,e.data.buttonClass];
                                     
-                            editor.insertContent('[button '+ getCssClass(options) + ' link="'+ e.data.buttonLink +'" label="'+ e.data.buttonInfotext +'"]');
+                            editor.insertContent('[wps_button '+ getCssClass(options) + ' link="'+ e.data.buttonLink +'" label="'+ e.data.buttonInfotext +'"]');
                         }
                     });
                 }
@@ -304,7 +304,7 @@
 
                                     return false;
                                 }
-                                editor.insertContent('[ico]'+ e.data.iconClass +'[/ico]');
+                                editor.insertContent('[wps_ico]'+ e.data.iconClass +'[/wps_ico]');
                             }
                         });
                     }
@@ -329,7 +329,7 @@
 
                                 var options = [e.data.listType,e.data.listClass];
                                 
-                                editor.insertContent('[s_list'+ getCssClass(options) + ']' + editor.selection.getContent() +'[/s_list]');
+                                editor.insertContent('[wps_list'+ getCssClass(options) + ']' + editor.selection.getContent() +'[/wps_list]');
                             }
                         });
                     }
@@ -374,7 +374,7 @@
                               }
 
                                     
-                            editor.insertContent('[slider images="'+ e.data.imageIdList +'"'+ slideImageLinks +']');
+                            editor.insertContent('[wps_slider images="'+ e.data.imageIdList +'"'+ slideImageLinks +']');
                         }
                         });
                     }
