@@ -162,7 +162,7 @@ class WpsGetThemeFonts{
 
 		if ( wps_get_theme_option( 'second_font_family_status' ) === 'enabled' ) {
 			$font_second = wps_get_theme_option( 'secondary_font_family' ); // Get selected font family option.
-			$font_second_prep = str_replace( 'http://fonts.googleapis.com/css?family=','|',$theme_fonts[ $font_second ][2] );
+			$font_second_prep = str_replace( 'https://fonts.googleapis.com/css?family=','|',$theme_fonts[ $font_second ][2] );
 
 		}
 
@@ -185,6 +185,8 @@ class WpsGetThemeFonts{
 
 		$select_b = 'html,body,.font-body';
 		$select_h = 'h1,h2,h3,h4,h5,h6,.font-heading';
+		$font_one =	'.font-one';
+		$font_two = '.font-two';
 
 		$style = '';
 
@@ -211,6 +213,10 @@ class WpsGetThemeFonts{
 			$style = $select_b.'{font-family:\''. esc_attr( $theme_fonts[ $font_main ][0] ) . '\';'. $theme_fonts[ $font_main ][3] .';}';
 
 			$style .= $select_h.'{font-family:\''. esc_attr( $theme_fonts[ $font_second ][0] ) . '\';'. $theme_fonts[ $font_second ][4] .';}';
+
+			//Font Family selectors without font weight
+			$style .= $font_one.'{font-family:\''. esc_attr( $theme_fonts[ $font_main ][0] ) . '\';}';
+			$style .= $font_two.'{font-family:\''. esc_attr( $theme_fonts[ $font_second ][0] ) . '\';}';
 		}
 
 		return $style;
