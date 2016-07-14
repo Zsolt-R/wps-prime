@@ -20,7 +20,7 @@ function wps_theme_setting_pages( $pages ) {
 	'menu_title' => __( 'Theme Settings', 'piklist' ),
 	'menu' => 'admin.php',
 	'capability' => 'manage_options',
-	'menu_slug' => 'theme_settings',
+	'menu_slug' => 'wps_prime_settings',
 	'setting' => 'wps_prime_settings',
 	'menu_icon' => 'dashicons-desktop',
 	'page_icon' => 'dashicons-desktop',
@@ -51,6 +51,12 @@ function wps_get_theme_option( $option_name = null ) {
 
 		// Check if option is set!
 		$result = isset( $theme_options[ $option_name ] ) ? $theme_options[ $option_name ] : null;
+
+		// If there is only one option in the option-array
+		// Extract the single option
+		if(is_array($result) && count($result) === 1){
+			$result = $result[0];
+		}
 
 	}
 	return $result;
