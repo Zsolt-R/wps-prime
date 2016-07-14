@@ -1,11 +1,14 @@
 <?php
 /**
-* Theme Settings
-*
-* Title: Content Settings
-* Setting: wps_prime_settings
-* Tab: Content
-*/
+ * Theme Settings
+ *
+ * Title: Content Settings
+ * Setting: wps_prime_settings
+ * Tab: Content
+ * Flow: WPS Settings Workflow
+ *
+ * @package wps_prime
+ */
 piklist('field', array(
      'type' => 'checkbox',
      'scope' => 'post_meta',

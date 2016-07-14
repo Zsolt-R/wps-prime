@@ -5,6 +5,7 @@
  * Title: Blog Settings
  * Setting: wps_prime_settings
  * Tab: Blog Settings
+ * Flow: WPS Settings Workflow
  *
  * @package wps_prime
  */

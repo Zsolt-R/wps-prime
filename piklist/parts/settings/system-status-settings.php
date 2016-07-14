@@ -5,6 +5,7 @@
  * Title: System Status
  * Setting: wps_prime_settings
  * Tab: System Status
+ * Flow: WPS Settings Workflow
  *
  * @package wps_prime
  */
@@ -124,7 +125,7 @@ function get_image_sizes() {
 }
 
 // Check favicon existence.
-$ico_path = get_stylesheet_directory() .'/favicon.ico'; 
+$ico_path = get_stylesheet_directory() .'/favicon.ico';	
 $favicon = false !== get_transient('site_favicon') ? get_transient('site_favicon') : '<span class="wp-ui-text-notification dashicons dashicons-warning"></span> No data';
 
 $favicon_status = wps_file_exist( $ico_path ) ? '<span class="dashicons dashicons-yes wp-ui-text-highlight"></span>':'<span class="wp-ui-text-notification dashicons dashicons-warning"></span> Missing';

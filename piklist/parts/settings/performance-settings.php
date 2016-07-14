@@ -5,6 +5,7 @@
  * Title: Theme Performance Tweaks
  * Setting: wps_prime_settings
  * Tab: Performance & Tweaks
+ * Flow: WPS Settings Workflow
  *
  * @package wps_prime
  */

@@ -1,12 +1,13 @@
 <?php
 /**
- *	Typography Settings
+ * Typography Settings
  *
- *	Title: Typography Settings
- *	Setting: wps_prime_settings
- *	Tab: Typography
+ * Title: Typography Settings
+ * Setting: wps_prime_settings
+ * Tab: Typography
+ * Flow: WPS Settings Workflow
  *
- * 	@package wps_prime
+ * @package wps_prime
  */
 
 /**

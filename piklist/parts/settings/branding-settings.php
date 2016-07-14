@@ -5,6 +5,7 @@
  * Title: Branding Settings
  * Setting: wps_prime_settings
  * Tab: Branding
+ * Flow: WPS Settings Workflow
  *
  * @package wps_prime
  */
