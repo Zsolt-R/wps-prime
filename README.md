@@ -19,18 +19,18 @@ A lightweight WordPress master theme based on _s and extended with simple and us
 - **Add favicon**
   - Add favicon to website by dropping it into the theme root ( name file favicon.ico )
 - **Theme Shortcodes**
-  - 1  Layout Wrapper Markup - [layout class="lap-and-up..." wrapper="false"]
-  - 2  Layout Item Markup - [item class="lap-and-up..."] ...content... [/item]
-  - 3  Full Width Slider - [slider images="1,2,3...(image id's)" links="56,78,98...(page/post id's)" size="wps_prime_full"]
-  - 4  Custom Buttons - [button class="btn--small,btn--large,btn--primary,btn--secondary,btn--tertiary" link="..." label="button label"]
-  - 5  Media / Flag Object - media/flag(OOCSS Markup Items) - [object type="media/flag"] ... [/object]
-  - 6  Media / Flag Object inners -media/flag (OOCSS Markup Items) - [object_item type="media__img/flag__img,media__img/media__body"]...[/object_item]
-  - 7  Shortcode for icons - [ico]fa fa-home[/ico]
-  - 8  Main Phone number - [main_phone_nr]
+  - 1  Layout Wrapper Markup - [wps_layout class="lap-and-up..." wrapper="false"]
+  - 2  Layout Item Markup - [wps_item class="lap-and-up..."] ...content... [/wps_item]
+  - 3  Full Width Slider - [wps_slider images="1,2,3...(image id's)" links="56,78,98...(page/post id's)" size="wps_prime_full"]
+  - 4  Custom Buttons - [wps_button class="btn--small,btn--large,btn--primary,btn--secondary,btn--tertiary" link="..." label="button label"]
+  - 5  Media / Flag Object - media/flag(OOCSS Markup Items) - [wps_object type="media/flag"] ... [/wps_object]
+  - 6  Media / Flag Object inners -media/flag (OOCSS Markup Items) - [wps_object_item type="media__img/flag__img,media__img/media__body"]...[/wps_object_item]
+  - 7  Shortcode for icons - [wps_ico]fa fa-home[/wps_ico]
+  - 8  Main Phone number - [wps_main_phone_nr]
   - 9  Main Email address - [main_email]"
-  - 10 List styles [s_list class="list--style-one custom--class"]<ul><li>List item</li> .... </ul>[/s_list]
-  - 11 Media Box [mediabox]...content...[/mediabox]
-  - 12 Highlight [hglt class="" html_tag=""]...content...[/hglt]
+  - 10 List styles [wps_list class="list--style-one custom--class"]<ul><li>List item</li> .... </ul>[/wps_list]
+  - 11 Media Box [wps_mediabox]...content...[/wps_mediabox]
+  - 12 Highlight [wps_hglt class="" html_tag=""]...content...[/wps_hglt]
   - 13 Divider [divider]
 - **Recommended plugins activator** _speeds up wp-setup making esential plugins more accessable_
   - PIKLIST 
