@@ -1,0 +1,27 @@
+/* ==========================================================================
+   #HOLDER
+   ========================================================================== */
+
+.o-holder--video{
+  position: relative;
+  overflow: hidden;
+}
+
+/* Add Black Background to the video */
+.o-holder--video::before{
+  content:'';
+  position:absolute;
+  top:0;
+  left: 0;
+  width:100%;
+  height:100%;
+  background-color: #000;
+  z-index:-99;
+}
+
+/*
+ Make the element following the video position relative so the video will go at the back of the content
+*/
+.o-holder--video > div:not(.wps-bg-video-wrapper) {
+  position: relative;
+}

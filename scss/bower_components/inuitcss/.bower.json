@@ -1,0 +1,43 @@
+{
+  "name": "inuitcss",
+  "version": "6.0.0-beta.4",
+  "homepage": "https://github.com/inuitcss/inuitcss",
+  "authors": [
+    "Harry Roberts <csswizardry@gmail.com>"
+  ],
+  "contributors": [
+    "Anselm Hannemann",
+    "Dennis Heibült",
+    "Florian Bouvot",
+    "Nenad Jelovac"
+  ],
+  "description": "Extensible, scalable, Sass-based, OOCSS framework for large and long-lasting UI projects.",
+  "main": "example.main.scss",
+  "keywords": [
+    "oocss",
+    "sass",
+    "bem",
+    "itcss",
+    "css"
+  ],
+  "ignore": [
+    "**/.*",
+    "test",
+    "package.json",
+    "CONTRIBUTING.md"
+  ],
+  "license": "Apache-2.0",
+  "dependencies": {
+    "sass-mq": "^3.2.9"
+  },
+  "_release": "6.0.0-beta.4",
+  "_resolution": {
+    "type": "version",
+    "tag": "6.0.0-beta.4",
+    "commit": "126bebe2ff2146b7101ef28fb1b2c0c4832261dc"
+  },
+  "_source": "https://github.com/inuitcss/inuitcss.git",
+  "_target": "^6.0.0-beta.4",
+  "_originalSource": "inuitcss",
+  "_direct": true
+}

@@ -1,0 +1,41 @@
+/*------------------------------------*\
+    #COMPONENTS COMMENT
+\*------------------------------------*/
+.comment-list{
+	margin-left:0;
+
+}
+
+.comment-author.vcard{
+	
+}
+
+.comment-respond{
+    border-top: 1px solid $color-gray-ui;
+    border-bottom: 1px solid $color-gray-ui;
+    padding: $inuit-global-spacing-unit/2 0;
+    margin-bottom: $inuit-global-spacing-unit;
+
+}
+
+.form-submit{
+    .submit{
+        display: inline-block; /* [1] */
+        vertical-align: middle; /* [2] */
+        font: inherit; /* [3] */
+        text-align: center; /* [4] */
+        margin: 0; /* [4] */
+        cursor: pointer; /* [5] */
+         padding: inuit-rem($inuit-global-spacing-unit-tiny) inuit-rem($inuit-global-spacing-unit-small);
+        transition: $global-transition;
+        border-radius: $global-radius;
+    }
+}
+.comment-form__label{
+   
+}
+.comment-form__field{
+    display:block;
+    width:100%;
+    @extend %u-form-adjust;
+}

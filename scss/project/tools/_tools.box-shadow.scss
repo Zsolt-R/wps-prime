@@ -1,0 +1,9 @@
+/*------------------------------------*\
+    #MIXIN BOX SHADOW
+\*------------------------------------*/
+
+@mixin box-shadow($args1, $args2) {
+    -webkit-box-shadow: $args1, $args2;
+    -moz-box-shadow: $args1, $args2;
+    box-shadow: $args1, $args2;
+}

@@ -1,0 +1,92 @@
+/*------------------------------------*\
+    #COMPONENTS MAIN-NAV
+\*------------------------------------*/
+
+/* Shared deskop and mobile */
+/* Reset ul default styling */
+.site-nav__list,
+.site-mobile-nav__list{
+    list-style: none;
+    margin-bottom:0;
+    margin-left:0;
+}
+
+.site-nav__link{
+    text-decoration: none;
+    padding:0.5em;
+}
+/* End Shared */
+
+
+/* Mobile nav */
+.site-nav-mobile,
+.site-mobile-nav-toggler{
+     @include media-query(lap-and-up) {
+        @include hide();
+    }
+}
+
+.site-nav-mobile{
+    display:none; 
+    text-align: center;
+    position: relative;
+    &>div{
+        position: absolute;
+        width: 100%;        
+        background-color: $color-body;
+        z-index: 99999;
+    }
+    /* Subnav */
+    .site-nav__item > .site-nav__list{
+            @include inuit-font-size(14px);
+        }
+
+    // Site nav toggled
+    &.toggled{
+        display: block;
+    }
+}
+
+.site-mobile-nav-toggler{   
+    float: right;
+}
+/* End Mobile nav */
+
+/* Desktop nav */
+.site-nav {        
+    display:none; // Mobile First Default Hidden 
+    float: right;
+    @include media-query(lap-and-up) {
+        display:block;
+    }    
+}
+.site-nav{
+
+    .site-nav__list{
+        position: relative;
+    }    
+
+    /* Subnav */
+    .site-nav__item > .site-nav__list{
+         position: absolute;
+         min-width: 140px;
+         display: none;
+         background-color: $color-white;
+         z-index: 99999;
+         .site-nav__item{
+            display: block;
+            position: relative;        
+            }
+        }
+
+    .site-nav__item:hover > .site-nav__list{
+        display: block;
+    }
+
+    .site-nav__item{
+        display: inline-block;
+        position: relative;        
+    }
+
+}
+/* End Desktop nav */

@@ -1,0 +1,28 @@
+/*------------------------------------*\
+    #GENERATE RESPONSIVE CLASSES
+\*------------------------------------*/
+
+@mixin generate-responsive-classes() {
+
+    // Loop through our previously-defined breakpoints.
+    @each $breakpoint in $breakpoints {
+
+        $breakpoint-name:      nth($breakpoint, 1) !global;
+        //$inuit-generate-spacing-condition:  nth($breakpoint, 2);
+
+        // This isn’t ideal, but we definitely don’t want to generate widths
+        // for retina devices. Exclude retina media-qeuries manually.
+        @if ($breakpoint-name != "retina") {
+    
+            @include media-query($breakpoint-name) {
+                @content;
+            } // Close media query.
+
+        } // Close retina check.
+
+        // Take the global variable back out of scope.
+        $breakpoint-name: null !global;
+
+    } // Close breakpoints loop.
+
+}

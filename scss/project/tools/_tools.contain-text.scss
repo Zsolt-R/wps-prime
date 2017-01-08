@@ -1,0 +1,14 @@
+/*------------------------------------*\
+    #CONTAIN TEXT
+\*------------------------------------*/
+
+/*
+ * #break long words taht would overflow from container
+ */
+@mixin contain-text() {
+       word-break: break-word;
+       word-wrap: break-word;
+       -webkit-hyphens: auto;
+       -moz-hyphens: auto;
+       hyphens: auto;
+}

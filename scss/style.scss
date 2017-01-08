@@ -1,0 +1,239 @@
+/* ==========================================================================
+   INUITCSS
+   ========================================================================== */
+
+/**
+ * inuitcss, by @csswizardry
+ *
+ * github.com/inuitcss | inuitcss.com
+ */
+
+/**
+ * This is an example inuitcss manifest file. DO NOT MODIFY THIS FILE DIRECTLY.
+ * Instead, copy and paste it into your own CSS directory and make additions,
+ * extensions, and modifications there.
+ */
+
+/**
+ * CONTENTS
+ *
+ * THEME DATA
+ * Theme-info...........Wordpress Theme Data Style
+ *
+ * SETTINGS
+ * Config...............Project-level configuration and feature switches.
+ * Core.................inuitcss’ core and setup settings.
+ * Global...............Project-wide variables and settings.
+ *
+ * TOOLS
+ * Rem..................Tools for converting pixel inputs into their rem
+ *                      equivalents.
+ * Font-size............A mixin which guarantees baseline-friendly line-heights.
+ * Clearfix.............Micro clearfix mixin.
+ * Hidden...............Mixin for hiding elements.
+ * Sass MQ..............inuitcss’ default media query manager.
+ *
+ * GENERIC
+ * Box-sizing...........Better default `box-sizing`.
+ * Normalize.css........A level playing field using @necolas’ Normalize.css.
+ * Reset................A tiny reset to complement Normalize.css.
+ * Shared...............Sensibly and tersely share some global commonalities
+ *                      (particularly useful when managing vertical rhythm).
+ *
+ * ELEMENTS
+ * Page.................Set up our document’s default `font-size` and
+ *                      `line-height`.
+ * Headings.............Very minimal (i.e. only font-size information) for
+ *                      headings 1 through 6.
+ * Images...............Base image styles.
+ * Tables...............Simple table styles.
+ *
+ * OBJECTS
+ * Wrapper..............Page constraint object.
+ * Layout...............Generic layout module.
+ * Media................Image- and text-like content side by side. The
+ *                      poster-child of OOCSS.
+ * Flag.................Table-layout-based advancement on the Media object.
+ * List-bare............Lists with no bullets or indents.
+ * List-inline..........A list whose items all site in a line.
+ * Box..................Simple boxing abstraction.
+ * Block................Image-on-top-of-text object.
+ * Ratio................A container for maintaining aspect ratio of content.
+ * Crop.................Provide a cropping context for media (images, etc.).
+ * Tables...............Classes for manipulating `table`s.
+ * Pack.................Pack items into available horizontal space.
+ *
+ * COMPONENTS
+ * Buttons..............An example button component, and how it fits into the
+ *                      inuitcss framework.
+ *
+ * UTILITIES
+ * Clearfix.............Bind our clearfix onto a utility class.
+ * Widths...............Simple width helper classes.
+ * Headings.............Reassigning our heading styles to helper classes.
+ * Spacing..............Nudge bits of the DOM around with these spacing
+ *                      classes.
+ * Print................Reset-like styles taken from the HTML5 Boilerplate.
+ * Hide.................Helper classes to hide content
+ */
+// Grid Setups
+// Gridlex
+// Sass MQ
+
+// Gridlex vars
+$gl-palm:          "screen and (max-width: 44.9375em)";                       // 719px
+$gl-lap:           "screen and (min-width: 45em) and (max-width: 63.9375em)"; // 720px <-> 1023px
+$gl-lap-and-up:    "screen and (min-width: 45em)";                            // 720px
+$gl-portable:      "screen and (max-width: 63.9375em)";                       // 1023px
+$gl-desktop:       "screen and (min-width: 64em)";                            // 1024px
+
+$breakpoints:(
+"palm"       $gl-palm,
+"lap"        $gl-lap,
+"lap-and-up" $gl-lap-and-up,
+"portable"   $gl-portable,
+"desktop"    $gl-desktop
+);
+
+// Sass MQ
+// Tweakpoints
+// desktopAd: 810px,
+// mobileLandscape: 480px
+//$mq-breakpoints: (
+//    mobile:  300px,
+//    tablet:  740px,
+//    laptop:  1024px,
+//    desktop: 1200px,
+//    wide:    1300px,
+//);
+//$mq-show-breakpoints: (mobile, tablet, desktop, wide);
+
+// THEME DATA 
+@import "theme-data";
+
+// SETTINGS
+$inuit-global-font-size:    16px;
+$inuit-global-line-height:  24px;
+@import "bower_components/inuitcss/settings/settings.core";
+
+
+$spacing-unit: $inuit-global-spacing-unit;
+$gl-gutter:    $inuit-global-spacing-unit; // Total
+$gl-col-bottom: 0;
+@import "project/settings/settings.gridlex";
+@import "project/settings/settings.colors";
+@import "project/settings/settings.font-weight";
+@import "project/settings/settings.styled-list";
+@import "project/settings/settings.global";
+
+
+
+// TOOLS
+@import "bower_components/inuitcss/tools/tools.rem";
+@import "bower_components/inuitcss/tools/tools.font-size";
+@import "bower_components/inuitcss/tools/tools.clearfix";
+@import "project/tools/tools.rgba-background";
+@import "project/tools/tools.hide";
+@import "project/tools/tools.box-shadow";
+@import "project/tools/tools.contain-text";
+@import "project/tools/tools.media-query-generator";
+@import "project/tools/tools.generate-responsive-classes";
+//@import "bower_components/sass-mq/mq";
+
+
+
+// GENERIC
+@import "bower_components/inuitcss/generic/generic.box-sizing";
+@import "bower_components/inuitcss/generic/generic.normalize";
+@import "bower_components/inuitcss/generic/generic.reset";
+@import "bower_components/inuitcss/generic/generic.shared";
+
+
+
+
+
+// ELEMENTS
+$inuit-font-size-h1:  36px !default;
+$inuit-font-size-h2:  28px !default;
+$inuit-font-size-h3:  24px !default;
+$inuit-font-size-h4:  20px !default;
+$inuit-font-size-h5:  18px !default;
+$inuit-font-size-h6:  16px !default;
+@import "bower_components/inuitcss/elements/elements.page";
+@import "bower_components/inuitcss/elements/elements.headings";
+@import "project/elements/elements.type";
+@import "project/elements/elements.links";
+@import "project/elements/elements.images";
+@import "bower_components/inuitcss/elements/elements.tables";
+
+
+
+
+
+// OBJECTS
+//
+// Uncomment and add to this section as necessary.
+@import "bower_components/inuitcss/objects/objects.wrapper";
+@import "project/objects/objects.col-inner";
+@import "bower_components/inuitcss/objects/objects.media";
+@import "bower_components/inuitcss/objects/objects.flag";
+//@import "bower_components/inuitcss/objects/objects.list-bare";
+//@import "bower_components/inuitcss/objects/objects.list-inline";
+@import "bower_components/inuitcss/objects/objects.box";
+@import "bower_components/inuitcss/objects/objects.block";
+@import "bower_components/inuitcss/objects/objects.ratio";
+@import "bower_components/inuitcss/objects/objects.crop";
+@import "bower_components/inuitcss/objects/objects.tables";
+//@import "bower_components/inuitcss/objects/objects.pack";
+@import "project/objects/objects.media-flag-responsive";
+@import "project/objects/objects.holder";
+@import "project/objects/objects.responsive-video";
+@import "project/objects/objects.parallax";
+
+
+
+
+
+// COMPONENTS
+//
+// Build and include your project’s UI Compoments here.
+
+//Wordpress Generated
+@import "project/components/components.wp-screen-reader";
+@import "project/components/components.wp-page";
+@import "project/components/components.wp-images";
+@import "project/components/components.wp-widget";
+@import "project/components/components.wp-galleries";
+@import "project/components/components.wp-comments";
+
+//Custom Components
+@import "project/components/components.buttons";
+@import "project/components/components.divider";
+@import "project/components/components.styled-list";
+@import "project/components/components.swiper-slider";
+@import "project/components/components.tabs";
+@import "project/components/components.accordion";
+@import "project/components/components.main-navigation";
+@import "project/components/components.page-micro";
+@import "project/components/components.icons";
+@import "project/components/components.highlight";
+@import "project/components/components.fancybox";
+
+// UTILITIES
+@import "bower_components/inuitcss/utilities/utilities.clearfix";
+@import "project/utilities/utilities.alignments";
+@import "project/utilities/utilities.show-hide";
+@import "project/utilities/utilities.form";
+
+
+@import "bower_components/inuitcss/utilities/utilities.headings";
+@import "bower_components/inuitcss/utilities/utilities.spacing";
+@import "project/utilities/utilities.typography";
+
+
+
+@import "project/utilities/utilities.gridlex";
+@import "project/utilities/utilities.backgrounds";
+@import "project/utilities/utilities.video-backgrounds";
+@import "project/utilities/utilities.shadow";
+@import "bower_components/inuitcss/utilities/utilities.print";

@@ -1,0 +1,47 @@
+/*------------------------------------*\
+    #VIDEO BACKGROUND
+\*------------------------------------*/
+
+.wps-bg-video-wrapper,
+.wps-ytube-video {
+    display: block;
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    background-size: cover;
+    opacity: 0.9;
+
+    &::after{
+        content:'';
+        display:block;
+        position:absolute;
+        width:100%;
+        height:100%;
+        top:0;
+        left:0;
+    }
+}
+.wps-ytube-video.loaded{
+
+}
+.wps-bg-video,
+.ytplayer-container{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background-size: cover;
+    opacity: 0.6;
+}

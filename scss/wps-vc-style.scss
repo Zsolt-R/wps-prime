@@ -1,0 +1,54 @@
+/* ==========================================================================
+   INUITCSS
+   ========================================================================== */
+
+
+// Gridlex vars
+$gl-palm:          "screen and (max-width: 44.9375em)";                       // 719px
+$gl-lap:           "screen and (min-width: 45em) and (max-width: 63.9375em)"; // 720px <-> 1023px
+$gl-lap-and-up:    "screen and (min-width: 45em)";                            // 720px
+$gl-portable:      "screen and (max-width: 63.9375em)";                       // 1023px
+$gl-desktop:       "screen and (min-width: 64em)"; 
+
+
+$breakpoints:(
+"palm"       $gl-palm,
+"lap"        $gl-lap,
+"lap-and-up" $gl-lap-and-up,
+"portable"   $gl-portable,
+"desktop"    $gl-desktop
+);
+
+// SETTINGS
+@import "bower_components/inuitcss/settings/settings.core";
+@import "project/settings/settings.colors";
+@import "project/settings/settings.font-weight";
+@import "project/settings/settings.styled-list";
+@import "project/settings/settings.global";
+
+
+
+
+
+
+
+// TOOLS
+@import "bower_components/inuitcss/tools/tools.rem";
+@import "bower_components/inuitcss/tools/tools.font-size";
+@import "project/tools/tools.contain-text";
+@import "project/tools/tools.media-query-generator";
+
+
+// COMPONENTS
+//
+// Build and include your project’s UI Compoments here.
+@import "project/components/components.buttons";
+@import "project/components/components.divider";
+
+
+
+
+
+// UTILITIES
+@import "project/utilities/utilities.typography";
+@import "project/utilities/utilities.backgrounds";

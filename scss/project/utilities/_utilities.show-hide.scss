@@ -1,0 +1,21 @@
+/*------------------------------------*\
+    #SHOW-HIDE
+\*------------------------------------*/
+
+/**
+ * Mixin hide(); in _tools.hide.scss 
+ */
+.u-hide,
+%u-hide { @include hide(); }
+
+
+@include generate-responsive-classes() {
+	.u-#{$breakpoint-name}--hide{ @include hide(); }
+
+}
+
+.u-hide-title{
+	.entry-title{
+		@extend %u-hide;
+	}
+}

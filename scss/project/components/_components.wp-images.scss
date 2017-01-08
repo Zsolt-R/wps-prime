@@ -1,0 +1,20 @@
+/*------------------------------------*\
+    #COMPONENTS WP-IMAGES
+\*------------------------------------*/
+
+// WP generated image alignment classes
+.aligncenter{
+    margin:0 auto;   
+    clear: both;
+    display: block;
+}
+
+.alignleft{
+    float: left;
+    margin-right: $inuit-global-spacing-unit; // add margin to images
+}
+
+.alignright{
+    float: right;
+    margin-left: $inuit-global-spacing-unit; // add margin to images
+}

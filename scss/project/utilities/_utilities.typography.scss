@@ -1,0 +1,88 @@
+/*------------------------------------*\
+    #TRUMPS TYPOGRAPHY
+\*------------------------------------*/
+
+//Font Weight
+.u-text-normal{
+    font-weight: $font-weight-normal;
+}
+.u-text-thinner{
+    font-weight: $font-weight-thinner;
+}
+.u-text-thin{
+    font-weight: $font-weight-thin;
+}
+.u-text-bold{
+    font-weight: $font-weight-bold;
+}
+.u-text-bolder{
+    font-weight: $font-weight-bolder;
+}
+
+
+//Test Align
+.u-text-center{
+    text-align: center;
+}
+.u-text-right{
+    text-align: right;
+}
+
+.u-text-left{
+    text-align: left;
+}
+
+//  Text Colors
+.u-text-color-invert{
+    color:$color-text-invert; // invert text color to body color //
+    h1,h2,h3,h4,h5,h6,a{
+       color:$color-text-invert; // invert text color to body color // 
+    }       
+}
+
+.u-text-color-light{
+    color:$color-text-light;
+    h1,h2,h3,h4,h5,h6,a{
+    color:$color-text-light;
+    }
+}
+
+.u-text-color-primary{
+    color:$color-text-primary; 
+    h1,h2,h3,h4,h5,h6,a{
+        color:$color-text-primary;
+    } 
+}
+
+.u-text-color-secondary{
+    color:$color-text-secondary;
+    h1,h2,h3,h4,h5,h6,a{
+    color:$color-text-secondary;
+    }
+}
+
+.u-text-color-tertiary{
+    color:$color-text-tertiary; 
+    h1,h2,h3,h4,h5,h6,a{
+        color:$color-text-tertiary;
+    }   
+}
+
+/* Text Sizes */
+.u-text-small{
+    @include inuit-font-size(12px);    
+} 
+
+.u-text-large{
+    @include inuit-font-size(28px);
+    @include media-query(lap-and-up){
+        @include inuit-font-size(32px);
+    }
+}   
+
+.u-text-huge{
+    @include inuit-font-size(42px);
+    @include media-query(lap-and-up){
+        @include inuit-font-size(48px);
+    }
+}

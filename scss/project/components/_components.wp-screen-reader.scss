@@ -1,0 +1,7 @@
+/*------------------------------------*\
+    #COMPONENTS SCREEN READER TEXT
+\*------------------------------------*/
+
+.screen-reader-text{
+	@include hidden-visually();
+}

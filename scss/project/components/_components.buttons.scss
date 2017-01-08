@@ -1,0 +1,345 @@
+/* ==========================================================================
+   #BUTTONS
+   ========================================================================== */
+
+/**
+ * This is an example component. Extend inuitcss by building your own components
+ * that make up your UI. Component classes are prefixed with a `c-`.
+ */
+
+/**
+ * 1. Allow us to style box model properties.
+ * 2. Line different sized buttons up a little nicer.
+ * 3. Make buttons inherit font styles (often necessary when styling `input`s as
+ *    buttons).
+ * 4. Reset/normalize some styles.
+ * 5. Force all button-styled elements to appear clickable.
+ */
+
+.c-button {
+  display: inline-block; /* [1] */
+  vertical-align: middle; /* [2] */
+  font: inherit; /* [3] */
+  text-align: center; /* [4] */
+  margin: 0; /* [4] */
+  cursor: pointer; /* [5] */
+  padding: $inuit-global-spacing-unit-small $inuit-global-spacing-unit;
+  transition: $global-transition;
+  border-radius: $global-radius;
+  background-color: $color-button-default;
+
+  &,
+  &:hover,
+  &:active,
+  &:focus {
+   text-decoration: none;   
+   color: $color-white; 
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $color-button-default-hover;
+  }
+}
+
+
+
+
+
+/* Style variants
+   ========================================================================== */
+
+.c-button--primary {
+  background-color: $color-button-primary;
+
+  &,
+  &:hover,
+  &:active,
+  &:focus {
+    color: $color-white;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $color-button-primary-hover;
+  }
+
+}
+
+.c-button--secondary {
+  background-color: $color-button-secondary;
+
+  &,
+  &:hover,
+  &:active,
+  &:focus {    
+    color: $color-white;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $color-button-secondary-hover;
+  }
+
+}
+
+.c-button--tertiary {
+  background-color: $color-button-tertiary;
+
+  &,
+  &:hover,
+  &:active,
+  &:focus {
+    color: $color-white;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $color-button-tertiary-hover;
+  }
+
+}
+
+.c-button--negative {
+  background-color: $color-button-negative;
+
+  &,
+  &:hover,
+  &:active,
+  &:focus {
+    color: $color-white;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $color-button-negative-hover;
+  }
+
+}
+
+.c-button--positive {
+  background-color: $color-button-positive;
+
+  &,
+  &:hover,
+  &:active,
+  &:focus {
+    color: $color-white;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $color-button-positive-hover;
+  }
+
+}
+
+.c-button--neutral {
+  background-color: $color-button-neutral;
+
+  &,
+  &:hover,
+  &:active,
+  &:focus {
+    color: $color-white;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $color-button-neutral-hover;
+  }
+
+}
+
+.c-button--light {
+  background-color: $color-button-light;
+
+  &,
+  &:hover,
+  &:active,
+  &:focus {
+    color: $color-white;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $color-button-light-hover;
+  }
+
+}
+
+.c-button--white {
+  background-color: $color-button-white;
+
+  &,
+  &:hover,
+  &:active,
+  &:focus {
+    color: $color-button-white-text;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $color-button-white-hover;
+  }
+
+}
+
+
+/* Size variants
+   ========================================================================== */
+
+.c-button--small {
+  padding: inuit-rem($inuit-global-spacing-unit-tiny) inuit-rem($inuit-global-spacing-unit-small);
+}
+
+.c-button--large {
+  padding: inuit-rem($inuit-global-spacing-unit) inuit-rem($inuit-global-spacing-unit-large);
+}
+
+
+
+
+
+/* Ghost buttons
+   ========================================================================== */
+
+/**
+ * Ghost buttons have see-through backgrounds and are bordered.
+ */
+
+$btn-ghost-border-width: 1px;
+
+.c-button--ghost {
+  border: $btn-ghost-border-width solid $color-button-default;
+  color:  $color-button-default;
+  padding: ($inuit-global-spacing-unit-small - $btn-ghost-border-width) ($inuit-global-spacing-unit - $btn-ghost-border-width);
+
+  &,
+  &:hover,
+  &:active,
+  &:focus {
+    background: none;
+    color: $color-button-default-hover;
+  }
+
+  &.c-button--small {
+    padding: ($inuit-global-spacing-unit-tiny - $btn-ghost-border-width) ($inuit-global-spacing-unit-small - $btn-ghost-border-width);
+  }
+
+  &.c-button--large {
+    padding: ($inuit-global-spacing-unit - $btn-ghost-border-width) ($inuit-global-spacing-unit-large - $btn-ghost-border-width);
+  }
+
+  &.c-button--primary {
+    color: $color-button-primary;
+    border-color:currentColor;
+
+    &:hover,
+    &:focus {
+      color: $color-button-primary-hover;
+    }
+
+  }
+
+  &.c-button--secondary {
+    color: $color-button-secondary;
+    border-color:currentColor;
+
+    &:hover,
+    &:focus {
+      color: $color-button-secondary-hover;
+    }
+
+  }
+
+  &.c-button--tertiary {
+    color: $color-button-tertiary;
+    border-color:currentColor;
+
+    &:hover,
+    &:focus {
+      color: $color-button-tertiary-hover;
+    }
+
+  }
+
+  &.c-button--negative {
+    color: $color-button-negative;
+    border-color:currentColor;
+
+    &:hover,
+    &:focus {
+      color: $color-button-negative-hover;
+    }
+
+  }
+
+  &.c-button--positive {
+    color: $color-button-positive;
+    border-color:currentColor;
+
+    &:hover,
+    &:focus {
+      color: $color-button-positive-hover;
+    }
+
+  }
+
+  &.c-button--neutral {
+    color: $color-button-neutral;
+    border-color:currentColor;
+
+    &:hover,
+    &:focus {
+      color: $color-button-neutral-hover;
+    }
+
+  }
+
+  &.c-button--light {
+    color: $color-button-light;
+    border-color:currentColor;
+
+    &:hover,
+    &:focus {
+      color: $color-button-light-hover;
+    }
+
+  }
+
+  &.c-button--white {
+    color: $color-button-white;
+    border-color:currentColor;
+
+    &:hover,
+    &:focus {
+      color: $color-button-white-hover;
+    }
+
+  }
+
+}
+
+
+/** Alignments **/
+.c-button--center,
+%c-button--center{
+    display: table;  
+    margin:0 auto;
+}
+.c-button--right,
+%c-button--right{
+    display: table;  
+    margin:0 0 0 auto;
+}
+
+/** Aspect **/
+.c-button--pill,
+%c-button--pill{
+    border-radius: 100px;
+}
+.c-button--full,
+%c-button--full{
+    width: 100%;     
+}

@@ -1,0 +1,11 @@
+/* ==========================================================================
+   #Inner Column
+   ========================================================================== */
+
+/* When the row is set to verical align inner element (middle or bottom) the col_inner content margins colapses unless we ad a slight padding to col_inner
+ so better use components margins/padding to create spacing around componet if avaliable*/
+   
+/* prevent margin colaps for elements in the inner column */
+.col_inner{
+    overflow: visible;
+}

@@ -1,0 +1,26 @@
+/*------------------------------------*\
+    #ALIGNMENTS
+\*------------------------------------*/
+
+.u-align-right,
+%u-align-right{
+	float:right;
+}
+
+.u-align-left,
+%u-align-left{
+	float:left;
+}
+
+.u-align-center,
+%u-align-center{
+	margin:0 auto;   
+    clear: both;
+    display: block;	
+}
+
+@include generate-responsive-classes() {
+  .u-#{$breakpoint-name}-align-left      {float:left;}
+  .u-#{$breakpoint-name}-align-center    {margin:0 auto; display: block; clear: both;}
+  .u-#{$breakpoint-name}-align-right     {float:right;}
+}

@@ -1,0 +1,136 @@
+/*------------------------------------*\
+    #COLORS
+\*------------------------------------*/
+
+// Literal color variables.
+// Ref: http://flatuicolors.com/
+// Ref: http://designmodo.com/flat-free/
+// For More flat colors visit
+// Ref: http://www.flatuicolorpicker.com/
+// Ref: http://bootflat.github.io/color-picker.html
+
+$color-turquoise:     #1abc9c;
+$color-green-sea:     #16a085;
+$color-sun-flower:    #f1c40f;
+$color-orange:        #f39c12;
+$color-emerald:       #2ecc71;
+$color-nephritis:     #27ae60;
+$color-carrot:        #e67e22;
+$color-pumpkin:       #d35400;
+$color-peter-river:   #3498db;
+$color-belize-hole:   #2980b9;
+$color-alizarin:      #e74c3c;
+$color-pomegrante:    #c0392b;
+$color-amethyst:      #9b59b6;
+$color-wisteria:      #8e44ad;
+$color-clouds:        #ecf0f1;
+$color-silver:        #bdc3c7;
+$color-wet-asphalt:   #34495e;
+$color-midnight-blue: #2c3e50;
+$color-concrete:      #95a5a6;
+$color-asbestos:      #7f8c8d;
+
+$color-gray:        #444;
+$color-white:       #fff;
+$color-dark:        #222;
+$color-gray-dark:   #222;
+$color-gray-light:  #f7f6f6;
+$color-gray-ui:     #ddd;
+$color-gray-ui-dark:     darken($color-gray-ui,15);
+
+// Assign colors to more meaningful variables.
+
+// Theme Pallete
+$color-brand:	$color-peter-river;
+$color-theme-1: $color-midnight-blue;
+$color-theme-2: $color-alizarin;
+$color-theme-3: $color-orange;
+$color-theme-4: $color-peter-river;
+$color-theme-5: $color-amethyst;
+$color-theme-6: $color-nephritis;
+$color-theme-7: $color-clouds;
+
+// Theme context variables
+$color-body:		#fff;
+$color-text:		#333;
+
+//Background text adjustments
+$color-bg-1:			$color-theme-1;
+$color-bg-2:			$color-theme-2;
+$color-bg-3:			$color-theme-3;
+$color-bg-4:			$color-theme-4;
+$color-bg-5:			$color-theme-5;
+$color-bg-6:			$color-theme-6;
+$color-bg-dark:			$color-dark;
+$color-bg-body:			$color-body;
+$color-bg-light:		$color-gray-ui;
+$color-bg-opaq-dark:		 $color-dark;
+$color-bg-opaq-dark-opacity: 0.7;
+$color-bg-opaq-light:		 $color-white;
+$color-bg-opaq-light-opacity: 0.7;
+
+// Slider Colors
+$color-arrow: '1abc9c'; //Use hex color without # value is interpolated in svg
+$color-bullet: $color-brand;
+
+// Text Colors
+$color-text-invert: 	$color-body;  // Invert text from black to white
+$color-text-light:		$color-gray-ui;
+$color-text-primary:	$color-brand;
+$color-text-secondary:  $color-theme-2;
+$color-text-tertiary:	$color-theme-3;
+
+// Heading colors
+$color-headings:        $color-text;
+
+// Link-color
+$color-text-links:      $color-belize-hole;
+
+// Button Colors
+$color-button-default: 			$color-theme-1;
+$color-button-default-hover:	darken($color-theme-1,10);
+
+
+$color-button-primary: 			$color-brand;
+$color-button-primary-hover:	darken($color-brand,10);
+
+
+
+$color-button-secondary:		$color-theme-2;
+$color-button-secondary-hover:	darken($color-theme-2,10);
+
+
+$color-button-tertiary:			$color-theme-3;
+$color-button-tertiary-hover:	darken($color-theme-3,10);
+
+
+$color-button-negative: 		$color-theme-4;
+$color-button-negative-hover: 	darken($color-theme-4,10);
+
+
+$color-button-positive:			$color-theme-5;
+$color-button-positive-hover:	darken($color-theme-5,10);
+
+
+$color-button-neutral:			$color-theme-6;
+$color-button-neutral-hover:	darken($color-theme-6,10);
+
+$color-button-light:			$color-gray-ui-dark;
+$color-button-light-hover:		darken($color-gray-ui-dark,10);
+
+$color-button-white:			$color-white;
+$color-button-white-hover:		darken($color-white,2);
+$color-button-white-text:		$color-text;
+
+$color-button-ghost:				$color-brand;
+$color-button-ghost-hover:	    	$color-brand;
+$color-button-ghost-hover-text:     $color-white;
+
+$color-button-ghost-l:		    	$color-theme-6;
+$color-button-ghost-l-hover:    	$color-theme-6;
+$color-button-ghost-l-hover-text:   $color-white;
+
+// Code
+$color-text-code:       $color-nephritis;
+$color-pre-background:  $color-gray;
+$color-pre:				$color-white;

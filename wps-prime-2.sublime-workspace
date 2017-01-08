@@ -1,0 +1,875 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"color-button-se",
+				"color-button-secondary-hover"
+			],
+			[
+				"border",
+				"border-style"
+			],
+			[
+				"marg",
+				"margin"
+			],
+			[
+				"wps",
+				"wps_tiny_mce_tweaks"
+			],
+			[
+				"fun",
+				"function_exists"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"con",
+				"console"
+			],
+			[
+				"var",
+				"var_dump"
+			],
+			[
+				"backgr",
+				"background-image"
+			],
+			[
+				"inn",
+				"inner_class"
+			],
+			[
+				"op",
+				"option_name"
+			],
+			[
+				"t",
+				"td\tTag"
+			],
+			[
+				"bra",
+				"border-radius"
+			],
+			[
+				"fo",
+				"font-size"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"fon",
+				"font-weight"
+			],
+			[
+				"colo",
+				"color-white"
+			],
+			[
+				"b",
+				"inline-block"
+			],
+			[
+				"fa-var-s",
+				"fa-var-shopping-cart"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"ic",
+				"brand-ico-family"
+			],
+			[
+				"margin",
+				"margin-bottom"
+			],
+			[
+				"margi",
+				"margin-right"
+			],
+			[
+				"borde",
+				"border-radius"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"ba",
+				"background-color"
+			],
+			[
+				"inui",
+				"inuit-base-spacing-unit"
+			],
+			[
+				"inli",
+				"inline-block"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "scss/project/components/_components.wp-page.scss",
+			"settings":
+			{
+				"buffer_size": 1502,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/E/DesktopServer/prime.dev/wp-content/themes/wps-prime-child/scss/project/components/_components.wp-page.scss",
+			"settings":
+			{
+				"buffer_size": 1502,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "Package Control: ",
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 400.0
+	},
+	"console":
+	{
+		"height": 146.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/inc/integrations",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/inc/integrations/visual-composer",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/inc/integrations/visual-composer/shortcodes",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/inc/integrations/visual-composer/vc_templates",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/inc/shortcodes",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/inc/shortcodes/shortcode_classes",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/scss",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/scss/project",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/scss/project/components",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/scss/project/objects",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime-child",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime-child/js",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime-child/scss",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime-child/scss/project",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime-child/scss/project/components",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime-child/scss/project/elements",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime-child/scss/project/objects",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime-child/scss/project/settings",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime-child/scss/project/tools",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime-child/scss/project/utilities",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime-child/template-components",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime-child/template-components/components",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime-child/template-components/theme-front-setup",
+		"/E/DesktopServer/whd.dev/wp-content/themes/whd-theme",
+		"/E/DesktopServer/whd.dev/wp-content/themes/whd-theme/assets",
+		"/E/DesktopServer/whd.dev/wp-content/themes/whd-theme/assets/sass",
+		"/E/DesktopServer/whd.dev/wp-content/themes/whd-theme/assets/sass/project"
+	],
+	"file_history":
+	[
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/inc/integrations/visual-composer/shortcodes/wps-vc-column.php",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/inc/integrations/visual-composer/shortcodes/wps-vc-row.php",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/inc/integrations/visual-composer/shortcodes/wps-vc-mediabox.php",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/inc/integrations/visual-composer/shortcodes/wps-vc-button.php",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/inc/integrations/visual-composer/shortcodes/wps-vc-image.php",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/inc/integrations/visual-composer/shortcodes/wps-vc-heading.php",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/inc/integrations/visual-composer/shortcodes/wps-vc-tabs.php",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/inc/integrations/visual-composer/shortcodes/wps-vc-accordion.php",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/inc/integrations/visual-composer/shortcodes/wps-vc-list.php",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/inc/shortcodes/wps-shortcodes.php",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/inc/integrations/visual-composer/vc_templates/vc_row_inner.php",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/inc/integrations/visual-composer/vc_templates/vc_column.php",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/inc/integrations/visual-composer/vc_templates/vc_column_inner.php",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/inc/integrations/visual-composer/vc_templates/vc_row.php",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/inc/shortcodes/wps-shortcode-helpers.php",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/inc/integrations/visual-composer/vc_templates/vc_column_text.php",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime-child/scss/project/objects/_objects.col-inner.scss",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/scss/project/objects/_objects.col-inner.scss",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime-child/scss/project/components/_components.main-navigation.scss",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/scss/project/components/_components.main-navigation.scss",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime-child/scss/project/objects/_objects.parallax.scss",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime-child/scss/style.scss",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime-child/scss/project/objects/_objects.holder.scss",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime-child/scss/project/utilities/_utilities.video-backgrounds.scss",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/scss/style.scss",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime-child/js/site.js",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/js/site.js",
+		"/C/Users/zsolt/AppData/Local/Temp/Rar$DIa0.788/jquery.youtubebackground_avrilkim.js",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/js/wps-video-bg.js",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/js/min/wps-video-bg.min.js",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/functions.php",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime-child/functions.php",
+		"/C/Users/zsolt/AppData/Local/Temp/scp00467/public_html/wps-prime.pw/wp-content/themes/wps-prime/template-components/components/theme-site-logo.php",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/template-components/components/theme-site-logo.php",
+		"/C/Users/zsolt/AppData/Local/Temp/scp52089/public_html/wps-prime.pw/wp-config.php",
+		"/E/DesktopServer/whd.dev/wp-content/themes/whd-theme/assets/js/theme.js",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/scss/project/components/_components.fancybox.scss",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime-child/css-architecture-elements.md",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/inc/integrations/visual-composer/wps-vc-integration.php",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/inc/integrations/visual-composer/vc_templates/vc_video.php",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/inc/integrations/visual-composer/shortcodes/wps-vc-shortcode-fallbacks.php",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime-child/template-components/components/theme-footer-site-microcopy.php",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/template-components/components/theme-footer-site-microcopy.php",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime-child/sidebar-footer.php",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/inc/theme-hooks-filters/theme-hooks.php",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/template-components/theme-front-setup/theme-hook-components.php",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime-child/template-components/theme-front-setup/child-hook-components.php",
+		"/E/DesktopServer/whd.dev/wp-content/themes/wps-prime/CHANGELOG.md",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime-child/inc/settings/child-admin-image-sizes.php",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime-child/inc/settings/child-admin-typography.php",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime-child/template-components/components/child-site-nav.php",
+		"/E/DesktopServer/whd.dev/wp-content/themes/whd-theme/theme-components/default/wps-child-template-tags.php",
+		"/E/DesktopServer/whd.dev/wp-content/themes/whd-theme/functions.php",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/inc/settings/wps-admin-theme-fine-tune.php",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/template-components/theme-front-setup/theme-front-layout-setup.php",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime-child/template-components/theme-front-setup/child-front-layout-setup.php",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/template-components/theme-header-layout.php",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime-child/template-components/child-front-template-tags.php",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/template-components/theme-front-template-tags.php",
+		"/C/Users/zsolt/AppData/Local/Temp/Rar$DIa0.349/functions.php",
+		"/C/Users/zsolt/AppData/Local/Temp/Rar$DIa0.449/search.php",
+		"/C/Users/zsolt/AppData/Local/Temp/Rar$DIa0.459/sidebar.php",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/inc/admin/js/mce-wps-shortcode-buttons.js",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/scss/project/components/_components.highlight.scss",
+		"/E/DesktopServer/whd.dev/wp-content/themes/whd-theme/assets/sass/style.scss",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/inc/admin/wps-tinymce-extension.php",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/scss/project/utilities/_utilities.backgrounds.scss",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime-child/scss/project/utilities/_utilities.backgrounds.scss",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/inc/integrations/visual-composer/css/wps-vc-style.css",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime-child/scss/project/utilities/_utilities.typography.scss",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/scss/project/utilities/_utilities.typography.scss",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime-child/scss/project/settings/_settings.colors.scss",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/scss/project/settings/_settings.colors.scss",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/inc/integrations/visual-composer/wps-vc-helpers.php",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/inc/integrations/visual-composer/shortcodes/wps-vc-column-inner.php",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime-child/scss/project/components/_components.buttons.scss",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/scss/project/components/_components.buttons.scss",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/scss/wps-vc-style.scss",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime-child/scss/wps-vc-style.scss",
+		"/E/DesktopServer/whd.dev/wp-content/themes/whd-theme/assets/sass/bower_components/inuit-buttons/_objects.buttons.scss",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime-child/inc/integrations/visual-composer/css/wps-vc-style.css",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime-child/scss/_theme-data.scss",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime-child/js/wps_vc-video-bg.js",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/js/min/wps_video-bg.min.js",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime-child/style.css",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime-child/wps-prime-2.sublime-project",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/inc/integrations/visual-composer/params/wps-extend-vc-icons.php",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/inc/integrations/visual-composer/params/wps-vc-column-params.php",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/inc/integrations/visual-composer/shortcodes/wps-vc-icon.php",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/inc/integrations/visual-composer/vc_templates/vc_icon.php",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/scss/project/components/_components.icons.scss",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/inc/integrations/visual-composer/demos/fallback_shortcode_class.php",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/inc/integrations/visual-composer/demos/vc-settings-demo.php",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/sidebar-footer.php",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/footer.php",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/rtl.css",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/scss/project/components/_components.wp-page.scss",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/scss/project/components/_components.wp-screen-reader.scss",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/scss/project/tools/_tools.hide.scss",
+		"/E/DesktopServer/webdesignlondon.dev/wp-content/themes/wpdesign-london/assets/sass/project/_trumps.screen.reader.text.scss",
+		"/F/-=Work Files =-/2016/wimpole/theming-css-classes-list.txt",
+		"/F/custom-tinymce.php",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/scss/project/utilities/_utilities.shadow.scss",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/scss/bower_components/inuitcss/utilities/_utilities.shadow.scss",
+		"/E/DesktopServer/whd.dev/wp-content/themes/wps-prime/assets/sass/project/_trumps.typography.scss",
+		"/E/DesktopServer/whd.dev/wp-content/themes/wps-prime/assets/sass/project/_trumps.alignments.scss",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/scss/project/utilities/_utilities.alignments.scss",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/scss/project/components/_components.wp-images.scss",
+		"/E/DesktopServer/whd.dev/wp-content/themes/wps-prime/assets/sass/project/_tools.project.mixins.scss",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/scss/project/settings/_settings.global.scss",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/scss/project/utilities/_utilities.form.scss",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/scss/project/elements/_elements.type.scss",
+		"/E/DesktopServer/whd.dev/wp-content/themes/wps-prime/assets/sass/project/_generic.shared.scss",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/scss/bower_components/inuitcss/example.main.scss",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/scss/project/elements/_elements.links.scss",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/scss/project/components/_components.comments.scss",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/scss/project/settings/_settings.round.scss",
+		"/E/DesktopServer/whd.dev/wp-content/themes/wps-prime/assets/sass/project/_generic.form.fields.scss",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/scss/bower_components/inuitcss/elements/_elements.headings.scss",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/scss/project/objects/_objects.form.scss",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/scss/project/components/_components.widget.scss",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/scss/bower_components/inuitcss/utilities/_utilities.spacing.scss",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/scss/project/components/_components.page-micro.scss",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/scss/project/utilities/_utilities.gridlex.scss",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/header.php",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/template-components/components/theme-site-nav.php",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/js/navigation.js",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/scss/project/objects/_objects.holder.scss"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			"E:\\DesktopServer\\prime.dev\\wp-content\\themes\\wps-prime\\inc\\integrations\\visual-composer\\shortcodes",
+			"E:\\DesktopServer\\prime.dev\\wp-content\\themes\\wps-prime",
+			"E:\\DesktopServer\\prime.dev\\wp-content\\themes\\wps-prime\\inc\\integrations",
+			"E:\\DesktopServer\\prime.dev\\wp-content\\themes\\wps-prime",
+			"E:\\DesktopServer\\prime.dev\\wp-content\\themes\\wps-prime\\inc\\integrations\\visual-composer\\vc_templates",
+			"E:\\DesktopServer\\prime.dev\\wp-content\\themes\\wps-prime\\inc\\integrations\\visual-composer",
+			"E:\\DesktopServer\\prime.dev\\wp-content\\themes\\wps-prime-child\\scss\\project",
+			"E:\\DesktopServer\\prime.dev\\wp-content\\themes\\wps-prime",
+			"E:\\DesktopServer\\whd.dev\\wp-content\\themes\\wps-prime",
+			"E:\\DesktopServer\\prime.dev\\wp-content\\themes\\wps-prime-child",
+			"E:\\DesktopServer\\prime.dev\\wp-content\\themes\\wps-prime",
+			"E:\\DesktopServer\\prime.dev\\wp-content\\themes\\wps-prime-child",
+			"E:\\DesktopServer\\prime.dev\\wp-content\\themes\\wps-prime",
+			"E:\\DesktopServer\\webdesignlondon.dev\\wp-content\\themes\\wpdesign-london",
+			"E:\\DesktopServer\\whd.dev\\wp-content\\themes\\wps-prime\\assets\\sass\\project",
+			"E:\\DesktopServer\\whd.dev\\wp-content\\themes\\wps-prime\\assets\\sass",
+			"E:\\DesktopServer\\prime.dev\\wp-content\\themes\\wps-prime\\scss",
+			"E:\\DesktopServer\\prime.dev\\wp-content\\themes\\wps-prime\\scss\\bower_components",
+			"E:\\DesktopServer\\prime.dev\\wp-content\\themes\\wps-prime\\scss\\project",
+			"E:\\DesktopServer\\prime.dev\\wp-content\\themes\\wps-prime\\scss",
+			"E:\\DesktopServer\\whd.dev\\wp-content\\themes\\wps-prime\\assets\\sass\\project",
+			"E:\\DesktopServer\\prime.dev\\wp-content\\themes\\wps-prime",
+			"E:\\DesktopServer\\prime.dev\\wp-content\\themes\\wps-prime\\scss",
+			"E:\\DesktopServer\\prime.dev\\wp-content\\themes\\wps-prime",
+			"E:\\DesktopServer\\prime.dev\\wp-content\\themes\\wps-prime\\scss",
+			"E:\\DesktopServer\\whd.dev\\wp-content\\themes\\wps-prime",
+			"E:\\DesktopServer\\prime.dev\\wp-content\\themes\\wps-prime",
+			"E:\\DesktopServer\\prime.dev\\wp-content\\themes\\wps-prime\\template-components",
+			"E:\\DesktopServer\\prime.dev\\wp-content\\themes\\wps-prime",
+			"E:\\DesktopServer\\whd.dev\\wp-content\\themes\\wps-prime",
+			"E:\\DesktopServer\\prime.dev\\wp-content\\plugins\\js_composer",
+			"E:\\DesktopServer\\prime.dev\\wp-content\\themes\\wps-prime",
+			"E:\\DesktopServer\\prime.dev\\wp-content\\themes\\wps-prime\\inc",
+			"E:\\DesktopServer\\prime.dev\\wp-content\\themes\\wps-prime\\scss\\bower_components",
+			"E:\\DesktopServer\\prime.dev\\wp-content\\plugins\\js_composer",
+			"E:\\DesktopServer\\prime.dev\\wp-content\\themes\\wps-prime",
+			"E:\\DesktopServer\\prime.dev\\wp-content\\plugins\\js_composer",
+			"E:\\DesktopServer\\prime.dev\\wp-content\\themes\\wps-prime\\inc\\integrations",
+			"E:\\DesktopServer\\prime.dev\\wp-content\\plugins\\js_composer",
+			"E:\\DesktopServer\\prime.dev\\wp-content\\themes\\wps-prime",
+			"E:\\DesktopServer\\prime.dev\\wp-content\\themes\\wps-prime\\inc",
+			"E:\\DesktopServer\\prime.dev\\wp-content\\plugins\\js_composer",
+			"E:\\DesktopServer\\prime.dev\\wp-content\\themes\\wps-prime",
+			"E:\\DesktopServer\\prime.dev\\wp-content\\themes\\wps-prime\\inc\\integrations\\visual-composer\\params",
+			"E:\\DesktopServer\\whd.dev\\wp-content\\themes\\wps-prime",
+			"E:\\DesktopServer\\whd.dev\\wp-content\\themes\\wps-prime\\assets\\sass\\project",
+			"E:\\DesktopServer\\prime.dev\\wp-content\\themes\\wps-prime",
+			"E:\\DesktopServer\\whd.dev\\wp-content\\themes\\whd-theme",
+			"E:\\DesktopServer\\prime.dev\\wp-content\\plugins\\js_composer",
+			"E:\\DesktopServer\\whd.dev\\wp-content\\themes\\wps-prime",
+			"E:\\DesktopServer\\prime.dev\\wp-content\\themes\\wps-prime",
+			"E:\\DesktopServer\\prime.dev\\wp-content\\plugins\\js_composer",
+			"E:\\DesktopServer\\prime.dev\\wp-content\\themes\\wps-prime\\inc\\integrations",
+			"E:\\DesktopServer\\prime.dev\\wp-content\\themes\\wps-prime",
+			"E:\\DesktopServer\\prime.dev\\wp-content\\themes\\wps-prime\\inc\\integrations",
+			"E:\\DesktopServer\\prime.dev\\wp-content\\themes\\wps-prime\\inc\\integrations\\visual-composer",
+			"E:\\DesktopServer\\prime.dev\\wp-content\\plugins\\js_composer",
+			"E:\\DesktopServer\\prime.dev\\wp-content\\themes\\wps-prime",
+			"E:\\DesktopServer\\whd.dev\\wp-content\\themes\\whd-theme",
+			"E:\\DesktopServer\\prime.dev\\wp-content\\themes\\wps-prime",
+			"E:\\DesktopServer\\whd.dev\\wp-content\\themes\\wps-prime\\assets\\sass",
+			"E:\\DesktopServer\\whd.dev\\wp-content\\themes\\wps-prime",
+			"E:\\DesktopServer\\prime.dev\\wp-content\\plugins\\js_composer",
+			"E:\\DesktopServer\\prime.dev\\wp-content\\themes\\wps-prime\\inc\\settings",
+			"E:\\DesktopServer\\prime.dev\\wp-content\\themes\\wps-prime\\inc\\integrations",
+			"E:\\DesktopServer\\prime.dev\\wp-content\\plugins\\js_composer",
+			"E:\\DesktopServer\\whd.dev\\wp-content\\themes\\wps-prime",
+			"E:\\DesktopServer\\prime.dev\\wp-content\\themes\\wps-prime\\scss\\bower_components",
+			"E:\\DesktopServer\\prime.dev\\wp-content\\themes\\wps-prime",
+			"E:\\DesktopServer\\prime.dev\\wp-content\\themes\\wps-prime\\inc\\theme-helpers",
+			"E:\\DesktopServer\\prime.dev\\wp-content\\themes\\wps-prime\\inc\\integrations",
+			"E:\\DesktopServer\\prime.dev\\wp-content\\themes\\wps-prime\\inc",
+			"E:\\DesktopServer\\prime.dev\\wp-content\\themes\\wps-prime\\inc\\integrations",
+			"E:\\DesktopServer\\prime.dev\\wp-content\\themes\\wps-prime\\inc",
+			"E:\\DesktopServer\\whd.dev\\wp-content\\themes\\wps-prime",
+			"E:\\DesktopServer\\prime.dev\\wp-content\\themes\\wps-prime",
+			"E:\\DesktopServer\\whd.dev\\wp-content\\themes\\wps-prime",
+			"E:\\DesktopServer\\prime.dev\\wp-content\\themes\\twentyseventeen",
+			"E:\\DesktopServer\\whd.dev\\wp-content\\themes\\wps-prime",
+			"E:\\DesktopServer\\prime.dev\\wp-content\\themes\\wps-prime",
+			"E:\\DesktopServer\\prime.dev\\wp-content\\themes\\wps-prime\\inc\\theme-settings",
+			"E:\\DesktopServer\\prime.dev\\wp-content\\themes\\wps-prime",
+			"E:\\DesktopServer\\whd.dev\\wp-content\\themes\\wps-prime",
+			"E:\\DesktopServer\\prime.dev\\wp-content\\themes\\wps-prime",
+			"E:\\DesktopServer\\prime.dev\\wp-content\\themes\\wps-prime\\inc\\theme-settings",
+			"E:\\DesktopServer\\prime.dev\\wp-content\\themes\\wps-prime",
+			"C:\\Users\\zsolt\\Desktop\\ziuacargo",
+			"E:\\DesktopServer\\whd.dev\\wp-content\\themes\\wps-prime",
+			"E:\\DesktopServer\\prime.dev\\wp-content\\themes\\wps-prime",
+			"F:\\Work-files\\JMGtheme",
+			"F:\\Work-files\\JMGtheme\\wpsc-parts",
+			"D:\\vagrant-local\\www\\arc\\htdocs\\wp-content\\plugins\\woocommerce",
+			"D:\\vagrant-local\\www\\arc\\htdocs\\wp-content\\plugins\\woocommerce\\templates",
+			"D:\\vagrant-local\\www\\meagan\\htdocs\\wp-content\\themes\\Total",
+			"D:\\vagrant-local\\www\\arc\\htdocs\\wp-content\\themes\\wps-arc",
+			"D:\\vagrant-local\\www\\arc\\htdocs\\wp-content\\themes\\wps-arc\\assets\\sass",
+			"D:\\vagrant-local\\www\\arc\\htdocs\\wp-content\\themes\\wps-arc\\assets\\sass\\bower_components",
+			"D:\\vagrant-local\\www\\arc\\htdocs\\wp-content\\themes\\wps-arc\\assets\\sass",
+			"D:\\vagrant-local\\www\\arc\\htdocs\\wp-content\\themes\\wps-arc\\assets\\sass\\project",
+			"E:\\wampold\\www\\tecnolam\\wp-content\\plugins\\our-products",
+			"E:\\wampold\\www\\tecnolam\\wp-content\\themes\\tecno-theme",
+			"E:\\wampold\\www\\tecnolam\\wp-content\\plugins\\our-products",
+			"D:\\vagrant-local\\www\\arc\\htdocs\\wp-content\\plugins\\our-products\\parts",
+			"D:\\vagrant-local\\www\\arc\\htdocs\\wp-content\\plugins\\woocommerce\\templates",
+			"D:\\vagrant-local\\www\\arc\\htdocs\\wp-content\\themes\\wps-arc",
+			"E:\\wamp\\www\\andinidev\\wp-content\\themes\\sale-rocket\\css\\woocommerce",
+			"D:\\vagrant-local\\www\\arc\\htdocs\\wp-content\\themes\\wps-arc\\assets\\sass\\woocommerce",
+			"D:\\vagrant-local\\www\\arc\\htdocs\\wp-content\\themes\\wps-arc\\assets\\sass",
+			"D:\\vagrant-local\\www\\arc\\htdocs\\wp-content\\themes\\wps-arc\\assets",
+			"D:\\vagrant-local\\www\\arc\\htdocs\\wp-content\\plugins\\woocommerce\\templates",
+			"E:\\wamp\\www\\andinidev\\wp-content\\themes\\sale-rocket",
+			"E:\\wamp\\www\\andinidev\\wp-content\\themes\\sale-rocket\\css",
+			"E:\\wamp\\www\\andinidev\\wp-content\\themes\\sale-rocket\\css\\project",
+			"D:\\vagrant-local\\www\\arc\\htdocs\\wp-content\\themes\\wps-prime",
+			"D:\\vagrant-local\\www\\arc\\htdocs\\wp-content\\plugins\\arc-booster-products",
+			"D:\\vagrant-local\\www\\practicert\\htdocs\\wp-content\\themes\\wps-prime",
+			"D:\\vagrant-local\\www\\installdeal\\htdocs\\wp-content\\themes\\isd-theme",
+			"D:\\vagrant-local\\www\\practicert\\htdocs\\wp-content\\themes\\wps-prime-child\\assets\\sass\\project",
+			"D:\\vagrant-local\\www\\installdeal\\htdocs\\wp-content\\themes\\isd-theme\\assets\\sass\\project",
+			"D:\\vagrant-local\\www\\practicert\\htdocs\\wp-content\\themes\\wps-prime-child\\assets\\sass\\project",
+			"D:\\vagrant-local\\www\\installdeal\\htdocs\\wp-content\\themes\\isd-theme",
+			"D:\\vagrant-local\\www\\installdeal\\htdocs\\wp-content\\themes\\isd-theme\\assets\\sass\\project",
+			"D:\\vagrant-local\\www\\installdeal\\htdocs\\wp-content\\themes\\wps-prime",
+			"C:\\Users\\Z\\Desktop\\wp-content\\themes\\dt-the7",
+			"D:\\vagrant-local\\www\\wallrepair\\htdocs\\wp-content\\themes\\wrb-theme",
+			"D:\\vagrant-local\\www\\installdeal\\htdocs\\wp-content\\themes\\isd-theme\\assets\\sass\\project",
+			"D:\\vagrant-local\\www\\wallrepair\\htdocs\\wp-content\\themes\\wrb-theme",
+			"D:\\vagrant-local\\www\\installdeal\\htdocs\\wp-content\\themes\\wps-prime"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"<strong>Component Settings:</strong>",
+			"custom class",
+			"wps_image",
+			"image",
+			"head",
+			"o-holder",
+			"$class_h",
+			"o-holder",
+			"wps_getExtraClass(",
+			"holder",
+			"wps_getExtraClass('",
+			"wps_getExtraClass",
+			"holder",
+			"wps_getExtraClass",
+			"inner_pa",
+			"wps_getExtraClass",
+			"o-holder",
+			"o-hol",
+			"objects",
+			"parala",
+			"createContainerVideo",
+			"height",
+			"setSize",
+			"tv",
+			"video",
+			"width",
+			"options.width",
+			"html",
+			"$node",
+			"createBackgroundVideo",
+			"fitToBackground",
+			"col",
+			"flag",
+			"ubackground",
+			"bg--light",
+			"defaul",
+			"wps_theme_setup_defaults",
+			"navig",
+			"main",
+			"assets/",
+			"jQuery",
+			"deprecated",
+			"vc_youtube_iframe_api_js",
+			"video",
+			"fancybox",
+			"layout__",
+			"footer",
+			"naviga",
+			"theme_site",
+			"footer_end",
+			"lap-and-up-7/10",
+			"wps_prime_paging_nav",
+			"wps_prime_categorized_blog",
+			"wps_theme_js",
+			"WPS_THEME_STYLE_URI",
+			"style",
+			"support",
+			"high",
+			"u-text-color-tertiary",
+			".u-background-color-body",
+			"contrast",
+			"high",
+			"Color ",
+			" row__item",
+			"right",
+			"center",
+			"$color-gray-ui",
+			"light",
+			"btn",
+			"negative",
+			"light",
+			"neutral",
+			"egative",
+			"secondary",
+			"#2f4054",
+			"neutral",
+			"neutra",
+			"theme-6",
+			"button",
+			"ghost",
+			" unset",
+			"c-button--ghost",
+			"-neutral",
+			"$color-gray-ui",
+			"$color-wet-asphalt",
+			"body",
+			"default",
+			"button",
+			"wps-vc-style.css",
+			"wps_vc",
+			"Woo",
+			"woothemesecom",
+			"'iconsPerPage'",
+			"row",
+			"ICON",
+			"--",
+			"grid",
+			"desk",
+			"hide",
+			"screen-reader-text",
+			"settin",
+			"left",
+			"padding",
+			"mb0",
+			"txt--",
+			"'inline' => 'span',",
+			"block' => 'h3',",
+			"HIDE",
+			"box-shadow-2",
+			"shadow-2",
+			"z-depth",
+			";\n",
+			".txt-",
+			".u-text-",
+			"$inuit-generate-spacing-alias",
+			"spacing-alias",
+			"base",
+			"$brand-round",
+			"$inuit-base",
+			"round",
+			"shared",
+			"wp-page",
+			"clear",
+			"font-size",
+			"spacing",
+			"$base-round",
+			"$spacing-unit--small",
+			"base"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"wpshapers-theme",
+			"wps_prime",
+			"'wps-prime'",
+			"wps_prime_",
+			"wps",
+			"wps_prime",
+			"WPS Prime",
+			"wps-prime",
+			"; ",
+			" "
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "scss/project/components/_components.wp-page.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1502,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								457,
+								457
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai (Colorcoded) (Colorcoded).tmTheme",
+							"syntax": "Packages/SCSS/SCSS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/E/DesktopServer/prime.dev/wp-content/themes/wps-prime-child/scss/project/components/_components.wp-page.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1502,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								312,
+								312
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai (Colorcoded) (Colorcoded).tmTheme",
+							"syntax": "Packages/SCSS/SCSS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 22.0
+	},
+	"input":
+	{
+		"height": 34.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				0,
+				1,
+				1,
+				2
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			0.947534102833,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "wps-prime-2.sublime-project",
+	"replace":
+	{
+		"height": 40.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "whd",
+		"selected_items":
+		[
+			[
+				"whd",
+				"E:\\DesktopServer\\whd.dev\\wp-content\\themes\\whd-theme\\whd.sublime-workspace"
+			],
+			[
+				"pra",
+				"E:\\DesktopServer\\practice.dev\\wp-content\\themes\\wps-prime-child\\Practice-RT.sublime-workspace"
+			],
+			[
+				"zero",
+				"E:\\DesktopServer\\zero.dev\\wp-content\\themes\\arcadia\\zero.sublime-project"
+			],
+			[
+				"pro",
+				"E:\\DesktopServer\\profile.dev\\profile.sublime-project"
+			],
+			[
+				"",
+				"E:\\DesktopServer\\newyou.dev\\wp-content\\themes\\newyou\\newyou.sublime-workspace"
+			],
+			[
+				"london",
+				"D:\\desktop-server\\wpdesignlondon.dev\\wp-content\\themes\\wpdesign-london\\Webdesign London.sublime-project"
+			],
+			[
+				"wpl",
+				"D:\\desktop-server\\wpdesignlondon.dev\\wp-content\\themes\\wpdesign-london\\Webdesign London.sublime-project"
+			],
+			[
+				"wpde",
+				"D:\\desktop-server\\wpdesign.dev\\wp-content\\themes\\wpdesign\\wpdesign.sublime-workspace"
+			],
+			[
+				"blue",
+				"D:\\vagrant-local\\www\\wps-blueprints\\htdocs\\wp-content\\themes\\wps-prime\\Blueporints.sublime-project"
+			],
+			[
+				"sol",
+				"D:\\vagrant-local\\www\\solarsquad\\htdocs\\wp-content\\themes\\solar-squad\\Solar-Squad.sublime-project"
+			],
+			[
+				"inner",
+				"D:\\vagrant-local\\www\\innercords\\htdocs\\wp-content\\themes\\innerchords\\Innerchords.sublime-workspace"
+			],
+			[
+				"inn",
+				"D:\\vagrant-local\\www\\innercords\\htdocs\\wp-content\\themes\\innerchords\\Innerchords.sublime-workspace"
+			],
+			[
+				"in",
+				"D:\\vagrant-local\\www\\innercords\\htdocs\\wp-content\\themes\\innerchords\\Innerchords.sublime-workspace"
+			],
+			[
+				"craig",
+				"D:\\vagrant-local\\www\\craigwire\\htdocs\\wp-content\\themes\\wps-cw\\Craig.sublime-workspace"
+			],
+			[
+				"sola",
+				"D:\\vagrant-local\\www\\solarsquad\\htdocs\\wp-content\\themes\\solar-squad\\Solar-Squad.sublime-project"
+			],
+			[
+				"wall",
+				"D:\\vagrant-local\\www\\wallrepair\\htdocs\\wp-content\\themes\\wrb-theme\\wallrepair.sublime-project"
+			],
+			[
+				"repa",
+				"D:\\vagrant-local\\www\\wallrepair\\htdocs\\wp-content\\themes\\wpshapers-theme\\wallrepair.sublime-workspace"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 319.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

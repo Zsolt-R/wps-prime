@@ -1,0 +1,77 @@
+.o-flag img {
+            display: block;
+            max-width: none;
+        }
+@media screen and (max-width: 720px) {
+    .o-media--responsive,
+    .o-media--responsive>.o-media__body,
+    .o-media--responsive>.o-media__img,
+    .o-flag--responsive,
+    .o-flag--responsive>.o-flag__body
+    .o-flag--responsive>.o-flag__img  {
+        display: block;
+        width: 100%;
+    }
+}
+@media screen and (max-width: 720px) {   
+    .o-media--responsive>.o-media__img {
+        float: none;
+        margin-right: 0;
+        margin-bottom: $inuit-global-spacing-unit;
+        margin-left: 0
+    }
+    .o-media--responsive.o-media--tiny>.o-media__img {
+        margin-right: 0;
+        margin-left: 0;
+        margin-bottom: $inuit-global-spacing-unit-tiny;
+    }
+    .o-media--responsive.o-media--small>.o-media__img {
+        margin-right: 0;
+        margin-left: 0;
+        margin-bottom: $inuit-global-spacing-unit-small;
+    }
+    .o-media--responsive.o-media--large>.o-media__img {
+        margin-right: 0;
+        margin-left: 0;
+        margin-bottom: $inuit-global-spacing-unit-large;
+    }
+    .o-media--responsive.o-media--huge>.o-media__img {
+        margin-right: 0;
+        margin-left: 0;
+        margin-bottom: $inuit-global-spacing-unit-huge;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .o-flag--responsive {
+        direction: ltr
+    }
+
+    .o-flag--responsive>.o-flag__img {
+        padding-right: 0;
+        padding-left: 0;
+        margin-bottom: $inuit-global-spacing-unit;
+        display: block; 
+        max-width: 100%;
+    }
+    .o-flag--responsive.o-flag--tiny>.o-flag__img {
+        padding-right: 0;
+        padding-left: 0;
+        margin-bottom: $inuit-global-spacing-unit-tiny;
+    }
+    .o-flag--responsive.o-flag--small>.o-flag__img {
+        padding-right: 0;
+        padding-left: 0;
+        margin-bottom: $inuit-global-spacing-unit-small;
+    }
+    .o-flag--responsive.o-flag--large>.o-flag__img {
+        margin-right: 0;
+        margin-left: 0;
+        margin-bottom: $inuit-global-spacing-unit-large;
+    }
+    .o-flag--responsive.o-flag--huge>.o-flag__img {
+        margin-right: 0;
+        margin-left: 0;
+        margin-bottom: $inuit-global-spacing-unit-huge;
+    }
+}

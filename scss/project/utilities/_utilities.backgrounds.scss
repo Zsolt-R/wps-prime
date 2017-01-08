@@ -1,0 +1,48 @@
+/*------------------------------------*\
+    #BG-HIGHLIGHTS
+\*------------------------------------*/
+
+.u-background-color-one{
+	background-color: $color-bg-1;
+}
+.u-background-color-two{
+	background-color: $color-bg-2;
+}
+.u-background-color-three{
+	background-color: $color-bg-3;
+}
+.u-background-color-four{
+	background-color: $color-bg-4;
+}
+.u-background-color-five{
+	background-color: $color-bg-5;
+}
+.u-background-color-six{
+	background-color: $color-bg-6;
+}
+
+
+.u-background-light{
+	background-color: $color-bg-light;
+}
+.u-background-dark{
+	background-color: $color-bg-dark;
+}
+.u-background-body{
+	background-color: $color-bg-body;
+}
+
+/* Transpearent Backgrounds */
+.u-background-opaq-dark{
+	@include rgba-background($color-bg-opaq-dark,$color-bg-opaq-dark-opacity);
+}
+.u-background-opaq-light{
+	@include rgba-background($color-bg-opaq-light,$color-bg-opaq-light-opacity);
+}
+
+/* Background Image Adjustments */
+.u-background-center{
+	background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+} 

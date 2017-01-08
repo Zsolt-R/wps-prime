@@ -1,0 +1,77 @@
+/*------------------------------------*\
+    #COMPONENTS WP-PAGE
+\*------------------------------------*/
+
+/*------------------------------------*\
+    #PAGE-HEAD
+\*------------------------------------*/
+
+.site-header{
+    padding: $inuit-global-spacing-unit 0;
+    // margin-bottom:$inuit-global-spacing-unit/2;
+    // box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.brand-logo{
+    @include media-query(palm){
+    margin: 0 auto;
+    display: block;
+    }
+}
+
+.site-title,
+.site-description{
+    margin: 0;
+}
+
+/*------------------------------------*\
+    # PAGE CONTENT
+\*------------------------------------*/
+
+.hentry{
+	margin-bottom: $inuit-global-spacing-unit;
+}
+
+.entry-content{
+    @include inuit-clearfix();
+    margin-bottom: halve($inuit-global-spacing-unit);
+}
+.entry-title>a{
+    font-weight:300;
+}
+.entry-meta-content{
+	margin-bottom: halve($inuit-global-spacing-unit);
+	@include inuit-font-size(12px,1);
+}
+
+.entry-header__entry-title{
+
+    @include inuit-font-size(22px);
+
+    @include media-query(lap-and-up) {
+        @include inuit-font-size(28px);
+    }
+
+    @include media-query(desk) {
+        @include inuit-font-size(36px);
+    }
+
+}
+
+
+/*------------------------------------*\
+    #NAV LINKS
+\*------------------------------------*/
+.nav-links{
+    padding: halve($inuit-global-spacing-unit) 0;
+    margin-bottom: $inuit-global-spacing-unit;
+   border-top: 1px solid $color-gray-ui;
+}
+@include media-query(lap-and-up){
+	.nav-previous{
+		float:left;
+	}
+	.nav-next{
+		float:right;
+	}
+}
