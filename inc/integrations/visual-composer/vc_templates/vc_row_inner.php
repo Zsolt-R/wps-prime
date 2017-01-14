@@ -128,7 +128,7 @@ $wrapper_attributes[] = 'class="' . esc_attr( trim( $css_class ) ) . '"';
 $output .= $holder_start;
 $output .= $wrapper_start;
 $output .= '<div ' . implode( ' ', $wrapper_attributes ) . '>';
-$output .= wpb_js_remove_wpautop( $content );
+$output .= wpb_js_remove_wpautop( $content , true);
 $output .= '</div>';
 $output .= $wrapper_end;
 $output .= $holder_end;

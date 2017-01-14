@@ -74,7 +74,7 @@ $wrapper_attributes[] = 'class="' . esc_attr( trim( $css_class ) ) . '"';
 
 $output .= '<div ' . implode( ' ', $wrapper_attributes ) . '>';
 $output .= $inner_s;
-$output .= wpb_js_remove_wpautop( $content );
+$output .= wpb_js_remove_wpautop( $content, true );
 $output .= $inner_e;
 $output .= '</div>';
 
