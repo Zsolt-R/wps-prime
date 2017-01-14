@@ -9,7 +9,7 @@
 .site-header{
     padding: $inuit-global-spacing-unit 0;
     // margin-bottom:$inuit-global-spacing-unit/2;
-    // box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .brand-logo{
@@ -23,9 +23,17 @@
     margin: 0;
 }
 
+.site-title{
+    @include inuit-font-size(18px,1);
+}
+
 /*------------------------------------*\
     # PAGE CONTENT
 \*------------------------------------*/
+
+.site-content{
+    padding: $inuit-global-spacing-unit-large 0;
+}
 
 .hentry{
 	margin-bottom: $inuit-global-spacing-unit;

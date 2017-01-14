@@ -1380,7 +1380,8 @@ table {
     #PAGE-HEAD
 \*------------------------------------*/
 .site-header {
-  padding: 24px 0; }
+  padding: 24px 0;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); }
 
 @media screen and (max-width: 44.9375em) {
   .brand-logo {
@@ -1390,9 +1391,17 @@ table {
 .site-description {
   margin: 0; }
 
+.site-title {
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1; }
+
 /*------------------------------------*\
     # PAGE CONTENT
 \*------------------------------------*/
+.site-content {
+  padding: 48px 0; }
+
 .hentry {
   margin-bottom: 24px; }
 

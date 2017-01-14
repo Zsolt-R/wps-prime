@@ -308,7 +308,7 @@ if ( ! function_exists( 'theme_page_title_visibility_body_class' ) ) {
 
 
 /**
-*	Add margin top Enable/Disable to main content area
+*	Add padding top Enable/Disable to main content area
 */
 
 /* Add content margin setting */
@@ -325,15 +325,15 @@ if ( ! function_exists( 'theme_page_margin_setup' ) ) {
 				$get_mb = get_post_meta(get_the_ID(),'page_margin_bottom_reset',true);
 			
 				if( 'reset' === $get_mt && 'reset' !== $get_mb){
-					$classes[] = 'u-margin-top-none';
+					$classes[] = 'u-padding-top-none';
 				}
 		
 				if( 'reset' === $get_mb && 'reset' !== $get_mt){
-					$classes[] = 'u-margin-bottom-none';
+					$classes[] = 'u-padding-bottom-none';
 				}
 		
 				if( 'reset' === $get_mt && 'reset' === $get_mb){
-					$classes[] = 'u-margin-vertical-none';
+					$classes[] = 'u-padding-vertical-none';
 				}
 		}
 	
