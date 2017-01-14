@@ -2524,7 +2524,8 @@ table {
 .site-nav__link {
   text-decoration: none;
   padding: 0.5em;
-  color: #333; }
+  color: #333;
+  display: block; }
 
 /* End Shared */
 /* Mobile nav */
