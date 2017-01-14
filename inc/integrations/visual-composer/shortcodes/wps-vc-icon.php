@@ -23,9 +23,9 @@ function wps_vc_icon_shortcode() {
                 'type' => 'iconpicker',
                 'heading' => __( 'Icon', 'wps-prime' ),
                 'param_name' => 'icon_fontawesome',
-                'value' => 'fa fa-adjust', // default value to backend editor admin_label
+                'value' => '', // default value to backend editor admin_label
                 'settings' => array(
-                    'emptyIcon' => false,
+                    //'emptyIcon' => false,
                     // default true, display an "EMPTY" icon?
                     'iconsPerPage' => 4000,
                     // default 100, how many icons per/page to display, we use (big number) to display all icons in single page
@@ -40,9 +40,9 @@ function wps_vc_icon_shortcode() {
                 'type' => 'iconpicker',
                 'heading' => __( 'Icon', 'wps-prime' ),
                 'param_name' => 'icon_typicons',
-                'value' => 'typcn typcn-adjust-brightness', // default value to backend editor admin_label
+                'value' => '', // default value to backend editor admin_label
                 'settings' => array(
-                    'emptyIcon' => false, // default true, display an "EMPTY" icon?
+                    //'emptyIcon' => false, // default true, display an "EMPTY" icon?
                     'type' => 'typicons',
                     'iconsPerPage' => 4000, // default 100, how many icons per/page to display
                 ),
@@ -56,9 +56,9 @@ function wps_vc_icon_shortcode() {
                 'type' => 'iconpicker',
                 'heading' => __( 'Icon', 'wps-prime' ),
                 'param_name' => 'icon_linecons',
-                'value' => 'vc_li vc_li-heart', // default value to backend editor admin_label
+                'value' => '', // default value to backend editor admin_label
                 'settings' => array(
-                    'emptyIcon' => false, // default true, display an "EMPTY" icon?
+                    //'emptyIcon' => false, // default true, display an "EMPTY" icon?
                     'type' => 'linecons',
                     'iconsPerPage' => 4000, // default 100, how many icons per/page to display
                 ),
@@ -72,9 +72,9 @@ function wps_vc_icon_shortcode() {
                 'type' => 'iconpicker',
                 'heading' => __( 'Icon', 'wps-prime' ),
                 'param_name' => 'icon_woothemesecom',
-                'value' => 'woo-ecom-icon e-commerce000', // default value to backend editor admin_label
+                'value' => '', // default value to backend editor admin_label
                 'settings' => array(
-                    'emptyIcon' => false, // default true, display an "EMPTY" icon?
+                    //'emptyIcon' => false, // default true, display an "EMPTY" icon?
                     'type' => 'woothemesecom',
                     'iconsPerPage' => 4000, // default 100, how many icons per/page to display
                 ),
@@ -90,6 +90,7 @@ function wps_vc_icon_shortcode() {
             'param_name' => 'size',
             'admin_label' => true, 
             'value' => wps_ico_size(),
+            'description' => __('Set icon size', 'wps-prime')
             ),
             array(
             'type' => 'dropdown',
@@ -98,7 +99,7 @@ function wps_vc_icon_shortcode() {
             'admin_label' => true, 
             'value' => wps_ico_colors(),
             'std'=>'',
-            'description' => __('Set icon size', 'wps-prime')
+            'description' => __('Set icon color', 'wps-prime')
             ),
             array(
             'type' => 'textfield',
@@ -115,7 +116,23 @@ function wps_vc_icon_shortcode() {
             'admin_label' => true,
             'value' => '',
             'description' => __('Add custom CSS class.', 'wps-prime')
-            ),       
+            ),
+        // Only for VC UI functionality
+        array(
+            'type' => 'checkbox',
+            'heading' => "Set Margin",
+            'param_name' => 'set_margin',
+            'admin_label' => false,
+        ),
+        /////////////////////////////////
+
+        array(
+            'type' => 'wps_margin',
+            'heading' => "Margin Settings",
+            'param_name' => 'margin',
+            'admin_label' => true,
+            'dependency' => array('element' => 'set_margin', 'value' => 'true'),
+        ),
         );
      // Title
     vc_map(

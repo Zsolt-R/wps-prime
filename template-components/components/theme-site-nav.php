@@ -41,8 +41,10 @@ if ( ! function_exists( 'main_site_mobile_nav_toggler' ) ) {
 
 function main_site_mobile_nav_toggler() {
 
+		$ico = '<div class="site-mobile-nav-icon"><span></span><span></span><span></span><span></span></div>';
+
 		echo '<button class="site-mobile-nav-toggler"  id="nav-toggler" data-ui-component="menu-toggle-button">';
-		echo esc_html( 'Menu', 'wps-prime' );
+		echo $ico;
 		echo '</button>';
 
 		}

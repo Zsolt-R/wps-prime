@@ -60,7 +60,7 @@
             'value' => '',
             'description' => __('Add custom class', 'wps-prime')
         ),
-                // Only for VC UI functionality
+        // Only for VC UI functionality
         array(
             'type' => 'checkbox',
             'heading' => "Set Margin",

@@ -1,41 +1,44 @@
 /*------------------------------------*\
-    #COMPONENTS COMMENT
+    #COMPONENTS GALLERIES
 \*------------------------------------*/
-.comment-list{
-	margin-left:0;
 
+.gallery {
+    margin-bottom: 1.5em;
 }
-
-.comment-author.vcard{
-	
+.gallery-item {
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    width: 100%;
+    margin:0;
 }
-
-.comment-respond{
-    border-top: 1px solid $color-gray-ui;
-    border-bottom: 1px solid $color-gray-ui;
-    padding: $inuit-global-spacing-unit/2 0;
-    margin-bottom: $inuit-global-spacing-unit;
-
-}
-
-.form-submit{
-    .submit{
-        display: inline-block; /* [1] */
-        vertical-align: middle; /* [2] */
-        font: inherit; /* [3] */
-        text-align: center; /* [4] */
-        margin: 0; /* [4] */
-        cursor: pointer; /* [5] */
-         padding: inuit-rem($inuit-global-spacing-unit-tiny) inuit-rem($inuit-global-spacing-unit-small);
-        transition: $global-transition;
-        border-radius: $global-radius;
+@include media-query(lap-and-up) {
+    .gallery-columns-2 .gallery-item {
+        max-width: 50%;
+    }
+    .gallery-columns-3 .gallery-item {
+        max-width: 33.33%;
+    }
+    .gallery-columns-4 .gallery-item {
+        max-width: 25%;
+    }
+    .gallery-columns-5 .gallery-item {
+        max-width: 20%;
+    }
+    .gallery-columns-6 .gallery-item {
+        max-width: 16.66%;
+    }
+    .gallery-columns-7 .gallery-item {
+        max-width: 14.28%;
+    }
+    .gallery-columns-8 .gallery-item {
+        max-width: 12.5%;
+    }
+    .gallery-columns-9 .gallery-item {
+        max-width: 11.11%;
     }
 }
-.comment-form__label{
-   
+.gallery-icon{
+        margin:0.2em;
 }
-.comment-form__field{
-    display:block;
-    width:100%;
-    @extend %u-form-adjust;
-}
+.gallery-caption {}

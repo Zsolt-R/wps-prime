@@ -23,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @var $this WPBakeryShortCode_VC_Row
  */
 $class = $wrapper = $wrapper_class = $holder_img = $holder_class = $holder_id = $holder_img_size = $background = $use_parallax = '';
-$holder_margin = $holder_padding = $holder_img_pos = $holder_bg_fx = $row_v_align = $row_h_align = $row_adjust = '';
+$holder_margin = $holder_padding = $holder_img_pos = $holder_bg_fx = $row_v_align = $row_h_align = $row_adjust = $row_align = '';
 
 $v_bg = $v_youtube = $v_hosted = $v_placeholder = $video_bg = $hosted_video = $tube_video = '';
 

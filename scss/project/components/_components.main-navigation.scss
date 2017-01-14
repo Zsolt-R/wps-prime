@@ -14,17 +14,12 @@
 .site-nav__link{
     text-decoration: none;
     padding:0.5em;
+    color:$color-nav-link;
 }
 /* End Shared */
 
 
 /* Mobile nav */
-.site-nav-mobile,
-.site-mobile-nav-toggler{
-     @include media-query(lap-and-up) {
-        @include hide();
-    }
-}
 
 .site-nav-mobile{
     display:none; 
@@ -47,10 +42,104 @@
     }
 }
 
-.site-mobile-nav-toggler{   
-    float: right;
+.site-nav-mobile,
+.site-mobile-nav-toggler,
+.site-nav-mobile.toggled{
+     @include media-query(lap-and-up) {
+        @include hide();
+    }
 }
+
 /* End Mobile nav */
+
+/* Mobile nav toggle button */
+.site-mobile-nav-toggler{
+    float: right;
+    background-color: transparent;    
+    color:$color-nav-link;
+    border:1px solid currentColor;
+    outline: none;
+    border-radius: $global-radius;
+    padding:round($inuit-global-spacing-unit/2);
+    overflow: hidden;
+    white-space: nowrap;
+    border-radius: $global-radius;
+    margin:0 auto;
+}
+
+.site-mobile-nav-icon {
+  width: 30px;
+  height: 24px;
+  position: relative;
+  margin: 0px auto;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: $global-transition ease-in-out;
+  -moz-transition: $global-transition ease-in-out;
+  -o-transition: $global-transition ease-in-out;
+  transition: $global-transition ease-in-out;
+  cursor: pointer;
+}
+
+.site-mobile-nav-icon span {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: $color-nav-link;
+  border-radius: 2px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: $global-transition ease-in-out;
+  -moz-transition: $global-transition ease-in-out;
+  -o-transition: $global-transition ease-in-out;
+  transition: $global-transition ease-in-out;
+}
+
+.site-mobile-nav-icon span:nth-child(1) {
+  top: 0px;
+}
+
+.site-mobile-nav-icon span:nth-child(2),.site-mobile-nav-icon span:nth-child(3) {
+  top: 10px;
+}
+
+.site-mobile-nav-icon span:nth-child(4) {
+  top: 20px;
+}
+
+.mobile-nav-open .site-mobile-nav-icon span:nth-child(1) {
+  top: 10px;
+  width: 0%;
+  left: 50%;
+}
+
+.mobile-nav-open .site-mobile-nav-icon span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.mobile-nav-open .site-mobile-nav-icon span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.mobile-nav-open .site-mobile-nav-icon span:nth-child(4) {
+  top: 10px;
+  width: 0%;
+  left: 50%;
+}
+/* End mobile nav toggle button */
 
 /* Desktop nav */
 .site-nav {        

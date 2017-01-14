@@ -80,3 +80,14 @@ function wps_extract_youtube_id( $url ) {
 
 	return $vars['v'];
 }
+
+function wps_remove_wpautop( $content, $autop = false ) {
+
+	if ( $autop ) { 
+		$content = wpautop( preg_replace( '/<\/?p\>/', "\n", $content ) . "\n" );
+	}
+	
+	// Don’t auto-p wrap shortcodes that stand alone
+	// ref: https://developer.wordpress.org/reference/functions/shortcode_unautop/
+	return do_shortcode( shortcode_unautop( $content ) );
+}

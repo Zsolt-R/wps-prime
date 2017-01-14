@@ -77,7 +77,15 @@ function wps_vc_button_shortcode() {
                             ),
             'description' => __('<small>Link target specifies where to open the linked document.</small> <br/><small> _blank (Opens the linked document in a new window or tab</small>)', 'wps-prime')
         ),
-                // Only for VC UI functionality
+        array(
+            'type' => 'textfield',
+            'heading' => 'Custom onclick action',
+            'admin_label' => true,
+            'param_name' => 'onclick',            
+            'value' => '',
+            'description' => __('<small>Add custom onclick functionality</small>', 'wps-prime')
+        ),
+        // Only for VC UI functionality
         array(
             'type' => 'checkbox',
             'heading' => "Set Margin",

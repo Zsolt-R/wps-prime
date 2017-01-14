@@ -93,7 +93,7 @@ function optionsframework_options() {
 
 	$options[] = array(
 		'name' => __( 'Company contact email', 'wps-prime' ),
-		'desc' => __( 'Used in a shortcode. Regardles where the phone number will be placed we can update it from here.', 'wps-prime' ),
+		'desc' => __( 'Used in a shortcode. Regardles where the email will be placed we can update it from here.', 'wps-prime' ),
 		'id' => 'email_address',
 		//'std' => 'Default Value',
 		'type' => 'text'
@@ -101,7 +101,7 @@ function optionsframework_options() {
 
 	$options[] = array(
 		'name' => __( 'Company contact email (second)', 'wps-prime' ),
-		'desc' => __( 'Used in a shortcode. Regardles where the phone number will be placed we can update it from here.', 'wps-prime' ),
+		'desc' => __( 'Used in a shortcode. Regardles where the email will be placed we can update it from here.', 'wps-prime' ),
 		'id' => 'email_address_secondary',
 		//'std' => 'Default Value',
 		'type' => 'text'

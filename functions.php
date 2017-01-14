@@ -89,28 +89,37 @@ class WPS_Theme_Setup {
 	public function theme_constants() {
 
 		/* Paths to the parent theme directory */
-		define( 'WPS_THEME_DIR', $this->template_dir );
+		if (!defined('WPS_THEME_DIR')) 
+			define( 'WPS_THEME_DIR', $this->template_dir );
+
+		if (!defined('WPS_THEME_URI')) 
 		define( 'WPS_THEME_URI', get_template_directory_uri() );
 
 		/* Stylesheet uri  */
-		define( 'WPS_THEME_STYLE_URI', get_stylesheet_uri() );
+		if (!defined('WPS_THEME_STYLE_URI')) 
+			define( 'WPS_THEME_STYLE_URI', get_stylesheet_uri() );
 
 		/* Theme assets images/fonts/scss/js  */
 		//define( 'WPS_ASSETS_URI', WPS_THEME_URI .'/assets' );
 
 		/* Theme assets images/fonts/scss/js  */
-		define( 'WPS_CSS_URI', WPS_THEME_URI .'/css' );
+		if (!defined('WPS_CSS_URI')) 
+			define( 'WPS_CSS_URI', WPS_THEME_URI .'/css' );
 
 		/* Javascript Paths  */
-		define( 'WPS_JS_DIR_URI', WPS_THEME_URI .'/js' );
+		if (!defined('WPS_JS_DIR_URI')) 
+			define( 'WPS_JS_DIR_URI', WPS_THEME_URI .'/js' );
 
 		/* Theme "engine" directory. Houses core functions  */
-		define( 'WPS_ENGINE_DIR', WPS_THEME_DIR .'/inc' );
+		if (!defined('WPS_ENGINE_DIR')) 
+			define( 'WPS_ENGINE_DIR', WPS_THEME_DIR .'/inc' );
 
 		/* Theme components directory  */
+		if (!defined('WPS_COMPONENTS_DIR'))
 		define( 'WPS_COMPONENTS_DIR', WPS_THEME_DIR .'/template-components' );
 
 		/* Theme options framework dir  */
+		if (!defined('OPTIONS_FRAMEWORK_DIRECTORY'))
 		define( 'OPTIONS_FRAMEWORK_DIRECTORY', get_template_directory_uri() . '/inc/theme-options-framework/' );
 
 	}

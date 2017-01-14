@@ -1,0 +1,37 @@
+/*------------------------------------*\
+    #COMPONENTS MEDIABOX
+\*------------------------------------*/
+.c-mediabox--tiny {
+
+  > .c-mediabox__symbol {
+    margin-bottom: $inuit-global-spacing-unit-tiny;
+  }
+}
+
+.c-mediabox--small {
+
+  > .c-mediabox__symbol {
+    margin-bottom: $inuit-global-spacing-unit-small;
+  }
+}
+
+.c-mediabox--normal {
+
+  > .c-mediabox__symbol {
+    margin-bottom: $inuit-global-spacing-unit;
+  }
+}
+
+.c-mediabox--large {
+
+  > .c-mediabox__symbol {
+    margin-bottom: $inuit-global-spacing-unit-large;
+  }
+}
+
+.c-mediabox--huge {
+
+  > .c-mediabox__symbol {
+    margin-bottom: $inuit-global-spacing-unit-huge;
+  }
+}

@@ -53,6 +53,7 @@
         margin-bottom: $inuit-global-spacing-unit;
         display: block; 
         max-width: 100%;
+        width: 100%; // Reset Inuit Setting
     }
     .o-flag--responsive.o-flag--tiny>.o-flag__img {
         padding-right: 0;

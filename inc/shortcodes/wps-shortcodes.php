@@ -93,52 +93,128 @@ add_shortcode('wps_tab_item','wps_tab_item_shortcode');
 function wps_row_shortcode( $atts, $content = null ) {
 			$options = shortcode_atts(array(			
 				'class' => '',
-				'wrapper_class' => '',
-				'holder_class' => '',
 				'wrapper' => false,
+				'wrapper_class' => '',
 				'holder_img' => '',
+				'holder_class' => '',
+				'holder_id' =>'',
 				'holder_img_size' => 'full',
-				'holder_img_pos' =>'',
+				'background' => '',
+				'use_parallax' => false,
+				'holder_margin' => '',
+				'holder_padding' => '',
+				'holder_img_pos' => '',
 				'holder_bg_fx' =>'',
-				'row_align' =>''
+				'row_v_align' => '',
+				'row_h_align' => '',
+				'row_adjust' => '',
+				'grid_col_full_height' => '',
+				'grid_col_equal_height' => '',
+				'row_align' => '',
+				'v_bg' => '',	
+				'v_youtube' => '',
+				'v_hosted' => '',
+				'v_placeholder' => '',
+				'video_bg' => '',
+				'hosted_video' => '',
+				'tube_video' => ''
 			), $atts );
 
-			// Setup Defaults
-			$style = '';
+			$v_bg = $v_youtube = $v_hosted = $v_placeholder = $video_bg = $hosted_video = $tube_video = $wrapper = $css_class = $background = '';
+
+			$holder_start = $holder_end = '';
+			$wrapper_start = $wrapper_end = '';
 			$output = '';
-
-			// Stack Classes
-			$class  = wps_getExtraClass( array(
-					  $options['class'],
-					  $options['row_align']
-					  )
-					);
 			
-			$class_w  = wps_getExtraClass($options['wrapper_class']);
+			$css_classes = array();
 
+			$has_tube_bg = ( ! empty( $options['v_bg'] ) && ! empty( $options['v_youtube'] ) && wps_extract_youtube_id( $options['v_youtube'] ) );
+			$has_hosted_bg = ( ! empty( $options['v_bg'] ) && ! empty( $options['v_hosted'] ) );
+
+	        if ( $has_tube_bg && wps_extract_youtube_id( $options['v_youtube'] )) {
+
+				$parallax_image = $options['v_youtube'];
+				$css_classes[] = 'vc_video-bg-container';		
+				$tube_video = '<span class="wps-ytube-video" data-video-bg-id="' . wps_extract_youtube_id( $options['v_youtube'] ) . '"></span>';
+				
+			}	
+
+			if( $has_hosted_bg ){
+				$hosted_video = '<div class="wps-bg-video-wrapper"><video playsinline autoplay muted loop ';
+				$hosted_video .= wp_get_attachment_url( $options['v_placeholder'] ) ? 'poster="'.wp_get_attachment_url( $options['v_placeholder'] ).'" ' : '';
+				$hosted_video .= 'class="wps-bg-video">';
+				$hosted_video .= '<source src="'.wp_get_attachment_url( $options['v_hosted'] ).'" type="video/mp4"></video></div>';		
+			}
+
+			if( $has_tube_bg || $has_hosted_bg ){
+				$video_bg = $has_tube_bg ?  $tube_video : $hosted_video;
+			}
+
+			// Layout Classes
+			$class  = wps_getExtraClass( array(
+				 $options['class'],
+				 $options['row_v_align'],
+				 $options['row_h_align'],
+				 $options['row_align'],
+				 $options['row_adjust'],
+				 $options['grid_col_equal_height'] ? wps_getExtraClass('grid--equalHeight') : '',
+				 $options['grid_col_full_height'] ? wps_getExtraClass('grid--full-height') : ''
+					  )
+					);			
+
+			// Holder Classes
 			$class_h  = wps_getExtraClass( array(
-				$options['holder_class'],
-				$options['holder_img_pos'],
-				$options['holder_bg_fx']
+					$options['video_bg'] ? wps_getExtraClass('o-holder--video') : '',
+					$options['holder_class'],					
+					$options['holder_img_pos'],
+					$options['holder_bg_fx'],
+					$options['holder_margin'],
+					$options['holder_padding']	
 				) 
 			);
 
+			// Wrapper Classes
+			$class_w  = wps_getExtraClass( array( 'o-wrapper', $options['wrapper_class'] ) );
 
-			// Check for background Image and setup inline style
-			if ( $options['holder_img'] ) {
+			// Holder ID
+			$row_id = $options['holder_id'] ? ' id="'. $options['holder_id'] .'" ' : '';
+
+			if ( $options['holder_img'] && !$has_hosted_bg) {
+
 				$image = wp_get_attachment_image_src( $options['holder_img'],$options['holder_img_size'],false );
-				$style = $image[0] ? " style='background-image:url({$image[0]});'" : '';
+				$background = $image[0] ? " style='background-image:url({$image[0]});'" : '';
+
+				if ( $options['use_parallax'] ){	
+					wp_enqueue_script('wps_parallax'); // Registered in functions
+					$background = " data-parallax=\"scroll\" data-image-src=\"{$image[0]}\"";
+					$class_h .= wps_getExtraClass('parallax-window');
+				}
 			}
 
-			// Prepare Output
-			$output = sprintf('%1$s%2$s<div class="grid-1%3$s">%4$s</div>%5$s%6$s',
-				$style || $class_h ? "<div class=\"holder{$class_h}\"{$style}>" : '', 									//  %1$s
-				'false' !== $options['wrapper'] && $options['wrapper'] ? "<div class=\"o-wrapper{$class_w}\">" : '',		//  %2$s
-				$class,																									//  %3$s
-				do_shortcode( $content ),																				//  %4$s	
-				'false' !== $options['wrapper'] && $options['wrapper'] ? "</div>" : '',									//  %5$s
-				$style || $class_h ? "</div>" : ''																		//  %6$s
-			);
+			if ( $background || $class_h || $row_id || $video_bg) {
+				$holder_start = '<div '.$row_id.'class="o-holder'.$class_h.'"'.$background.'>'.$video_bg;
+				$holder_end = '</div>';
+			}
+		
+			if ( 'false' !== $options['wrapper'] && $options['wrapper'] ) {
+				$wrapper_start = '<div class="'.$class_w.'">';
+				$wrapper_end = '</div>';
+			}
+
+			$css_classes = array(
+		    		'grid-1',
+		    		$class,    
+					);
+
+			$css_class = preg_replace( '/\s+/', ' ', implode( ' ', array_filter( array_unique( $css_classes ) ) ) );
+
+			$output .= $holder_start;
+			$output .= $wrapper_start;
+			$output .= '<div class="' . esc_attr( trim( $css_class ) ) . '">';
+			$output .= wps_remove_wpautop( $content );
+			$output .= '</div>';
+			$output .= $wrapper_end;
+			$output .= $holder_end;
 
 			return $output;
 }
@@ -330,7 +406,8 @@ function wps_buttons_shortcode( $atts ) {
 		'aspect'  => '',
 		'size' 	  => '',
 		'ghost'	  => '',
-		'color'   => ''
+		'color'   => '',
+		'onclick' => ''
 	), $atts );
 
 	$styleClass  = wps_getExtraClass( array( 		
@@ -349,8 +426,9 @@ function wps_buttons_shortcode( $atts ) {
 	$btnInfotext = $options['label'] ? $options['label'] : '';
 	$btnLink = $options['link'] ? $options['link'] : '#';
 	$btnTarget = $options['target'] ? ' target="'.$options['target'].'"' : '';
+	$btnOnClick = $options['onclick'] ? ' onclick="'.$options['onclick'].'"' : '';
 
-	$output = '<a class="c-button'. $styleClass .'" href="'.$btnLink.'"'.$btnTarget.'>'. $btnInfotext .'</a>';
+	$output = '<a class="c-button'. $styleClass .'" href="'.$btnLink.'"'.$btnTarget.$btnOnClick.'>'. $btnInfotext .'</a>';
 
 	return $output;
 
@@ -466,31 +544,32 @@ function wps_ico_shortcode( $atts, $content = null ) {
 		'icon_woothemesecom' => '',		// default value to backend editor | param used by VC
 		'size'=>'',
 		'color' =>'',
-		'type' =>''
+		'type' =>'',
+		'margin'=>''
 	), $atts );
 
-	$ico_class = $class = $size = $type = '';
+	$type = '';
 	$output = '';
 
-	$class = wps_getExtraClass($options['class']);
-	$color = wps_getExtraClass($options['color']);
 	$content = $content ? ' '.$content : '';
 
 	$type = $options['type'] ? $options['type'] : 'fontawesome'; // Set as default iconfont
 
-	$ico_class = $options["icon_{$type}"] ? ' '.$options["icon_{$type}"] : '';
 
+	$ico_class = wps_getExtraClass(array(
+			$options['class'] ? $options['class'] : '',
+			$options['color'] ? $options['color'] : '',
+			$options["icon_{$type}"] ? $options["icon_{$type}"] : '',
+			$options['size'] ? $options['size'] : '',
+			$options['margin'] ? $options['margin'] : '',
+		));
 
-	$size = wps_getExtraClass($options['size']);
-
-	$wrapper_s = $options['center'] ? '<div class="ico-wrap-center">' : '';
-	$wrapper_e = $options['center'] ? '</div>' : '';
-
+	$center = $options['center'] ? ' ico-wrap--center' : '';
 
 	// Enque frontend icon font family
 	wps_icon_element_fonts_enqueue( $type );
 
-	$output = $wrapper_s.'<i class="ico'. esc_attr($content) . esc_attr($class) . esc_attr($color) . esc_attr($ico_class) . esc_attr($size) .'"></i>'.$wrapper_e;
+	$output = '<div class="ico-wrap'.esc_attr($center).'"><i class="ico'. esc_attr($content) . esc_attr($ico_class) .'"></i></div>';
 	return $output;
 }
 
@@ -607,13 +686,18 @@ function wps_media_box_shortcode( $atts, $content = null ) {
 			'icon_linecons' => '',			// default value to backend editor | param used by VC
 			'icon_woothemesecom' => '',		// default value to backend editor | param used by VC
 			'ico_type'=>'',
+			'icon_align' => '',
+			'icon_size' => '',
+			'icon_color' => '',
 			'type' => '',
 			'type_class' => '',
 			'type_spacing' => false,
 			'type_reverse' => '',
 			'type_img_class' => '',
-			'not_responsive' => false,
-			'class' => '',
+			'not_responsive' => false,		
+			'txt_color' => '',	
+			'margin' => '',
+			'class' => ''
 
 		),$atts);
 
@@ -630,7 +714,12 @@ function wps_media_box_shortcode( $atts, $content = null ) {
 		}
 
 		// Mediabox class.
-		$class = wps_getExtraClass($args['class']);
+		$class = wps_getExtraClass(array(
+			$args['class'],
+			$args['txt_color'],
+			$args['margin']
+			)
+		);
 
 		// Symbol image/ico.
 		if ( $args['image_class'] !== '' ) {
@@ -641,15 +730,22 @@ function wps_media_box_shortcode( $atts, $content = null ) {
 
 		$ico_type_class = wps_getExtraClass($args["icon_{$ico_type}"]);
 
-		$ico_class_custom = wps_getExtraClass($args['ico_class']);
+		$ico_class_custom = wps_getExtraClass(
+			array(
+				$args['ico_class'],
+				$args['icon_size'],
+				$args['icon_color']
+				)
+			);
 
 
-		$ico = $ico_class_custom || $ico_type_class ? "<i class=\"ico {$ico_class_custom}{$ico_type_class}\"></i>" : '';
+		$ico = $ico_class_custom || $ico_type_class ? "<div class=\"ico-wrap ico-wrap--center\"><i class=\"ico{$ico_class_custom}{$ico_type_class}\"></i></div>" : '';
 
 
 		$image = $args['image_id'] !== '' ? wp_get_attachment_image( $args['image_id'],$args['image_size'],false,$image_args ) :'';
 
 		$symbol = $image ? $image : $ico;
+
 		// Type.
 		$type_class = wps_getExtraClass( array(
 			$args['type'],
@@ -659,6 +755,8 @@ function wps_media_box_shortcode( $atts, $content = null ) {
 			$args['type_spacing'] ? $args['type'].$args['type_spacing'] : '',
 			)
 		);
+
+		$type_spacing = $args['type_spacing'] ? wps_getExtraClass( array('c-mediabox'.$args['type_spacing'])) : '';
 
 
 		//Img link
@@ -670,7 +768,7 @@ function wps_media_box_shortcode( $atts, $content = null ) {
 			 $output = "<div class=\"c-mediabox{$class}\"><div class=\"{$type_class}\"><div class=\"{$args['type']}__img\">{$img_link_start}{$symbol}{$img_link_end}</div><div class=\"{$args['type']}__body\">{$content}</div></div></div>";
 		} else {
 
-			 $output = "<div class=\"c-mediabox{$class}\">{$img_link_start}{$symbol}{$img_link_end}{$content}</div>";
+			 $output = "<div class=\"c-mediabox{$class}{$type_spacing}\"><div class=\"c-mediabox__symbol\">{$img_link_start}{$symbol}{$img_link_end}</div>{$content}</div>";
 		}
 
 		return $output;

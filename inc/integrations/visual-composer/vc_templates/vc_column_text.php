@@ -31,8 +31,8 @@ $class_to_filter  = wps_getExtraClass( array(
 				);
 
 $css_class = apply_filters( VC_SHORTCODE_CUSTOM_CSS_FILTER_TAG, $class_to_filter, $this->settings['base'], $atts );
-//var_dump($css_class);
-$output  = $class_to_filter !== '' ? '<div class="text-block '.esc_attr( $css_class ).'">' : '';
-$output .= wpb_js_remove_wpautop($content);
-$output .= $class_to_filter !== '' ? '</div>' : '';
+
+//$output  = $class_to_filter !== '' ? '<div class="text-block '.esc_attr( $css_class ).'">' : '';
+$output = '<div class="c-text-block'.esc_attr( $css_class ).'">'.wpb_js_remove_wpautop($content).'</div>';
+//$output .= $class_to_filter !== '' ? '</div>' : '';
 echo $output;

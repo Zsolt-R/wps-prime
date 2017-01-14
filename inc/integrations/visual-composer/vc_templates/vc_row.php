@@ -23,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @var $this WPBakeryShortCode_VC_Row
  */
 $class = $wrapper = $wrapper_class = $holder_img = $holder_class = $holder_id = $holder_img_size = $background = $use_parallax = '';
-$holder_margin = $holder_padding = $holder_img_pos = $holder_bg_fx = $row_v_align = $row_h_align = $row_adjust = $grid_col_full_height = $row_align = '';
+$holder_margin = $holder_padding = $holder_img_pos = $holder_bg_fx = $row_v_align = $row_h_align = $row_adjust = $grid_col_full_height = $grid_col_equal_height = $row_align = '';
 
 $v_bg = $v_youtube = $v_hosted = $v_placeholder = $video_bg = $hosted_video = $tube_video = '';
 
@@ -98,7 +98,6 @@ extract( $atts );
 				$class_h .= wps_getExtraClass('parallax-window');
 			}
 	}
-	
 		
 
 	if ( $background || $class_h || $row_id || $video_bg) {
@@ -127,7 +126,7 @@ $wrapper_attributes[] = 'class="' . esc_attr( trim( $css_class ) ) . '"';
 $output .= $holder_start;
 $output .= $wrapper_start;
 $output .= '<div ' . implode( ' ', $wrapper_attributes ) . '>';
-$output .= wpb_js_remove_wpautop( $content );
+$output .= wpb_js_remove_wpautop( $content, true );
 $output .= '</div>';
 $output .= $wrapper_end;
 $output .= $holder_end;

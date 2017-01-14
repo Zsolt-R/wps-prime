@@ -98,6 +98,7 @@ jQuery(document).ready(function($) {
     });
   });
 
+
   // Fancybox
   /* Create gallery items alt data */
   $('.gallery').each(function () {
@@ -117,6 +118,8 @@ jQuery(document).ready(function($) {
         
         this.title = alt;
     }
-  });//.attr('rel', 'gallery')
+  });
 
+  // Initialize the Lightbox automatically for any links to images with extensions .jpg, .jpeg, .png or .gif
+    $("a[href$='.jpg'], a[href$='.png'], a[href$='.jpeg'], a[href$='.gif']").fancybox();
 });

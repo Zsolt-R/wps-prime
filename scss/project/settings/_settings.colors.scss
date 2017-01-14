@@ -70,8 +70,11 @@ $color-bg-opaq-light:		 $color-white;
 $color-bg-opaq-light-opacity: 0.7;
 
 // Slider Colors
-$color-arrow: '1abc9c'; //Use hex color without # value is interpolated in svg
-$color-bullet: $color-brand;
+$color-arrow: '333333'; //Use hex color without # value is interpolated in svg
+$color-bullet: $color-text;
+
+// Navigation colors
+$color-nav-link:        $color-text;
 
 // Text Colors
 $color-text-invert: 	$color-body;  // Invert text from black to white
