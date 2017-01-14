@@ -54,7 +54,6 @@ function page_pre_content_save_postdata( $post_id ){
         }
 
     if ( isset($_POST['page_pre_content'])){
-        $data = htmlspecialchars($_POST['page_pre_content']);
-            update_post_meta($post_id , 'page_pre_content', $data);
+            update_post_meta($post_id , 'page_pre_content', $_POST['page_pre_content']);
         }
     }
