@@ -169,12 +169,16 @@
 	},
 	"expanded_folders":
 	[
-		"/E/DesktopServer/dg.dev/wp-content/themes/wps-prime-shaw",
 		"/E/DesktopServer/dg.dev/wp-content/themes/wps-prime-shaw/scss",
-		"/E/DesktopServer/dg.dev/wp-content/themes/wps-prime-shaw/scss/project"
+		"/E/DesktopServer/dg.dev/wp-content/themes/wps-prime-shaw/scss/project",
+		"/E/DesktopServer/dg.dev/wp-content/themes/wps-prime-shaw/scss/project/components"
 	],
 	"file_history":
 	[
+		"/E/DesktopServer/dg.dev/wp-content/themes/wps-prime-shaw/scss/project/components/_components.icons.scss",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime-child/css-architecture-elements.md",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime-child/.jshintignore",
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime-child/.jscsrc",
 		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/.git/info/exclude",
 		"/C/Users/zsolt/AppData/Local/Temp/scp48661/public_html/clients/dg/.htaccess",
 		"/E/DesktopServer/dg.dev/wp-content/themes/wps-prime-shaw/scss/_theme-data.scss",
@@ -265,7 +269,6 @@
 		"/C/Users/zsolt/AppData/Local/Temp/scp52089/public_html/wps-prime.pw/wp-config.php",
 		"/E/DesktopServer/whd.dev/wp-content/themes/whd-theme/assets/js/theme.js",
 		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/scss/project/components/_components.fancybox.scss",
-		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime-child/css-architecture-elements.md",
 		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/inc/integrations/visual-composer/vc_templates/vc_video.php",
 		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/inc/integrations/visual-composer/shortcodes/wps-vc-shortcode-fallbacks.php",
 		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime-child/template-components/components/theme-footer-site-microcopy.php",
@@ -299,10 +302,7 @@
 		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime-child/scss/project/components/_components.buttons.scss",
 		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/scss/project/components/_components.buttons.scss",
 		"/E/DesktopServer/whd.dev/wp-content/themes/whd-theme/assets/sass/bower_components/inuit-buttons/_objects.buttons.scss",
-		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime-child/inc/integrations/visual-composer/css/wps-vc-style.css",
-		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime-child/scss/_theme-data.scss",
-		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime-child/js/wps_vc-video-bg.js",
-		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/js/min/wps_video-bg.min.js"
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime-child/inc/integrations/visual-composer/css/wps-vc-style.css"
 	],
 	"find":
 	{
@@ -603,8 +603,15 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"file": "favicon.ico",
+					"semi_transient": true,
+					"stack_index": 0,
+					"type": "image"
+				}
 			]
 		},
 		{
@@ -761,7 +768,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 0,
+	"selected_group": 1,
 	"settings":
 	{
 	},
