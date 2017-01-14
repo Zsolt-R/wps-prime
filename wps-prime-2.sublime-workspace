@@ -175,6 +175,7 @@
 	],
 	"file_history":
 	[
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/.git/info/exclude",
 		"/C/Users/zsolt/AppData/Local/Temp/scp48661/public_html/clients/dg/.htaccess",
 		"/E/DesktopServer/dg.dev/wp-content/themes/wps-prime-shaw/scss/_theme-data.scss",
 		"/E/DesktopServer/dg.dev/wp-content/themes/wps-prime-shaw/scss/style.scss",
@@ -301,8 +302,7 @@
 		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime-child/inc/integrations/visual-composer/css/wps-vc-style.css",
 		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime-child/scss/_theme-data.scss",
 		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime-child/js/wps_vc-video-bg.js",
-		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/js/min/wps_video-bg.min.js",
-		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime-child/style.css"
+		"/E/DesktopServer/prime.dev/wp-content/themes/wps-prime/js/min/wps_video-bg.min.js"
 	],
 	"find":
 	{

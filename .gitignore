@@ -1,0 +1,6 @@
+#Sublime Files
+*.sublime-project
+*.sublime-workspace
+
+#Prepros Files
+/prepros-6.config
