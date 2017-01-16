@@ -15,10 +15,12 @@
  *
  *  HEADER Hooks layout
  *
- *   - before_header
- *   - theme_header
- *       - theme_header_left
- *       - theme_header_right
+ *  - before_header
+ *  - mast_head_start
+ *   	- theme_header
+ *   	  - header-left
+ *   	  - header-right
+ *	- mast_head_start
  *  - after_header
  *  - before_content
  *

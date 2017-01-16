@@ -25,7 +25,9 @@
 	<?php before_header(); ?>
 
 	<header id="masthead"<?php echo site_header_class(); ?> role="banner">
+	<?php mast_head_start(); ?>
 	<div class="o-wrapper"><div class="grid-1 grid-middle"><?php theme_header(); ?></div><!--grid--></div><!--o-wrapper-->
+	<?php mast_head_end(); ?>
 	</header><!-- #masthead -->
 	<?php after_header(); ?>
 	<?php before_content(); ?>

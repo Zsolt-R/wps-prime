@@ -14,10 +14,12 @@
  *
  *  HEADER Hooks layout
  *
- *   - before_header
- *   - theme_header
- *       - header-left
- *       - header-right
+ *  - before_header
+ *  - mast_head_start
+ *   	- theme_header
+ *   	  - header-left
+ *   	  - header-right
+ *	- mast_head_start
  *  - after_header
  *  - before_content
  *
@@ -43,6 +45,20 @@
  */
 function body_start() {
 	do_action( 'body_start' );
+}
+
+/**
+* Master Header Start Hook	
+*/
+function mast_head_start() {
+	do_action( 'mast_head_start' );
+}
+
+/**
+* Master Header End Hook	
+*/
+function mast_head_end() {
+	do_action( 'mast_head_end' );
 }
 
 /**
