@@ -40,9 +40,39 @@
 	@include rgba-background($color-bg-opaq-light,$color-bg-opaq-light-opacity);
 }
 
-/* Background Image Adjustments */
-.u-background-center{
-	background-position: center;
+/*********************************
+ Background Image Adjustments 
+**********************************/
+
+.u-background-cover{
     background-repeat: no-repeat;
     background-size: cover;
 } 
+.u-background-contain{
+	background-repeat: no-repeat;
+    background-size: contain;
+}
+.u-background-no-repeat{
+    background-repeat: no-repeat;
+} 
+
+
+/* Background positioning */
+.u-background-pos-top-center{
+	background-position: top center;
+}
+.u-background-pos-top-right{
+	background-position: top right;
+}
+.u-background-pos-bottom-left{
+	background-position: bottom left;
+}
+.u-background-pos-bottom-center{
+	background-position: bottom center;
+}
+.u-background-pos-bottom-right{
+	background-position: bottom right;
+}
+.u-background-pos-center{
+	background-position: center;
+}
