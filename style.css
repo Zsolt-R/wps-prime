@@ -80,7 +80,7 @@ Theme URI: http://wps-prime.pw
 Author: Zsolt Revay-Giran
 Author URI: http://wps-prime.pw
 Description: A lightweight WordPress master theme extended with simple and useful add-ons that speeds up child theme development
-Version: 1.0.0
+Version: 1.1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: wps-prime
@@ -4912,11 +4912,38 @@ textarea {
   background-color: #fff;
   background-color: rgba(255, 255, 255, 0.7); }
 
-/* Background Image Adjustments */
-.u-background-center {
-  background-position: center;
+/*********************************
+ Background Image Adjustments 
+**********************************/
+.u-background-cover {
   background-repeat: no-repeat;
   background-size: cover; }
+
+.u-background-contain {
+  background-repeat: no-repeat;
+  background-size: contain; }
+
+.u-background-no-repeat {
+  background-repeat: no-repeat; }
+
+/* Background positioning */
+.u-background-pos-top-center {
+  background-position: top center; }
+
+.u-background-pos-top-right {
+  background-position: top right; }
+
+.u-background-pos-bottom-left {
+  background-position: bottom left; }
+
+.u-background-pos-bottom-center {
+  background-position: bottom center; }
+
+.u-background-pos-bottom-right {
+  background-position: bottom right; }
+
+.u-background-pos-center {
+  background-position: center; }
 
 /*------------------------------------*\
     #VIDEO BACKGROUND
