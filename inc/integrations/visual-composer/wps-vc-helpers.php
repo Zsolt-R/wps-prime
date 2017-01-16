@@ -183,15 +183,38 @@ if(!function_exists('wps_ico_sizes')){
  *
  * @since 1.4.4
  */
-if(!function_exists('wps_bg_positions')){
-	function wps_bg_positions() {
+if(!function_exists('wps_bg_behavior')){
+	function wps_bg_behavior() {
 		$position_list = array(
-	                __('None','wps-prime')				=> '',
-                    __('Bg Center (cover)','wps-prime') => 'u-background-center',
+	                __('Default (repeat)','wps-prime')	=> '',
+	                __('No Repeat','wps-prime')			=> 'u-background-no-repeat',
+                    __('Bg Cover','wps-prime') 			=> 'u-background-cover',
+                    __('Bg Contain','wps-prime') 		=> 'u-background-contain',
 	                );
 		return $position_list;
 	}
 }
+/**
+ * Returns array of predefined css classes
+ *
+ * @since 1.4.4
+ */
+if(!function_exists('wps_bg_positions')){
+	function wps_bg_positions() {
+		$position_list = array(
+	                __('Default (top left)','wps-prime') => '',
+	                __('Center','wps-prime') => 'u-background-pos-center',
+                    __('Top Center','wps-prime') => 'u-background-pos-top-center',
+                    __('Top Right','wps-prime') => 'u-background-pos-top-right',
+                    __('Bottom Left','wps-prime') => 'u-background-pos-bottom-left',
+                    __('Bottom Center','wps-prime') => 'u-background-pos-bottom-center',
+                    __('Bottom Right','wps-prime') => 'u-background-pos-bottom-right',
+	                );
+		return $position_list;
+	}
+}
+
+
 /**
  * Layout Adjust
  *
