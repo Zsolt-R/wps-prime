@@ -22,12 +22,12 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Shortcode class
  * @var $this WPBakeryShortCode_VC_Row
  */
-$class = $wrapper = $wrapper_class = $holder_img = $holder_class = $holder_id = $holder_img_size = $background = $use_parallax = '';
+$class = $wrapper = $wrapper_class = $holder_img = $holder_class = $holder_id = $holder_img_size = $holder_img_behave = $holder_img_pos = $use_parallax = '';
 $holder_margin = $holder_padding = $holder_img_pos = $holder_bg_fx = $row_v_align = $row_h_align = $row_adjust = $row_align = '';
 
 $v_bg = $v_youtube = $v_hosted = $v_placeholder = $video_bg = $hosted_video = $tube_video = '';
 
-$holder_start = $holder_end = '';
+$holder_start = $holder_end =  $imagepath = $background = '';
 $wrapper_start = $wrapper_end = '';
 $output = '';
 
@@ -76,6 +76,7 @@ extract( $atts );
 					$video_bg ? wps_getExtraClass('o-holder--video') : '',
 					$holder_class,
 					$holder_img_pos,
+					$holder_img_behave,
 					$holder_bg_fx,
 					$holder_margin,
 					$holder_padding					
@@ -90,8 +91,16 @@ extract( $atts );
 
 
 	if ( $holder_img && !$has_hosted_bg) {
-			$image = wp_get_attachment_image_src( $holder_img,$holder_img_size,false );
-			$background = $image[0] ? " style='background-image:url({$image[0]});'" : '';
+			$filetype = wp_check_filetype(wp_get_attachment_url($holder_img));
+
+			if('svg' === $filetype['ext']){
+				$imagepath = wp_get_attachment_url($holder_img);
+			}else{
+				$image = wp_get_attachment_image_src( $holder_img,$holder_img_size,false );
+				$imagepath = $image[0];
+			}
+
+			$background = $imagepath ? " style='background-image:url({$imagepath});'" : '';
 			if ( $use_parallax ){
 
 				wp_enqueue_script('wps_parallax'); // Registered in functions
