@@ -144,7 +144,7 @@ function wps_vc_row_inner_shortcode(){
             'admin_label' => true,
             'param_name' => 'holder_img',
             'value' => '',
-            'group' => __( 'Wrapper Outer Bg / Image', 'wps-prime' ),
+            'group' => __( 'Outer Bg-Image/Fx', 'wps-prime' ),
             'description' => __('Add image to be used as a background for the current row. Limit to 1 image', 'wps-prime')
         ),
 
@@ -155,8 +155,18 @@ function wps_vc_row_inner_shortcode(){
             'admin_label' => true,
             'value' => wps_image_sizes(),
             'std' => 'full',
-            'group' => __( 'Wrapper Outer Bg / Image', 'wps-prime' ),
+            'group' => __( 'Outer Bg-Image/Fx', 'wps-prime' ),
             'description' => __('Add image to be used as a background for the current row. Limit to 1 image', 'wps-prime')
+        ),
+        array(
+            'type' => 'dropdown',
+            'heading' => "Background image behavior",
+            'param_name' => 'holder_img_behave',
+            'admin_label' => true,
+            'value' => wps_bg_behavior(),
+            'std' => '',
+            'group' => __( 'Outer Bg-Image/Fx', 'wps-prime' ),
+            'description' => __('Background image behavior settings', 'wps-prime')
         ),
         array(
             'type' => 'dropdown',
@@ -165,7 +175,7 @@ function wps_vc_row_inner_shortcode(){
             'admin_label' => true,
             'value' => wps_bg_positions(),
             'std' => '',
-            'group' => __( 'Wrapper Outer Bg / Image', 'wps-prime' ),
+            'group' => __( 'Outer Bg-Image/Fx', 'wps-prime' ),
             'description' => __('Background Image Position', 'wps-prime')
         ),
         array(
@@ -174,17 +184,17 @@ function wps_vc_row_inner_shortcode(){
             'param_name' => 'use_parallax',
             'admin_label' => true,
             'value' => '',
-            'group' => __( 'Wrapper Outer Bg / Image', 'wps-prime' ),
+            'group' => __( 'Outer Bg-Image/Fx', 'wps-prime' ),
             'description' => __('Use parallax', 'wps-prime')
         ),
         array(
             'type' => 'dropdown',
-            'heading' => "Background effects",
+            'heading' => "Background Color",
             'param_name' => 'holder_bg_fx',
             'admin_label' => true,
             'value' => wps_bg_fx(),
             'std' => '',
-            'group' => __( 'Wrapper Outer Bg / Image', 'wps-prime' ),
+            'group' => __( 'Outer Bg-Image/Fx', 'wps-prime' ),
             'description' => __('Background Effects', 'wps-prime')
         ),
         array(
@@ -194,7 +204,7 @@ function wps_vc_row_inner_shortcode(){
             'admin_label' => true,
             'value' => false,
             'std' => '',
-            'group' => __( 'Wrapper Outer Bg / Image', 'wps-prime' ),
+            'group' => __( 'Outer Bg-Video', 'wps-prime' ),
             'description' => __('Enable Video Background', 'wps-prime')
         ),
         array(
@@ -204,7 +214,7 @@ function wps_vc_row_inner_shortcode(){
             'admin_label' => true,
             'value' => '',
             'std' => '',
-            'group' => __( 'Wrapper Outer Bg / Image', 'wps-prime' ),
+            'group' => __( 'Outer Bg-Video', 'wps-prime' ),
             'description' => __('Paste the youtube link', 'wps-prime')
         ),  
         array(
@@ -214,7 +224,7 @@ function wps_vc_row_inner_shortcode(){
             'admin_label' => true,
             'value' => '',
             'std' => '',
-            'group' => __( 'Wrapper Outer Bg / Image', 'wps-prime' ),
+            'group' => __( 'Outer Bg-Video', 'wps-prime' ),
             'description' => __('See the video ID in the media library (mp4)', 'wps-prime')
         ),
         array(
@@ -224,7 +234,7 @@ function wps_vc_row_inner_shortcode(){
             'admin_label' => true,
             'value' => '',
             'std' => '',
-            'group' => __( 'Wrapper Outer Bg / Image', 'wps-prime' ),
+            'group' => __( 'Outer Bg-Video', 'wps-prime' ),
             'description' => __('Add a background Image for the video. (only for self hosted video)', 'wps-prime')
         ), 
   
