@@ -702,15 +702,20 @@ function wps_media_box_shortcode( $atts, $content = null ) {
 		),$atts);
 
 		$output = '';
+		$type = 'fontawesome'; // default
 		$image_args = array();
 
 		$content = do_shortcode( $content );
 
 		$class = '';
 
+		if('' !== $args['ico_type']){
+			$type = $args['ico_type'];
+		}
+
 		// Enqueue frontend icon font family
-		if($args['ico_type'] !== ''){
-			wps_icon_element_fonts_enqueue( $args['ico_type'] );
+		if('' !== $type){
+			wps_icon_element_fonts_enqueue( $type );
 		}
 
 		// Mediabox class.
