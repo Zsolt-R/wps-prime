@@ -12,7 +12,7 @@ function wps_vc_accordion_shortcode() {
             'heading' => 'Autoclose',
             'admin_label' => true,
             'param_name' => 'autoclose',            
-            'value' => true,
+            'value' => array( __( 'Yes', 'wps-prime' ) => 'yes' ),
             'description' => __('Sets whether accordion items close automatically when you open the next item.', 'wps-prime')
         ),
         array(
@@ -20,7 +20,7 @@ function wps_vc_accordion_shortcode() {
             'heading' => 'Openfirst',            
             'admin_label' => true,
             'param_name' => 'openfirst',
-            'value' => '',
+            'value' => array( __( 'Yes', 'wps-prime' ) => 'yes' ),
             'description' => __('Sets whether the first accordion item is open by default. This setting will be overridden if openall is set to true.', 'wps-prime')
         ),
         array(
@@ -28,7 +28,7 @@ function wps_vc_accordion_shortcode() {
             'heading' => 'Open All',            
             'admin_label' => true,
             'param_name' => 'openall',
-            'value' => '',
+            'value' => array( __( 'Yes', 'wps-prime' ) => 'yes' ),
             'description' => __('Sets whether all accordion items are open by default. It is recommended that this setting be used with clicktoclose', 'wps-prime')
         ),
         array(
@@ -36,7 +36,7 @@ function wps_vc_accordion_shortcode() {
             'heading' => 'Click to close',            
             'admin_label' => true,
             'param_name' => 'clicktoclose',
-            'value' => '',
+            'value' => array( __( 'Yes', 'wps-prime' ) => 'yes' ),
             'description' => __('Sets whether clicking an open title closes it', 'wps-prime')
         ),
         array(
@@ -44,7 +44,7 @@ function wps_vc_accordion_shortcode() {
             'heading' => 'Scroll',
             'admin_label' => true,
             'param_name' => 'scroll',            
-            'value' => '',
+            'value' => array( __( 'Yes', 'wps-prime' ) => 'yes' ),
             'description' => __('Sets whether to scroll to the title when it’s clicked open. This is useful if you have a lot of content within your accordion items.', 'wps-prime')
         ),
         array(

@@ -182,8 +182,8 @@ function wps_vc_row_shortcode(){
             'type' => 'checkbox',
             'heading' => "Use parallax",
             'param_name' => 'use_parallax',
+            'value' => array( __( 'Yes', 'wps-prime' ) => 'yes' ),
             'admin_label' => true,
-            'value' => '',
             'group' => __( 'Outer Bg-Image/Fx', 'wps-prime' ),
             'description' => __('Use parallax', 'wps-prime')
         ),
@@ -201,9 +201,8 @@ function wps_vc_row_shortcode(){
             'type' => 'checkbox',
             'heading' => "Use video background",
             'param_name' => 'v_bg',
+            'value' => array( __( 'Yes', 'wps-prime' ) => 'yes' ),
             'admin_label' => true,
-            'value' => false,
-            'std' => '',
             'group' => __( 'Outer Bg-Video', 'wps-prime' ),
             'description' => __('Enable Video Background', 'wps-prime')
         ),
@@ -243,8 +242,8 @@ function wps_vc_row_shortcode(){
             'type' => 'checkbox',
             'heading' => "Equal height columns",
             'param_name' => 'grid_col_equal_height',
+            'value' => array( __( 'Yes', 'wps-prime' ) => 'yes' ),
             'admin_label' => true,
-            'value' => '',
             'group' => __( 'Advanced', 'wps-prime' ),
             'description' => __('Once set this option on the row, must set equal height on each direct child columns as well.', 'wps-prime')
         ),
@@ -252,8 +251,8 @@ function wps_vc_row_shortcode(){
             'type' => 'checkbox',
             'heading' => "Full-screen height row",
             'param_name' => 'grid_col_full_height',
+            'value' => array( __( 'Yes', 'wps-prime' ) => 'yes' ),
             'admin_label' => true,
-            'value' => '',
             'group' => __( 'Advanced', 'wps-prime' ),
             'description' => __('Make the row height equal the device height.', 'wps-prime')
         ),

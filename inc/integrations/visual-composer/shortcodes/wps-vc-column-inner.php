@@ -194,7 +194,7 @@ function wps_vc_column_inner_shortcode(){
             'heading' => "Equal Height Columns",
             'param_name' => 'col_equal_height',
             'admin_label' => true,
-            'value' => '',
+            'value' => array( __( 'Yes', 'wps-prime' ) => 'yes' ),
             'group' => __( 'Advanced', 'wps-prime' ),
             'description' => __('Once set equal height on the row, must set equal height on the column.', 'wps-prime')
         ),

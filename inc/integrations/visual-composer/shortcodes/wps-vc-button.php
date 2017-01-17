@@ -41,6 +41,7 @@ function wps_vc_button_shortcode() {
             'heading' => 'Button Ghost',
             'admin_label' => true,
             'param_name' => 'ghost',
+            'value' => array( __( 'Yes', 'wps-prime' ) => 'yes' ),
             'description' => __('Make this a ghost button', 'wps-prime')
         ),
         array(

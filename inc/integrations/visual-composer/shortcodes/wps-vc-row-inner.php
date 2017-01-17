@@ -68,8 +68,8 @@ function wps_vc_row_inner_shortcode(){
             'type' => 'checkbox',
             'heading' => "Add Wrapper",
             'param_name' => 'wrapper',
+            'value' => array( __( 'Yes', 'wps-prime' ) => 'yes' ),
             'admin_label' => true,
-            'value' => '',
             'description' => __('Add wrapper container around the row, this is useful if you want to contain elements wne you are using the full width template. Options true/false(default false)', 'wps-prime')
         ),
 
@@ -182,8 +182,8 @@ function wps_vc_row_inner_shortcode(){
             'type' => 'checkbox',
             'heading' => "Use Parallax",
             'param_name' => 'use_parallax',
+            'value' => array( __( 'Yes', 'wps-prime' ) => 'yes' ),
             'admin_label' => true,
-            'value' => '',
             'group' => __( 'Outer Bg-Image/Fx', 'wps-prime' ),
             'description' => __('Use parallax', 'wps-prime')
         ),
@@ -202,8 +202,7 @@ function wps_vc_row_inner_shortcode(){
             'heading' => "Use Video Background",
             'param_name' => 'v_bg',
             'admin_label' => true,
-            'value' => false,
-            'std' => '',
+            'value' => array( __( 'Yes', 'wps-prime' ) => 'yes' ),
             'group' => __( 'Outer Bg-Video', 'wps-prime' ),
             'description' => __('Enable Video Background', 'wps-prime')
         ),
@@ -243,8 +242,8 @@ function wps_vc_row_inner_shortcode(){
             'type' => 'checkbox',
             'heading' => "Equal Height Columns",
             'param_name' => 'grid_col_equal_height',
+            'value' => array( __( 'Yes', 'wps-prime' ) => 'yes' ),
             'admin_label' => true,
-            'value' => '',
             'group' => __( 'Advanced', 'wps-prime' ),
             'description' => __('Once set this option on the row, must set equal height on each direct child columns as well.', 'wps-prime')
         ),

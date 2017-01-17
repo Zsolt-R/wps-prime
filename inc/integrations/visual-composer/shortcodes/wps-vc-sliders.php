@@ -8,18 +8,18 @@ function wps_vc_wps_slider_shortcode() {
     $attributes = array(
         array(
             'type' => 'checkbox',
-            'heading' => 'Scrollbar visibility',
-            'admin_label' => true,
+            'heading' => 'Scrollbar visibility',            
             'param_name' => 'scrollbar',            
-            'value' => '',
+            'value' => array( __( 'Yes', 'wps-prime' ) => 'yes' ),
+            'admin_label' => true,
             'description' => __('Show slider scrollbar ( Default is false )', 'wps-prime')
         ),
         array(
             'type' => 'checkbox',
-            'heading' => 'Pagination visibility',            
-            'admin_label' => true,
+            'heading' => 'Pagination visibility', 
             'param_name' => 'pagination',
-            'value' => '',
+            'value' => array( __( 'Yes', 'wps-prime' ) => 'yes' ),
+            'admin_label' => true,
             'description' => __('Show slider pagination ( Default is false )', 'wps-prime')
         )
         );
