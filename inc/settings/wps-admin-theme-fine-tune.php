@@ -16,8 +16,9 @@
  *  12 We will need the following filter function to disable TinyMCE emojicons
  *  13 Disable Comment form URL
  *  14 Allow shortcode in text widget
- *  15 Custom WP gallery styles | Disable WP default gallery style and use our own see: _components.galleries.scss 
- *  16 Allow svg upload
+ *  15 Allow shortcode in widget title
+ *  16 Custom WP gallery styles | Disable WP default gallery style and use our own see: _components.galleries.scss 
+ *  17 Allow svg upload
  *
  * @package wps_prime_2
  *
@@ -313,8 +314,15 @@ function unset_url_field_in_comment( $fields ){
  */
 add_filter( 'widget_text', 'do_shortcode' );
 
+
 /**
  * 15
+ * Allow shortcode in widget title
+ */
+add_filter( 'widget_title', 'do_shortcode' );
+
+/**
+ * 16
  * Custom WP-Gallery CSS 
  */
 /* Disable WP default gallery style and use our own see: _components.galleries.scss */
@@ -322,7 +330,7 @@ add_filter( 'use_default_gallery_style', '__return_false' );
 
 
 /**
- * 16
+ * 17
  * Allow svg upload
  */
 add_filter('upload_mimes', 'wps_custom_upload_mimes');
