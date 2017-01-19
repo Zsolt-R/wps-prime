@@ -36,7 +36,6 @@ function wps_vc_tab_item_shortcode() {
             'param_name' => 'title',
             'admin_label' => true,
             'value' => '',
-            //'group' => esc_html__( 'Advanced', 'wps-prime' ),
             'description' => __('Add title To tab', 'wps-prime')
         ),
         array(
@@ -66,10 +65,9 @@ function wps_vc_tab_item_shortcode() {
                 'type' => 'iconpicker',
                 'heading' => __( 'Icon', 'wps-prime' ),
                 'param_name' => 'icon_fontawesome',
-                'value' => 'fa fa-adjust', // default value to backend editor admin_label
+                'value' => '', // default value to backend editor admin_label
                 'settings' => array(
-                    'emptyIcon' => false,
-                    // default true, display an "EMPTY" icon?
+                    'type' => 'fontawesome',
                     'iconsPerPage' => 4000,
                     // default 100, how many icons per/page to display, we use (big number) to display all icons in single page
                 ),
@@ -84,9 +82,8 @@ function wps_vc_tab_item_shortcode() {
                 'type' => 'iconpicker',
                 'heading' => __( 'Icon', 'wps-prime' ),
                 'param_name' => 'icon_typicons',
-                'value' => 'typcn typcn-adjust-brightness', // default value to backend editor admin_label
+                'value' => '', // default value to backend editor admin_label
                 'settings' => array(
-                    'emptyIcon' => false, // default true, display an "EMPTY" icon?
                     'type' => 'typicons',
                     'iconsPerPage' => 4000, // default 100, how many icons per/page to display
                 ),
@@ -101,9 +98,8 @@ function wps_vc_tab_item_shortcode() {
                 'type' => 'iconpicker',
                 'heading' => __( 'Icon', 'wps-prime' ),
                 'param_name' => 'icon_linecons',
-                'value' => 'vc_li vc_li-heart', // default value to backend editor admin_label
+                'value' => '', // default value to backend editor admin_label
                 'settings' => array(
-                    'emptyIcon' => false, // default true, display an "EMPTY" icon?
                     'type' => 'linecons',
                     'iconsPerPage' => 4000, // default 100, how many icons per/page to display
                 ),
@@ -118,9 +114,8 @@ function wps_vc_tab_item_shortcode() {
                 'type' => 'iconpicker',
                 'heading' => __( 'Icon', 'wps-prime' ),
                 'param_name' => 'icon_woothemesecom',
-                'value' => 'woo-ecom-icon e-commerce000', // default value to backend editor admin_label
+                'value' => '', // default value to backend editor admin_label
                 'settings' => array(
-                    'emptyIcon' => false, // default true, display an "EMPTY" icon?
                     'type' => 'woothemesecom',
                     'iconsPerPage' => 4000, // default 100, how many icons per/page to display
                 ),

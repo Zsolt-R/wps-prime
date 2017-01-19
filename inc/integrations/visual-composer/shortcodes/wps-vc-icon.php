@@ -25,8 +25,7 @@ function wps_vc_icon_shortcode() {
                 'param_name' => 'icon_fontawesome',
                 'value' => '', // default value to backend editor admin_label
                 'settings' => array(
-                    //'emptyIcon' => false,
-                    // default true, display an "EMPTY" icon?
+                    'type' => 'fontawesome',
                     'iconsPerPage' => 4000,
                     // default 100, how many icons per/page to display, we use (big number) to display all icons in single page
                 ),
@@ -42,7 +41,6 @@ function wps_vc_icon_shortcode() {
                 'param_name' => 'icon_typicons',
                 'value' => '', // default value to backend editor admin_label
                 'settings' => array(
-                    //'emptyIcon' => false, // default true, display an "EMPTY" icon?
                     'type' => 'typicons',
                     'iconsPerPage' => 4000, // default 100, how many icons per/page to display
                 ),
@@ -58,7 +56,6 @@ function wps_vc_icon_shortcode() {
                 'param_name' => 'icon_linecons',
                 'value' => '', // default value to backend editor admin_label
                 'settings' => array(
-                    //'emptyIcon' => false, // default true, display an "EMPTY" icon?
                     'type' => 'linecons',
                     'iconsPerPage' => 4000, // default 100, how many icons per/page to display
                 ),
@@ -74,7 +71,6 @@ function wps_vc_icon_shortcode() {
                 'param_name' => 'icon_woothemesecom',
                 'value' => '', // default value to backend editor admin_label
                 'settings' => array(
-                    //'emptyIcon' => false, // default true, display an "EMPTY" icon?
                     'type' => 'woothemesecom',
                     'iconsPerPage' => 4000, // default 100, how many icons per/page to display
                 ),
