@@ -2352,33 +2352,33 @@ table {
   border-width: 1px 1px 0px 1px;
   border-color: #fff;
   border-style: solid;
-  padding: quarter(24px) halve(24px);
+  padding: 6px 12px;
   white-space: nowrap;
   float: left;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  font-weight: 600; }
+  position: relative;
+  top: 0px; }
 
 .c-responsive-tabs .c-responsive-tabs__list__item .ico {
   margin-right: 8px;
-  line-height: 0.8;
   font-weight: normal; }
 
 .c-responsive-tabs .c-responsive-tabs__list__item:hover {
-  background-color: #484848; }
+  background-color: #444;
+  color: #fff; }
 
 .c-responsive-tabs .c-responsive-tabs__list__item--active {
   background-color: #fff;
   border-color: #ddd;
   color: #333;
-  margin-top: 0;
-  position: relative;
   top: 1px; }
 
 .c-responsive-tabs .c-responsive-tabs__list__item--active:hover {
-  background: #fff; }
+  background: #fff;
+  color: #333; }
 
 .c-responsive-tabs .c-responsive-tabs__panel {
   background: #fff;
@@ -2392,7 +2392,7 @@ table {
   border-top-left-radius: 0px;
   clear: left;
   margin-bottom: 0;
-  padding: 20px 20px 0;
+  padding: 20px;
   word-wrap: break-word; }
 
 .c-responsive-tabs .c-responsive-tabs__panel.c-responsive-tabs__panel--active {
@@ -2407,6 +2407,30 @@ table {
   height: 0;
   clear: both; }
 
+.c-responsive-tabs__list__item,
+.c-responsive-tabs .c-responsive-tabs__heading {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+  background: #fff;
+  border: 1px solid #444;
+  border-top: none;
+  color: #222;
+  font-weight: 600;
+  text-transform: inherit;
+  margin: 0;
+  padding: 12px;
+  position: relative; }
+  .c-responsive-tabs__list__item:hover,
+  .c-responsive-tabs .c-responsive-tabs__heading:hover {
+    background: #f7f6f6;
+    color: #222; }
+
+.c-responsive-tabs .c-responsive-tabs__heading--active,
+.c-responsive-tabs .c-responsive-tabs__heading--active:hover {
+  background: #444;
+  color: #fff; }
+
 @media screen and (min-width: 45em) {
   .c-responsive-tabs .c-responsive-tabs__panel--closed-accordion-only {
     display: block; } }
@@ -2420,25 +2444,12 @@ table {
     opacity: 1; }
 
   .c-responsive-tabs-wrapper {
-    border-top: 1px solid #ccc; }
-
-  .c-responsive-tabs .c-responsive-tabs__heading {
-    background: #fff;
-    border: 1px solid #ccc;
-    border-top: none;
-    color: #777;
-    font-size: 18px;
-    font-weight: normal;
-    text-transform: inherit;
-    margin: 0;
-    padding: 10px 0;
-    padding-left: 20px;
-    position: relative; }
+    border-top: 1px solid #444; }
 
   .c-responsive-tabs .c-responsive-tabs__heading:after {
     border-left: 6px solid transparent;
     border-right: 6px solid transparent;
-    border-top: 6px solid #777;
+    border-top: 6px solid #222;
     content: "";
     display: block;
     position: absolute;
@@ -2447,17 +2458,8 @@ table {
     height: 0;
     width: 0; }
 
-  .c-responsive-tabs .c-responsive-tabs__heading:hover {
-    background: #eee;
-    color: #777; }
-
   .c-responsive-tabs .c-responsive-tabs__heading:hover:after {
-    border-top: 6px solid #777; }
-
-  .c-responsive-tabs .c-responsive-tabs__heading--active,
-  .c-responsive-tabs .c-responsive-tabs__heading--active:hover {
-    background: #ccc;
-    color: #fff; }
+    border-top: 6px solid #222; }
 
   .c-responsive-tabs .c-responsive-tabs__heading--active:after,
   .c-responsive-tabs .c-responsive-tabs__heading--active:hover:after {
@@ -2467,23 +2469,21 @@ table {
 
   .c-responsive-tabs .c-responsive-tabs__panel {
     background: #fff;
-    border: 1px solid #ccc;
+    border: 1px solid #444;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     border-radius: 0;
     border-top: none;
-    margin: 0;
-    padding: 0 20px;
-    padding-top: 20px; } }
+    margin: 0; } }
 /*------------------------------------*\
     #COMPONENTS ACCORDION
 \*------------------------------------*/
 .accordion {
-  padding: quarter(24px) halve(24px);
-  margin-bottom: quarter(24px); }
+  padding: 6px 12px;
+  margin-bottom: 6px; }
 
 .accordion-title {
-  padding: quarter(24px) 0;
+  padding: 6px 0;
   cursor: pointer;
   margin-bottom: 0; }
   .accordion-title i {
@@ -2504,8 +2504,8 @@ table {
 
 .accordion-content {
   display: none;
-  margin-bottom: halve(24px);
-  padding: quarter(24px) 0 halve(24px) 0;
+  margin-bottom: 12px;
+  padding: 6px 0 12px 0;
   border-bottom: 1px solid #ddd;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   box-shadow: 0px 2px 0px -1px rgba(255, 255, 255, 0.1); }

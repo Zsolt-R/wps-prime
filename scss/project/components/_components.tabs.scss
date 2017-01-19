@@ -108,9 +108,6 @@
 }
 
 .c-responsive-tabs ul.c-responsive-tabs__list {
-    // font-size: 18px;
-    // line-height: 18px;
-    // margin: 20px 0 0 12px;
     margin: 0;
     padding: 0;
 }
@@ -120,40 +117,40 @@
     -moz-transition: background-color 0.2s ease-in-out;
     -o-transition: background-color 0.2s ease-in-out;
     transition: background-color 0.2s ease-in-out;
-
     border-width: 1px 1px 0px 1px;
     border-color: $color-body;
     border-style: solid;
-    padding: quarter($spacing-unit) halve($spacing-unit);
+    padding: round($spacing-unit/4) round($spacing-unit/2);
     white-space: nowrap;
     float: left;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    font-weight: 600;
+    position: relative;
+    top: 0px;
 }
 
 .c-responsive-tabs .c-responsive-tabs__list__item .ico {
     margin-right: 8px;
-    line-height: 0.8;
     font-weight: normal;
 }
 
 .c-responsive-tabs .c-responsive-tabs__list__item:hover {
-    background-color: lighten($color-gray-dark,15);
+    background-color:$color-gray;
+    color:$color-body;
 }
 
 .c-responsive-tabs .c-responsive-tabs__list__item--active{
     background-color: $color-body;
     border-color: #ddd;
     color: $color-text;
-    margin-top: 0;
-    position: relative;
     top: 1px;
+
 }
 .c-responsive-tabs .c-responsive-tabs__list__item--active:hover{
     background: $color-body;
+    color: $color-text;
 }
 
 
@@ -169,7 +166,7 @@
     border-top-left-radius: 0px;
     clear: left;
     margin-bottom: 0;
-    padding: 20px 20px 0;
+    padding: 20px;
     word-wrap: break-word;
 }
 
@@ -185,6 +182,30 @@
     height: 0;
     clear: both;
 }
+.c-responsive-tabs__list__item,
+.c-responsive-tabs .c-responsive-tabs__heading {
+        @include inuit-font-size(16px); 
+        background: $color-body;
+        border: 1px solid $color-gray;
+        border-top: none;
+        color: $color-gray-dark;
+        font-weight: 600;
+        text-transform: inherit;
+        margin: 0;
+        padding: round($spacing-unit/2);
+        position: relative;
+        &:hover {
+            background: $color-gray-light;
+            color: $color-gray-dark;
+        }
+    }
+
+.c-responsive-tabs .c-responsive-tabs__heading--active,
+.c-responsive-tabs .c-responsive-tabs__heading--active:hover {
+    background: $color-gray;
+    color: $color-body;
+}
+
 
 @include media-query(lap-and-up) {
 
@@ -206,27 +227,13 @@
     }
 
     .c-responsive-tabs-wrapper {
-        border-top: 1px solid #ccc;
-    }
-
-    .c-responsive-tabs .c-responsive-tabs__heading {
-        background: $color-body;
-        border: 1px solid #ccc;
-        border-top: none;
-        color: #777;
-        font-size: 18px;
-        font-weight: normal;
-        text-transform: inherit;
-        margin: 0;
-        padding: 10px 0;
-        padding-left: 20px;
-        position: relative;
-    }
+        border-top: 1px solid $color-gray;
+    }    
 
     .c-responsive-tabs .c-responsive-tabs__heading:after {
         border-left: 6px solid transparent;
         border-right: 6px solid transparent;
-        border-top: 6px solid #777;
+        border-top: 6px solid $color-gray-dark;
         content:"";
         display: block;
         position: absolute;
@@ -235,21 +242,13 @@
         height: 0;
         width: 0;
     }
-
-    .c-responsive-tabs .c-responsive-tabs__heading:hover {
-        background: #eee;
-        color: #777;
-    }
+    
 
     .c-responsive-tabs .c-responsive-tabs__heading:hover:after {
-        border-top: 6px solid #777;
+        border-top: 6px solid $color-gray-dark;
     }
 
-    .c-responsive-tabs .c-responsive-tabs__heading--active,
-    .c-responsive-tabs .c-responsive-tabs__heading--active:hover {
-        background: #ccc;
-        color: $color-body;
-    }
+
 
     .c-responsive-tabs .c-responsive-tabs__heading--active:after,
     .c-responsive-tabs .c-responsive-tabs__heading--active:hover:after {
@@ -260,13 +259,11 @@
 
     .c-responsive-tabs .c-responsive-tabs__panel {
         background: $color-body;
-        border: 1px solid #ccc;
+        border: 1px solid $color-gray;
         -webkit-border-radius: 0;
         -moz-border-radius: 0;
         border-radius: 0;
         border-top: none;
-        margin: 0;
-        padding: 0 20px;
-        padding-top: 20px;
+        margin: 0;       
     }
 }

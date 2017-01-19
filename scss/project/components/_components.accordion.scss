@@ -3,12 +3,12 @@
 \*------------------------------------*/
 
 .accordion {
-    padding:quarter($spacing-unit) halve($spacing-unit);
+    padding: round($spacing-unit/4) round($spacing-unit/2);
     
-    margin-bottom:quarter($spacing-unit);
+    margin-bottom: round($spacing-unit/4);
 }
 .accordion-title {
-    padding: quarter($spacing-unit) 0;
+    padding:  round($spacing-unit/4) 0;
     cursor: pointer;    
     margin-bottom:0;
     i{
@@ -29,8 +29,8 @@
 
 .accordion-content {
     display: none; //hide by default eliminate FOUC
-    margin-bottom: halve($spacing-unit);
-    padding:quarter($spacing-unit) 0 halve($spacing-unit) 0;
+    margin-bottom: round($spacing-unit/2);
+    padding: round($spacing-unit/4) 0 round($spacing-unit/2) 0;
     border-bottom:1px solid $color-gray-ui;
 
     border-bottom: 1px solid rgba(000, 000, 000, .2);
