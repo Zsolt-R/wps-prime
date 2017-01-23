@@ -282,6 +282,11 @@ class WPS_Theme_Setup {
 		require( WPS_ENGINE_DIR .'/settings/wps-admin-theme-fine-tune.php' );
 
 		/**
+		 *	Add media id to media library admin column
+		 */
+		require( WPS_ENGINE_DIR .'/admin/wps-admin-column-show-media-id.php' );
+
+		/**
 		 *	Theme configurations
 		 */
 
