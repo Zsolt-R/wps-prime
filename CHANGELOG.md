@@ -1,4 +1,9 @@
 ##WPS-Prime Changelog##
+- v.1.1.2
+- Show media id in media library admin column 
+- Fix divider shortcode margin padding arguments
+- Update shortcode docs
+
 - v.1.1.1
 - Set checkbox output value to (yes) 
 - Fix mediabox default icon font family (fontawesome)
