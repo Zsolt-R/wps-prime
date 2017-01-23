@@ -547,7 +547,8 @@ function wps_ico_shortcode( $atts, $content = null ) {
 		'size'=>'',
 		'color' =>'',
 		'type' =>'',
-		'margin'=>''
+		'margin'=>'',
+		'html_tag' => ''
 	), $atts );
 
 	$type = '';
@@ -568,10 +569,12 @@ function wps_ico_shortcode( $atts, $content = null ) {
 
 	$center = $options['center'] ? ' ico-wrap--center' : '';
 
+	$tag = $options['html_tag'] ? $options['html_tag'] : 'div'; // Prevent empty.
+
 	// Enque frontend icon font family
 	wps_icon_element_fonts_enqueue( $type );
 
-	$output = '<div class="ico-wrap'.esc_attr($center).'"><i class="ico'. esc_attr($content) . esc_attr($ico_class) .'"></i></div>';
+	$output = '<'.$tag.' class="ico-wrap'.esc_attr($center).'"><i class="ico'. esc_attr($content) . esc_attr($ico_class) .'"></i></'.$tag.'>';
 	return $output;
 }
 
