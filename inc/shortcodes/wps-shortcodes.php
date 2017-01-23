@@ -23,8 +23,8 @@
  * 13 Divider [wps_divider]
  * 14 Accordion [wps_accordion]
  * 15 Accordion item [wps_accordion_item]
- * 16 WPS Anything slider [wps_slider]
- * 17 WPS Anything slider slide [wps_slider_item]
+ * 16 WPS Anything slider [wps_all_slider]
+ * 17 WPS Anything slider slide [wps_all_slider_item]
  */
 
 /* 1 Row Wrapper Markup */
@@ -510,7 +510,9 @@ function wps_heading_shortcode( $atts, $content = null ) {
 		$options['padding'],
 		$options['class'],
 		$options['text_align']
-	 ) );	$classes = $class_list ? ' class="'.$class_list.'"' : '';
+	 ) );	
+
+	$classes = $class_list ? ' class="'.$class_list.'"' : '';
 	$id = $options['id'] ? ' id="'.$options['id'].'"' : '';
 
 	$html_tag = $options['html_tag'] ? $options['html_tag'] : 'h3';	
@@ -523,7 +525,7 @@ function wps_heading_shortcode( $atts, $content = null ) {
 	$output .= $options['text'] ? '<'.$html_tag.$classes.$id.'>'.$link_open.$options['text'].$link_close.'</'.$html_tag.'>' : '';
 
 
-	return $output;
+	return '<div class="c-heading">'.$output.'</div>';
 }
 
 /**
@@ -575,7 +577,7 @@ function wps_ico_shortcode( $atts, $content = null ) {
 
 /**
  * 8 Main Phone number
- * ex: [wps_phone_nr]
+ * ex: [wps_main_phone_nr]
  */
 function wps_main_phone_nr_shortcode($atts) {
 	$options = shortcode_atts( array(
@@ -603,7 +605,7 @@ function wps_main_phone_nr_shortcode($atts) {
 
 /**
  * 9 Main Email address
- * ex: [wps_email]
+ * ex: [wps_main_email]
  */
 function wps_main_email_shortcode($atts) {
 	$options = shortcode_atts( array(
@@ -667,7 +669,7 @@ function wps_styled_list_shortcode( $atts, $content = null ) {
 
 /**
  * 11 Media Box
- * ex: [wps_mediabox image_id="1038" image_class="aligncenter img--round img--border" image_size="thumbnail" ico_class="fa fa-envelope fa-4x" class="bg--color-one p- txt--color-invert" type="flag" type_class="flag--responsive" title="Contact our experts today!" divider="true" divider_class="mb-" title_class="txt--bold mb-"]...content...[/wps_mediabox]
+ * ex: [wps_mediabox image_id="1038" image_class="aligncenter img--round img--border" image_size="thumbnail" ico_class="fa fa-envelope fa-4x" class="bg--color-one p- txt--color-invert" type="flag" type_class="flag--responsive" title="Contact our experts today!" title_class="txt--bold mb-"]...content...[/wps_mediabox]
  *
  * @param array $atts an associative array of attributes, or an empty string if no attributes are given.
  * @param str   $content the enclosed content.
@@ -807,12 +809,16 @@ function wps_content_divider_shortcode( $atts ) {
 	$args = shortcode_atts(array(
 		'style' => '',
 		'class' => '',
+		'padding' => '',
+		'margin' => ''
 	),$atts);
 
 		$class = wps_getExtraClass( array(
 				'c-divider',
 				$args['class'],
-				$args['style']
+				$args['style'],
+				$args['padding'],
+				$args['margin']
 				)
 		);
 
