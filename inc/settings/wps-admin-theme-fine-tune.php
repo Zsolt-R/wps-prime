@@ -122,12 +122,13 @@ function customize_comment_form_text_area( $args ) {
 
 /**
  * 5
- * Removes empty paragraph tags (<p></p>) and line break tags (<br>)
- * from shortcodes caused by WordPress's wpautop function.
- * https://www.twirlingumbrellas.com/wordpress/remove-empty-paragraph-tags-around-shortcodes/
+ * Filters the content to remove any extra paragraph or break tags
+ * caused by shortcodes.
  *
- * @param string $content Holds the content that need to be filtered.
- * @return string
+ * @since 1.0.0
+ *
+ * @param string $content  String of HTML content.
+ * @return string $content Amended string of HTML content.
  */
 
 add_filter( 'the_content', 'remove_empty_tags_around_shortcodes' );
