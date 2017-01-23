@@ -17,8 +17,9 @@
  *  13 Disable Comment form URL
  *  14 Allow shortcode in text widget
  *  15 Allow shortcode in widget title
- *  16 Custom WP gallery styles | Disable WP default gallery style and use our own see: _components.galleries.scss 
- *  17 Allow svg upload
+ *	16 Allow shortcode in menu titles
+ *  17 Custom WP gallery styles | Disable WP default gallery style and use our own see: _components.galleries.scss 
+ *  18 Allow svg upload
  *
  * @package wps_prime_2
  *
@@ -322,8 +323,16 @@ add_filter( 'widget_text', 'do_shortcode' );
  */
 add_filter( 'widget_title', 'do_shortcode' );
 
+
 /**
  * 16
+ * Allow shortcode in menu titles
+ */
+add_filter('wp_nav_menu', 'do_shortcode'); 
+
+
+/**
+ * 17
  * Custom WP-Gallery CSS 
  */
 /* Disable WP default gallery style and use our own see: _components.galleries.scss */
@@ -331,7 +340,7 @@ add_filter( 'use_default_gallery_style', '__return_false' );
 
 
 /**
- * 17
+ * 18
  * Allow svg upload
  */
 add_filter('upload_mimes', 'wps_custom_upload_mimes');
