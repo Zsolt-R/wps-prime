@@ -211,7 +211,7 @@ function wps_row_shortcode( $atts, $content = null ) {
 			$output .= $holder_start;
 			$output .= $wrapper_start;
 			$output .= '<div class="' . esc_attr( trim( $css_class ) ) . '">';
-			$output .= wps_remove_wpautop( $content );
+			$output .= wps_remove_wpautop( $content ,true );
 			$output .= '</div>';
 			$output .= $wrapper_end;
 			$output .= $holder_end;
@@ -662,7 +662,7 @@ function wps_styled_list_shortcode( $atts, $content = null ) {
 		)
 	);
 
-	$options['style'] ? wps_icon_element_fonts_enqueue( 'fontawesome' ) : '';
+	wps_icon_element_fonts_enqueue( 'fontawesome' );
 
 	$output = '<div class="'. $list_styles .'">'. do_shortcode( $content ) .'</div>';
 
