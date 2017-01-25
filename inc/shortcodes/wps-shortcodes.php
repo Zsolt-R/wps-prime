@@ -285,7 +285,7 @@ function wps_col_shortcode( $atts, $content = null ) {
 		$inner_end = "</div>";
 	}
 
-	$output = '<div class="col '. $class .''. $row_width .'">'.$inner_start .'' . do_shortcode( $content ) . ''.$inner_end.'</div>';
+	$output = '<div class="col '. $class .''. $row_width .'">'.$inner_start .'' . wps_remove_wpautop( do_shortcode( $content ), true ). ''.$inner_end.'</div>';
 
 	return  $output;
 }
