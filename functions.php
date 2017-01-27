@@ -100,9 +100,6 @@ class WPS_Theme_Setup {
 			define( 'WPS_THEME_STYLE_URI', get_stylesheet_uri() );
 
 		/* Theme assets images/fonts/scss/js  */
-		//define( 'WPS_ASSETS_URI', WPS_THEME_URI .'/assets' );
-
-		/* Theme assets images/fonts/scss/js  */
 		if (!defined('WPS_CSS_URI')) 
 			define( 'WPS_CSS_URI', WPS_THEME_URI .'/css' );
 
