@@ -622,7 +622,7 @@ function wps_main_email_shortcode($atts) {
 		wps_get_theme_option( 'email_address_secondary' )
 		);
 
-	$email = $options['secondary'] ? $emails[0] : $emails[1];
+	$email = $options['secondary'] ? $emails[1] : $emails[0];
 
 
 	$email = $email ? $email : 'No email set';
