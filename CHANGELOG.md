@@ -1,4 +1,10 @@
 ##WPS-Prime Changelog##
+- v.1.1.3
+- Make Modify Comment form text area function pluggable
+- Make Modify Comment form input fields function pluggable
+- Fix email main | secondary check logic
+- Add single post template part
+
 - v.1.1.2
 - Show media id in media library admin column 
 - Fix divider shortcode margin padding arguments
