@@ -23,8 +23,8 @@ function wps_add_button() {
 		return;
 	}
 	// verify the post type
-	if ( ! in_array( $typenow, array( 'post', 'page' ) ) ) {
-		return; }
+	//if ( ! in_array( $typenow, array( 'post', 'page' ) ) ) { return; }
+	
 	// check if WYSIWYG is enabled
 	if ( get_user_option( 'rich_editing' ) == 'true' ) {
 		add_filter( 'mce_external_plugins', 'wps_add_tinymce_plugin' );
