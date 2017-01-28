@@ -27,13 +27,13 @@ function wps_comment( $comment, $args, $depth ) {
 ?>
     <<?php echo esc_attr( $tag ) ?> <?php comment_class( empty( $args['has_children'] ) ? '' : 'parent' ) ?> id="comment-<?php comment_ID() ?>">
     <?php if ( 'div' !== $args['style'] ) : ?>
-    <div id="div-comment-<?php comment_ID() ?>" class="media mb">
+    <div id="div-comment-<?php comment_ID() ?>" class="o-media u-margin-bottom">
     <?php endif; ?>
-    <div class="comment-author vcard media__img">
+    <div class="comment-author vcard o-media__img">
     <?php if ( 0 !== $args['avatar_size'] ) { echo get_avatar( $comment, $args['avatar_size'] ); } ?>    
     </div>
-    <div class="media__body">
-    <h4 class="margin-bottom-none"><cite class="fn"><?php get_comment_author_link(); ?></cite></h4>
+    <div class="o-media__body">
+    <h4 class="u-margin-bottom-none"><cite class="fn"><?php get_comment_author_link(); ?></cite></h4>
     <?php if ( $comment->comment_approved === '0' ) : ?>
         <em class="comment-awaiting-moderation"><?php esc_attr_x( 'Your comment is awaiting moderation.' ,'wps-prime' ); ?></em>
         <br />
@@ -47,7 +47,7 @@ function wps_comment( $comment, $args, $depth ) {
     </small>
 
     <?php comment_text(); ?>
-    </div><!-- media__body -->
+    
 
     <div class="reply">
     <?php comment_reply_link( array_merge( $args, array( 'add_below' => $add_below, 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
@@ -55,5 +55,6 @@ function wps_comment( $comment, $args, $depth ) {
     <?php if ( 'div' !== $args['style'] ) : ?>
     </div>
     <?php endif; ?>
+    </div><!-- media__body -->
 <?php
 }
