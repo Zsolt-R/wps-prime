@@ -83,7 +83,7 @@ if ( post_password_required() ) {
 	<?php
 	endif;
 
-	comment_form();
+	comment_form(array('class_submit'=>'c-button'));
 	?>
 
 </div><!-- #comments -->
