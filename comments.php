@@ -51,7 +51,7 @@ if ( post_password_required() ) {
 			<?php
 				wp_list_comments( array(
 					'style'      => 'ol',
-					'avatar_size'       => 32,
+					'avatar_size'=> 45,
 					'short_ping' => true, /* Added in 3.6 */
 					'type' => 'comment',
 					'format' => 'html5', /* xhtml or html5 added in 3.6  */
