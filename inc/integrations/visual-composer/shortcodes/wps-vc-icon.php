@@ -105,6 +105,26 @@ function wps_vc_icon_shortcode() {
             'value' => '',
             'description' => __('Add custom CSS class.', 'wps-prime')
             ),  
+             array(
+            'type' => 'textfield',
+            'heading' => 'Link',
+            'param_name' => 'link',
+            'admin_label' => true,
+            'value' => '',
+            'group' => esc_html__( 'Link', 'wps-prime' ),
+            'description' => __('Link address – ex: http://yourlink.com/yourpage', 'wps-prime')
+            ), 
+            array(
+            'type' => 'dropdown',
+            'heading' => 'Link target',
+            'param_name' => 'target',
+            'value' => array(
+                            __('Default','wps-prime')   => '',
+                            __('New tab')               => '_blank'
+                            ),
+            'group' => esc_html__( 'Link', 'wps-prime' ),
+            'description' => __('<small>Link target specifies where to open the linked document.</small> <br/> _blank (Opens the linked document in a new tab)', 'wps-prime')
+            ),
             array(
             'type' => 'checkbox',
             'heading' => 'Center',

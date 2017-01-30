@@ -548,7 +548,9 @@ function wps_ico_shortcode( $atts, $content = null ) {
 		'color' =>'',
 		'type' =>'',
 		'margin'=>'',
-		'html_tag' => ''
+		'html_tag' => '',
+		'link' => '',
+		'target'=>''
 	), $atts );
 
 	$type = '';
@@ -570,11 +572,23 @@ function wps_ico_shortcode( $atts, $content = null ) {
 	$center = $options['center'] ? ' ico-wrap--center' : '';
 
 	$tag = $options['html_tag'] ? $options['html_tag'] : 'div'; // Prevent empty.
+	
+	$icoTarget = $options['target'] ? ' target="'.$options['target'].'"' : '';
 
 	// Enque frontend icon font family
 	wps_icon_element_fonts_enqueue( $type );
 
-	$output = '<'.$tag.' class="ico-wrap'.esc_attr($center).'"><i class="ico'. esc_attr($content) . esc_attr($ico_class) .'"></i></'.$tag.'>';
+	$linkStart = $options['link'] !== '' ? '<a href="'.$options['link'].'"'.$icoTarget.'>' : '';
+	$linkEnd   = $options['link'] !== '' ? '</a>' : '';
+
+	// If the wrapper is block element add the link inside 
+	// Prevent the link going beyond the actual icon by wrapping it's block-level holder
+	if('div' === $tag){
+		$output = '<'.$tag.' class="ico-wrap'.esc_attr($center).'">'.$linkStart.'<i class="ico'. esc_attr($content) . esc_attr($ico_class) .'"></i>'.$linkEnd.'</'.$tag.'>';
+	}else{
+		$output = $linkStart.'<'.$tag.' class="ico-wrap'.esc_attr($center).'"><i class="ico'. esc_attr($content) . esc_attr($ico_class) .'"></i></'.$tag.'>'.$linkEnd;
+	}	
+
 	return $output;
 }
 
