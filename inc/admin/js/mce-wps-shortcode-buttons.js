@@ -290,12 +290,31 @@
                 onclick: function() {
                         editor.windowManager.open( {
                             title: 'Add icon',                         
-                            body: {
+                            body: [{
                                 type: 'textbox',
                                 name: 'iconClass',
                                 label: 'Fontawesome Icon CSS ex.fa fa-bluetooth ( http://fontawesome.io/icons/ )',
                             },
+                            {
+                                type: 'textbox',
+                                name: 'iconLink',
+                                label: 'Link'
+                            },
+                            { 
+                            type: 'listbox',                                
+                            name: 'iconTarget',
+                            label: 'link Target',
+                            'values': [
+                                {text: 'Default', value: 'false'},
+                                {text: 'New Window', value: 'true'},
+                            ]
+
+                        }],
                             onsubmit: function( e ) {
+
+                                var iLink ='';
+                                var iTarget = '';
+
                                 if(e.data.iconClass === ''){
 
                                     var window_id = this._id;
@@ -305,11 +324,20 @@
 
                                     if(e.data.iconClass === '') {
                                         jQuery(inputs.get(0)).css('border-color', 'red');
-                                    }
+                                    }                                   
 
                                     return false;
                                 }
-                                editor.insertContent('[wps_ico'+ e.data.iconClass +']');
+
+                                if(e.data.iconLink !== '') {
+                                        iLink = ' link="'+e.data.iconLink+'"';
+                                    }
+
+                                if(e.data.iconTarget !== 'false') {
+                                        iTarget = ' target="_blank"';
+                                }
+
+                                editor.insertContent('[wps_ico class="'+ e.data.iconClass +'"'+iLink+iTarget+' html_tag="span"]');
                             }
                         });
                     }
