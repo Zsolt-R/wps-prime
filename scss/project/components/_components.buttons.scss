@@ -27,6 +27,7 @@
   transition: $global-transition;
   border-radius: $global-radius;
   background-color: $color-button-default;
+  border-width: 0;
 
   &,
   &:hover,

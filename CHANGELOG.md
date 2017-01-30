@@ -5,6 +5,11 @@
 - Fix email main | secondary check logic
 - Add single post template part
 - Fix widget title allow shortcode with parameters (decode specialchar encode)
+- Allow WPS editor helper buttons everywhere
+- Update comment form markup
+- Fix WP editor generated icon shortcode output (added class="")
+- Extend Icon Shortcode /Component functionality. Add link and link target
+- Add Extra class to navigation container element (aid styling)
 
 - v.1.1.2
 - Show media id in media library admin column 

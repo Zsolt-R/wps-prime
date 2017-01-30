@@ -2,6 +2,7 @@
     #COMPONENTS HIGHLIGHT
 \*------------------------------------*/
 
-.c-highlight{
+// Only inline if highlight wrapper element is set as a div
+div.c-highlight{
 	display: inline-block;
 }

@@ -39,7 +39,7 @@
             'param_name' => 'link',
             'value' => '',
             'group' => esc_html__( 'Link', 'wps-prime' ),
-            'description' => __('link address – ex: http://yourlink.com/yourpage', 'wps-prime')
+            'description' => __('Link address – ex: http://yourlink.com/yourpage', 'wps-prime')
         ), 
         array(
             'type' => 'dropdown',
