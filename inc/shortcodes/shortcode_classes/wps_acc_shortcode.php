@@ -74,7 +74,7 @@ class WPS_Accordion_Shortcodes {
 	function __construct() {
 
 		// Load text domain
-		load_plugin_textdomain('wps_prime', false, WPS_THEME_DIR . '/languages/');
+		load_plugin_textdomain('wps-prime', false, WPS_THEME_DIR . '/languages/');
 
 		// Register JavaScript
 		add_action('wp_enqueue_scripts', array($this, 'register_script'));
@@ -272,7 +272,7 @@ class WPS_Accordion_Shortcodes {
 
 		$accordion_title = sprintf('<%1$s id="%3$s" class="accordion-title%5$s" role="tab" aria-controls="%4$s" aria-selected="false" aria-expanded="false">%6$s%2$s</%1$s>',
 			$options['tag'] ? $this->check_html_tag($options['tag']) : $this->title_tag,
-			$options['title'] ? $options['title'] : '<span style="color:red;">' . __('Please enter a title attribute', 'accordion_shortcodes') . '</span>',
+			$options['title'] ? $options['title'] : '<span style="color:red;">' . __('Please enter a title attribute', 'wps-prime') . '</span>',
 			$ids['title'],
 			$ids['content'],
 			$options['class'] ? ' '.$options['class'] : '',

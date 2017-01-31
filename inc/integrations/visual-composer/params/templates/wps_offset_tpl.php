@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<?php if ( '1' === vc_settings()->get( 'not_responsive_css' ) ) :  ?>
 		<div class="wpb_alert wpb_content_element vc_alert_rounded wpb_alert-warning">
 			<div class="messagebox_text">
-				<p><?php printf( __( 'Responsive design settings are currently disabled. You can enable them in Visual Composer <a href="%s">settings page</a> by unchecking "Disable responsive content elements".', 'js_composer' ), admin_url( 'admin.php?page=vc-general' ) ) ?></p>
+				<p><?php printf( __( 'Responsive design settings are currently disabled. You can enable them in Visual Composer <a href="%s">settings page</a> by unchecking "Disable responsive content elements".', 'wps-prime' ), admin_url( 'admin.php?page=vc-general' ) ) ?></p>
 			</div>
 		</div>
 	<?php endif ?>
@@ -20,13 +20,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<table class="vc_table wps_vc_column-offset-table">
 		<tr>
 			<th>
-				<?php _e( 'Device', 'js_composer' ) ?>
+				<?php _e( 'Device', 'wps-prime' ) ?>
 			</th>
 			<th>
-				<?php _e( 'Width', 'js_composer' ) ?>
+				<?php _e( 'Width', 'wps-prime' ) ?>
 			</th>
 			<th>
-				<?php _e( 'Hide on device?', 'js_composer' ) ?>
+				<?php _e( 'Hide on device?', 'wps-prime' ) ?>
 			</th>
 		</tr>
 		<?php foreach ( $sizes as $key => $size ) :  ?>
@@ -49,7 +49,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 </div>
 <script type="text/javascript">
 	window.WpsVcI8nColumnOffsetParam = <?php echo json_encode(array(
-			'inherit' => __( 'Inherit: ', 'js_composer' ),
-			'inherit_default' => __( 'Inherit from default', 'js_composer' ),
+			'inherit' => __( 'Inherit: ', 'wps-prime' ),
+			'inherit_default' => __( 'Inherit from default', 'wps-prime' ),
 		)) ?>;
 </script>

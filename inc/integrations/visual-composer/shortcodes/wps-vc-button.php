@@ -6,23 +6,23 @@ function wps_vc_button_shortcode() {
     $attributes = array(
         array(
             'type' => 'textfield',
-            'heading' => 'Button link',
+            'heading' => __('Button link', 'wps-prime'),
             'admin_label' => true,
             'param_name' => 'link',
             'value' => '',
-            'description' => __('link address – ex: http://yourlink.com/yourpage', 'wps-prime')
+            'description' => __('link address ex: http://yourlink.com/yourpage', 'wps-prime')
         ),
         array(
             'type' => 'textfield',
-            'heading' => 'Button label',
+            'heading' => __('Button label', 'wps-prime'),
             'admin_label' => true,
             'param_name' => 'label',
             'value' => 'Please add label',
-            'description' => __('button text – ex: Click me', 'wps-prime')
+            'description' => __('button text ex: Click me', 'wps-prime')
         ),
         array(
             'type' => 'dropdown',
-            'heading' => 'Button Color',
+            'heading' => __('Button Color', 'wps-prime'),
             'admin_label' => true,
             'param_name' => 'color',
             'value' => wps_btn_color(),
@@ -30,7 +30,7 @@ function wps_vc_button_shortcode() {
         ),
         array(
             'type' => 'dropdown',
-            'heading' => 'Button Size',
+            'heading' => __('Button Size', 'wps-prime'),
             'admin_label' => true,
             'param_name' => 'size',
             'value' => wps_btn_size(),
@@ -38,7 +38,7 @@ function wps_vc_button_shortcode() {
         ),
         array(
             'type' => 'checkbox',
-            'heading' => 'Button Ghost',
+            'heading' => __('Button Ghost', 'wps-prime'),
             'admin_label' => true,
             'param_name' => 'ghost',
             'value' => array( __( 'Yes', 'wps-prime' ) => 'yes' ),
@@ -46,7 +46,7 @@ function wps_vc_button_shortcode() {
         ),
         array(
             'type' => 'dropdown',
-            'heading' => 'Button Aspect',
+            'heading' => __('Button Aspect', 'wps-prime'),
             'admin_label' => true,
             'param_name' => 'aspect',
             'value' => wps_btn_aspect(),
@@ -54,7 +54,7 @@ function wps_vc_button_shortcode() {
         ),
         array(
             'type' => 'dropdown',
-            'heading' => 'Button align',
+            'heading' => __('Button align', 'wps-prime'),
             'admin_label' => true,
             'param_name' => 'align',
             'value' => wps_btn_pos(),
@@ -62,7 +62,7 @@ function wps_vc_button_shortcode() {
         ),
         array(
             'type' => 'textfield',
-            'heading' => 'Custom CSS class',
+            'heading' => __('Custom CSS class', 'wps-prime'),
             'admin_label' => true,
             'param_name' => 'class',            
             'value' => '',
@@ -70,17 +70,17 @@ function wps_vc_button_shortcode() {
         ),
         array(
             'type' => 'dropdown',
-            'heading' => 'Link target',
+            'heading' => __('Link target', 'wps-prime'),
             'param_name' => 'target',
             'value' => array(
                             __('Default','wps-prime')   => '',
-                            __('New tab')               => '_blank'
+                            __('New tab', 'wps-prime')  => '_blank'
                             ),
             'description' => __('<small>Link target specifies where to open the linked document.</small> <br/><small> _blank (Opens the linked document in a new window or tab</small>)', 'wps-prime')
         ),
         array(
             'type' => 'textfield',
-            'heading' => 'Custom onclick action',
+            'heading' => __('Custom onclick action', 'wps-prime'),
             'admin_label' => true,
             'param_name' => 'onclick',            
             'value' => '',
@@ -89,7 +89,7 @@ function wps_vc_button_shortcode() {
         // Only for VC UI functionality
         array(
             'type' => 'checkbox',
-            'heading' => "Set Margin",
+            'heading' => __('Set Margin', 'wps-prime'),
             'param_name' => 'set_margin',
             'admin_label' => false,
             'group' => esc_html__( 'Margins/paddings', 'wps-prime' ),
@@ -98,7 +98,7 @@ function wps_vc_button_shortcode() {
 
         array(
             'type' => 'wps_margin',
-            'heading' => "Margin Settings",
+            'heading' => __('Margin Settings', 'wps-prime'),
             'param_name' => 'margin',
             'admin_label' => true,
             'dependency' => array('element' => 'set_margin', 'value' => 'true'),
@@ -108,7 +108,7 @@ function wps_vc_button_shortcode() {
         // Only for VC UI functionality
         array(
             'type' => 'checkbox',
-            'heading' => "Set Padding",
+            'heading' => __('Set Padding', 'wps-prime'),
             'param_name' => 'set_padding',
             'admin_label' => false,
             'group' => esc_html__( 'Margins/paddings', 'wps-prime' ),
@@ -117,7 +117,7 @@ function wps_vc_button_shortcode() {
 
         array(
             'type' => 'wps_padding',
-            'heading' => "Padding Settings",
+            'heading' => __('Padding Settings', 'wps-prime'),
             'param_name' => 'padding',
             'admin_label' => true,
             'dependency' => array('element' => 'set_padding', 'value' => 'true'),
@@ -128,9 +128,9 @@ function wps_vc_button_shortcode() {
     // Title
     vc_map(
         array(
-            'name' => __( 'Button' ),
+            'name' => __( 'Button', 'wps-prime' ),
             'base' => 'wps_button',
-            'category' => __( 'Content' ),
+            'category' => __( 'Content', 'wps-prime' ),
             'icon' => 'icon-wpb-ui-button',
             'params' => $attributes
 

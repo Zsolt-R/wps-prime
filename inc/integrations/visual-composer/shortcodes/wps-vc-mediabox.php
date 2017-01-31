@@ -29,7 +29,7 @@ function wps_vc_mediabox_shortcode() {
             'value' => wps_image_sizes(),
             'std'=>'full',
             'group' => __( 'Image', 'wps-prime' ),
-            'description' => __('Set custom image size ( Default: ‘full’)', 'wps-prime')
+            'description' => __('Set custom image size ( Default: full)', 'wps-prime')
         ),
         array(
             'type' => 'textfield',
@@ -134,7 +134,7 @@ function wps_vc_mediabox_shortcode() {
             ),
         array(
             'type' => 'textfield',
-            'heading' => 'Icon custom CSS class',
+            'heading' => __('Icon custom CSS class', 'wps-prime'),
             'admin_label' => true,
             'param_name' => 'ico_class',
             'value' => '',
@@ -143,13 +143,13 @@ function wps_vc_mediabox_shortcode() {
         ),
         array(
             'type' => 'dropdown',
-            'heading' => 'Media Type',
+            'heading' => __('Media Type', 'wps-prime'),
             'admin_label' => true,
             'param_name' => 'type',
             'value' => array(
-                __('Default') =>false,
-                __('Flag')    =>'o-flag',
-                __('Media')   =>'o-media'
+                __('Default', 'wps-prime') =>false,
+                __('Flag', 'wps-prime')    =>'o-flag',
+                __('Media', 'wps-prime')   =>'o-media'
                 ),
             'group' => __( 'Media settings', 'wps-prime' ),
             'description' => __('Set media type', 'wps-prime')
@@ -160,13 +160,13 @@ function wps_vc_mediabox_shortcode() {
             'admin_label' => true,
             'param_name' => 'type_spacing',
             'value' => array(
-                __('Default') =>false,
-                __('Tiny')    =>'--tiny',
-                __('Small')   =>'--small',
-                __('Normal')  =>'--normal',
-                __('Large')   =>'--large',
-                __('Huge')    =>'--huge',
-                __('None')    =>'--flush',
+                __('Default', 'wps-prime') =>false,
+                __('Tiny', 'wps-prime')    =>'--tiny',
+                __('Small', 'wps-prime')   =>'--small',
+                __('Normal', 'wps-prime')  =>'--normal',
+                __('Large', 'wps-prime')   =>'--large',
+                __('Huge', 'wps-prime')    =>'--huge',
+                __('None', 'wps-prime')    =>'--flush',
                 ),
             'group' => __( 'Media settings', 'wps-prime' ),
             'description' => __('Set elements spacing. By default the Media|Flag media type has a \'normal\' spacing. If you use the default media type there is no spacing between elements.', 'wps-prime')
@@ -255,10 +255,10 @@ function wps_vc_mediabox_shortcode() {
     // Title
     vc_map(
         array(
-            'name' => __( 'Mediabox' ),
+            'name' => __( 'Mediabox','wps-prime'),
             'base' => 'wps_mediabox',
             'description' => 'Image text combination that can rearange itself on responsive devices',
-            'category' => __( 'Content' ),
+            'category' => __( 'Content','wps-prime' ),
             'icon' => 'icon-wpb-toggle-small-expand',
             'params' => $attributes 
         )

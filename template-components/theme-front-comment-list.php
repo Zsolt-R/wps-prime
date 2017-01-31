@@ -35,14 +35,14 @@ function wps_comment( $comment, $args, $depth ) {
     <div class="o-media__body">
     <h4 class="u-margin-bottom-none"><cite class="fn"><?php get_comment_author_link(); ?></cite></h4>
     <?php if ( $comment->comment_approved === '0' ) : ?>
-        <em class="comment-awaiting-moderation"><?php esc_attr_x( 'Your comment is awaiting moderation.' ,'wps-prime' ); ?></em>
+        <em class="comment-awaiting-moderation"><?php esc_attr_x( 'Your comment is awaiting moderation.' ,'','wps-prime' ); ?></em>
         <br />
     <?php endif; ?>
 
     <small data-ui-component="comment-meta commentmetadata"><a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
         <?php
 			/* translators: 1: date, 2: time */
-			printf( esc_html_x( '%1$s at %2$s','wps-prime' ), get_comment_date(),  get_comment_time() ); ?></a><?php edit_comment_link( __( '(Edit)' ,'wps-prime' ), '  ', '' );
+			printf( esc_html_x( '%1$s at %2$s','', 'wps-prime' ), get_comment_date(),  get_comment_time() ); ?></a><?php edit_comment_link( __( '(Edit)' ,'wps-prime' ), '  ', '' );
 		?>
     </small>
 

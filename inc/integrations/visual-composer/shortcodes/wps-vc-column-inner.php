@@ -41,10 +41,10 @@ function wps_vc_column_inner_shortcode(){
 
         array(
             'type' => 'wps_column_offset',
-            'heading' => __( 'Responsiveness', 'js_composer' ),
+            'heading' => __( 'Responsiveness', 'wps-prime' ),
             'param_name' => 'row_width',
-            'group' => __( 'Responsive Options', 'js_composer' ),
-            'description' => __( 'Adjust column for different screen sizes. Control width, offset and visibility settings.', 'js_composer' ),
+            'group' => __( 'Responsive Options', 'wps-prime' ),
+            'description' => __( 'Adjust column for different screen sizes. Control width, offset and visibility settings.', 'wps-prime' ),
         ),
 
         array(

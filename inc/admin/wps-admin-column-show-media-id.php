@@ -6,7 +6,7 @@
  */
 
 function column_id($columns) {
-    $columns['colID'] = __('ID');
+    $columns['colID'] = __('ID','wps-prime');
     return $columns;
 }
 add_filter( 'manage_media_columns', 'column_id' );

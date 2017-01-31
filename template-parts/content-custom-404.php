@@ -48,7 +48,7 @@ $title_vis = true;
 	?>
 
 	<?php else : ?>
-		<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+		<p><?php _e( 'Sorry, no posts matched your criteria.','wps-prime' ); ?></p>
 	<?php endif; ?>
 
 

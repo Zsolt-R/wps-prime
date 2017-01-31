@@ -7,7 +7,7 @@
 add_action('admin_init', 'page_title_custom_meta_box_settings');
  
 function page_title_custom_meta_box_settings(){
-    add_meta_box('wps_title_settings', __('Page title settings', 'wps_prime') , 'page_title_settings', 'page' , 'side');
+    add_meta_box('wps_title_settings', __('Page title settings', 'wps-prime') , 'page_title_settings', 'page' , 'side');
     }
  
 function page_title_settings($post){

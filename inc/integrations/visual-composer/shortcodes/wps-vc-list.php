@@ -6,7 +6,7 @@ function wps_vc_list_shortcode() {
     $attributes = array(
         array(
             'type' => 'dropdown',
-            'heading' => 'Bullet Style',
+            'heading' => __('Bullet Style', 'wps-prime' ),
             'admin_label' => true,
             'param_name' => 'style',
             'value' => array(
@@ -25,7 +25,7 @@ function wps_vc_list_shortcode() {
         ),
         array(
             'type' => 'dropdown',
-            'heading' => 'Bullet Color',
+            'heading' => __('Bullet Color', 'wps-prime' ),
             'admin_label' => true,
             'param_name' => 'color',
             'value' => array(
@@ -61,7 +61,7 @@ function wps_vc_list_shortcode() {
         ),
         array(
             'type' => 'textfield',
-            'heading' => 'Extra Class',
+            'heading' => __( 'Extra Class', 'wps-prime' ),
             'param_name' => 'class',
             'admin_label' => true,
             'value' => '',
@@ -73,10 +73,10 @@ function wps_vc_list_shortcode() {
     // Title
     vc_map(
         array(
-            'name' => __( 'Styled List' ),
+            'name' => __( 'Styled List', 'wps-prime' ),
             'base' => 'wps_list',
-            'description' => 'Wrapper element for styling a list with predefined bullets|colors|lines.',
-            'category' => __( 'Content' ),
+            'description' => __('Wrapper element for styling a list with predefined bullets|colors|lines.', 'wps-prime' ),
+            'category' => __( 'Content', 'wps-prime' ),
             'icon' => 'icon-wpb-graph',
             'params' => $attributes 
         )

@@ -9,10 +9,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<table class="vc_table">
 		<tr>
 			<th>
-				<?php _e( 'Padding Location', 'js_composer' ) ?>
+				<?php _e( 'Padding Location', 'wps-prime' ) ?>
 			</th>
 			<th>
-				<?php _e( 'Padding Size', 'js_composer' ) ?>
+				<?php _e( 'Padding Size', 'wps-prime' ) ?>
 			</th>
 		</tr>
 		<?php foreach ( $sizes as $key => $size ) :  ?>
@@ -29,7 +29,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 </div>
 <script type="text/javascript">
 	window.WpsVcI8nPaddingParam = <?php echo json_encode(array(
-			'inherit' => __( 'Inherit: ', 'js_composer' ),
-			'inherit_default' => __( 'Inherit from default', 'js_composer' ),
+			'inherit' => __( 'Inherit: ', 'wps-prime' ),
+			'inherit_default' => __( 'Inherit from default', 'wps-prime' ),
 		)) ?>;
 </script>

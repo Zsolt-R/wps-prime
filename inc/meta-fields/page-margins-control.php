@@ -7,7 +7,7 @@
 add_action('admin_init', 'page_margin_custom_meta_box_settings');
  
 function page_margin_custom_meta_box_settings(){
-    add_meta_box('wps_page_margins_settings', __('Page margins adjust', 'wysiwyg') , 'page_margin_settings', 'page' , 'side');
+    add_meta_box('wps_page_margins_settings', __('Page margins adjust', 'wps-prime') , 'page_margin_settings', 'page' , 'side');
     }
  
 function page_margin_settings($post){

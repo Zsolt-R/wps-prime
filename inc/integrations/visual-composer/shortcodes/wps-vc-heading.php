@@ -33,12 +33,12 @@
         ),                  
         array(
             'type' => 'textfield',
-            'heading' => 'Link',
+            'heading' => __('Link', 'wps-prime' ),
             'admin_label' => true,
             'param_name' => 'link',
             'value' => '',
             'group' => __( 'Link', 'wps-prime' ),
-            'description' => __('link address – ex: http://yourlink.com/yourpage', 'wps-prime')
+            'description' => __('link address ex: http://yourlink.com/yourpage', 'wps-prime')
         ), 
         array(
             'type' => 'dropdown',
@@ -46,7 +46,7 @@
             'param_name' => 'target',
             'value' => array(
                             __('Default','wps-prime')   => '',
-                            __('New tab')               => '_blank'
+                            __('New tab','wps-prime')               => '_blank'
                             ),
             'group' => __( 'Link', 'wps-prime' ),
             'description' => __('<small>Link target specifies where to open the linked document.</small> <br/> _blank (Opens the linked document in a new tab)', 'wps-prime')
@@ -129,9 +129,9 @@
 
     $settings = array(
 
-            'name' => __( 'Heading' ),
+            'name' => __( 'Heading', 'wps-prime' ),
             'base' => 'wps_heading',
-            'category' => __( 'Content' ),
+            'category' => __( 'Content', 'wps-prime' ),
             'icon' => 'icon-wpb-ui-custom_heading',
             'params' => $attributes      
         );

@@ -7,7 +7,7 @@
 add_action('admin_init', 'wysiwyg_register_custom_meta_box');
  
 function wysiwyg_register_custom_meta_box(){
-    add_meta_box('wps_page_settings', __('Page Pre Content', 'wysiwyg') , 'page_pre_content', 'page');
+    add_meta_box('wps_page_settings', __('Page Pre Content', 'wps-prime') , 'page_pre_content', 'page');
     }
  
 function page_pre_content($post){

@@ -5,7 +5,7 @@ function wps_vc_divider_shortcode() {
     $attributes = array(
         array(
             'type' => 'dropdown',
-            'heading' => 'Divider style',
+            'heading' => __('Divider style','wps-prime'),
             'param_name' => 'style',
             'value' => array(
                             __('Line','wps-prime')   => '',
@@ -17,7 +17,7 @@ function wps_vc_divider_shortcode() {
 
         array(
             'type' => 'textfield',
-            'heading' => 'Custom Class',
+            'heading' => __('Custom Class','wps-prime'),
             'admin_label' => true,
             'param_name' => 'class',
             'value' => '',
@@ -32,10 +32,10 @@ function wps_vc_divider_shortcode() {
      // Title
     vc_map(
         array(
-            'name' => __( 'Content Divider' ),
-            'description'=>'Creates a horizontal line, use to separate content',
+            'name' => __( 'Content Divider', 'wps-prime' ),
+            'description'=> __('Creates a horizontal line, use to separate content','wps-prime'),
             'base' => 'wps_divider',
-            'category' => __( 'Content' ),
+            'category' => __( 'Content', 'wps-prime' ),
             'params' => $attributes,
             'icon' => 'icon-wpb-ui-separator'
         )

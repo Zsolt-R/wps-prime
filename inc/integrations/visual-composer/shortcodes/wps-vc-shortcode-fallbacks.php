@@ -19,7 +19,7 @@ if (!class_exists('Wps_Vc_Fallback_Shortcodes')) :
 	function __construct() {
 
 		// Load text domain
-		load_plugin_textdomain('wps_prime', false, WPS_THEME_DIR . '/languages/');
+		load_plugin_textdomain('wps-prime', false, WPS_THEME_DIR . '/languages/');
 
 		add_shortcode('vc_row', array($this, 'wps_vc_row_shortcode_fallback'));		
 		add_shortcode('vc_row_inner', array($this, 'wps_vc_row_inner_shortcode_fallback'));

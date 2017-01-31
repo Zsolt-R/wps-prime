@@ -66,7 +66,7 @@ function wps_vc_wps_slider_item_shortcode() {
             'value' => wps_image_sizes(),
             'std'=>'full',
             'group' => esc_html__( 'Background image', 'wps-prime' ),
-            'description' => __('Set custom background image size ( Default: ‘full’)', 'wps-prime')
+            'description' => __('Set custom background image size ( Default: full)', 'wps-prime')
         ),
         array(
             'type' => 'textarea_html',

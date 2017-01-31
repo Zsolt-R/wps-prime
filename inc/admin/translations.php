@@ -16,8 +16,8 @@ if ( ! class_exists( '_WP_Editors' ) ) {
  */
 function wps_button_translation() {
 	$strings = array(
-		'button_label' => __( 'WPS Shortcode Helper', 'wps_helper_plugin' ),
-		'msg' => __( 'Hello World!!!!', 'wps_helper_plugin' ),
+		'button_label' => __( 'WPS Shortcode Helper', 'wps-prime' ),
+		'msg' => __( 'Hello World!!!!', 'wps-prime' ),
 	);
 
 	$locale = _WP_Editors::$mce_locale;

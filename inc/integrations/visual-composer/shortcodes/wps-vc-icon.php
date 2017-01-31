@@ -82,7 +82,7 @@ function wps_vc_icon_shortcode() {
             ),
             array(
             'type' => 'dropdown',
-            'heading' => 'Icon size',
+            'heading' => __('Icon size', 'wps-prime'),
             'param_name' => 'size',
             'admin_label' => true, 
             'value' => wps_ico_size(),
@@ -90,7 +90,7 @@ function wps_vc_icon_shortcode() {
             ),
             array(
             'type' => 'dropdown',
-            'heading' => 'Icon color',
+            'heading' => __('Icon color', 'wps-prime'),
             'param_name' => 'color',
             'admin_label' => true, 
             'value' => wps_ico_colors(),
@@ -99,7 +99,7 @@ function wps_vc_icon_shortcode() {
             ),
             array(
             'type' => 'textfield',
-            'heading' => 'Class',
+            'heading' => __('Class', 'wps-prime'),
             'param_name' => 'class',
             'admin_label' => true,
             'value' => '',
@@ -107,27 +107,27 @@ function wps_vc_icon_shortcode() {
             ),  
              array(
             'type' => 'textfield',
-            'heading' => 'Link',
+            'heading' => __('Link', 'wps-prime'),
             'param_name' => 'link',
             'admin_label' => true,
             'value' => '',
             'group' => esc_html__( 'Link', 'wps-prime' ),
-            'description' => __('Link address – ex: http://yourlink.com/yourpage', 'wps-prime')
+            'description' => __('Link address ex: http://yourlink.com/yourpage', 'wps-prime')
             ), 
             array(
             'type' => 'dropdown',
-            'heading' => 'Link target',
+            'heading' => __('Link target', 'wps-prime'),
             'param_name' => 'target',
             'value' => array(
-                            __('Default','wps-prime')   => '',
-                            __('New tab')               => '_blank'
+                            __('Default', 'wps-prime')   => '',
+                            __('New tab', 'wps-prime')   => '_blank'
                             ),
             'group' => esc_html__( 'Link', 'wps-prime' ),
             'description' => __('<small>Link target specifies where to open the linked document.</small> <br/> _blank (Opens the linked document in a new tab)', 'wps-prime')
             ),
             array(
             'type' => 'checkbox',
-            'heading' => 'Center',
+            'heading' => __('Center', 'wps-prime'),
             'param_name' => 'center',
             'admin_label' => true,
             'value' => '',
@@ -136,7 +136,7 @@ function wps_vc_icon_shortcode() {
         // Only for VC UI functionality
         array(
             'type' => 'checkbox',
-            'heading' => "Set Margin",
+            'heading' => __('Set Margin' , 'wps-prime'),
             'param_name' => 'set_margin',
             'admin_label' => false,
         ),
@@ -144,7 +144,7 @@ function wps_vc_icon_shortcode() {
 
         array(
             'type' => 'wps_margin',
-            'heading' => "Margin Settings",
+            'heading' => __('Margin Settings' , 'wps-prime'),
             'param_name' => 'margin',
             'admin_label' => true,
             'dependency' => array('element' => 'set_margin', 'value' => 'true'),
@@ -153,7 +153,7 @@ function wps_vc_icon_shortcode() {
      // Title
     vc_map(
         array(
-            'name' => __( 'Icon' ),
+            'name' => __( 'Icon' , 'wps-prime'),
             'description' => __( 'Eye catching icons from libraries','wps-prime' ),
             'base' => 'wps_ico',
             'category' => __( 'Content','wps-prime' ),

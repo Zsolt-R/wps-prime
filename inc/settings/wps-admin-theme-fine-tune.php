@@ -79,11 +79,11 @@ if(!function_exists('modify_comment_form_fields')){
 		$req = get_option( 'require_name_email' );
 		$aria_req = ( $req ? " aria-required='true'" : '' );
 
-		$fields['author'] = '<p class="comment-form-author"><label for="author" class="comment-form__label">' . _x( 'Name', 'wps-prime' ) . '</label> ' .
+		$fields['author'] = '<p class="comment-form-author"><label for="author" class="comment-form__label">' . _x( 'Name', 'comment form author name' ,'wps-prime' ) . '</label> ' .
 
 		( $req ? '<span class="required">*</span>' : '' ) .
 
-		'<input id="author" class="comment-form__field" name="author" type="text" placeholder="' . _x( 'Real name, please, no keyword spamming!', 'wps-prime' ) . '" value="' .
+		'<input id="author" class="comment-form__field" name="author" type="text" placeholder="' . __( 'Real name, please, no keyword spamming!', 'wps-prime' ) . '" value="' .
 
 		esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' /></p>';
 
@@ -91,11 +91,11 @@ if(!function_exists('modify_comment_form_fields')){
 
 		( $req ? '<span class="required">*</span>' : '' ) .
 
-		'<input id="email" class="comment-form__field" name="email" type="text" placeholder="' . _x( 'add e-mail address', 'wps-prime' ) . '" value="' .
+		'<input id="email" class="comment-form__field" name="email" type="text" placeholder="' . __( 'add e-mail address', 'wps-prime' ) . '" value="' .
 
 		esc_attr( $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' /></p>';
 
-		$fields['url'] = '<p class="comment-form-url"><label for="url" class="comment-form__label">' . _x( 'Domain', 'wpsites.net' ) . '</label><input id="url" class="comment-form__field" name="url" type="text" placeholder="Please Link To Your Own Domain" value="' .
+		$fields['url'] = '<p class="comment-form-url"><label for="url" class="comment-form__label">' . __( 'Domain', 'wps-prime' ) . '</label><input id="url" class="comment-form__field" name="url" type="text" placeholder="Please Link To Your Own Domain" value="' .
 
 		esc_attr( $commenter['comment_author_url'] ) . '" size="30" /></p>';
 	
@@ -120,7 +120,7 @@ add_filter( 'comment_form_defaults', 'customize_comment_form_text_area' );
 if(!function_exists('customize_comment_form_text_area')){
 
 	function customize_comment_form_text_area( $args ) {
-		$args['comment_field'] = '<p class="comment-form-comment"><label for="comment" class="comment-form__label">' . _x( 'Comment', 'wps-prime' ) . '</label><textarea id="comment" class="comment-form__field" name="comment" placeholder="' . _x( 'Your Feedback Is Appreciated', 'wps-prime' ) . '"cols="45" rows="5" aria-required="true"></textarea></p>';
+		$args['comment_field'] = '<p class="comment-form-comment"><label for="comment" class="comment-form__label">' . _x( 'Comment', '', 'wps-prime' ) . '</label><textarea id="comment" class="comment-form__field" name="comment" placeholder="' . _x( 'Your Feedback Is Appreciated', '', 'wps-prime' ) . '"cols="45" rows="5" aria-required="true"></textarea></p>';
 		return $args;
 	}
 	

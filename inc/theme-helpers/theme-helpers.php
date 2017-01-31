@@ -91,7 +91,7 @@ function get_development_data(){
     $short_data .= '<ul>';
     $short_data .= '<li><strong>Site Title</strong>: '.get_bloginfo( 'name' ) .'</li>';  
     $short_data .= '<li><strong>Tagline</strong>: '.get_bloginfo( 'description' ) .'</li>';
-    $short_data .= '<li><strong>SiteUrl</strong>: '.get_bloginfo('wpurl') .'</li>';
+    $short_data .= '<li><strong>SiteUrl</strong>: '. site_url() .'</li>';
     $short_data .= '<li><strong>Stylesheet Directory</strong>: '.get_stylesheet_directory_uri() .'</li>';
     $short_data .= '<li><strong>Template directory</strong>: '.get_template_directory_uri() .'</li>';
     $short_data .= '<li><hr/></li>';

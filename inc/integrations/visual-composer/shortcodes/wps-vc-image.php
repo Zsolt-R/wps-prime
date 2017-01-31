@@ -18,7 +18,7 @@
             'param_name' => 'image_size',
             'value' => wps_image_sizes(),
             'std'=>'full',
-            'description' => __('Set custom image size ( Default: ‘full’)', 'wps-prime')
+            'description' => __('Set custom image size ( Default: full)', 'wps-prime')
         ),
         array(
             'type' => 'dropdown',
@@ -39,22 +39,22 @@
             'param_name' => 'link',
             'value' => '',
             'group' => esc_html__( 'Link', 'wps-prime' ),
-            'description' => __('Link address – ex: http://yourlink.com/yourpage', 'wps-prime')
+            'description' => __('Link address ex: http://yourlink.com/yourpage', 'wps-prime')
         ), 
         array(
             'type' => 'dropdown',
             'heading' => 'Link target',
             'param_name' => 'target',
             'value' => array(
-                            __('Default','wps-prime')   => '',
-                            __('New tab')               => '_blank'
+                            __('Default','wps-prime')  => '',
+                            __('New tab', 'wps-prime') => '_blank'
                             ),
             'group' => esc_html__( 'Link', 'wps-prime' ),
             'description' => __('<small>Link target specifies where to open the linked document.</small> <br/> _blank (Opens the linked document in a new tab)', 'wps-prime')
         ),
         array(
             'type' => 'textfield',
-            'heading' => 'Custom CSS class',
+            'heading' => __('Custom CSS class', 'wps-prime'),
             'admin_label' => true,
             'param_name' => 'class',            
             'value' => '',
@@ -63,7 +63,7 @@
         // Only for VC UI functionality
         array(
             'type' => 'checkbox',
-            'heading' => "Set Margin",
+            'heading' => __('Set Margin', 'wps-prime'),
             'param_name' => 'set_margin',
             'admin_label' => false,
             'group' => esc_html__( 'Margins/paddings', 'wps-prime' ),
@@ -72,7 +72,7 @@
 
         array(
             'type' => 'wps_margin',
-            'heading' => "Margin Settings",
+            'heading' => __('Margin Settings', 'wps-prime'),
             'param_name' => 'margin',
             'admin_label' => true,
             'dependency' => array('element' => 'set_margin', 'value' => 'true'),
@@ -82,7 +82,7 @@
         // Only for VC UI functionality
         array(
             'type' => 'checkbox',
-            'heading' => "Set Padding",
+            'heading' => __('Set Padding', 'wps-prime'),
             'param_name' => 'set_padding',
             'admin_label' => false,
             'group' => esc_html__( 'Margins/paddings', 'wps-prime' ),
@@ -91,7 +91,7 @@
 
         array(
             'type' => 'wps_padding',
-            'heading' => "Padding Settings",
+            'heading' => __('Padding Settings', 'wps-prime'),
             'param_name' => 'padding',
             'admin_label' => true,
             'dependency' => array('element' => 'set_padding', 'value' => 'true'),
@@ -101,9 +101,9 @@
 
     $settings = array(
 
-            'name' => __( 'Image' ),
+            'name' => __( 'Image' , 'wps-prime'),
             'base' => 'wps_image',
-            'category' => __( 'Content' ),
+            'category' => __( 'Content', 'wps-prime'),
             'icon' => 'icon-wpb-single-image',
             'params' => $attributes      
         );
