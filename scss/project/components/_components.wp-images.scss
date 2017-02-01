@@ -18,3 +18,11 @@
     float: right;
     margin-left: $inuit-global-spacing-unit; // add margin to images
 }
+
+.wp-caption{
+	@include inuit-font-size(14px,1.2);    
+    
+}
+.wp-caption-text{
+	padding:$inuit-global-spacing-unit-small;	
+}
