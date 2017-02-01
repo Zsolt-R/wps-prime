@@ -135,12 +135,21 @@ if(function_exists('vc_disable_frontend')){
 
 // Deregister VC style and script from front end
 if(!vc_is_inline()){
-add_action( 'wp_enqueue_scripts', 'remove_vc_default_scripts', 20 );
+  add_action( 'wp_enqueue_scripts', 'wps_vc_default_dequeue_styles' );
 }
-function remove_vc_default_scripts() {  
+function wps_vc_default_dequeue_styles() {  
     wp_deregister_style( 'js_composer_front' );
-    wp_deregister_script( 'wpb_composer_front_js' );
 }
+
+if(!vc_is_inline()){
+  add_action( 'wp_print_scripts', 'wps_vc_default_dequeue_scripts' );
+}
+function wps_vc_default_dequeue_scripts() {
+    wp_deregister_script( 'wpb_composer_front_js' );
+    wp_dequeue_script( 'wpb_composer_front_js' );
+}
+
+
 
 // Alter Visual Composer shortcodes
 require get_template_directory() . '/inc/integrations/visual-composer/shortcodes/wps-vc-row.php';

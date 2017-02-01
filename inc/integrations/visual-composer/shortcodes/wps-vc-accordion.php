@@ -45,7 +45,7 @@ function wps_vc_accordion_shortcode() {
             'admin_label' => true,
             'param_name' => 'scroll',            
             'value' => array( __( 'Yes', 'wps-prime' ) => 'yes' ),
-            'description' => __('Sets whether to scroll to the title when it’s clicked open. This is useful if you have a lot of content within your accordion items.', 'wps-prime')
+            'description' => __('Sets whether to scroll to the title when it is clicked open. This is useful if you have a lot of content within your accordion items.', 'wps-prime')
         ),
         array(
             'type' => 'textfield',
