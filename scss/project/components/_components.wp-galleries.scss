@@ -5,6 +5,7 @@
 .gallery {
     margin-bottom: 1.5em;
 }
+
 .gallery-item {
     display: inline-block;
     text-align: center;
@@ -37,4 +38,8 @@
         max-width: 11.11%;
     }
 }
-.gallery-caption {}
+
+.gallery-caption{   
+    @include inuit-font-size(14px,1.2);    
+    padding:$inuit-global-spacing-unit-small;
+}
