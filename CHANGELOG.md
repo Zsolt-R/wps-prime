@@ -1,4 +1,10 @@
 ##WPS-Prime Changelog##
+- v.1.1.4
+- Fix textdomain and strings
+- PHP lint files
+- Remove cf7 deregister script function
+- Extend css styling & SASS components
+
 - v.1.1.3
 - Make Modify Comment form text area function pluggable
 - Make Modify Comment form input fields function pluggable
