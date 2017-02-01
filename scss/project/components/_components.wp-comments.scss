@@ -1,44 +1,41 @@
 /*------------------------------------*\
-    #COMPONENTS GALLERIES
+    #COMPONENTS COMMENT
 \*------------------------------------*/
+.comment-list{
+	margin-left:0;
 
-.gallery {
-    margin-bottom: 1.5em;
 }
-.gallery-item {
-    display: inline-block;
-    text-align: center;
-    vertical-align: top;
-    width: 100%;
-    margin:0;
+
+.comment-author.vcard{
+	
 }
-@include media-query(lap-and-up) {
-    .gallery-columns-2 .gallery-item {
-        max-width: 50%;
-    }
-    .gallery-columns-3 .gallery-item {
-        max-width: 33.33%;
-    }
-    .gallery-columns-4 .gallery-item {
-        max-width: 25%;
-    }
-    .gallery-columns-5 .gallery-item {
-        max-width: 20%;
-    }
-    .gallery-columns-6 .gallery-item {
-        max-width: 16.66%;
-    }
-    .gallery-columns-7 .gallery-item {
-        max-width: 14.28%;
-    }
-    .gallery-columns-8 .gallery-item {
-        max-width: 12.5%;
-    }
-    .gallery-columns-9 .gallery-item {
-        max-width: 11.11%;
-    }
+
+.comment-respond{
+    border-top: 1px solid $color-gray-ui;
+    border-bottom: 1px solid $color-gray-ui;
+    padding: $inuit-global-spacing-unit/2 0;
+    margin-bottom: $inuit-global-spacing-unit;
+
 }
-.gallery-icon{
-        margin:0.2em;
+
+.form-submit{
+
 }
-.gallery-caption {}
+.comment-form__label{
+   
+}
+.comment-form__field{
+    display:block;
+    width:100%;
+}
+
+.comment-reply-link{
+	@include inuit-font-size(14px,1);
+	font-weight: 600;
+}
+
+
+.bypostauthor{
+    border-left:2px solid $color-gray-ui;
+    padding-left: $inuit-global-spacing-unit-small;
+}
