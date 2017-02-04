@@ -50,7 +50,7 @@ function optionsframework_options() {
 
 	$options[] = array(
 		'name' => __( 'Company name', 'wps-prime' ),
-		'desc' => __( 'If no name is added will fall back to site name', 'wps-prime' ),
+		'desc' => __( 'If no name is added will fall back to site name, Used in site info, ex. footer micro copy.', 'wps-prime' ),
 		'id' => 'company_name',
 		//'std' => 'Default Value',
 		'type' => 'text'
@@ -58,7 +58,7 @@ function optionsframework_options() {
 
 	$options[] = array(
 		'name' => __( 'Company logo', 'wps-prime' ),
-		'desc' => __( '', 'wps-prime' ),
+		'desc' => __( 'Logo will be rendered at full size. Please adjust your logo size to the correct fit. The logo will replace sitename/company name in the header area', 'wps-prime' ),
 		'id' => 'company_logo',
 		'type' => 'upload'
 	);
