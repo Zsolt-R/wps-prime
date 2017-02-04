@@ -10,7 +10,7 @@ $myfont = WpsGenerateThemeFonts::get_instance();
 
 $myfont->add_font('Open Sans',
 	'sans-serif',
-	'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,800',
+	'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800',
 	'font-weight: 300',
 	'font-weight: 600'
 );
