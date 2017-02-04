@@ -719,7 +719,9 @@ function wps_styled_list_shortcode( $atts, $content = null )
 
     wps_icon_element_fonts_enqueue('fontawesome');
 
-    $output = '<div class="'. $list_styles .'">'. do_shortcode($content) .'</div>';
+    $sc_content = wpb_js_remove_wpautop($content,true);
+
+    $output = '<div class="'. $list_styles .'">'. do_shortcode($sc_content) .'</div>';
 
     return $output;
 
@@ -833,6 +835,8 @@ function wps_media_box_shortcode( $atts, $content = null )
     $img_link_start = $args['image_link'] ? '<a href="'. $args['image_link'] .'">' : '';
     $img_link_end = $args['image_link'] ? '</a>' : '';
 
+    $content = do_shortcode($content);
+
     if ($args['type'] !== '' ) {
 
         $output = "<div class=\"c-mediabox{$class}\"><div class=\"{$type_class}\"><div class=\"{$args['type']}__img\">{$img_link_start}{$symbol}{$img_link_end}</div><div class=\"{$args['type']}__body\">{$content}</div></div></div>";
@@ -841,7 +845,10 @@ function wps_media_box_shortcode( $atts, $content = null )
         $output = "<div class=\"c-mediabox{$class}{$type_spacing}\"><div class=\"c-mediabox__symbol\">{$img_link_start}{$symbol}{$img_link_end}</div>{$content}</div>";
     }
 
-    return $output;
+    $sc_content = wpb_js_remove_wpautop($output,true);
+
+
+    return $sc_content;
 }
 
 /**
