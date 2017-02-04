@@ -153,17 +153,20 @@ $gl-col-bottom: 0;
 
 
 // ELEMENTS
-$inuit-font-size-h1:  36px !default;
-$inuit-font-size-h2:  28px !default;
-$inuit-font-size-h3:  24px !default;
-$inuit-font-size-h4:  20px !default;
-$inuit-font-size-h5:  18px !default;
-$inuit-font-size-h6:  16px !default;
+$inuit-font-size-h1:  36px;
+$inuit-font-size-h2:  28px;
+$inuit-font-size-h3:  24px;
+$inuit-font-size-h4:  20px;
+$inuit-font-size-h5:  18px;
+$inuit-font-size-h6:  16px;
 @import "bower_components/inuitcss/elements/elements.page";
 @import "bower_components/inuitcss/elements/elements.headings";
 @import "project/elements/elements.type";
 @import "project/elements/elements.links";
 @import "project/elements/elements.images";
+@import "project/elements/elements.table";
+@import "project/elements/elements.lists";
+@import "project/elements/elements.form";
 @import "bower_components/inuitcss/elements/elements.tables";
 
 
@@ -173,7 +176,10 @@ $inuit-font-size-h6:  16px !default;
 // OBJECTS
 //
 // Uncomment and add to this section as necessary.
+$inuit-wrapper-width: 1300px;
+$project-wrapper-width-slim: 1000px;
 @import "bower_components/inuitcss/objects/objects.wrapper";
+@import "project/objects/objects.wrapper-extend";
 @import "project/objects/objects.col-inner";
 @import "bower_components/inuitcss/objects/objects.media";
 @import "bower_components/inuitcss/objects/objects.flag";
@@ -184,11 +190,14 @@ $inuit-font-size-h6:  16px !default;
 @import "bower_components/inuitcss/objects/objects.ratio";
 @import "bower_components/inuitcss/objects/objects.crop";
 @import "bower_components/inuitcss/objects/objects.tables";
+@import "project/objects/objects.table-extend";
 //@import "bower_components/inuitcss/objects/objects.pack";
 @import "project/objects/objects.media-flag-responsive";
 @import "project/objects/objects.holder";
 @import "project/objects/objects.responsive-video";
 @import "project/objects/objects.parallax";
+@import "project/objects/objects.card";
+
 
 
 
@@ -221,6 +230,9 @@ $inuit-font-size-h6:  16px !default;
 @import "project/components/components.fancybox";
 @import "project/components/components.mediabox";
 @import "project/components/components.vc-text-block";
+@import "project/components/components.cf7";
+@import "project/components/components.heading";
+
 
 // UTILITIES
 @import "bower_components/inuitcss/utilities/utilities.clearfix";
@@ -239,4 +251,5 @@ $inuit-font-size-h6:  16px !default;
 @import "project/utilities/utilities.backgrounds";
 @import "project/utilities/utilities.video-backgrounds";
 @import "project/utilities/utilities.shadow";
+@import "project/utilities/utilities.borders";
 @import "bower_components/inuitcss/utilities/utilities.print";

@@ -1,0 +1,12 @@
+/*------------------------------------*\
+    #LIST
+\*------------------------------------*/
+
+dl {
+    border: 3px double $color-gray-ui;
+    padding: $inuit-global-spacing-unit-small;
+  }
+  dt {
+    font-weight: 600;
+  }  
+  dd { }

@@ -1,0 +1,18 @@
+/*------------------------------------*\
+    # HEADINGS
+\*------------------------------------*/
+.c-heading{
+
+}
+
+.c-heading--deco:after{
+        content:'';
+        display:block;
+        width:3em;
+        border-bottom:2px solid currentColor;
+        padding-bottom: round($inuit-global-spacing-unit/2);
+}
+.u-text-center .c-heading--deco::after,
+.c-heading--deco.u-text-center::after{
+		margin:0 auto;	
+}

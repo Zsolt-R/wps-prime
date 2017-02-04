@@ -1,9 +1,6 @@
 /*------------------------------------*\
     #COMPONENTS WP-PAGE
 \*------------------------------------*/
-.sticky{
-    border-bottom:3px solid $color-gray-ui;
-}
 
 /*------------------------------------*\
     #PAGE-HEAD
@@ -16,7 +13,7 @@
 }
 
 .brand-logo{
-    @include media-query(palm){
+    @include media-query(palm){    
     display: block;
     }
 }
@@ -44,14 +41,14 @@
 
 .entry-content{
     @include inuit-clearfix();
-    margin-bottom: halve($inuit-global-spacing-unit);
+    margin-bottom: round($inuit-global-spacing-unit/2);
 }
 .entry-title>a{
     font-weight:300;
 }
 .entry-meta-content{
-	margin-bottom: halve($inuit-global-spacing-unit);
-	@include inuit-font-size(12px,1);
+	margin-bottom: round($inuit-global-spacing-unit/2);
+	@include inuit-font-size(14px,1);
 }
 
 .entry-header__entry-title{
@@ -73,7 +70,7 @@
     #NAV LINKS
 \*------------------------------------*/
 .nav-links{
-    padding: halve($inuit-global-spacing-unit) 0;
+    padding: round($inuit-global-spacing-unit/2) 0;
     margin-bottom: $inuit-global-spacing-unit;
    border-top: 1px solid $color-gray-ui;
 }
@@ -85,8 +82,3 @@
 		float:right;
 	}
 }
-
-/*------------------------------------*\
-    #WP EXTRA
-\*------------------------------------*/
-.sticky{}

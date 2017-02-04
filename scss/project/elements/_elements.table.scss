@@ -1,0 +1,20 @@
+/*------------------------------------*\
+    #TABLE
+\*------------------------------------*/
+
+table{
+	caption{
+		background-color: $color-gray-ui;
+		padding: $inuit-global-spacing-unit-small;
+	}
+    th{
+        text-align:left;
+        font-weight:600;
+    }
+    width: 100%;
+    th,
+    td {
+        border: 1px solid $color-gray-ui;
+        padding: $inuit-global-spacing-unit-small;
+    }
+}

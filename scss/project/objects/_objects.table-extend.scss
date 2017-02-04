@@ -1,0 +1,44 @@
+/* ==========================================================================
+   #OBJECT TABLE
+   ========================================================================== */
+
+.table--striped{
+	tr:nth-child(even) {
+		background: $color-body; 		
+	}
+	tr:nth-child(odd) {
+		background: lighten($color-gray-ui,5);		
+	}
+}
+
+.table--rows{
+	&,
+    th,
+    td {
+        border: 0 solid $color-gray-ui;
+    }
+
+    border-top-width: 1px;
+    th,
+    td {
+        border-bottom-width: 1px;
+    }
+}
+
+.table--columns{
+
+	&,
+    th,
+    td {
+        border: 0 solid $color-gray-ui;
+    }
+
+    border-left-width: 1px;
+    
+    th,
+    td {
+        border-right-width: 1px;
+    }
+
+}
+

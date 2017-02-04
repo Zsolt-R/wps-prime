@@ -83,6 +83,9 @@ $color-text-primary:	$color-brand;
 $color-text-secondary:  $color-theme-2;
 $color-text-tertiary:	$color-theme-3;
 
+$color-positive:		$color-theme-6;
+$color-negative:		$color-theme-2;
+
 // Heading colors
 $color-headings:        $color-text;
 
@@ -132,6 +135,10 @@ $color-button-ghost-hover-text:     $color-white;
 $color-button-ghost-l:		    	$color-theme-6;
 $color-button-ghost-l-hover:    	$color-theme-6;
 $color-button-ghost-l-hover-text:   $color-white;
+
+//Cards
+$color-card-bg-1:				$color-gray-ui;
+$color-card-bg-2:				$color-gray-light;
 
 // Code
 $color-text-code:       $color-nephritis;

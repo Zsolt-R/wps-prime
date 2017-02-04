@@ -48,7 +48,7 @@ pre {
 hr {
     border: none;
     border-bottom: 1px solid $color-gray-ui;
-    margin-bottom: $spacing-unit - 1px;
+    margin-bottom: $inuit-global-spacing-unit - 1px;
 }
 
 
@@ -71,4 +71,35 @@ mark {
         color: inherit;
     }
 
+}
+
+/**
+* Blockquote
+*/
+blockquote{      
+    font-style: italic;  
+    position: relative;     
+    padding:$inuit-global-spacing-unit $inuit-global-spacing-unit*1.5;
+    // border-top:1px solid $color-gray-ui;
+    // border-bottom:1px solid $color-gray-ui;
+
+        &:after,
+        &:before{
+            font-style: normal;  
+            @include inuit-font-size(32px,1);
+            content:'"';
+            color:$color-gray-ui;
+            position: absolute;                    
+            font-weight:900;
+            display:inline-block;    
+        }
+        &:before{
+            top:round($inuit-global-spacing-unit/2);
+            left:0.3em;  
+        }
+        &:after{
+            bottom:0;
+            right:0.3em;  
+        }
+    p{ margin-bottom:0; }
 }

@@ -76,13 +76,13 @@
 .u-text-large{
     @include inuit-font-size(28px);
     @include media-query(lap-and-up){
-        @include inuit-font-size(32px);
+        @include inuit-font-size(48px);
     }
 }   
 
 .u-text-huge{
     @include inuit-font-size(42px);
     @include media-query(lap-and-up){
-        @include inuit-font-size(48px);
+        @include inuit-font-size(84px);
     }
 }

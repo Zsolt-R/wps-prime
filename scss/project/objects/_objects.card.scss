@@ -1,0 +1,24 @@
+/*------------------------------------*\
+    #OBJECTS CARD
+\*------------------------------------*/
+
+.o-card{
+	@include box-shadow(0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19));		
+}
+
+.o-card--hover{
+    position: relative;
+	transition: box-shadow .5s ease;
+	&:hover{
+	z-index: 1; // raise object to allow casting shadow over siblings (most visible on mobile)
+	@include box-shadow(0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22));
+	}
+}
+
+.o-card--background-one{
+	background-color:$color-card-bg-1;
+
+}
+.o-card--background-one{
+	background-color:$color-card-bg-2;
+}
