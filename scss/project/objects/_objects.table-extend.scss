@@ -2,17 +2,17 @@
    #OBJECT TABLE
    ========================================================================== */
 
-.table--striped{
-	tr:nth-child(even) {
-		background: $color-body; 		
-	}
-	tr:nth-child(odd) {
-		background: lighten($color-gray-ui,5);		
-	}
+.o-table--striped{
+    tr:nth-child(even) {
+        background: $color-body;        
+    }
+    tr:nth-child(odd) {
+        background: lighten($color-gray-ui,5);      
+    }
 }
 
-.table--rows{
-	&,
+.o-table--rows{
+    &,
     th,
     td {
         border: 0 solid $color-gray-ui;
@@ -25,9 +25,9 @@
     }
 }
 
-.table--columns{
+.o-table--columns{
 
-	&,
+    &,
     th,
     td {
         border: 0 solid $color-gray-ui;
