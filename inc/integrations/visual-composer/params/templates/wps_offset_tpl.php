@@ -39,7 +39,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				</td>
 				<td>
 					<label>
-						<input type="checkbox" name="<?php echo str_replace('_','u-',$key); ?>-hide" value="yes"<?php echo in_array( str_replace('_','u-',$key) . '-hide', $data ) ? ' checked="true"' : '' ?>
+						<input type="checkbox" name="<?php echo str_replace('_','u-',$key); ?>hide" value="yes"<?php echo in_array( str_replace('_','u-',$key) . 'hide', $data ) ? ' checked="true"' : '' ?>
 						       class="wps_vc_column_offset_field">
 					</label>
 				</td>
