@@ -1,22 +1,10 @@
-.wpcf7--cta{
-	input, select, textarea, {
-    max-width: 100%;
-    width: 100%;
-	}
-	p{
-		margin-bottom: 0;
-	}
-	.wpcf7-file {
+/*------------------------------------*\
+    #COMPONENT CONTACT FORM 7
+\*------------------------------------*/
+
+.wpcf7-file {
 	@include inuit-font-size(12px);
-	}
-	input[type=submit]{
-		border: 0;
-		width:auto;
-	}
 }
-.req:before{
-	content:'*';
-	color:$color-negative;
-	font-weight: 900;
-	margin-left:-0.785em;
+.wpcf7-form-control-wrap{
+	 @include inuit-clearfix();
 }
