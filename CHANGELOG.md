@@ -5,6 +5,7 @@
 * Remove cf7 deregister script function
 * Extend css styling & SASS components
 * Move theme options under Appereance admin menu
+* Fix hiden css style and VC parameter output
 
 #### v.1.1.3
 * Make Modify Comment form text area function pluggable
