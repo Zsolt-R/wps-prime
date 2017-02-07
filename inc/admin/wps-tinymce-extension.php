@@ -150,6 +150,21 @@ if(!function_exists('wps_custom_editor_formats')){
 	                )  
 	            )
 	        ),
+			array(
+	            'title' => 'Font Family',
+	                'items' => array(
+	                array(
+	                    'title'=> 'Body font',
+	                    'selector' => 'span, p, h1, h2, h3, h4, h5, h6',                   
+	                    'classes'  => 'u-font-one'
+	                ),	               
+	                array(
+	                    'title' => 'Heading font',
+	                    'selector' => 'span, p, h1, h2, h3, h4, h5, h6',                     
+	                    'classes' => 'u-font-two'
+	                )  
+	            )
+	        ),
 	        array(
 	            'title' => 'Margins',
 	                'items' => array(

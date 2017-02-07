@@ -143,7 +143,7 @@ function optionsframework_options() {
 
 	$options[] = array(
 		'name' => __( 'Heading Font', 'wps-prime' ),
-		'desc' => __( 'Set different font family for headings.  This option has performance impact.', 'wps-prime' ),
+		'desc' => __( 'Set different font family for headings.  This option has performance impact. You can also use this font by adding "u-font-two" css class on a text.', 'wps-prime' ),
 		'id' => 'second_font_family_status',
 		'std' => '0',
 		'type' => 'checkbox'
@@ -155,6 +155,14 @@ function optionsframework_options() {
 		'id' => 'secondary_font_family',
 		'type' => 'select',
 		'options' => $fonts->get_fonts_name()
+	);
+
+	$options[] = array(
+		'name' => __( 'Navigation Font', 'wps-prime' ),
+		'desc' => __( 'Set heading font family for navigation.', 'wps-prime' ),
+		'id' => 'nav_custom_font',
+		'std' => '0',
+		'type' => 'checkbox'
 	);
 
 	/**

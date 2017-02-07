@@ -27,3 +27,13 @@ function add_theme_fonts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'add_theme_fonts', 99 ); // Add last in style chain.
+
+
+function filter_handler( $classes ){ 	
+
+	// Custom Navigation font	
+	if ( wps_get_theme_option( 'nav_custom_font' ) ) $classes[] = 'u-font-two';
+	
+	return $classes;
+}
+add_filter( 'nav_menu_css_class', 'filter_handler', 10, 4 ); 

@@ -6,6 +6,8 @@
 * Extend css styling & SASS components
 * Move theme options under Appereance admin menu
 * Fix hiden css style and VC parameter output
+* Extend font family options
+* Add font family control to wp editor
 
 #### v.1.1.3
 * Make Modify Comment form text area function pluggable
@@ -32,8 +34,5 @@
 * Organize Row | Inner Row VC options UI
 * Added row/inner_row background image positioning ( top left | top center ...)
 * Added row/inner_row background image behaviour (no-repeat | cover | contain)
-<<<<<<< HEAD
 * Allow shortcode execution in widget title
-=======
 * Allow shortcode execution in widget title
->>>>>>> deaf7ad076e2c7cd5cda7fd7d94ac4ea76db90ed

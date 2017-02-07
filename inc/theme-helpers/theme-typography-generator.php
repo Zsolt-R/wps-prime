@@ -166,10 +166,10 @@ class WpsGetThemeFonts{
 
 		$font_second_status = wps_get_theme_option( 'second_font_family_status' ) ? true : false;
 
-		$select_b = 'html,body,.font-body';
-		$select_h = 'h1,h2,h3,h4,h5,h6,.font-heading';
-		$font_one =	'.font-one';
-		$font_two = '.font-two';
+		$select_b = 'html,body,.u-font-body';
+		$select_h = 'h1,h2,h3,h4,h5,h6,.u-font-heading';
+		$font_one =	'.u-font-one';
+		$font_two = '.u-font-two';
 
 		$style = '';
 
