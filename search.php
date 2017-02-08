@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-	<section id="primary" <?php echo main_class(); ?>>
+	<section id="primary" <?php echo wps_main_content_class(); ?>>
 		<main id="main" class="site-main" role="main">
 
 		<?php

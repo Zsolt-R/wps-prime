@@ -1,11 +1,11 @@
 <?php
-function wpb_mce_buttons_2($buttons) {
+function wps_mce_custom_buttons($buttons) {
 
     array_unshift($buttons, 'styleselect');
     return $buttons;
 
 }
-add_filter('mce_buttons_2', 'wpb_mce_buttons_2');
+add_filter('mce_buttons_2', 'wps_mce_custom_buttons');
 
 
 if(!function_exists('wps_custom_editor_formats')){

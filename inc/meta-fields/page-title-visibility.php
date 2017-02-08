@@ -4,13 +4,13 @@
 */
 
 
-add_action('admin_init', 'page_title_custom_meta_box_settings');
+add_action('admin_init', 'wps_page_title_custom_meta_box_settings');
  
-function page_title_custom_meta_box_settings(){
-    add_meta_box('wps_title_settings', __('Page title settings', 'wps-prime') , 'page_title_settings', 'page' , 'side');
+function wps_page_title_custom_meta_box_settings(){
+    add_meta_box('wps_title_settings', __('Page title settings', 'wps-prime') , 'wps_page_title_settings', 'page' , 'side');
     }
  
-function page_title_settings($post){
+function wps_page_title_settings($post){
 
     // The nonce field is used to validate that the contents of the form request came from the current site and not somewhere else
     // https://codex.wordpress.org/Function_Reference/wp_nonce_field
@@ -24,8 +24,8 @@ function page_title_settings($post){
     }
 
 
-add_action('save_post', 'page_title_settings_save_postdata');
-function page_title_settings_save_postdata( $post_id ){
+add_action('save_post', 'wps_page_title_settings_save_postdata');
+function wps_page_title_settings_save_postdata( $post_id ){
     if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) 
             return;
 

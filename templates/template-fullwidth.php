@@ -6,7 +6,7 @@
  */
 
 get_header(); ?>
-<div id="primary" <?php echo main_class(); ?> data-ui-components="content-area">
+<div id="primary" <?php echo wps_main_content_class(); ?>>
         <main id="main" class="site-main" role="main">
         <?php if ( have_posts() ) : ?>
 

@@ -12,6 +12,6 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 }
 ?>
 
-<aside id="secondary" <?php echo sidebar_class(); ?> role="complementary">
+<aside id="secondary" <?php echo wps_main_sidebar_class(); ?> role="complementary">
 	<?php dynamic_sidebar( 'sidebar-1' ); ?>
 </aside><!-- #secondary -->

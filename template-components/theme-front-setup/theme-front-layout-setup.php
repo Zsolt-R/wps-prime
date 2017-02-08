@@ -10,9 +10,9 @@
 /**
  * Header Class
  */
-add_filter( 'site_header_class', 'site_main_header' );
+add_filter( 'wps_site_header_class', 'wps_site_main_header' );
 
-if ( ! function_exists( 'site_main_header' ) ) {
+if ( ! function_exists( 'wps_site_main_header' ) ) {
 
 	/**
 	 * Setting for theme header layout left area
@@ -20,7 +20,7 @@ if ( ! function_exists( 'site_main_header' ) ) {
 	 * @param array $classes Storred css classes.
 	 * @return array
 	 */
-	function site_main_header( $classes ) {
+	function wps_site_main_header( $classes ) {
 
 		$classes[] = 'site-header';
 		return $classes;
@@ -30,9 +30,9 @@ if ( ! function_exists( 'site_main_header' ) ) {
 /**
  * Header layout left Classes
  */
-add_filter( 'header_layout_left_class', 'header_layout_left' );
+add_filter( 'wps_header_layout_left_class', 'wps_header_layout_left' );
 
-if ( ! function_exists( 'header_layout_left' ) ) {
+if ( ! function_exists( 'wps_header_layout_left' ) ) {
 
 	/**
 	 * Setting for theme header layout left area
@@ -40,7 +40,7 @@ if ( ! function_exists( 'header_layout_left' ) ) {
 	 * @param array $classes Storred css classes.
 	 * @return array
 	 */
-	function header_layout_left( $classes ) {
+	function wps_header_layout_left( $classes ) {
 
 		$classes[] = 'col';
 		$classes[] = '_palm-8';
@@ -52,9 +52,9 @@ if ( ! function_exists( 'header_layout_left' ) ) {
 /**
  * Header layout right Classes
  */
-add_filter( 'header_layout_right_class', 'header_layout_right' );
+add_filter( 'wps_header_layout_right_class', 'wps_header_layout_right' );
 
-if ( ! function_exists( 'header_layout_right' ) ) {
+if ( ! function_exists( 'wps_header_layout_right' ) ) {
 
 	/**
 	 * Setting for theme header layout right area
@@ -62,7 +62,7 @@ if ( ! function_exists( 'header_layout_right' ) ) {
 	 * @param array $classes Storred css classes.
 	 * @return array
 	 */
-	function header_layout_right( $classes ) {
+	function wps_header_layout_right( $classes ) {
 
 		$classes[] = 'col';
 		$classes[] = '_palm-4';
@@ -74,9 +74,9 @@ if ( ! function_exists( 'header_layout_right' ) ) {
 /**
  * Main Content Area Classes
  */
-add_filter( 'main_class', 'main_layout' );
+add_filter( 'wps_main_content_class', 'wps_main_layout' );
 
-if ( ! function_exists( 'main_layout' ) ) {
+if ( ! function_exists( 'wps_main_layout' ) ) {
 
 	/**
 	 * Setting for id="primary"
@@ -84,7 +84,7 @@ if ( ! function_exists( 'main_layout' ) ) {
 	 * @param array $classes Storred css classes.
 	 * @return array
 	 */
-	function main_layout( $classes ) {
+	function wps_main_layout( $classes ) {
 
 		global $wp_query, $wpdb;
 
@@ -118,9 +118,9 @@ if ( ! function_exists( 'main_layout' ) ) {
 /**
  * Sidebar Area Classes
  */
-add_filter( 'sidebar_class', 'sidebar_layout' );
+add_filter( 'wps_main_sidebar_class', 'wps_sidebar_layout' );
 
-if ( ! function_exists( 'sidebar_layout' ) ) {
+if ( ! function_exists( 'wps_sidebar_layout' ) ) {
 
 	/**
 	 * Setting for id="secondary"
@@ -128,7 +128,7 @@ if ( ! function_exists( 'sidebar_layout' ) ) {
 	 * @param array $classes Storred css classes.
 	 * @return array
 	 */
-	function sidebar_layout( $classes ) {
+	function wps_sidebar_layout( $classes ) {
 
 		// Add 'class-name' to the $classes array!
 		$classes[] = 'col';
@@ -143,9 +143,9 @@ if ( ! function_exists( 'sidebar_layout' ) ) {
 /**
 *	Main Site Content class
 */
-add_filter( 'site_content_class', 'site_content_layout' );
+add_filter( 'wps_site_content_class', 'wps_site_content_layout' );
 
-if ( ! function_exists( 'site_content_layout' ) ) {
+if ( ! function_exists( 'wps_site_content_layout' ) ) {
 
 	/**
 	 * Setting for id="content"
@@ -153,7 +153,7 @@ if ( ! function_exists( 'site_content_layout' ) ) {
 	 * @param array $classes Storred css classes.
 	 * @return array
 	 */
-	function site_content_layout( $classes ) {
+	function wps_site_content_layout( $classes ) {
 
 		// Add 'class-name' to the $classes array!
 		$classes[] = 'site-content';
@@ -167,9 +167,9 @@ if ( ! function_exists( 'site_content_layout' ) ) {
 /**
  * Theme footer default class
  */
-add_filter( 'site_footer_class','site_footer_layout' );
+add_filter( 'wps_site_footer_class','wps_site_footer_layout' );
 
-if ( ! function_exists( 'site_footer_layout' ) ) {
+if ( ! function_exists( 'wps_site_footer_layout' ) ) {
 
 	/**
 	 * Setting for id="colophon"
@@ -177,7 +177,7 @@ if ( ! function_exists( 'site_footer_layout' ) ) {
 	 * @param array $classes Storred css classes.
 	 * @return array
 	 */
-	function site_footer_layout( $classes ) {
+	function wps_site_footer_layout( $classes ) {
 
 		// Add 'class-name' to the $classes array!
 		$classes[] = 'site-footer';
@@ -194,14 +194,14 @@ if ( ! function_exists( 'site_footer_layout' ) ) {
 /**
  * HTML Page Content Wrappers.
  */
-add_action( 'content_start' , 'page_top',0 );
+add_action( 'wps_content_start' , 'wps_page_top',0 );
 
-if ( ! function_exists( 'page_top' ) ) {
+if ( ! function_exists( 'wps_page_top' ) ) {
 
 	/**
 	 * Add page wrapper html element
 	 */
-	function page_top() {
+	function wps_page_top() {
 
 		global $wp_query, $wpdb;
 
@@ -218,14 +218,14 @@ if ( ! function_exists( 'page_top' ) ) {
 /**
  * HTML Page Content Wrappers.
  */
-add_action( 'content_end' , 'page_end',0 );
+add_action( 'wps_content_end' , 'wps_page_end',0 );
 
-if ( ! function_exists( 'page_end' ) ) {
+if ( ! function_exists( 'wps_page_end' ) ) {
 
 	/**
 	 * Add page wrapper html element
 	 */
-	function page_end() {
+	function wps_page_end() {
 
 		global $wp_query, $wpdb;
 
@@ -242,9 +242,9 @@ if ( ! function_exists( 'page_end' ) ) {
 /**
  * Theme Main nav default class
  */
-add_filter( 'main_nav_class','theme_main_nav_class' );
+add_filter( 'wps_site_nav_class','wps_theme_main_nav_class' );
 
-if ( ! function_exists( 'theme_main_nav_class' ) ) {
+if ( ! function_exists( 'wps_theme_main_nav_class' ) ) {
 
 	/**
 	 * Theme Main nav default class
@@ -252,7 +252,7 @@ if ( ! function_exists( 'theme_main_nav_class' ) ) {
 	 * @param array $classes Holds the classes of the main navigation.
 	 * @return array
 	 */
-	function theme_main_nav_class( $classes ) {
+	function wps_theme_main_nav_class( $classes ) {
 		$classes[] = 'site-nav';
 		return $classes;
 	}
@@ -261,9 +261,9 @@ if ( ! function_exists( 'theme_main_nav_class' ) ) {
 /**
  * Theme Main mobile nav default class
  */
-add_filter( 'main_mobile_nav_class','theme_main_mobile_nav_class' );
+add_filter( 'wps_site_mobile_nav_class','wps_theme_main_mobile_nav_class' );
 
-if ( ! function_exists( 'theme_main_mobile_nav_class' ) ) {
+if ( ! function_exists( 'wps_theme_main_mobile_nav_class' ) ) {
 
 	/**
 	 * Theme Main nav default class
@@ -271,23 +271,23 @@ if ( ! function_exists( 'theme_main_mobile_nav_class' ) ) {
 	 * @param array $classes Holds the classes of the main navigation.
 	 * @return array
 	 */
-	function theme_main_mobile_nav_class( $classes ) {
+	function wps_theme_main_mobile_nav_class( $classes ) {
 		$classes[] = 'site-nav-mobile';
 		return $classes;
 	}
 }
 
 /* Title Visibility */
-add_filter('body_class','theme_page_title_visibility_body_class');
+add_filter('body_class','wps_theme_page_title_visibility_body_class');
 
-if ( ! function_exists( 'theme_page_title_visibility_body_class' ) ) {
+if ( ! function_exists( 'wps_theme_page_title_visibility_body_class' ) ) {
 
 	/**
 	 * Function to add body class based on page meta option "Show/Hide" Title
 	 *
 	 * @param array $classes Holds all the body classes in an array.
 	 */
-	function theme_page_title_visibility_body_class($classes){
+	function wps_theme_page_title_visibility_body_class($classes){
 		
 				
 		if(is_page()){
@@ -312,12 +312,12 @@ if ( ! function_exists( 'theme_page_title_visibility_body_class' ) ) {
 */
 
 /* Add content margin setting */
-add_filter('site_content_class','theme_page_margin_setup');
-add_filter('post_class','theme_page_margin_setup');
+add_filter('wps_site_content_class','wps_theme_page_margin_setup');
+add_filter('wps_post_class','wps_theme_page_margin_setup');
 
-if ( ! function_exists( 'theme_page_margin_setup' ) ) {
+if ( ! function_exists( 'wps_theme_page_margin_setup' ) ) {
 
-	function theme_page_margin_setup($classes){
+	function wps_theme_page_margin_setup($classes){
 						
 		if(is_page()){
 		
@@ -346,11 +346,11 @@ if ( ! function_exists( 'theme_page_margin_setup' ) ) {
 *	Body reference class for info purposes ( or you can hook into the class if needed )
 */
 
-add_filter('body_class','theme_page_spacing_body_classes');
+add_filter('body_class','wps_theme_page_spacing_body_classes');
 
-if ( ! function_exists( 'theme_page_spacing_body_classes' ) ) {
+if ( ! function_exists( 'wps_theme_page_spacing_body_classes' ) ) {
 
-	function theme_page_spacing_body_classes($classes){	
+	function wps_theme_page_spacing_body_classes($classes){	
 				
 		if(is_page()){
 		

@@ -20,17 +20,17 @@
 </head>
 
 <body <?php body_class(); ?>>
-<?php body_start();?>
+<?php wps_body_start();?>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'wps-prime' ); ?></a>
-	<?php before_header(); ?>
+	<?php wps_before_header(); ?>
 
-	<header id="masthead"<?php echo site_header_class(); ?> role="banner">
-	<?php mast_head_start(); ?>
-	<div class="o-wrapper"><div class="grid-1 grid-middle"><?php theme_header(); ?></div><!--grid--></div><!--o-wrapper-->
-	<?php mast_head_end(); ?>
+	<header id="masthead"<?php echo wps_site_header_class(); ?> role="banner">
+	<?php wps_mast_head_start(); ?>
+	<div class="o-wrapper"><div class="grid-1 grid-middle"><?php wps_theme_header(); ?></div><!--grid--></div><!--o-wrapper-->
+	<?php wps_mast_head_end(); ?>
 	</header><!-- #masthead -->
-	<?php after_header(); ?>
-	<?php before_content(); ?>
-	<div id="content"<?php echo site_content_class(); ?>>
-	<?php content_start(); ?>
+	<?php wps_after_header(); ?>
+	<?php wps_before_content(); ?>
+	<div id="content"<?php echo wps_site_content_class(); ?>>
+	<?php wps_content_start(); ?>

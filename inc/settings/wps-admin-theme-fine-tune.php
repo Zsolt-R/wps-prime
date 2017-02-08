@@ -54,9 +54,9 @@ function wp_remove_version() {  return '';  }
  * @return array
  *
  */
-add_filter( 'comment_form_defaults', 'remove_comment_form_allowed_tags' );
+add_filter( 'comment_form_defaults', 'wps_remove_comment_form_allowed_tags' );
 
-function remove_comment_form_allowed_tags( $defaults ) {
+function wps_remove_comment_form_allowed_tags( $defaults ) {
 	$defaults['comment_notes_after'] = '';
 	return $defaults;
 }
@@ -68,11 +68,11 @@ function remove_comment_form_allowed_tags( $defaults ) {
  * @param array $fields All the parameters of the comment form fields.
  * @return array
  */
-add_filter( 'comment_form_default_fields','modify_comment_form_fields' );
+add_filter( 'comment_form_default_fields','wps_modify_comment_form_fields' );
 
-if(!function_exists('modify_comment_form_fields')){
+if(!function_exists('wps_modify_comment_form_fields')){
 
-	function modify_comment_form_fields( $fields ) {
+	function wps_modify_comment_form_fields( $fields ) {
 
 		// Setup Variables.
 		$commenter = wp_get_current_commenter();
@@ -115,11 +115,11 @@ if(!function_exists('modify_comment_form_fields')){
  * @param array $args All the comment form html elements.
  * @return array
  */
-add_filter( 'comment_form_defaults', 'customize_comment_form_text_area' );
+add_filter( 'comment_form_defaults', 'wps_customize_comment_form_text_area' );
 
-if(!function_exists('customize_comment_form_text_area')){
+if(!function_exists('wps_customize_comment_form_text_area')){
 
-	function customize_comment_form_text_area( $args ) {
+	function wps_customize_comment_form_text_area( $args ) {
 		$args['comment_field'] = '<p class="comment-form-comment"><label for="comment" class="comment-form__label">' . _x( 'Comment', '', 'wps-prime' ) . '</label><textarea id="comment" class="comment-form__field" name="comment" placeholder="' . _x( 'Your Feedback Is Appreciated', '', 'wps-prime' ) . '"cols="45" rows="5" aria-required="true"></textarea></p>';
 		return $args;
 	}
@@ -137,9 +137,9 @@ if(!function_exists('customize_comment_form_text_area')){
  * @return string $content Amended string of HTML content.
  */
 
-add_filter( 'the_content', 'remove_empty_tags_around_shortcodes' );
+add_filter( 'the_content', 'wps_remove_empty_tags_around_shortcodes' );
 
-function remove_empty_tags_around_shortcodes( $content ) {
+function wps_remove_empty_tags_around_shortcodes( $content ) {
 	$tags = array(
 		'<p>[' => '[',
 		']</p>' => ']',
@@ -250,10 +250,10 @@ function wps_prime_disable_wp_styles() {
  * Disable WP default emoji
  */
 if ( wps_get_theme_option( 'front_emoji_use' ) ) {
-	add_action( 'init','disable_wp_emojicons' );
+	add_action( 'init','wps_disable_wp_emojicons' );
 }
 
-function disable_wp_emojicons() {
+function wps_disable_wp_emojicons() {
 
 	// all actions related to emojis
 	remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
@@ -265,10 +265,10 @@ function disable_wp_emojicons() {
 	remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
 
 	// filter to remove TinyMCE emojis
-	add_filter( 'tiny_mce_plugins', 'disable_emojicons_tinymce' );
+	add_filter( 'tiny_mce_plugins', 'wps_disable_emojicons_tinymce' );
 
 	// remove the DNS prefetch by returning false on filter emoji_svg_url 
-	add_filter( 'wp_resource_hints', 'disable_emojis_remove_dns_prefetch', 10, 2 );
+	add_filter( 'wp_resource_hints', 'wps_disable_emojis_remove_dns_prefetch', 10, 2 );
 }
 
 /**
@@ -277,7 +277,7 @@ function disable_wp_emojicons() {
  * Settinmg controlled by option 11
  */
 
-function disable_emojicons_tinymce( $plugins ) {
+function wps_disable_emojicons_tinymce( $plugins ) {
 	if ( is_array( $plugins ) ) {
 		return array_diff( $plugins, array( 'wpemoji' ) );
 	} else {
@@ -289,7 +289,7 @@ function disable_emojicons_tinymce( $plugins ) {
  * 12.1
  * Remove emoji CDN hostname from DNS prefetching hints.
  */
-function disable_emojis_remove_dns_prefetch( $urls, $relation_type ) {
+function wps_disable_emojis_remove_dns_prefetch( $urls, $relation_type ) {
 	if ( 'dns-prefetch' == $relation_type ) {
 		/** This filter is documented in wp-includes/formatting.php */
 		$emoji_svg_url = apply_filters( 'emoji_svg_url', 'https://s.w.org/images/core/emoji/2.2.1/svg/' );
@@ -306,10 +306,10 @@ function disable_emojis_remove_dns_prefetch( $urls, $relation_type ) {
  */
 
 if ( wps_get_theme_option( 'disable_comment_url' ) ) {
-	add_filter('comment_form_default_fields','unset_url_field_in_comment');
+	add_filter('comment_form_default_fields','wps_unset_url_field_in_comment');
 }
 
-function unset_url_field_in_comment( $fields ){
+function wps_unset_url_field_in_comment( $fields ){
 	if ( isset( $fields['url'] ) ) { unset( $fields['url'] ); }
 	return $fields;
 }

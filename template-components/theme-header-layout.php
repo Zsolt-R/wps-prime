@@ -10,23 +10,23 @@
 /**
  * Site header Layout
  */
-if ( ! function_exists( 'layout_header' ) ) :
-	function layout_header() {
+if ( ! function_exists( 'wps_layout_header' ) ) :
+	function wps_layout_header() {
 	
 		/**
 		 * If hook doesn't has action hide the html
 		 */
-		if ( has_action( 'theme_header_left' ) === true ) {
+		if ( has_action( 'wps_theme_header_left' ) === true ) {
 	
-			echo '<div'. header_layout_left_class() .'>';
-				theme_header_left();
+			echo '<div'. wps_header_layout_left_class() .'>';
+				wps_theme_header_left();
 			echo '</div>';
 		}
 	
-		if ( has_action( 'theme_header_right' ) === true ) {
+		if ( has_action( 'wps_theme_header_right' ) === true ) {
 	
-			echo '<div'. header_layout_right_class() .'>';
-				theme_header_right();
+			echo '<div'. wps_header_layout_right_class() .'>';
+				wps_theme_header_right();
 			echo '</div>';
 		}
 	}

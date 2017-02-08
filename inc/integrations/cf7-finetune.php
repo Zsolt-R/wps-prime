@@ -8,7 +8,7 @@
 /**
  * Disable styles
  */
-function disable_contact7_styles() 
+function wps_disable_contact7_styles() 
 {
     wp_dequeue_style('contact-form-7');
     wp_dequeue_style('contact-form-7-rtl');
@@ -40,7 +40,7 @@ function wps_wpcf7_form_elements( $form )
 if (function_exists('wpcf7_contact_form') ) {
 
     // Deregister Contact From 7 default Styles.
-    add_action('wp_enqueue_scripts', 'disable_contact7_styles');
+    add_action('wp_enqueue_scripts', 'wps_disable_contact7_styles');
     add_filter('wpcf7_ajax_loader', 'wps_custom_wpcf7_ajax_loader');
     add_filter('wpcf7_form_elements', 'wps_wpcf7_form_elements');
 

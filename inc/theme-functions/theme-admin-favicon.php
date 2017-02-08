@@ -5,14 +5,14 @@
  * @package wps_prime
  */
 
-add_action( 'wp_head','get_favicon' );
-add_action( 'admin_head','get_favicon' );
-add_action( 'admin_init','update_favicon');
+add_action( 'wp_head','wps_get_favicon' );
+add_action( 'admin_head','wps_get_favicon' );
+add_action( 'admin_init','wps_update_favicon');
 
 /**
  * Set favicon link in transient
  */
-function set_favicon() {
+function wps_set_favicon() {
 
 	// Check if ico exist.
 	$icon_path = get_stylesheet_directory() .'/favicon.ico';	
@@ -32,7 +32,7 @@ function set_favicon() {
 /*
  * Update favicon transient
  */
-function update_favicon(){
+function wps_update_favicon(){
 
 	$reset = isset($_GET["settings-updated"]) ? false : true;
 
@@ -42,14 +42,14 @@ function update_favicon(){
 		delete_transient( 'site_favicon' );	
 	
 		// Store favico link in transient.
-		return set_favicon();
+		return wps_set_favicon();
 	}
 }
 
 /**
  *	Retrieve function for favicon.
  */
-function get_favicon(){
+function wps_get_favicon(){
 
 	$favicon = get_transient('site_favicon');
 	

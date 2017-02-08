@@ -11,12 +11,12 @@
  * Site footer closing data line
  */
 
-if ( ! function_exists( 'footer_micro' ) ) {
+if ( ! function_exists( 'wps_footer_micro' ) ) {
 
    	/**
      * Site footer closing data line
      */
-    function footer_micro() {
+    function wps_footer_micro() {
     
         $date = wps_get_theme_option( 'company_launch_date' ) ? wps_get_theme_option( 'company_launch_date' ) : '';
     

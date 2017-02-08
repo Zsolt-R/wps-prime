@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-	<div id="primary" <?php echo main_class(); ?>>
+	<div id="primary" <?php echo wps_main_content_class(); ?>>
 		<main id="main" class="site-main" role="main">
 
 		<?php wps_get_theme_option('404_custom_page_use', true); ?>

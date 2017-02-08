@@ -14,7 +14,7 @@
 
 get_header(); ?>
 
-	<div id="primary" <?php echo main_class(); ?>>
+	<div id="primary" <?php echo wps_main_content_class(); ?>>
 		<main id="main" class="site-main" role="main">
 
 			<?php

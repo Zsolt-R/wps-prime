@@ -10,14 +10,14 @@
  */
 
 ?>
-	<?php content_end();?>
+	<?php wps_content_end();?>
 	</div><!-- #content -->
 
-    <?php after_content(); ?>
+    <?php wps_after_content(); ?>
 
-	<?php before_footer(); ?>
+	<?php wps_before_footer(); ?>
 
-    <footer id="colophon" <?php echo site_footer_class(); ?> role="contentinfo">
+    <footer id="colophon" <?php echo wps_site_footer_class(); ?> role="contentinfo">
     
     	<div class="o-wrapper">
     		<?php get_sidebar( 'footer' );?>
@@ -25,7 +25,7 @@
 
 	</footer><!-- #colophon -->
 
-	<?php after_footer(); ?>
+	<?php wps_after_footer(); ?>
 
 </div><!-- #page -->
 

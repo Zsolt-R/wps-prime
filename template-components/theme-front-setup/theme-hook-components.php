@@ -9,68 +9,68 @@
 
 /**
  *  BODY Hooks
- *  - body_start
+ *  - wps_body_start
  *    ....
- *  - wp_footer
+ *  - wps_wp_footer
  *
  *  HEADER Hooks layout
  *
- *  - before_header
- *  - mast_head_start
- *   	- theme_header
- *   	  - header-left
- *   	  - header-right
- *	- mast_head_start
- *  - after_header
- *  - before_content
+ *  - wps_before_header
+ *  - wps_mast_head_start
+ *   	- wps_theme_header
+ *   	  - wps_header-left
+ *   	  - wps_header-right
+ *	- wps_mast_head_start
+ *  - wps_after_header
+ *  - wps_before_content
  *
  *  MAIN CONTENT Hooks layout
  *
- *   - content_start
- *   - content_end
+ *   - wps_content_start
+ *   - wps_content_end
  *
  *  MAIN SIDEBAR Hooks layout
  *
  *
  *
- *  - after_content
+ *  - wps_after_content
  *
  *  FOOTER Hooks layout
  *
- *   - before_footer
- *   - after_footer
+ *   - wps_before_footer
+ *   - wps_after_footer
  */
 
 /**
  * Hook Header Layout to theme header
  */
-add_action( 'theme_header', 'layout_header' );
+add_action( 'wps_theme_header', 'wps_layout_header' );
 
 /**
  * Hook logo To theme_header_left
  */
-add_action( 'theme_header_left', 'theme_site_logo' );
+add_action( 'wps_theme_header_left', 'wps_theme_site_logo' );
 
 /**
  * Hook Menu To theme_header_right
  * Modified by filter and removed on custom page template
  * See: add_filter('body_start','conditional_remove_site_nav');
  */
-add_action( 'theme_header_right', 'main_site_mobile_nav_toggler' );
-add_action( 'theme_header_right', 'main_site_nav' );
-add_action( 'after_header', 'main_site_nav_mobile' );
+add_action( 'wps_theme_header_right', 'wps_main_site_mobile_nav_toggler' );
+add_action( 'wps_theme_header_right', 'wps_main_site_nav' );
+add_action( 'wps_after_header', 'wps_main_site_nav_mobile' );
 
 /**
  * Page pre content 
  */
-add_action('before_content','theme_page_pre_content' );
+add_action('wps_before_content','wps_theme_page_pre_content' );
 
 /**
  * Add Global Content Object 
  */
-add_action( 'before_footer', 'theme_global_content_area' );
+add_action( 'wps_before_footer', 'wps_theme_global_content_area' );
 
 /**
  *  Footer Parts
  */
-add_action( 'after_footer','footer_micro' );
+add_action( 'wps_after_footer','wps_footer_micro' );

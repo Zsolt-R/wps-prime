@@ -12,7 +12,7 @@ add_image_size( 'wps_prime_medium', 360, 200, true );
 add_image_size( 'wps_prime_full', 1052, 350, array( 'center', 'center' ) );
 
 // Show at insertion.
-add_filter( 'image_size_names_choose', 'custom_image_sizes_choose' );
+add_filter( 'image_size_names_choose', 'wps_custom_image_sizes_choose' );
 
 /**
  * Add image sizes to content insert image size list
@@ -20,7 +20,7 @@ add_filter( 'image_size_names_choose', 'custom_image_sizes_choose' );
  * @param array $sizes Image sizes array.
  * @return array
  */
-function custom_image_sizes_choose( $sizes ) {
+function wps_custom_image_sizes_choose( $sizes ) {
 	$custom_sizes = array(
 
 		'wps_prime_medium' => 'WPS Medium',

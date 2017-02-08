@@ -15,7 +15,7 @@
  * @param string $filter_name Filter function name.
  * @return array
  */
-function get_css_class( $class = '', $filter_name = '' ) {
+function wps_get_css_class( $class = '', $filter_name = '' ) {
 
 	$classes = array();
 
@@ -50,71 +50,12 @@ function get_css_class( $class = '', $filter_name = '' ) {
  *
  * @param array $class CSS Classes for element.
  */
-function site_header_class( $class = '' ) {
+function wps_site_header_class( $class = '' ) {
 
-	$classes = join( ' ', get_css_class( $class, 'site_header_class' ) );
-
-	return ' class="' . esc_attr( $classes ) . '"';
-}
-
-
-/**
- * Theme main navigation css class function
- * Separates classes with a single space, collates classes for element
- *
- * @param array|string $class CSS Classes for element.
- * @return string
- */
-function main_nav_class( $class = '' ) {
-
-	$classes = join( ' ', get_css_class( $class , 'main_nav_class' ) );
+	$classes = join( ' ', wps_get_css_class( $class, 'wps_site_header_class' ) );
 
 	return ' class="' . esc_attr( $classes ) . '"';
 }
-
-
-/**
- * Theme main mobile navigation css class function
- * Separates classes with a single space, collates classes for element
- *
- * @param array|string $class CSS Classes for element.
- * @return string
- */
-function main_mobile_nav_class( $class = '' ) {
-
-	$classes = join( ' ', get_css_class( $class , 'main_mobile_nav_class' ) );
-
-	return ' class="' . esc_attr( $classes ) . '"';
-}
-
-
-/**
- * Theme Main Content layout css class function
- * Separates classes with a single space, collates classes for element
- *
- * @param array|string $class CSS Classes for element.
- * @return string
- */
-function main_class( $class = '' ) {
-
-	$classes = join( ' ', get_css_class( $class, 'main_class' ) );
-
-	return ' class="' . esc_attr( $classes ) . '"';
-}
-
-/**
- * Theme Main Sidebar layout css class function
- * Separates classes with a single space, collates classes for element
- *
- * @param array $class CSS Classes for element.
- */
-function sidebar_class( $class = '' ) {
-
-	$classes = join( ' ', get_css_class( $class, 'sidebar_class' ) );
-
-	return ' class="' . esc_attr( $classes ) . '"';
-}
-
 
 /**
  * Theme Main Header layout left side classes
@@ -125,9 +66,9 @@ function sidebar_class( $class = '' ) {
  * @param array $class CSS Classes for element.
  * @return string
  */
-function header_layout_left_class( $class = '' ) {
+function wps_header_layout_left_class( $class = '' ) {
 
-	$classes = join( ' ', get_css_class( $class, 'header_layout_left_class' ) );
+	$classes = join( ' ', wps_get_css_class( $class, 'wps_header_layout_left_class' ) );
 
 	return ' class="' . esc_attr( $classes ) . '"';
 }
@@ -141,12 +82,43 @@ function header_layout_left_class( $class = '' ) {
  * @param array $class CSS Classes for element.
  * @return string
  */
-function header_layout_right_class( $class = '' ) {
+function wps_header_layout_right_class( $class = '' ) {
 	
-	$classes = join( ' ', get_css_class( $class, 'header_layout_right_class' ) );
+	$classes = join( ' ', wps_get_css_class( $class, 'wps_header_layout_right_class' ) );
 
 	return ' class="' . esc_attr( $classes ) . '"';
 }
+
+
+/**
+ * Theme main navigation css class function
+ * Separates classes with a single space, collates classes for element
+ *
+ * @param array|string $class CSS Classes for element.
+ * @return string
+ */
+function wps_site_nav_class( $class = '' ) {
+
+	$classes = join( ' ', wps_get_css_class( $class , 'wps_site_nav_class' ) );
+
+	return ' class="' . esc_attr( $classes ) . '"';
+}
+
+
+/**
+ * Theme main mobile navigation css class function
+ * Separates classes with a single space, collates classes for element
+ *
+ * @param array|string $class CSS Classes for element.
+ * @return string
+ */
+function wps_site_mobile_nav_class( $class = '' ) {
+
+	$classes = join( ' ', wps_get_css_class( $class , 'wps_site_mobile_nav_class' ) );
+
+	return ' class="' . esc_attr( $classes ) . '"';
+}
+
 
 /**
  * Theme Main Site content class
@@ -157,12 +129,43 @@ function header_layout_right_class( $class = '' ) {
  * @param array $class CSS Classes for element.
  * @return string
  */
-function site_content_class( $class = '' ) {
+function wps_site_content_class( $class = '' ) {
 
-	$classes = join( ' ', get_css_class( $class, 'site_content_class' ) );
+	$classes = join( ' ', wps_get_css_class( $class, 'wps_site_content_class' ) );
 
 	return ' class="' . esc_attr( $classes ) . '"';
 }
+
+
+/**
+ * Theme Main Content layout css class function
+ * Separates classes with a single space, collates classes for element
+ *
+ * @param array|string $class CSS Classes for element.
+ * @return string
+ */
+function wps_main_content_class( $class = '' ) {
+
+	$classes = join( ' ', wps_get_css_class( $class, 'wps_main_content_class' ) );
+
+	return ' class="' . esc_attr( $classes ) . '"';
+}
+
+
+/**
+ * Theme Main Sidebar layout css class function
+ * Separates classes with a single space, collates classes for element
+ *
+ * @param array $class CSS Classes for element.
+ */
+function wps_main_sidebar_class( $class = '' ) {
+
+	$classes = join( ' ', wps_get_css_class( $class, 'wps_main_sidebar_class' ) );
+
+	return ' class="' . esc_attr( $classes ) . '"';
+}
+
+
 
 /**
  * Theme Main Site footer class
@@ -173,9 +176,9 @@ function site_content_class( $class = '' ) {
  * @param array $class CSS Classes for element.
  * @return string
  */
-function site_footer_class( $class = '' ) {
+function wps_site_footer_class( $class = '' ) {
 
-	$classes = join( ' ', get_css_class( $class, 'site_footer_class' ) );
+	$classes = join( ' ', wps_get_css_class( $class, 'wps_site_footer_class' ) );
 
 	return ' class="' . esc_attr( $classes ) . '"';
 }
