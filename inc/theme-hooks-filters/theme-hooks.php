@@ -20,6 +20,9 @@
  *   	  - header-left
  *   	  - header-right
  *	- mast_head_start
+ *
+ *  INTERMEDIATE Hooks after header before content
+ *
  *  - after_header
  *  - before_content
  *
@@ -111,30 +114,10 @@ function before_content() {
 /**
  * WP HOOK on top of id="content"
  *      <div id="content" class="site-content">
- *          <div class="wrapper">
- *              <?php content_start(); ?>
- *          <div class="layout">....
+ *              <?php content_start(); ?>   
  */
 function content_start() {
 	do_action( 'content_start' );
-}
-
-/**
- * WP HOOK on media object in content.php
- *         <div class="entry-content ...
- *              <div class="media__img ...
- */
-function entry_content_media_img() {
-	do_action( 'entry_content_media_img' );
-}
-
-/**
- * WP HOOK on media object in content.php
- *         <div class="entry-content ...
- *              <div class="media__body ...
- */
-function entry_content_media_body() {
-	do_action( 'entry_content_media_body' );
 }
 
 /**
@@ -150,7 +133,6 @@ function content_end() {
 /**
  * WP HOOK on the end o the main content and sidebar
  * just before the footer starts
- *        </div><!-- wrapper -->
  *  </div><!-- #content -->
  *	<?php after_content(); ?>
  */
@@ -160,7 +142,6 @@ function after_content() {
 
 /**
  * WP HOOK before the footer </footer>
- *        </div><!-- wrapper -->
  *  </div><!-- #content -->
  *
  *      <?php before_footer(); ?>
