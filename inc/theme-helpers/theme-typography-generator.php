@@ -205,3 +205,8 @@ class WpsGetThemeFonts{
 		return $style;
 	}
 }
+
+// Wrapper function to init font administration
+function wps_fonts_setup(){
+	return WpsGenerateThemeFonts::get_instance();
+}
