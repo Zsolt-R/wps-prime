@@ -20,6 +20,7 @@
 </head>
 
 <body <?php body_class(); ?>>
+<?php body_start();?>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'wps-prime' ); ?></a>
 	<?php before_header(); ?>
