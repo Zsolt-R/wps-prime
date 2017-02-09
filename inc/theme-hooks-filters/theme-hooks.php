@@ -51,20 +51,6 @@ function wps_body_start() {
 }
 
 /**
-* Master Header Start Hook	
-*/
-function wps_mast_head_start() {
-	do_action( 'wps_mast_head_start' );
-}
-
-/**
-* Master Header End Hook	
-*/
-function wps_mast_head_end() {
-	do_action( 'wps_mast_head_end' );
-}
-
-/**
 * Before Header Hook	
 */
 function wps_before_header() {
@@ -72,12 +58,11 @@ function wps_before_header() {
 }
 
 /**
-* After Header Hook	
+* Master Header Start Hook	
 */
-function wps_after_header() {
-	do_action( 'wps_after_header' );
+function wps_mast_head_start() {
+	do_action( 'wps_mast_head_start' );
 }
-
 
 /**
  * WP HOOK to add in the head before the main nav <div class="header-content">
@@ -99,6 +84,21 @@ function wps_theme_header_left() {
 function wps_theme_header_right() {
 	do_action( 'wps_theme_header_right' );
 }
+
+/**
+* Master Header End Hook	
+*/
+function wps_mast_head_end() {
+	do_action( 'wps_mast_head_end' );
+}
+
+/**
+* After Header Hook	
+*/
+function wps_after_header() {
+	do_action( 'wps_after_header' );
+}
+
 
 /**
  * WP HOOK to add before the content starts
