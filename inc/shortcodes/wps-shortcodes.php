@@ -25,6 +25,9 @@
  * 15 Accordion item [wps_accordion_item]
  * 16 WPS Anything slider [wps_all_slider]
  * 17 WPS Anything slider slide [wps_all_slider_item]
+ * 18 WPS Tabby [wps_tab_shortcode]
+ * 19 WPS Tabby Item [wps_tab_item_shortcode]
+ * 20 WPS social links [wps_social_links]
  */
 
 /* 1 Row Wrapper Markup */
@@ -81,6 +84,9 @@ add_shortcode('wps_tab', 'wps_tab_shortcode');
 
 /* 19 WPS Tabby Item */
 add_shortcode('wps_tab_item', 'wps_tab_item_shortcode');
+
+/* 20 WPS social links */
+add_shortcode('wps_social_links', 'wps_social_links_shortcode');
 
 /**
  * 1 Row Item Markup
@@ -1101,4 +1107,77 @@ function wps_tab_item_shortcode($atts,$content = null)
     
     return $output;
 
+}
+
+
+/**
+*    20 Social Links 
+*/
+function wps_social_links_shortcode($atts)
+{
+
+     $options = shortcode_atts(
+        array(
+        'list' => false,
+        'ico_class' => '',
+        'link_class' => '',
+        'label_class' => '',
+        'target' => '',
+        'list_class' => ''
+        ), $atts
+    );
+
+    $output = $listStart = $listEnd = $listItemStart = $listItemEnd = '';
+
+    wps_icon_element_fonts_enqueue('fontawesome');
+
+    $hidelabel = $options['list'] ? '' : 'u-hide';
+
+    $classLink = wps_getExtraClass( array( 'c-social-list__link',$options['link_class'] ) );
+    $classIco = wps_getExtraClass( array( 'c-social-list__ico', $options['ico_class'] ) );
+    $classList = wps_getExtraClass( array( 'c-social-list',$options['list_class'] ) );
+    $classLabel = wps_getExtraClass( array( 'c-social-list__label',$options['label_class'],$hidelabel ) );
+
+    $target = $options['target'] ? ' target="_blank"' : '';
+
+    $facebook = wps_get_theme_option( 'wps_social_link_facebook' );
+    $gplus = wps_get_theme_option( 'wps_social_link_gplus' );
+    $twitter = wps_get_theme_option( 'wps_social_link_twitter' );
+    $linkedIn = wps_get_theme_option( 'wps_social_link_linkedin' );
+    $youtube = wps_get_theme_option( 'wps_social_link_youtube' );
+
+   
+
+    if($options['list']){
+        $listStart = '<ul class="'.$classList.'">';
+        $listEnd   = '</ul>';
+        $listItemStart = '<li class="c-social-list__item">';
+        $listItemEnd = '</li>';
+    }
+    
+
+    if($facebook){
+       $output .= $listItemStart.'<a href="'.$facebook.'"'.$target.' class="'.$classLink.'"><i class="fa fa-facebook'.$classIco.'"></i><span class="'.$classLabel.'">Facebook</span></a>'.$listItemEnd;
+    }
+
+    if($gplus){
+       $output .= $listItemStart.'<a href="'.$gplus.'"'.$target.' class="'.$classLink.'"><i class="fa fa-google-plus'.$classIco.'"></i><span class="'.$classLabel.'">Google +</span></a>'.$listItemEnd;
+    }
+
+    if($twitter){
+       $output .= $listItemStart.'<a href="'.$twitter.'"'.$target.' class="'.$classLink.'"><i class="fa fa-twitter'.$classIco.'"></i><span class="'.$classLabel.'">Twitter</span></a>'.$listItemEnd;        
+    }
+
+    if($linkedIn){
+       $output .= $listItemStart.'<a href="'.$linkedIn.'"'.$target.' class="'.$classLink.'"><i class="fa fa-linkedin'.$classIco.'"></i><span class="'.$classLabel.'">LinkedIn</span></a>'.$listItemEnd;
+    }
+
+    if($youtube){
+       $output .= $listItemStart.'<a href="'.$youtube.'"'.$target.' class="'.$classLink.'"><i class="fa fa-youtube'.$classIco.'"></i><span class="'.$classLabel.'">Youtube</span></a>'.$listItemEnd;        
+    } 
+
+
+    $output = $listStart.$output.$listEnd;
+
+    return $output;
 }
