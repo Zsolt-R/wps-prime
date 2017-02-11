@@ -18,11 +18,13 @@
 	<?php wps_before_footer(); ?>
 
     <footer id="colophon" <?php echo wps_site_footer_class(); ?> role="contentinfo">
+    	<?php wps_footer_start(); ?>
     
     	<div class="o-wrapper">
     		<?php get_sidebar( 'footer' );?>
     	</div><!-- wrapper -->
 
+    	<?php wps_footer_end(); ?>
 	</footer><!-- #colophon -->
 
 	<?php wps_after_footer(); ?>

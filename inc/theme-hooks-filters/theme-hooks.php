@@ -30,16 +30,20 @@
  *
  *   - wps_content_start
  *   - wps_content_end
+ *   - wps_single_entry_header
+ *   - wps_single_entry_footer
+ *   - wps_after_content
  *
  *  MAIN SIDEBAR Hooks layout
- *
- *
- *
- *  - wps_after_content
+ * 
+ *   - wps_sidebar_start
+ *   - wps_sidebar_end
  *
  *  FOOTER Hooks layout
  *
  *   - wps_before_footer
+ *   - wps_footer_start
+ *   - wps_footer_end
  *   - wps_after_footer
  */
 
@@ -141,6 +145,24 @@ function wps_after_content() {
 }
 
 /**
+ * WP HOOK at the start (inside) of the main sidebar. Before the widgets
+ * <aside id="secondary" <?php echo wps_main_sidebar_class(); ?> role="complementary">
+ *	<?php wps_sidebar_start(); ?>
+ */
+function wps_sidebar_start() {
+	do_action( 'wps_sidebar_start' );
+}
+
+/**
+ * WP HOOK at the end (inside) of the main sidebar. After the widgets
+ * 	<?php wps_sidebar_end(); ?>
+ * </aside><!-- #secondary -->
+ */
+function wps_sidebar_end() {
+	do_action( 'wps_sidebar_end' );
+}
+
+/**
  * WP HOOK before the footer </footer>
  *  </div><!-- #content -->
  *
@@ -152,6 +174,24 @@ function wps_before_footer() {
 }
 
 /**
+ * WP HOOK at footer start (inside)</footer>
+ *   <footer id="colophon" <?php echo wps_site_footer_class(); ?> role="contentinfo">
+ *   	<?php wps_footer_start(); ?>
+ */
+function wps_footer_start() {
+	do_action( 'wps_footer_start' );
+}
+
+/**
+ * WP HOOK at footer end (inside)</footer>
+ *     	<?php wps_footer_end(); ?>
+ *  </footer><!-- #colophon -->
+ */
+function wps_footer_end() {
+	do_action( 'wps_footer_end' );
+}
+
+/**
  * WP HOOK after end of footer </footer>
  *        </footer><!-- #colophon -->
  *      <?php wps_after_footer(); ?>
@@ -159,4 +199,56 @@ function wps_before_footer() {
  */
 function wps_after_footer() {
 	do_action( 'wps_after_footer' );
+}
+
+/**
+ * WP HOOK after top entry meta 
+ *	</div><!-- .entry-meta -->
+ *	<?php  wps_single_entry_header(); // hook ?>
+ */
+function wps_single_entry_header() {
+	do_action( 'wps_single_entry_header' );
+}
+
+/**
+ * WP HOOK after top entry meta 
+ *	<footer class="entry-footer">
+ *		<?php wps_prime_entry_footer(); ?>
+ *		<?php wps_single_entry_footer(); //hook ?>
+ *	</footer><!-- .entry-footer -->
+ */
+function wps_single_entry_footer() {
+	do_action( 'wps_single_entry_footer' );
+}
+
+/*
+ * Hook list for debugging
+ */
+
+function wps_get_hook_list(){
+
+	$hooks = array(
+	    'wps_body_start',
+	    'wps_before_header',
+	    'wps_mast_head_start',
+	    'wps_theme_header',
+	    'wps_theme_header_left',
+	    'wps_theme_header_right',
+	    'wps_mast_head_end',
+	    'wps_after_header',
+	    'wps_before_content',
+	    'wps_content_start',
+	    'wps_content_end',
+	    'wps_after_content',
+	    'wps_sidebar_start',
+	    'wps_sidebar_end',
+	    'wps_before_footer',
+	    'wps_footer_start',
+	    'wps_footer_end',
+	    'wps_after_footer',
+	    'wps_single_entry_header',
+	    'wps_single_entry_footer',
+	    );
+
+	return $hooks;
 }

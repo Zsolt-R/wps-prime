@@ -17,6 +17,7 @@
 		<div class="entry-meta">
 			<?php wps_prime_posted_on(); ?>
 		</div><!-- .entry-meta -->
+		<?php  wps_single_entry_header(); //hook ?>
 		<?php
 		endif; ?>
 	</header><!-- .entry-header -->
@@ -38,5 +39,6 @@
 
 	<footer class="entry-footer">
 		<?php wps_prime_entry_footer(); ?>
+		<?php wps_single_entry_footer(); //hook ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
