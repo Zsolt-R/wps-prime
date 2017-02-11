@@ -20,7 +20,7 @@ if(!function_exists('wps_footer_scripts')){
 			return;
 		}
 
-		echo '<script type="text/javascript">'.$script.'</script>';  
+		echo $script;  
 	}
 }
 
@@ -37,7 +37,7 @@ if(!function_exists('wps_header_scripts')){
 			return;
 		}	
 
-		echo '<script type="text/javascript">'.$script.'</script>';
+		echo $script;
 	}
 }
 
