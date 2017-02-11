@@ -32,13 +32,13 @@ if ( ! function_exists( 'wps_prime_paging_nav' ) ) :
 			$output .= '<h1 class="screen-reader-text">'. esc_html__( 'Posts navigation', 'wps-prime' ) .'</h1>';
 			$output .= '<div class="nav-links">';
 			$output .= get_next_posts_link() ? '<div class="nav-previous">'. get_next_posts_link( sprintf( esc_html__( '%1$s Older posts', 'wps-prime' ),'<span class="meta-nav">&larr;</span>' ) ).'</div>' : '';
-			$output .= get_previous_posts_link() ? '<div class="nav-previous">'. get_previous_posts_link( sprintf( esc_html__( 'Newer posts %1$s', 'wps-prime' ),'<span class="meta-nav">&rarr;</span>' ) ) .'</div>' : '';
+			$output .= get_previous_posts_link() ? '<div class="nav-next">'. get_previous_posts_link( sprintf( esc_html__( 'Newer posts %1$s', 'wps-prime' ),'<span class="meta-nav">&rarr;</span>' ) ) .'</div>' : '';
 			$output .= '</div><!-- .nav-links -->';
 			$output .= '</nav><!-- .navigation -->';
 
 		} else {
 
-			$output = paginate_links();
+			$output = '<div class="navigation paging-numbered-navigation">'. paginate_links() .'</div>';
 
 		}
 			echo $output;
