@@ -80,6 +80,7 @@ class WPS_Theme_Setup
 
         /* Hook Theme Components (Add via hooks the theme custom components/objects) */
         add_action('after_setup_theme', array( $this, 'wps_hook_theme_components' ));
+
     }
 
     /**
@@ -294,6 +295,9 @@ class WPS_Theme_Setup
     public function wps_configs() 
     {
 
+        /* WPS Prime main settings definition list for theme-options-framework */
+        include WPS_ENGINE_DIR .'/theme-options/wps-prime-theme-settings-definition.php';
+
 
         /**
          * WP Fine Tune
@@ -364,8 +368,10 @@ class WPS_Theme_Setup
          * Theme front end construction helper functions /hooks / filters / menu walker
          */
 
-        /* Theme hooks */
+        /* Theme hooks & hook display debug */
         include WPS_ENGINE_DIR .'/theme-hooks-filters/theme-hooks.php';
+        include WPS_ENGINE_DIR .'/theme-hooks-filters/theme-debug-hooks.php';
+
 
         /* Theme filters */
         include WPS_ENGINE_DIR .'/theme-hooks-filters/theme-css-filters.php';
