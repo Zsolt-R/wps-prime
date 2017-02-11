@@ -3,16 +3,16 @@
    ========================================================================== */
 
 .o-table--striped{
-    tr:nth-child(even) {
-        background: $color-body;        
-    }
-    tr:nth-child(odd) {
-        background: lighten($color-gray-ui,5);      
-    }
+	tr:nth-child(even) {
+		background: $color-body; 		
+	}
+	tr:nth-child(odd) {
+		background: lighten($color-gray-ui,5);		
+	}
 }
 
 .o-table--rows{
-    &,
+	&,
     th,
     td {
         border: 0 solid $color-gray-ui;
@@ -27,7 +27,7 @@
 
 .o-table--columns{
 
-    &,
+	&,
     th,
     td {
         border: 0 solid $color-gray-ui;

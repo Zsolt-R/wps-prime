@@ -9,7 +9,7 @@ Theme URI: http://wps-prime.pw
 Author: Zsolt Revay-Giran
 Author URI: http://www.wpshapers.com/
 Description: A lightweight WordPress master theme extended with simple and useful add-ons that speeds up child theme development
-Version: 1.1.4
+Version: 1.1.5
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: wps-prime
@@ -716,6 +716,11 @@ table { width: 100%; /* [1] */ }
 
 .c-button--full { width: 100%; }
 
+/** Button Icon **/
+.c-button__ico--end { margin-left: 0.752em; }
+
+.c-button__ico--start { margin-right: 0.752em; }
+
 /*------------------------------------*\ #COMPONENTS DIVIDER
 \*------------------------------------*/
 .c-divider { border-top: 1px solid rgba(0, 0, 0, 0.2); border-bottom: 1px solid rgba(255, 255, 255, 0.1); -webkit-background-clip: padding-box; /* for Safari */ background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */ }
@@ -723,6 +728,12 @@ table { width: 100%; /* [1] */ }
 .c-divider--dashed { border-top-style: dashed; border-bottom-style: dashed; }
 
 .c-divider--dotted { border-top-style: dotted; border-bottom-style: dotted; }
+
+/*------------------------------------*\ # HEADINGS
+\*------------------------------------*/
+.c-heading--deco:after { content: ''; display: block; width: 3em; border-bottom: 2px solid currentColor; padding-bottom: 12px; }
+
+.u-text-center .c-heading--deco::after, .c-heading--deco.u-text-center::after { margin: 0 auto; }
 
 /*------------------------------------*\ #COMPONENTS STYLED LISTS
 \*------------------------------------*/
@@ -1164,11 +1175,11 @@ div.c-highlight { display: inline-block; }
 
 .wpcf7-form-control-wrap:after { content: "" !important; display: block !important; clear: both !important; }
 
-/*------------------------------------*\ # HEADINGS
+/*------------------------------------*\ # COMPONENTS SOCIAL LIST
 \*------------------------------------*/
-.c-heading--deco:after { content: ''; display: block; width: 3em; border-bottom: 2px solid currentColor; padding-bottom: 12px; }
+.c-social-list { list-style: none; margin-left: 0; }
 
-.u-text-center .c-heading--deco::after, .c-heading--deco.u-text-center::after { margin: 0 auto; }
+.c-social-list__ico { margin-right: 0.5em; }
 
 /* ========================================================================== #CLEARFIX ========================================================================== */
 /** Attach our clearfix mixin to a utility class. */
@@ -1208,6 +1219,14 @@ div.c-highlight { display: inline-block; }
 @media screen and (max-width: 63.9375em) { .u-portable-hide { display: none !important; } }
 @media screen and (min-width: 64em) { .u-desktop-hide { display: none !important; } }
 .u-hide-title .entry-title { display: none !important; }
+
+.u-display-none { display: none !important; }
+
+.u-display-inline { display: inline !important; }
+
+.u-display-inline-block { display: inline-block !important; }
+
+.u-display-block, .u-show { display: block !important; }
 
 /*------------------------------------*\ #Generic Input Fields
 \*------------------------------------*/

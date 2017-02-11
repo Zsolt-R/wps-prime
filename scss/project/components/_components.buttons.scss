@@ -324,23 +324,28 @@ $btn-ghost-border-width: 1px;
 
 
 /** Alignments **/
-.c-button--center,
-%c-button--center{
+.c-button--center{
     display: table;  
     margin:0 auto;
 }
-.c-button--right,
-%c-button--right{
+.c-button--right{
     display: table;  
     margin:0 0 0 auto;
 }
 
 /** Aspect **/
-.c-button--pill,
-%c-button--pill{
+.c-button--pill{
     border-radius: 100px;
 }
-.c-button--full,
-%c-button--full{
+.c-button--full{
     width: 100%;     
+}
+
+/** Button Icon **/
+.c-button__ico--end{
+  margin-left:0.752em;
+}
+
+.c-button__ico--start{
+  margin-right:0.752em;
 }

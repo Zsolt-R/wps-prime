@@ -219,6 +219,7 @@ $project-wrapper-width-slim: 1000px;
 //Custom Components
 @import "project/components/components.buttons";
 @import "project/components/components.divider";
+@import "project/components/components.heading";
 @import "project/components/components.styled-list";
 @import "project/components/components.swiper-slider";
 @import "project/components/components.tabs";
@@ -231,7 +232,7 @@ $project-wrapper-width-slim: 1000px;
 @import "project/components/components.mediabox";
 @import "project/components/components.vc-text-block";
 @import "project/components/components.cf7";
-@import "project/components/components.heading";
+@import "project/components/components.social-list";
 
 
 // UTILITIES
