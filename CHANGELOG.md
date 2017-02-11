@@ -1,4 +1,12 @@
 ##WPS-Prime Changelog##
+#### v.1.1.5
+* Add icon option to buttons components
+* Add Social Media link options & shortcode [wps_social_links]
+* Facilitate option panel extension from child themes
+* Fix generated font family (add genenal-family to css string)
+* Allow adding scripts with theyr script tag in options script section
+* Extend theme hooks
+
 #### v.1.1.4
 * Fix textdomain and strings
 * PHP lint files
