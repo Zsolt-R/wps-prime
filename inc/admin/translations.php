@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; }
 
 if ( ! class_exists( '_WP_Editors' ) ) {
-	require( ABSPATH . WPINC . '/class-wp-editor.php' ); }
+	require ABSPATH . WPINC . '/class-wp-editor.php'; }
 
 /**
  * Translation function
