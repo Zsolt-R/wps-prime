@@ -21,6 +21,9 @@
  *   	  - wps_header-left
  *   	  - wps_header-right
  *	- wps_mast_head_start
+ *
+ *  INTERMEDIATE Hooks after header before content
+ *
  *  - wps_after_header
  *  - wps_before_content
  *
@@ -28,16 +31,20 @@
  *
  *   - wps_content_start
  *   - wps_content_end
+ *   - wps_single_entry_header
+ *   - wps_single_entry_footer
+ *   - wps_after_content
  *
  *  MAIN SIDEBAR Hooks layout
- *
- *
- *
- *  - wps_after_content
+ * 
+ *   - wps_sidebar_start
+ *   - wps_sidebar_end
  *
  *  FOOTER Hooks layout
  *
  *   - wps_before_footer
+ *   - wps_footer_start
+ *   - wps_footer_end
  *   - wps_after_footer
  */
 
