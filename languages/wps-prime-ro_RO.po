@@ -1,0 +1,1853 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WPS Prime v1.1.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-02-10 22:00+0200\n"
+"PO-Revision-Date: 2017-02-10 22:06+0200\n"
+"Last-Translator: zsolt-revay-g <zsolt.revay.g@gmail.com>\n"
+"Language-Team: \n"
+"Language: ro_RO\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;"
+"esc_html__\n"
+"X-Poedit-Basepath: ..\n"
+"X-Textdomain-Support: yes\n"
+"X-Generator: Poedit 1.8.11\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: comments.php:31
+#, php-format
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: functions.php:222
+msgid "Primary Menu"
+msgstr ""
+
+#: functions.php:482
+msgid "Sidebar"
+msgstr ""
+
+#: functions.php:494
+msgid "Footer widget area one"
+msgstr ""
+
+#: functions.php:506
+msgid "Footer widget area two"
+msgstr ""
+
+#: functions.php:518
+msgid "Footer widget area three"
+msgstr ""
+
+#: functions.php:530
+msgid "Footer widget area four"
+msgstr ""
+
+#: inc/admin/translations.php:19
+msgid "WPS Shortcode Helper"
+msgstr ""
+
+#: inc/admin/translations.php:20
+msgid "Hello World!!!!"
+msgstr ""
+
+#: inc/admin/wps-admin-column-show-media-id.php:9
+msgid "ID"
+msgstr ""
+
+#: inc/integrations/visual-composer/params/templates/wps_margin_tpl.php:16
+msgid "Margin Location"
+msgstr ""
+
+#: inc/integrations/visual-composer/params/templates/wps_margin_tpl.php:19
+msgid "Margin Size"
+msgstr ""
+
+#: inc/integrations/visual-composer/params/templates/wps_margin_tpl.php:36
+#: inc/integrations/visual-composer/params/templates/wps_offset_tpl.php:52
+#: inc/integrations/visual-composer/params/templates/wps_padding_tpl.php:32
+msgid "Inherit: "
+msgstr ""
+
+#: inc/integrations/visual-composer/params/templates/wps_margin_tpl.php:37
+#: inc/integrations/visual-composer/params/templates/wps_offset_tpl.php:53
+#: inc/integrations/visual-composer/params/templates/wps_padding_tpl.php:33
+msgid "Inherit from default"
+msgstr ""
+
+#: inc/integrations/visual-composer/params/templates/wps_offset_tpl.php:14
+#, php-format
+msgid ""
+"Responsive design settings are currently disabled. You can enable them in "
+"Visual Composer <a href=\"%s\">settings page</a> by unchecking \"Disable "
+"responsive content elements\"."
+msgstr ""
+
+#: inc/integrations/visual-composer/params/templates/wps_offset_tpl.php:23
+msgid "Device"
+msgstr ""
+
+#: inc/integrations/visual-composer/params/templates/wps_offset_tpl.php:26
+msgid "Width"
+msgstr ""
+
+#: inc/integrations/visual-composer/params/templates/wps_offset_tpl.php:29
+msgid "Hide on device?"
+msgstr ""
+
+#: inc/integrations/visual-composer/params/templates/wps_padding_tpl.php:12
+msgid "Padding Location"
+msgstr ""
+
+#: inc/integrations/visual-composer/params/templates/wps_padding_tpl.php:15
+msgid "Padding Size"
+msgstr ""
+
+#: inc/integrations/visual-composer/params/wps-vc-column-params.php:53
+msgid "1 column - 1/12"
+msgstr ""
+
+#: inc/integrations/visual-composer/params/wps-vc-column-params.php:54
+msgid "2 columns - 1/6"
+msgstr ""
+
+#: inc/integrations/visual-composer/params/wps-vc-column-params.php:55
+msgid "3 columns - 1/4"
+msgstr ""
+
+#: inc/integrations/visual-composer/params/wps-vc-column-params.php:56
+msgid "4 columns - 1/3"
+msgstr ""
+
+#: inc/integrations/visual-composer/params/wps-vc-column-params.php:57
+msgid "5 columns - 5/12"
+msgstr ""
+
+#: inc/integrations/visual-composer/params/wps-vc-column-params.php:58
+msgid "6 columns - 1/2"
+msgstr ""
+
+#: inc/integrations/visual-composer/params/wps-vc-column-params.php:59
+msgid "7 columns - 7/12"
+msgstr ""
+
+#: inc/integrations/visual-composer/params/wps-vc-column-params.php:60
+msgid "8 columns - 2/3"
+msgstr ""
+
+#: inc/integrations/visual-composer/params/wps-vc-column-params.php:61
+msgid "9 columns - 3/4"
+msgstr ""
+
+#: inc/integrations/visual-composer/params/wps-vc-column-params.php:62
+msgid "10 columns - 5/6"
+msgstr ""
+
+#: inc/integrations/visual-composer/params/wps-vc-column-params.php:63
+msgid "11 columns - 11/12"
+msgstr ""
+
+#: inc/integrations/visual-composer/params/wps-vc-column-params.php:64
+msgid "12 columns - 1/1"
+msgstr ""
+
+#: inc/integrations/visual-composer/params/wps-vc-column-params.php:104
+#: inc/integrations/visual-composer/params/wps-vc-margin-params.php:91
+#: inc/integrations/visual-composer/params/wps-vc-padding-params.php:91
+msgid "Default value from width attribute"
+msgstr ""
+
+#: inc/integrations/visual-composer/params/wps-vc-column-params.php:104
+msgid "Inherit from smaller"
+msgstr ""
+
+#: inc/integrations/visual-composer/params/wps-vc-margin-params.php:48
+#: inc/integrations/visual-composer/params/wps-vc-padding-params.php:48
+msgid "Reset"
+msgstr ""
+
+#: inc/integrations/visual-composer/params/wps-vc-margin-params.php:49
+#: inc/integrations/visual-composer/params/wps-vc-padding-params.php:49
+#: inc/integrations/visual-composer/shortcodes/wps-vc-mediabox.php:164
+msgid "Tiny"
+msgstr ""
+
+#: inc/integrations/visual-composer/params/wps-vc-margin-params.php:50
+#: inc/integrations/visual-composer/params/wps-vc-padding-params.php:50
+#: inc/integrations/visual-composer/shortcodes/wps-vc-mediabox.php:165
+#: inc/integrations/visual-composer/wps-vc-helpers.php:95
+#: inc/integrations/visual-composer/wps-vc-helpers.php:171
+#: inc/integrations/visual-composer/wps-vc-helpers.php:301
+msgid "Small"
+msgstr ""
+
+#: inc/integrations/visual-composer/params/wps-vc-margin-params.php:51
+#: inc/integrations/visual-composer/params/wps-vc-padding-params.php:51
+#: inc/integrations/visual-composer/shortcodes/wps-vc-heading.php:21
+#: inc/integrations/visual-composer/shortcodes/wps-vc-heading.php:74
+#: inc/integrations/visual-composer/shortcodes/wps-vc-mediabox.php:166
+#: inc/integrations/visual-composer/wps-vc-helpers.php:96
+#: inc/integrations/visual-composer/wps-vc-helpers.php:172
+#: inc/theme-options-framework/includes/class-options-sanitization.php:442
+msgid "Normal"
+msgstr ""
+
+#: inc/integrations/visual-composer/params/wps-vc-margin-params.php:52
+#: inc/integrations/visual-composer/params/wps-vc-padding-params.php:52
+#: inc/integrations/visual-composer/shortcodes/wps-vc-heading.php:22
+#: inc/integrations/visual-composer/shortcodes/wps-vc-mediabox.php:167
+#: inc/integrations/visual-composer/wps-vc-helpers.php:97
+#: inc/integrations/visual-composer/wps-vc-helpers.php:173
+#: inc/integrations/visual-composer/wps-vc-helpers.php:302
+msgid "Large"
+msgstr ""
+
+#: inc/integrations/visual-composer/params/wps-vc-margin-params.php:53
+#: inc/integrations/visual-composer/params/wps-vc-padding-params.php:53
+msgid "Larger"
+msgstr ""
+
+#: inc/integrations/visual-composer/params/wps-vc-margin-params.php:93
+#: inc/integrations/visual-composer/params/wps-vc-padding-params.php:93
+#: inc/integrations/visual-composer/shortcodes/wps-vc-image.php:29
+#: inc/integrations/visual-composer/shortcodes/wps-vc-list.php:13
+#: inc/integrations/visual-composer/shortcodes/wps-vc-list.php:47
+#: inc/integrations/visual-composer/shortcodes/wps-vc-mediabox.php:169
+#: inc/integrations/visual-composer/wps-vc-helpers.php:112
+msgid "None"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-accordion.php:15
+#: inc/integrations/visual-composer/shortcodes/wps-vc-accordion.php:23
+#: inc/integrations/visual-composer/shortcodes/wps-vc-accordion.php:31
+#: inc/integrations/visual-composer/shortcodes/wps-vc-accordion.php:39
+#: inc/integrations/visual-composer/shortcodes/wps-vc-accordion.php:47
+#: inc/integrations/visual-composer/shortcodes/wps-vc-button.php:44
+#: inc/integrations/visual-composer/shortcodes/wps-vc-column-inner.php:197
+#: inc/integrations/visual-composer/shortcodes/wps-vc-column.php:198
+#: inc/integrations/visual-composer/shortcodes/wps-vc-mediabox.php:198
+#: inc/integrations/visual-composer/shortcodes/wps-vc-mediabox.php:206
+#: inc/integrations/visual-composer/shortcodes/wps-vc-row-inner.php:71
+#: inc/integrations/visual-composer/shortcodes/wps-vc-row-inner.php:185
+#: inc/integrations/visual-composer/shortcodes/wps-vc-row-inner.php:205
+#: inc/integrations/visual-composer/shortcodes/wps-vc-row-inner.php:245
+#: inc/integrations/visual-composer/shortcodes/wps-vc-row.php:185
+#: inc/integrations/visual-composer/shortcodes/wps-vc-row.php:204
+#: inc/integrations/visual-composer/shortcodes/wps-vc-row.php:245
+#: inc/integrations/visual-composer/shortcodes/wps-vc-row.php:254
+#: inc/integrations/visual-composer/shortcodes/wps-vc-sliders.php:13
+#: inc/integrations/visual-composer/shortcodes/wps-vc-sliders.php:21
+msgid "Yes"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-accordion.php:16
+msgid ""
+"Sets whether accordion items close automatically when you open the next item."
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-accordion.php:24
+msgid ""
+"Sets whether the first accordion item is open by default. This setting will "
+"be overridden if openall is set to true."
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-accordion.php:32
+msgid ""
+"Sets whether all accordion items are open by default. It is recommended that "
+"this setting be used with clicktoclose"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-accordion.php:40
+msgid "Sets whether clicking an open title closes it"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-accordion.php:48
+msgid ""
+"Sets whether to scroll to the title when it is clicked open. This is useful "
+"if you have a lot of content within your accordion items."
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-accordion.php:57
+msgid ""
+"Sets a custom CSS class for the accordion group or individual accordion "
+"items."
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-accordion.php:64
+#: inc/integrations/visual-composer/shortcodes/wps-vc-accordion.php:109
+msgid "Heading 2"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-accordion.php:65
+#: inc/integrations/visual-composer/shortcodes/wps-vc-accordion.php:110
+msgid "Heading 3"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-accordion.php:66
+#: inc/integrations/visual-composer/shortcodes/wps-vc-accordion.php:111
+msgid "Heading 4"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-accordion.php:67
+#: inc/integrations/visual-composer/shortcodes/wps-vc-accordion.php:112
+msgid "Heading 5"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-accordion.php:71
+#: inc/integrations/visual-composer/shortcodes/wps-vc-accordion.php:116
+msgid "Set the title wrapper tag"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-accordion.php:77
+msgid "WPS Accordion"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-accordion.php:102
+#: inc/integrations/visual-composer/shortcodes/wps-vc-icon.php:106
+#: inc/integrations/visual-composer/shortcodes/wps-vc-icon.php:134
+#: inc/integrations/visual-composer/shortcodes/wps-vc-sliders.php:51
+msgid "Add custom CSS class."
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-accordion.php:120
+#: inc/integrations/visual-composer/shortcodes/wps-vc-icon.php:11
+#: inc/integrations/visual-composer/shortcodes/wps-vc-mediabox.php:45
+#: inc/integrations/visual-composer/shortcodes/wps-vc-tabs.php:52
+msgid "Icon library"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-accordion.php:123
+#: inc/integrations/visual-composer/shortcodes/wps-vc-icon.php:14
+#: inc/integrations/visual-composer/shortcodes/wps-vc-mediabox.php:48
+#: inc/integrations/visual-composer/shortcodes/wps-vc-tabs.php:55
+msgid "Font Awesome"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-accordion.php:124
+#: inc/integrations/visual-composer/shortcodes/wps-vc-icon.php:15
+#: inc/integrations/visual-composer/shortcodes/wps-vc-mediabox.php:49
+#: inc/integrations/visual-composer/shortcodes/wps-vc-tabs.php:56
+msgid "Typicons"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-accordion.php:125
+#: inc/integrations/visual-composer/shortcodes/wps-vc-icon.php:16
+#: inc/integrations/visual-composer/shortcodes/wps-vc-mediabox.php:50
+#: inc/integrations/visual-composer/shortcodes/wps-vc-tabs.php:57
+msgid "Woo E Commerce"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-accordion.php:126
+#: inc/integrations/visual-composer/shortcodes/wps-vc-icon.php:17
+#: inc/integrations/visual-composer/shortcodes/wps-vc-mediabox.php:51
+#: inc/integrations/visual-composer/shortcodes/wps-vc-tabs.php:58
+msgid "Linecons"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-accordion.php:130
+#: inc/integrations/visual-composer/shortcodes/wps-vc-icon.php:20
+#: inc/integrations/visual-composer/shortcodes/wps-vc-mediabox.php:55
+#: inc/integrations/visual-composer/shortcodes/wps-vc-tabs.php:62
+msgid "Select icon library."
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-accordion.php:134
+#: inc/integrations/visual-composer/shortcodes/wps-vc-accordion.php:151
+#: inc/integrations/visual-composer/shortcodes/wps-vc-accordion.php:167
+#: inc/integrations/visual-composer/shortcodes/wps-vc-accordion.php:183
+#: inc/integrations/visual-composer/shortcodes/wps-vc-icon.php:24
+#: inc/integrations/visual-composer/shortcodes/wps-vc-icon.php:40
+#: inc/integrations/visual-composer/shortcodes/wps-vc-icon.php:55
+#: inc/integrations/visual-composer/shortcodes/wps-vc-icon.php:70
+#: inc/integrations/visual-composer/shortcodes/wps-vc-icon.php:156
+#: inc/integrations/visual-composer/shortcodes/wps-vc-mediabox.php:54
+#: inc/integrations/visual-composer/shortcodes/wps-vc-mediabox.php:59
+#: inc/integrations/visual-composer/shortcodes/wps-vc-mediabox.php:73
+#: inc/integrations/visual-composer/shortcodes/wps-vc-mediabox.php:78
+#: inc/integrations/visual-composer/shortcodes/wps-vc-mediabox.php:90
+#: inc/integrations/visual-composer/shortcodes/wps-vc-mediabox.php:95
+#: inc/integrations/visual-composer/shortcodes/wps-vc-mediabox.php:107
+#: inc/integrations/visual-composer/shortcodes/wps-vc-mediabox.php:112
+#: inc/integrations/visual-composer/shortcodes/wps-vc-mediabox.php:124
+#: inc/integrations/visual-composer/shortcodes/wps-vc-mediabox.php:132
+#: inc/integrations/visual-composer/shortcodes/wps-vc-mediabox.php:141
+#: inc/integrations/visual-composer/shortcodes/wps-vc-tabs.php:66
+#: inc/integrations/visual-composer/shortcodes/wps-vc-tabs.php:83
+#: inc/integrations/visual-composer/shortcodes/wps-vc-tabs.php:99
+#: inc/integrations/visual-composer/shortcodes/wps-vc-tabs.php:115
+msgid "Icon"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-accordion.php:147
+#: inc/integrations/visual-composer/shortcodes/wps-vc-accordion.php:163
+#: inc/integrations/visual-composer/shortcodes/wps-vc-accordion.php:179
+#: inc/integrations/visual-composer/shortcodes/wps-vc-accordion.php:195
+#: inc/integrations/visual-composer/shortcodes/wps-vc-icon.php:36
+#: inc/integrations/visual-composer/shortcodes/wps-vc-icon.php:51
+#: inc/integrations/visual-composer/shortcodes/wps-vc-icon.php:66
+#: inc/integrations/visual-composer/shortcodes/wps-vc-icon.php:81
+#: inc/integrations/visual-composer/shortcodes/wps-vc-mediabox.php:74
+#: inc/integrations/visual-composer/shortcodes/wps-vc-mediabox.php:91
+#: inc/integrations/visual-composer/shortcodes/wps-vc-mediabox.php:108
+#: inc/integrations/visual-composer/shortcodes/wps-vc-mediabox.php:125
+#: inc/integrations/visual-composer/shortcodes/wps-vc-tabs.php:79
+#: inc/integrations/visual-composer/shortcodes/wps-vc-tabs.php:95
+#: inc/integrations/visual-composer/shortcodes/wps-vc-tabs.php:111
+#: inc/integrations/visual-composer/shortcodes/wps-vc-tabs.php:127
+msgid "Select icon from library."
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-accordion.php:200
+#: inc/integrations/visual-composer/shortcodes/wps-vc-button.php:133
+#: inc/integrations/visual-composer/shortcodes/wps-vc-divider.php:38
+#: inc/integrations/visual-composer/shortcodes/wps-vc-heading.php:134
+#: inc/integrations/visual-composer/shortcodes/wps-vc-icon.php:159
+#: inc/integrations/visual-composer/shortcodes/wps-vc-image.php:106
+#: inc/integrations/visual-composer/shortcodes/wps-vc-list.php:55
+#: inc/integrations/visual-composer/shortcodes/wps-vc-list.php:57
+#: inc/integrations/visual-composer/shortcodes/wps-vc-list.php:79
+#: inc/integrations/visual-composer/shortcodes/wps-vc-mediabox.php:212
+#: inc/integrations/visual-composer/shortcodes/wps-vc-mediabox.php:214
+#: inc/integrations/visual-composer/shortcodes/wps-vc-mediabox.php:261
+#: inc/integrations/visual-composer/shortcodes/wps-vc-tabs.php:142
+msgid "Content"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-accordion.php:202
+#: inc/integrations/visual-composer/shortcodes/wps-vc-sliders.php:76
+msgid ""
+"<p>Click edit button to change the content. Lorem ipsum dolor sit amet, "
+"consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, "
+"pulvinar dapibus leo.</p>"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-accordion.php:207
+msgid "WPS Accordion item"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-button.php:9
+msgid "Button link"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-button.php:13
+#: inc/integrations/visual-composer/shortcodes/wps-vc-heading.php:41
+msgid "link address ex: http://yourlink.com/yourpage"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-button.php:17
+msgid "Button label"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-button.php:21
+msgid "button text ex: Click me"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-button.php:25
+msgid "Button Color"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-button.php:29
+msgid "Set button color"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-button.php:33
+msgid "Button Size"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-button.php:37
+msgid "Set button size"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-button.php:41
+msgid "Button Ghost"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-button.php:45
+msgid "Make this a ghost button"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-button.php:49
+msgid "Button Aspect"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-button.php:53
+msgid "Set button aspect"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-button.php:57
+msgid "Button align"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-button.php:61
+msgid "The Button will move to a new line"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-button.php:65
+#: inc/integrations/visual-composer/shortcodes/wps-vc-image.php:57
+msgid "Custom CSS class"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-button.php:69
+msgid ""
+"<small>Add custom classes defined in the theme stylesheet. Combine classes "
+"to get different looking buttons. ex. btn--custom-css</small>"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-button.php:73
+#: inc/integrations/visual-composer/shortcodes/wps-vc-icon.php:119
+msgid "Link target"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-button.php:76
+#: inc/integrations/visual-composer/shortcodes/wps-vc-heading.php:48
+#: inc/integrations/visual-composer/shortcodes/wps-vc-heading.php:69
+#: inc/integrations/visual-composer/shortcodes/wps-vc-heading.php:85
+#: inc/integrations/visual-composer/shortcodes/wps-vc-heading.php:101
+#: inc/integrations/visual-composer/shortcodes/wps-vc-icon.php:122
+#: inc/integrations/visual-composer/shortcodes/wps-vc-image.php:49
+#: inc/integrations/visual-composer/shortcodes/wps-vc-list.php:32
+#: inc/integrations/visual-composer/shortcodes/wps-vc-mediabox.php:150
+#: inc/integrations/visual-composer/shortcodes/wps-vc-mediabox.php:163
+#: inc/integrations/visual-composer/wps-vc-helpers.php:94
+#: inc/integrations/visual-composer/wps-vc-helpers.php:137
+#: inc/integrations/visual-composer/wps-vc-helpers.php:155
+#: inc/integrations/visual-composer/wps-vc-helpers.php:170
+#: inc/integrations/visual-composer/wps-vc-helpers.php:226
+#: inc/integrations/visual-composer/wps-vc-helpers.php:245
+#: inc/integrations/visual-composer/wps-vc-helpers.php:261
+#: inc/integrations/visual-composer/wps-vc-helpers.php:278
+#: inc/integrations/visual-composer/wps-vc-helpers.php:300
+#: inc/integrations/visual-composer/wps-vc-helpers.php:316
+#: inc/integrations/visual-composer/wps-vc-helpers.php:332
+msgid "Default"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-button.php:77
+#: inc/integrations/visual-composer/shortcodes/wps-vc-heading.php:49
+#: inc/integrations/visual-composer/shortcodes/wps-vc-icon.php:123
+#: inc/integrations/visual-composer/shortcodes/wps-vc-image.php:50
+msgid "New tab"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-button.php:79
+msgid ""
+"<small>Link target specifies where to open the linked document.</small> <br/"
+"><small> _blank (Opens the linked document in a new window or tab</small>)"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-button.php:83
+msgid "Custom onclick action"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-button.php:87
+msgid "<small>Add custom onclick functionality</small>"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-button.php:92
+#: inc/integrations/visual-composer/shortcodes/wps-vc-icon.php:139
+#: inc/integrations/visual-composer/shortcodes/wps-vc-image.php:66
+msgid "Set Margin"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-button.php:101
+#: inc/integrations/visual-composer/shortcodes/wps-vc-icon.php:147
+#: inc/integrations/visual-composer/shortcodes/wps-vc-image.php:75
+msgid "Margin Settings"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-button.php:111
+#: inc/integrations/visual-composer/shortcodes/wps-vc-image.php:85
+msgid "Set Padding"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-button.php:120
+#: inc/integrations/visual-composer/shortcodes/wps-vc-image.php:94
+msgid "Padding Settings"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-button.php:131
+msgid "Button"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-column-inner.php:44
+#: inc/integrations/visual-composer/shortcodes/wps-vc-column.php:46
+msgid "Responsiveness"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-column-inner.php:46
+#: inc/integrations/visual-composer/shortcodes/wps-vc-column.php:48
+msgid "Responsive Options"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-column-inner.php:47
+#: inc/integrations/visual-composer/shortcodes/wps-vc-column.php:49
+msgid ""
+"Adjust column for different screen sizes. Control width, offset and "
+"visibility settings."
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-column-inner.php:57
+#: inc/integrations/visual-composer/shortcodes/wps-vc-column.php:59
+msgid "Add optional CSS classes to the col element"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-column-inner.php:66
+#: inc/integrations/visual-composer/shortcodes/wps-vc-column.php:68
+msgid "Add optional CSS classes to the col_inner element"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-column-inner.php:75
+#: inc/integrations/visual-composer/shortcodes/wps-vc-column.php:77
+msgid "Align all the content in the element"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-column-inner.php:160
+#: inc/integrations/visual-composer/shortcodes/wps-vc-column-inner.php:189
+#: inc/integrations/visual-composer/shortcodes/wps-vc-column.php:161
+#: inc/integrations/visual-composer/shortcodes/wps-vc-column.php:190
+msgid "Inner Bg / Image"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-column-inner.php:161
+#: inc/integrations/visual-composer/shortcodes/wps-vc-column.php:162
+#: inc/integrations/visual-composer/shortcodes/wps-vc-row-inner.php:198
+#: inc/integrations/visual-composer/shortcodes/wps-vc-row.php:198
+msgid "Background Effects"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-column-inner.php:170
+#: inc/integrations/visual-composer/shortcodes/wps-vc-column.php:171
+msgid "Add image to be used as a background. Limit to 1 image"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-column-inner.php:180
+#: inc/integrations/visual-composer/shortcodes/wps-vc-column.php:181
+msgid "Select background image size (image will be stretched)"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-column-inner.php:190
+#: inc/integrations/visual-composer/shortcodes/wps-vc-column.php:191
+#: inc/integrations/visual-composer/shortcodes/wps-vc-row-inner.php:179
+#: inc/integrations/visual-composer/shortcodes/wps-vc-row.php:179
+msgid "Background Image Position"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-column-inner.php:198
+#: inc/integrations/visual-composer/shortcodes/wps-vc-column.php:199
+#: inc/integrations/visual-composer/shortcodes/wps-vc-divider.php:24
+#: inc/integrations/visual-composer/shortcodes/wps-vc-heading.php:61
+#: inc/integrations/visual-composer/shortcodes/wps-vc-heading.php:77
+#: inc/integrations/visual-composer/shortcodes/wps-vc-heading.php:93
+#: inc/integrations/visual-composer/shortcodes/wps-vc-heading.php:114
+#: inc/integrations/visual-composer/shortcodes/wps-vc-heading.php:123
+#: inc/integrations/visual-composer/shortcodes/wps-vc-list.php:68
+#: inc/integrations/visual-composer/shortcodes/wps-vc-mediabox.php:241
+#: inc/integrations/visual-composer/shortcodes/wps-vc-mediabox.php:250
+#: inc/integrations/visual-composer/shortcodes/wps-vc-row-inner.php:247
+#: inc/integrations/visual-composer/shortcodes/wps-vc-row.php:247
+#: inc/integrations/visual-composer/shortcodes/wps-vc-row.php:256
+msgid "Advanced"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-column-inner.php:199
+#: inc/integrations/visual-composer/shortcodes/wps-vc-column.php:200
+msgid "Once set equal height on the row, must set equal height on the column."
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-column-text.php:58
+#: inc/integrations/visual-composer/shortcodes/wps-vc-column-text.php:68
+#: inc/integrations/visual-composer/shortcodes/wps-vc-column-text.php:78
+msgid "Bg FX / Text FX & Align"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-column-text.php:59
+msgid "Background Effect"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-column-text.php:69
+msgid "Text Color"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-column-text.php:79
+msgid "Align all the content in this block"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-divider.php:8
+msgid "Divider style"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-divider.php:11
+#: inc/integrations/visual-composer/shortcodes/wps-vc-list.php:48
+msgid "Line"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-divider.php:12
+msgid "Dots"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-divider.php:13
+msgid "Dashes"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-divider.php:15
+msgid ""
+"Line | Dots  | Dashes <hr> <hr class=\"c-divider--dotted\"> <hr class=\"c-"
+"divider--dashed\">"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-divider.php:20
+msgid "Custom Class"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-divider.php:25
+msgid "custom element class"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-divider.php:35
+msgid "Content Divider"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-divider.php:36
+msgid "Creates a horizontal line, use to separate content"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-heading.php:23
+#: inc/integrations/visual-composer/shortcodes/wps-vc-mediabox.php:168
+#: inc/integrations/visual-composer/wps-vc-helpers.php:99
+#: inc/integrations/visual-composer/wps-vc-helpers.php:175
+msgid "Huge"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-heading.php:24
+msgid "Size of H1"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-heading.php:25
+msgid "Size of H2"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-heading.php:26
+msgid "Size of H3"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-heading.php:27
+msgid "Size of H4"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-heading.php:28
+msgid "Size of H5"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-heading.php:29
+msgid "Size of H6"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-heading.php:36
+#: inc/integrations/visual-composer/shortcodes/wps-vc-heading.php:40
+#: inc/integrations/visual-composer/shortcodes/wps-vc-heading.php:51
+#: inc/integrations/visual-composer/shortcodes/wps-vc-icon.php:110
+msgid "Link"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-heading.php:52
+#: inc/integrations/visual-composer/shortcodes/wps-vc-icon.php:126
+#: inc/integrations/visual-composer/shortcodes/wps-vc-image.php:53
+msgid ""
+"<small>Link target specifies where to open the linked document.</small> <br/"
+"> _blank (Opens the linked document in a new tab)"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-heading.php:70
+msgid "Thin"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-heading.php:71
+msgid "Thinner"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-heading.php:72
+#: inc/theme-options-framework/includes/class-options-sanitization.php:444
+msgid "Bold"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-heading.php:73
+msgid "Bolder"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-heading.php:76
+msgid ""
+"This setting depends on the current loaded fonts font-weight availability"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-heading.php:86
+msgid "H1"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-heading.php:87
+msgid "H2"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-heading.php:88
+msgid "H4"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-heading.php:89
+msgid "H5"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-heading.php:90
+msgid "H6"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-heading.php:102
+#: inc/integrations/visual-composer/shortcodes/wps-vc-icon.php:130
+#: inc/integrations/visual-composer/shortcodes/wps-vc-image.php:31
+#: inc/integrations/visual-composer/wps-vc-helpers.php:157
+#: inc/integrations/visual-composer/wps-vc-helpers.php:206
+#: inc/integrations/visual-composer/wps-vc-helpers.php:333
+msgid "Center"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-heading.php:103
+#: inc/integrations/visual-composer/shortcodes/wps-vc-image.php:30
+#: inc/integrations/visual-composer/wps-vc-helpers.php:156
+#: inc/integrations/visual-composer/wps-vc-helpers.php:334
+msgid "Right"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-heading.php:104
+msgid "Left"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-heading.php:113
+#: inc/integrations/visual-composer/shortcodes/wps-vc-image.php:61
+#: inc/integrations/visual-composer/shortcodes/wps-vc-mediabox.php:41
+#: inc/integrations/visual-composer/shortcodes/wps-vc-tabs.php:138
+msgid "Add custom class"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-heading.php:122
+msgid "Add custom css id"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-heading.php:132
+msgid "Heading"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-icon.php:85
+msgid "Icon size"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-icon.php:89
+msgid "Set icon size"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-icon.php:93
+msgid "Icon color"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-icon.php:98
+#: inc/integrations/visual-composer/shortcodes/wps-vc-mediabox.php:192
+msgid "Set icon color"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-icon.php:102
+msgid "Class"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-icon.php:115
+#: inc/integrations/visual-composer/shortcodes/wps-vc-image.php:42
+msgid "Link address ex: http://yourlink.com/yourpage"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-icon.php:157
+msgid "Eye catching icons from libraries"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-image.php:13
+#: inc/integrations/visual-composer/shortcodes/wps-vc-mediabox.php:14
+msgid "Set an image"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-image.php:21
+#: inc/integrations/visual-composer/shortcodes/wps-vc-mediabox.php:32
+msgid "Set custom image size ( Default: full)"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-image.php:104
+#: inc/integrations/visual-composer/shortcodes/wps-vc-mediabox.php:13
+#: inc/integrations/visual-composer/shortcodes/wps-vc-mediabox.php:22
+#: inc/integrations/visual-composer/shortcodes/wps-vc-mediabox.php:31
+#: inc/integrations/visual-composer/shortcodes/wps-vc-mediabox.php:40
+msgid "Image"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-list.php:9
+msgid "Bullet Style"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-list.php:14
+msgid "Style one"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-list.php:15
+msgid "Style two"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-list.php:16
+msgid "Style three"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-list.php:17
+msgid "Style four"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-list.php:18
+msgid "Style five"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-list.php:19
+msgid "Style six"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-list.php:20
+msgid "Style seven"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-list.php:21
+msgid "Style eight"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-list.php:22
+msgid "Style nine"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-list.php:23
+msgid "Style ten"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-list.php:28
+msgid "Bullet Color"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-list.php:33
+msgid "Color one"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-list.php:34
+msgid "Color two"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-list.php:35
+msgid "Color three"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-list.php:36
+msgid "Color four"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-list.php:37
+msgid "Color five"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-list.php:38
+msgid "Color six"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-list.php:49
+msgid "Dashed"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-list.php:50
+msgid "Dotted"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-list.php:59
+msgid "Only add lists as content. This component will only apply to lists "
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-list.php:60
+msgid "<ul><li>List item</li><li>List item</li></ul>"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-list.php:64
+msgid "Extra Class"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-list.php:69
+msgid "Add custom CSS class to element."
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-list.php:76
+msgid "Styled List"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-list.php:78
+msgid ""
+"Wrapper element for styling a list with predefined bullets|colors|lines."
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-mediabox.php:23
+msgid "Add custom link"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-mediabox.php:137
+msgid "Icon custom CSS class"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-mediabox.php:142
+msgid "Set an icon class"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-mediabox.php:146
+msgid "Media Type"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-mediabox.php:151
+msgid "Flag"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-mediabox.php:152
+msgid "Media"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-mediabox.php:154
+#: inc/integrations/visual-composer/shortcodes/wps-vc-mediabox.php:171
+#: inc/integrations/visual-composer/shortcodes/wps-vc-mediabox.php:200
+#: inc/integrations/visual-composer/shortcodes/wps-vc-mediabox.php:208
+msgid "Media settings"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-mediabox.php:155
+msgid "Set media type"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-mediabox.php:172
+msgid ""
+"Set elements spacing. By default the Media|Flag media type has a 'normal' "
+"spacing. If you use the default media type there is no spacing between "
+"elements."
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-mediabox.php:181
+#: inc/integrations/visual-composer/shortcodes/wps-vc-mediabox.php:191
+msgid "Colors"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-mediabox.php:182
+msgid "Color applies to icon color also (if icon color is NOT set)"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-mediabox.php:223
+#: inc/integrations/visual-composer/shortcodes/wps-vc-mediabox.php:232
+msgid "Margin"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-mediabox.php:242
+msgid "Add custom CSS class to mediabox wrapper."
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-mediabox.php:251
+msgid "Add custom CSS class to media object."
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-mediabox.php:258
+msgid "Mediabox"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-row-inner.php:37
+#: inc/integrations/visual-composer/shortcodes/wps-vc-row.php:37
+msgid "Set horizontal alignment of the grid columns"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-row-inner.php:46
+#: inc/integrations/visual-composer/shortcodes/wps-vc-row.php:46
+msgid "Set vertical alignment of the grid columns"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-row-inner.php:55
+#: inc/integrations/visual-composer/shortcodes/wps-vc-row.php:55
+msgid "Adjust column spacing"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-row-inner.php:64
+#: inc/integrations/visual-composer/shortcodes/wps-vc-row.php:64
+msgid ""
+"Add optional CSS classes to the row element, classes can contain the column "
+"control classes defined in the theme css architecture"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-row-inner.php:73
+#: inc/integrations/visual-composer/shortcodes/wps-vc-row.php:73
+msgid ""
+"Add wrapper container around the row, this is useful if you want to contain "
+"elements wne you are using the full width template. Options true/"
+"false(default false)"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-row-inner.php:82
+#: inc/integrations/visual-composer/shortcodes/wps-vc-row.php:82
+msgid ""
+"Add optional CSS class to the wrapper (if activated). Optional classes can "
+"contain background color extra paddings or any CSS rule that would apply to "
+"the wrapper. This setting requires a good knowledge of the css architecture "
+"used in the theme"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-row-inner.php:91
+#: inc/integrations/visual-composer/shortcodes/wps-vc-row.php:91
+msgid ""
+"Add custom class to be applied on the row outer holder element. Ex: add "
+"(predefined) class that centers the background image"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-row-inner.php:99
+#: inc/integrations/visual-composer/shortcodes/wps-vc-row.php:99
+msgid "Add unique ID to be applied on the row outer holder element."
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-row-inner.php:147
+#: inc/integrations/visual-composer/shortcodes/wps-vc-row-inner.php:158
+#: inc/integrations/visual-composer/shortcodes/wps-vc-row-inner.php:168
+#: inc/integrations/visual-composer/shortcodes/wps-vc-row-inner.php:178
+#: inc/integrations/visual-composer/shortcodes/wps-vc-row-inner.php:187
+#: inc/integrations/visual-composer/shortcodes/wps-vc-row-inner.php:197
+#: inc/integrations/visual-composer/shortcodes/wps-vc-row.php:147
+#: inc/integrations/visual-composer/shortcodes/wps-vc-row.php:158
+#: inc/integrations/visual-composer/shortcodes/wps-vc-row.php:168
+#: inc/integrations/visual-composer/shortcodes/wps-vc-row.php:178
+#: inc/integrations/visual-composer/shortcodes/wps-vc-row.php:187
+#: inc/integrations/visual-composer/shortcodes/wps-vc-row.php:197
+msgid "Outer Bg-Image/Fx"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-row-inner.php:148
+#: inc/integrations/visual-composer/shortcodes/wps-vc-row-inner.php:159
+#: inc/integrations/visual-composer/shortcodes/wps-vc-row.php:148
+#: inc/integrations/visual-composer/shortcodes/wps-vc-row.php:159
+msgid ""
+"Add image to be used as a background for the current row. Limit to 1 image"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-row-inner.php:169
+#: inc/integrations/visual-composer/shortcodes/wps-vc-row.php:169
+msgid "Background image behavior settings"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-row-inner.php:188
+#: inc/integrations/visual-composer/shortcodes/wps-vc-row.php:188
+msgid "Use parallax"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-row-inner.php:206
+#: inc/integrations/visual-composer/shortcodes/wps-vc-row-inner.php:216
+#: inc/integrations/visual-composer/shortcodes/wps-vc-row-inner.php:226
+#: inc/integrations/visual-composer/shortcodes/wps-vc-row-inner.php:236
+#: inc/integrations/visual-composer/shortcodes/wps-vc-row.php:206
+#: inc/integrations/visual-composer/shortcodes/wps-vc-row.php:216
+#: inc/integrations/visual-composer/shortcodes/wps-vc-row.php:226
+#: inc/integrations/visual-composer/shortcodes/wps-vc-row.php:236
+msgid "Outer Bg-Video"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-row-inner.php:207
+#: inc/integrations/visual-composer/shortcodes/wps-vc-row.php:207
+msgid "Enable Video Background"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-row-inner.php:217
+#: inc/integrations/visual-composer/shortcodes/wps-vc-row.php:217
+msgid "Paste the youtube link"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-row-inner.php:227
+#: inc/integrations/visual-composer/shortcodes/wps-vc-row.php:227
+msgid "See the video ID in the media library (mp4)"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-row-inner.php:237
+#: inc/integrations/visual-composer/shortcodes/wps-vc-row.php:237
+msgid "Add a background Image for the video. (only for self hosted video)"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-row-inner.php:248
+#: inc/integrations/visual-composer/shortcodes/wps-vc-row.php:248
+msgid ""
+"Once set this option on the row, must set equal height on each direct child "
+"columns as well."
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-row.php:257
+msgid "Make the row height equal the device height."
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-sliders.php:15
+msgid "Show slider scrollbar ( Default is false )"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-sliders.php:23
+msgid "Show slider pagination ( Default is false )"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-sliders.php:28
+msgid "WPS Anything slider"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-sliders.php:60
+msgid "Set an image background for the slide"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-sliders.php:69
+msgid "Set custom background image size ( Default: full)"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-sliders.php:74
+msgid "Slide Content"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-sliders.php:81
+msgid "WPS Anything slider slide"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-tabs.php:14
+msgid "WPS Tab"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-tabs.php:39
+msgid "Add title To tab"
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-tabs.php:47
+msgid ""
+"If you use the 'open' shortcode parameter in one of your tab shortcodes, "
+"ensure that you only add it to single tab as having more than one tab open "
+"within a tab group is not supported."
+msgstr ""
+
+#: inc/integrations/visual-composer/shortcodes/wps-vc-tabs.php:149
+msgid "WPS Tab item"
+msgstr ""
+
+#: inc/integrations/visual-composer/wps-vc-helpers.php:74
+msgid "Color default"
+msgstr ""
+
+#: inc/integrations/visual-composer/wps-vc-helpers.php:75
+msgid "Color 1"
+msgstr ""
+
+#: inc/integrations/visual-composer/wps-vc-helpers.php:76
+msgid "Color 2"
+msgstr ""
+
+#: inc/integrations/visual-composer/wps-vc-helpers.php:77
+msgid "Color 3"
+msgstr ""
+
+#: inc/integrations/visual-composer/wps-vc-helpers.php:78
+msgid "Color 4"
+msgstr ""
+
+#: inc/integrations/visual-composer/wps-vc-helpers.php:79
+msgid "Color 5"
+msgstr ""
+
+#: inc/integrations/visual-composer/wps-vc-helpers.php:80
+msgid "Color 6"
+msgstr ""
+
+#: inc/integrations/visual-composer/wps-vc-helpers.php:81
+#: inc/integrations/visual-composer/wps-vc-helpers.php:138
+#: inc/integrations/visual-composer/wps-vc-helpers.php:286
+msgid "Color White"
+msgstr ""
+
+#: inc/integrations/visual-composer/wps-vc-helpers.php:98
+#: inc/integrations/visual-composer/wps-vc-helpers.php:174
+msgid "Extra Large"
+msgstr ""
+
+#: inc/integrations/visual-composer/wps-vc-helpers.php:113
+msgid "Background One"
+msgstr ""
+
+#: inc/integrations/visual-composer/wps-vc-helpers.php:114
+msgid "Background Two"
+msgstr ""
+
+#: inc/integrations/visual-composer/wps-vc-helpers.php:115
+msgid "Background Three"
+msgstr ""
+
+#: inc/integrations/visual-composer/wps-vc-helpers.php:116
+msgid "Background Four"
+msgstr ""
+
+#: inc/integrations/visual-composer/wps-vc-helpers.php:117
+msgid "Background Five"
+msgstr ""
+
+#: inc/integrations/visual-composer/wps-vc-helpers.php:118
+msgid "Background Six"
+msgstr ""
+
+#: inc/integrations/visual-composer/wps-vc-helpers.php:119
+msgid "Background Body"
+msgstr ""
+
+#: inc/integrations/visual-composer/wps-vc-helpers.php:120
+msgid "Background Light"
+msgstr ""
+
+#: inc/integrations/visual-composer/wps-vc-helpers.php:121
+msgid "Background Dark"
+msgstr ""
+
+#: inc/integrations/visual-composer/wps-vc-helpers.php:122
+msgid "Background Opaq Light"
+msgstr ""
+
+#: inc/integrations/visual-composer/wps-vc-helpers.php:123
+msgid "Background Opaq Dark"
+msgstr ""
+
+#: inc/integrations/visual-composer/wps-vc-helpers.php:139
+#: inc/integrations/visual-composer/wps-vc-helpers.php:285
+msgid "Color Light"
+msgstr ""
+
+#: inc/integrations/visual-composer/wps-vc-helpers.php:140
+#: inc/integrations/visual-composer/wps-vc-helpers.php:279
+msgid "Color Primary"
+msgstr ""
+
+#: inc/integrations/visual-composer/wps-vc-helpers.php:141
+#: inc/integrations/visual-composer/wps-vc-helpers.php:280
+msgid "Color Secondary"
+msgstr ""
+
+#: inc/integrations/visual-composer/wps-vc-helpers.php:142
+#: inc/integrations/visual-composer/wps-vc-helpers.php:281
+msgid "Color Tertiary"
+msgstr ""
+
+#: inc/integrations/visual-composer/wps-vc-helpers.php:189
+msgid "Default (repeat)"
+msgstr ""
+
+#: inc/integrations/visual-composer/wps-vc-helpers.php:190
+#: inc/theme-options-framework/includes/class-options-sanitization.php:334
+msgid "No Repeat"
+msgstr ""
+
+#: inc/integrations/visual-composer/wps-vc-helpers.php:191
+msgid "Bg Cover"
+msgstr ""
+
+#: inc/integrations/visual-composer/wps-vc-helpers.php:192
+msgid "Bg Contain"
+msgstr ""
+
+#: inc/integrations/visual-composer/wps-vc-helpers.php:205
+msgid "Default (top left)"
+msgstr ""
+
+#: inc/integrations/visual-composer/wps-vc-helpers.php:207
+#: inc/theme-options-framework/includes/class-options-sanitization.php:350
+msgid "Top Center"
+msgstr ""
+
+#: inc/integrations/visual-composer/wps-vc-helpers.php:208
+#: inc/theme-options-framework/includes/class-options-sanitization.php:351
+msgid "Top Right"
+msgstr ""
+
+#: inc/integrations/visual-composer/wps-vc-helpers.php:209
+#: inc/theme-options-framework/includes/class-options-sanitization.php:355
+msgid "Bottom Left"
+msgstr ""
+
+#: inc/integrations/visual-composer/wps-vc-helpers.php:210
+#: inc/theme-options-framework/includes/class-options-sanitization.php:356
+msgid "Bottom Center"
+msgstr ""
+
+#: inc/integrations/visual-composer/wps-vc-helpers.php:211
+#: inc/theme-options-framework/includes/class-options-sanitization.php:357
+msgid "Bottom Right"
+msgstr ""
+
+#: inc/integrations/visual-composer/wps-vc-helpers.php:227
+msgid "Column Space Flush"
+msgstr ""
+
+#: inc/integrations/visual-composer/wps-vc-helpers.php:228
+msgid "Column Space Tiny"
+msgstr ""
+
+#: inc/integrations/visual-composer/wps-vc-helpers.php:229
+msgid "Column Space Small"
+msgstr ""
+
+#: inc/integrations/visual-composer/wps-vc-helpers.php:230
+msgid "Column Space Large"
+msgstr ""
+
+#: inc/integrations/visual-composer/wps-vc-helpers.php:231
+msgid "Column Space Huge"
+msgstr ""
+
+#: inc/integrations/visual-composer/wps-vc-helpers.php:246
+msgid "Align Right"
+msgstr ""
+
+#: inc/integrations/visual-composer/wps-vc-helpers.php:247
+msgid "Align Center"
+msgstr ""
+
+#: inc/integrations/visual-composer/wps-vc-helpers.php:262
+msgid "Align Top"
+msgstr ""
+
+#: inc/integrations/visual-composer/wps-vc-helpers.php:263
+msgid "Align Middle"
+msgstr ""
+
+#: inc/integrations/visual-composer/wps-vc-helpers.php:264
+msgid "Align Bottom"
+msgstr ""
+
+#: inc/integrations/visual-composer/wps-vc-helpers.php:282
+msgid "Color Positive"
+msgstr ""
+
+#: inc/integrations/visual-composer/wps-vc-helpers.php:283
+msgid "Color Negative"
+msgstr ""
+
+#: inc/integrations/visual-composer/wps-vc-helpers.php:284
+msgid "Color Neutral"
+msgstr ""
+
+#: inc/integrations/visual-composer/wps-vc-helpers.php:317
+msgid "Full Width"
+msgstr ""
+
+#: inc/integrations/visual-composer/wps-vc-helpers.php:318
+msgid "Pill"
+msgstr ""
+
+#: inc/meta-fields/page-margins-control.php:10
+msgid "Page margins adjust"
+msgstr ""
+
+#: inc/meta-fields/page-title-visibility.php:10
+msgid "Page title settings"
+msgstr ""
+
+#: inc/meta-fields/pre-content-area.php:10
+msgid "Page Pre Content"
+msgstr ""
+
+#: inc/settings/wps-admin-theme-fine-tune.php:82
+msgctxt "comment form author name"
+msgid "Name"
+msgstr ""
+
+#: inc/settings/wps-admin-theme-fine-tune.php:86
+msgid "Real name, please, no keyword spamming!"
+msgstr ""
+
+#: inc/settings/wps-admin-theme-fine-tune.php:90
+msgid "E-mail"
+msgstr ""
+
+#: inc/settings/wps-admin-theme-fine-tune.php:94
+msgid "add e-mail address"
+msgstr ""
+
+#: inc/settings/wps-admin-theme-fine-tune.php:98
+msgid "Domain"
+msgstr ""
+
+#: inc/settings/wps-admin-theme-fine-tune.php:123
+msgctxt ""
+msgid "Comment"
+msgstr ""
+
+#: inc/settings/wps-admin-theme-fine-tune.php:123
+msgctxt ""
+msgid "Your Feedback Is Appreciated"
+msgstr ""
+
+#: inc/shortcodes/shortcode_classes/wps_acc_shortcode.php:275
+msgid "Please enter a title attribute"
+msgstr ""
+
+#: inc/theme-functions/theme-widget-options.php:32
+msgid "Custom Widget CSS Class"
+msgstr ""
+
+#: inc/theme-options-framework/includes/class-options-framework-admin.php:91
+#: inc/theme-options-framework/includes/class-options-framework-admin.php:92
+msgid "Theme Options"
+msgstr ""
+
+#: inc/theme-options-framework/includes/class-options-framework-admin.php:206
+msgid "Click OK to reset. Any theme settings will be lost!"
+msgstr ""
+
+#: inc/theme-options-framework/includes/class-options-framework-admin.php:237
+msgid "Default options restored."
+msgstr ""
+
+#: inc/theme-options-framework/includes/class-options-framework-admin.php:291
+msgid "Options saved."
+msgstr ""
+
+#: inc/theme-options-framework/includes/class-options-media-uploader.php:62
+msgid "No file chosen"
+msgstr ""
+
+#: inc/theme-options-framework/includes/class-options-media-uploader.php:65
+#: inc/theme-options-framework/includes/class-options-media-uploader.php:118
+msgid "Upload"
+msgstr ""
+
+#: inc/theme-options-framework/includes/class-options-media-uploader.php:67
+#: inc/theme-options-framework/includes/class-options-media-uploader.php:119
+msgid "Remove"
+msgstr ""
+
+#: inc/theme-options-framework/includes/class-options-media-uploader.php:70
+msgid "Upgrade your version of WordPress for full media support."
+msgstr ""
+
+#: inc/theme-options-framework/includes/class-options-media-uploader.php:94
+msgid "View File"
+msgstr ""
+
+#: inc/theme-options-framework/includes/class-options-sanitization.php:335
+msgid "Repeat Horizontally"
+msgstr ""
+
+#: inc/theme-options-framework/includes/class-options-sanitization.php:336
+msgid "Repeat Vertically"
+msgstr ""
+
+#: inc/theme-options-framework/includes/class-options-sanitization.php:337
+msgid "Repeat All"
+msgstr ""
+
+#: inc/theme-options-framework/includes/class-options-sanitization.php:349
+msgid "Top Left"
+msgstr ""
+
+#: inc/theme-options-framework/includes/class-options-sanitization.php:352
+msgid "Middle Left"
+msgstr ""
+
+#: inc/theme-options-framework/includes/class-options-sanitization.php:353
+msgid "Middle Center"
+msgstr ""
+
+#: inc/theme-options-framework/includes/class-options-sanitization.php:354
+msgid "Middle Right"
+msgstr ""
+
+#: inc/theme-options-framework/includes/class-options-sanitization.php:369
+msgid "Scroll Normally"
+msgstr ""
+
+#: inc/theme-options-framework/includes/class-options-sanitization.php:370
+msgid "Fixed in Place"
+msgstr ""
+
+#: inc/theme-options-framework/includes/class-options-sanitization.php:443
+msgid "Italic"
+msgstr ""
+
+#: inc/theme-options-framework/includes/class-options-sanitization.php:445
+msgid "Bold Italic"
+msgstr ""
+
+#: inc/theme-options/wps-prime-theme-settings-definition.php:43
+msgid "Branding Settings"
+msgstr ""
+
+#: inc/theme-options/wps-prime-theme-settings-definition.php:48
+msgid "Company name"
+msgstr ""
+
+#: inc/theme-options/wps-prime-theme-settings-definition.php:49
+msgid ""
+"If no name is added will fall back to site name, Used in site info, ex. "
+"footer micro copy."
+msgstr ""
+
+#: inc/theme-options/wps-prime-theme-settings-definition.php:56
+msgid "Company logo"
+msgstr ""
+
+#: inc/theme-options/wps-prime-theme-settings-definition.php:57
+msgid ""
+"Logo will be rendered at full size. Please adjust your logo size to the "
+"correct fit. The logo will replace sitename/company name in the header area"
+msgstr ""
+
+#: inc/theme-options/wps-prime-theme-settings-definition.php:63
+msgid "Company launch year"
+msgstr ""
+
+#: inc/theme-options/wps-prime-theme-settings-definition.php:64
+msgid "Used in site info, ex. footer micro copy."
+msgstr ""
+
+#: inc/theme-options/wps-prime-theme-settings-definition.php:73
+msgid "Company phone number"
+msgstr ""
+
+#: inc/theme-options/wps-prime-theme-settings-definition.php:74
+#: inc/theme-options/wps-prime-theme-settings-definition.php:83
+msgid ""
+"Used in a shortcode. Regardles where the phone number will be placed we can "
+"update it from here."
+msgstr ""
+
+#: inc/theme-options/wps-prime-theme-settings-definition.php:82
+msgid "Company phone number (second)"
+msgstr ""
+
+#: inc/theme-options/wps-prime-theme-settings-definition.php:91
+msgid "Company contact email"
+msgstr ""
+
+#: inc/theme-options/wps-prime-theme-settings-definition.php:92
+#: inc/theme-options/wps-prime-theme-settings-definition.php:100
+msgid ""
+"Used in a shortcode. Regardles where the email will be placed we can update "
+"it from here."
+msgstr ""
+
+#: inc/theme-options/wps-prime-theme-settings-definition.php:99
+msgid "Company contact email (second)"
+msgstr ""
+
+#: inc/theme-options/wps-prime-theme-settings-definition.php:107
+msgid "Site disclaimer"
+msgstr ""
+
+#: inc/theme-options/wps-prime-theme-settings-definition.php:108
+msgid "Disclaimer text will appear in the footer."
+msgstr ""
+
+#: inc/theme-options/wps-prime-theme-settings-definition.php:120
+msgid "Typography"
+msgstr ""
+
+#: inc/theme-options/wps-prime-theme-settings-definition.php:125
+msgid "Body Font"
+msgstr ""
+
+#: inc/theme-options/wps-prime-theme-settings-definition.php:126
+msgid "Choose what font family to use as the main Body font."
+msgstr ""
+
+#: inc/theme-options/wps-prime-theme-settings-definition.php:133
+msgid "Load fonts subset"
+msgstr ""
+
+#: inc/theme-options/wps-prime-theme-settings-definition.php:134
+msgid ""
+"Will load Latin and Latin-ext font subset (where avaliable). This option has "
+"a high loding performance impact."
+msgstr ""
+
+#: inc/theme-options/wps-prime-theme-settings-definition.php:141
+#: inc/theme-options/wps-prime-theme-settings-definition.php:149
+msgid "Heading Font"
+msgstr ""
+
+#: inc/theme-options/wps-prime-theme-settings-definition.php:142
+msgid ""
+"Set different font family for headings.  This option has performance impact. "
+"You can also use this font by adding \"u-font-two\" css class on a text."
+msgstr ""
+
+#: inc/theme-options/wps-prime-theme-settings-definition.php:150
+msgid "Choose what font family to use as the main Heading font."
+msgstr ""
+
+#: inc/theme-options/wps-prime-theme-settings-definition.php:157
+msgid "Navigation Font"
+msgstr ""
+
+#: inc/theme-options/wps-prime-theme-settings-definition.php:158
+msgid "Set heading font family for navigation."
+msgstr ""
+
+#: inc/theme-options/wps-prime-theme-settings-definition.php:169
+msgid "Site Content"
+msgstr ""
+
+#: inc/theme-options/wps-prime-theme-settings-definition.php:174
+msgid "Site global content"
+msgstr ""
+
+#: inc/theme-options/wps-prime-theme-settings-definition.php:175
+msgid ""
+"Area visible on all the site pages. ( default location before the footer )"
+msgstr ""
+
+#: inc/theme-options/wps-prime-theme-settings-definition.php:186
+msgid "Widget custom CSS class"
+msgstr ""
+
+#: inc/theme-options/wps-prime-theme-settings-definition.php:187
+msgid "Enable custom CSS field option on site widgets"
+msgstr ""
+
+#: inc/theme-options/wps-prime-theme-settings-definition.php:194
+msgid "Custom 404 page"
+msgstr ""
+
+#: inc/theme-options/wps-prime-theme-settings-definition.php:195
+msgid "Use a custom page for 404 error page, defaults to true."
+msgstr ""
+
+#: inc/theme-options/wps-prime-theme-settings-definition.php:202
+msgid "Choose a page to use it as 404"
+msgstr ""
+
+#: inc/theme-options/wps-prime-theme-settings-definition.php:203
+msgid "Choose a page to display it's content on the 404 error page."
+msgstr ""
+
+#: inc/theme-options/wps-prime-theme-settings-definition.php:214
+msgid "Blog Settings"
+msgstr ""
+
+#: inc/theme-options/wps-prime-theme-settings-definition.php:219
+msgid "Article meta visibility settings"
+msgstr ""
+
+#: inc/theme-options/wps-prime-theme-settings-definition.php:220
+msgid ""
+"Set Article meta data visibility (ex. Posted on... / Posted in ...) show/"
+"hide. Default 'show'"
+msgstr ""
+
+#: inc/theme-options/wps-prime-theme-settings-definition.php:231
+msgid "Custom Scripts & Styles"
+msgstr ""
+
+#: inc/theme-options/wps-prime-theme-settings-definition.php:236
+msgid "Header Scripts"
+msgstr ""
+
+#: inc/theme-options/wps-prime-theme-settings-definition.php:237
+msgid "JS scripts that will load in the header."
+msgstr ""
+
+#: inc/theme-options/wps-prime-theme-settings-definition.php:244
+msgid "Footer Scripts"
+msgstr ""
+
+#: inc/theme-options/wps-prime-theme-settings-definition.php:245
+msgid "JS scripts that will load in the footer."
+msgstr ""
+
+#: inc/theme-options/wps-prime-theme-settings-definition.php:252
+msgid "Custom CSS style"
+msgstr ""
+
+#: inc/theme-options/wps-prime-theme-settings-definition.php:253
+msgid ""
+"Add custom CSS style. Large css settings should be in custom stylesheets. "
+"Only used it for limited amount of css, all the declarations will be inlined "
+"in the head. Don't wrap in \"style\" tag!"
+msgstr ""
+
+#: inc/theme-options/wps-prime-theme-settings-definition.php:264
+msgid "Performance Tweaks"
+msgstr ""
+
+#: inc/theme-options/wps-prime-theme-settings-definition.php:269
+msgid "WordPress default emoji"
+msgstr ""
+
+#: inc/theme-options/wps-prime-theme-settings-definition.php:270
+msgid "Disable unused empji scripts from loading on front end."
+msgstr ""
+
+#: inc/theme-options/wps-prime-theme-settings-definition.php:277
+msgid "WordPress default dashicons"
+msgstr ""
+
+#: inc/theme-options/wps-prime-theme-settings-definition.php:278
+msgid "Disable unused dashicon scripts from loading on front end."
+msgstr ""
+
+#: inc/theme-options/wps-prime-theme-settings-definition.php:285
+msgid "Comment form URL field"
+msgstr ""
+
+#: inc/theme-options/wps-prime-theme-settings-definition.php:286
+msgid "Disable the url field in the comment form section."
+msgstr ""
+
+#: inc/theme-options/wps-prime-theme-settings-definition.php:293
+msgid "System Status / Dev. options"
+msgstr ""
+
+#: inc/theme-options/wps-prime-theme-settings-definition.php:298
+msgid "Development Info"
+msgstr ""
+
+#: inc/theme-options/wps-prime-theme-settings-definition.php:303
+msgid "Display WPS hooks on front end"
+msgstr ""
+
+#: inc/theme-options/wps-prime-theme-settings-definition.php:304
+msgid ""
+"Show WPS Prime hooks on front end. Usefull for debugging and theme "
+"development"
+msgstr ""
+
+#: template-components/theme-front-comment-list.php:45
+msgid "(Edit)"
+msgstr ""
+
+#: template-components/theme-front-template-tags.php:65
+msgctxt "Previous post link"
+msgid "<span class=\"meta-nav\">&larr;</span>&nbsp;%title"
+msgstr ""
+
+#: template-components/theme-front-template-tags.php:66
+msgctxt "Next post link"
+msgid "%title&nbsp;<span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: template-parts/content-custom-404.php:51
+msgid "Sorry, no posts matched your criteria."
+msgstr ""
+
+#: template-parts/content-none.php:21
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: template-parts/content-single.php:33 template-parts/content.php:33
+#, php-format
+msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
