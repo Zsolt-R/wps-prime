@@ -86,6 +86,104 @@ function wps_vc_button_shortcode() {
             'value' => '',
             'description' => __('<small>Add custom onclick functionality</small>', 'wps-prime')
         ),
+
+        array(
+            'type' => 'dropdown',
+            'heading' => __( 'Icon library', 'wps-prime' ),
+            'param_name' => 'ico_type',
+            'value' => array(
+                __( 'Font Awesome', 'wps-prime' ) => 'fontawesome',
+                __( 'Typicons', 'wps-prime' ) => 'typicons',
+                __( 'Woo E Commerce', 'wps-prime' ) => 'woothemesecom',
+                __( 'Linecons', 'wps-prime' ) => 'linecons',
+            ),
+            'admin_label' => true,  
+            'group' => __( 'Icon', 'wps-prime' ),              
+            'description' => __( 'Select icon library.', 'wps-prime' ),
+        ),    
+        array(
+            'type' => 'iconpicker',
+            'heading' => __( 'Icon', 'wps-prime' ),
+            'param_name' => 'icon_fontawesome',
+            'value' => '', // default value to backend editor admin_label
+            'settings' => array(
+                //'emptyIcon' => false,
+                // default true, display an "EMPTY" icon?
+                'type' => 'fontawesome',
+                'iconsPerPage' => 4000,
+                // default 100, how many icons per/page to display, we use (big number) to display all icons in single page
+            ),
+            'dependency' => array(
+                'element' => 'ico_type',
+                'value' => 'fontawesome',
+            ),
+            'group' => __( 'Icon', 'wps-prime' ),  
+            'description' => __( 'Select icon from library.', 'wps-prime' ),
+        ),       
+        array(
+            'type' => 'iconpicker',
+            'heading' => __( 'Icon', 'wps-prime' ),
+            'param_name' => 'icon_typicons',
+            'value' => '', // default value to backend editor admin_label
+            'settings' => array(
+                //'emptyIcon' => false, // default true, display an "EMPTY" icon?
+                'type' => 'typicons',
+                'iconsPerPage' => 4000, // default 100, how many icons per/page to display
+            ),
+            'dependency' => array(
+                'element' => 'ico_type',
+                'value' => 'typicons',
+            ),
+            'group' => __( 'Icon', 'wps-prime' ),  
+            'description' => __( 'Select icon from library.', 'wps-prime' ),
+        ),
+        array(
+            'type' => 'iconpicker',
+            'heading' => __( 'Icon', 'wps-prime' ),
+            'param_name' => 'icon_linecons',
+            'value' => '', // default value to backend editor admin_label
+            'settings' => array(
+                //'emptyIcon' => false, // default true, display an "EMPTY" icon?
+                'type' => 'linecons',
+                'iconsPerPage' => 4000, // default 100, how many icons per/page to display
+            ),
+            'dependency' => array(
+                'element' => 'ico_type',
+                'value' => 'linecons',
+            ),
+            'group' => __( 'Icon', 'wps-prime' ),  
+            'description' => __( 'Select icon from library.', 'wps-prime' ),
+        ),
+        array(
+            'type' => 'iconpicker',
+            'heading' => __( 'Icon', 'wps-prime' ),
+            'param_name' => 'icon_woothemesecom',
+            'value' => '', // default value to backend editor admin_label
+            'settings' => array(
+                //'emptyIcon' => false, // default true, display an "EMPTY" icon?
+                'type' => 'woothemesecom',
+                'iconsPerPage' => 4000, // default 100, how many icons per/page to display
+            ),
+            'dependency' => array(
+                'element' => 'ico_type',
+                'value' => 'woothemesecom',
+            ),
+            'group' => __( 'Icon', 'wps-prime' ),  
+            'description' => __( 'Select icon from library.', 'wps-prime' ),
+        ),
+
+        array(
+        'type' => 'dropdown',
+        'heading' => 'Icon position',
+        'param_name' => 'ico_position',
+        'admin_label' => true, 
+        'group' => __( 'Icon', 'wps-prime' ),
+        'value' => array(
+            __('Default (end)','wps-prime') => '',
+            __('Start','wps-prime') => 'start',
+            )
+        ),
+
         // Only for VC UI functionality
         array(
             'type' => 'checkbox',

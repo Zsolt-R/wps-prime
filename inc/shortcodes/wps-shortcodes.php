@@ -422,7 +422,14 @@ function wps_buttons_shortcode( $atts )
         'size'       => '',
         'ghost'      => '',
         'color'   => '',
-        'onclick' => ''
+        'onclick' => '',        
+        'ico_class' => '',
+        'icon_fontawesome' => '',         // default value to backend editor | param used by VC
+        'icon_typicons' => '',            // default value to backend editor | param used by VC
+        'icon_linecons' => '',            // default value to backend editor | param used by VC
+        'icon_woothemesecom' => '',        // default value to backend editor | param used by VC
+        'ico_type'=>'',
+        'ico_position' => 'end'
         ), $atts 
     );
 
@@ -445,7 +452,34 @@ function wps_buttons_shortcode( $atts )
     $btnTarget = $options['target'] ? ' target="'.$options['target'].'"' : '';
     $btnOnClick = $options['onclick'] ? ' onclick="'.$options['onclick'].'"' : '';
 
-    $output = '<a class="c-button'. $styleClass .'" href="'.$btnLink.'"'.$btnTarget.$btnOnClick.'>'. $btnInfotext .'</a>';
+    $type = $options['ico_type'] ? $options['ico_type'] : 'fontawesome'; // Set as default iconfont
+
+    // Enque frontend icon font family
+    wps_icon_element_fonts_enqueue($type);
+
+    // Set icon position css class
+    $btnPosClass = 'end' !== $options['ico_position'] ? 'c-button__ico--start' : 'c-button__ico--end';
+
+    $ico_type_class = wps_getExtraClass(
+        array(
+            'c-button__ico',
+            $btnPosClass,
+            $options["icon_{$type}"]
+            )
+        );
+
+    $btnIcon = $options["icon_{$type}"] ? '<i class="'.$ico_type_class.'"></i>' : '';
+    
+    // Set icon position defaults
+    $btnEnd = $btnIcon;
+    $btnStart = '';    
+
+    if( 'end' !== $options['ico_position']){
+        $btnEnd = '';
+        $btnStart = $btnIcon;        
+    }
+
+    $output = '<a class="c-button'. $styleClass .'" href="'.$btnLink.'"'.$btnTarget.$btnOnClick.'>'.$btnStart. $btnInfotext .$btnEnd.'</a>';
 
     return $output;
 
