@@ -35,7 +35,7 @@ get_header(); ?>
 
 			endwhile;
 
-			the_posts_navigation();
+			wps_prime_paging_nav();
 
 		else :
 
