@@ -120,9 +120,11 @@ class WpsGetThemeFonts{
 
 	 	foreach ( $this->fontList as $key => $font ) {
 		 	/*
-		 	 * $font[0] = Font Name
-			 * $font[1] = font css style
+		 	 * $font[0] = Font Name / font family
+			 * $font[1] = generic family ex. "serif", "sans-serif", "cursive" ...
 			 * $font[2] = font http:// link
+			 * $font[3] = default weight normal
+			 * $font[4] = default weight bold
 			 */
 		 	$this->fontNameList[ $key ] = $font[0];
 		}
@@ -175,7 +177,7 @@ class WpsGetThemeFonts{
 
 		// If no secondary font.
 		if ( ! $font_second_status ) {
-			$style = $select_b.','.$select_h.'{font-family:\''. esc_attr( $theme_fonts[ $font_main ][0] ) . '\';'. $theme_fonts[ $font_main ][3] .';}';
+			$style = $select_b.','.$select_h.'{font-family:\''. esc_attr( $theme_fonts[ $font_main ][0] ) . '\','.esc_attr( $theme_fonts[ $font_main ][1]).';'. $theme_fonts[ $font_main ][3] .';}';
 
 			// If font weight is not the same add heading font weight.
 			$style .= $theme_fonts[ $font_main ][3] !== $theme_fonts[ $font_main ][4] ? $select_h.'{'.$theme_fonts[ $font_main ][4].';}' : '';
@@ -184,7 +186,7 @@ class WpsGetThemeFonts{
 		// If there is secondary font and it is the same as the body font, concatenate the body and heading selectors.
 		if ( $font_second_status && $font_second === $font_main ) {
 
-			$style = $select_b.','.$select_h.'{font-family:\''. esc_attr( $theme_fonts[ $font_main ][0] ) . '\';'. $theme_fonts[ $font_main ][3] .';}';
+			$style = $select_b.','.$select_h.'{font-family:\''. esc_attr( $theme_fonts[ $font_main ][0] ) . '\','.esc_attr( $theme_fonts[ $font_main ][1]).';'. $theme_fonts[ $font_main ][3] .';}';
 
 			// If font weight is not the same add heading font weight.
 			$style .= $theme_fonts[ $font_main ][3] !== $theme_fonts[ $font_main ][4] ? $select_h.'{'.$theme_fonts[ $font_main ][4].';}' : '';
@@ -193,13 +195,13 @@ class WpsGetThemeFonts{
 		// If there is secondary font and it is NOT the same as the body font.
 		if ( $font_second_status && $font_second !== $font_main ) {
 
-			$style = $select_b.'{font-family:\''. esc_attr( $theme_fonts[ $font_main ][0] ) . '\';'. $theme_fonts[ $font_main ][3] .';}';
+			$style = $select_b.'{font-family:\''. esc_attr( $theme_fonts[ $font_main ][0] ) . '\','.esc_attr( $theme_fonts[ $font_main ][1]).';'. $theme_fonts[ $font_main ][3] .';}';
 
-			$style .= $select_h.'{font-family:\''. esc_attr( $theme_fonts[ $font_second ][0] ) . '\';'. $theme_fonts[ $font_second ][4] .';}';
+			$style .= $select_h.'{font-family:\''. esc_attr( $theme_fonts[ $font_second ][0] ) . '\','.esc_attr( $theme_fonts[ $font_second ][1]).';'. $theme_fonts[ $font_second ][4] .';}';
 
 			//Font Family selectors without font weight
-			$style .= $font_one.'{font-family:\''. esc_attr( $theme_fonts[ $font_main ][0] ) . '\';}';
-			$style .= $font_two.'{font-family:\''. esc_attr( $theme_fonts[ $font_second ][0] ) . '\';}';
+			$style .= $font_one.'{font-family:\''. esc_attr( $theme_fonts[ $font_main ][0] ) . '\','.esc_attr( $theme_fonts[ $font_main ][1]).';}';
+			$style .= $font_two.'{font-family:\''. esc_attr( $theme_fonts[ $font_second ][0] ) . '\','.esc_attr( $theme_fonts[ $font_second ][1]).';}';
 		}
 
 		return $style;
