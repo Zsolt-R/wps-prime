@@ -9,12 +9,25 @@
 .u-border-top{
 	border-top:1px solid $color-gray-ui;
 }
+
 .u-border-bottom{
 	border-bottom:1px solid $color-gray-ui;
 }
+
 .u-border-left{
 	border-left:1px solid $color-gray-ui;
 }
+
 .u-border-right{
+	border-right:1px solid $color-gray-ui;
+}
+
+.u-border-vertical{
+	border-top:1px solid $color-gray-ui;
+	border-bottom:1px solid $color-gray-ui;
+}
+
+.u-border-horizontal{
+	border-left:1px solid $color-gray-ui;
 	border-right:1px solid $color-gray-ui;
 }
