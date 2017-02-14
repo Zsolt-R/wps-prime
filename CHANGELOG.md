@@ -1,4 +1,7 @@
 ##WPS-Prime Changelog##
+#### v.1.1.6
+* Change site disclaimer field to textarea (allow html)
+
 #### v.1.1.5
 * Add icon option to buttons components
 * Add Social Media link options & shortcode [wps_social_links]

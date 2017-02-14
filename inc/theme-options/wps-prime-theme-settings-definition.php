@@ -108,7 +108,10 @@ function wps_prime_settings_definition_list(){
 		'desc' => __( 'Disclaimer text will appear in the footer.', 'wps-prime' ),
 		'id' => 'site_disclaimer',
 		//'std' => 'Default Value',
-		'type' => 'text'
+		'type' => 'textarea',
+		'settings' => array(
+				'rows' => 2,
+			),
 	);
 
 
