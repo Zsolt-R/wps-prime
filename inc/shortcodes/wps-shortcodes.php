@@ -297,7 +297,7 @@ function wps_col_shortcode( $atts, $content = null )
     */
     if ($inner_class !== '' ||  $style !== '' ) {
 
-        $inner_start = "<div class=\"col col_inner{$inner_class}\"{$style}>";
+        $inner_start = "<div class=\"col_inner{$inner_class}\"{$style}>";
         $inner_end = "</div>";
     }
 
