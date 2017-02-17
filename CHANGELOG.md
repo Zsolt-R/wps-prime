@@ -1,6 +1,7 @@
 ##WPS-Prime Changelog##
 #### v.1.1.6
 * Change site disclaimer field to textarea (allow html)
+* Various bugfixes
 
 #### v.1.1.5
 * Add icon option to buttons components
