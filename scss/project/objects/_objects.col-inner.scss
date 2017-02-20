@@ -23,6 +23,6 @@
 }
 
 // Fix element stack side by side
-.grid--equalHeight:first-child > .col{
+.grid--equalHeight > .col{
   flex-direction: column;
 }
