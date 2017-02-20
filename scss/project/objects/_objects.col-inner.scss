@@ -9,3 +9,20 @@
 .col_inner{
     overflow: visible;
 }
+
+.col_inner--middle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.col_inner--bottom{
+    display: flex;    
+    flex-direction: column; 
+    justify-content: flex-end;
+}
+
+// Fix element stack side by side
+.grid--equalHeight:first-child > .col{
+  flex-direction: column;
+}
