@@ -20,20 +20,18 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @var $this WPBakeryShortCode_VC_Column
  */
 $class = $width = $css = $offset = $row_width = $style = '';
-$inner_img = $inner_img_size = $inner_img_pos = $inner_bg_fx = $align_content_inner = '';
+$inner_img = $inner_img_size = $inner_img_behave = $inner_img_pos = $inner_bg_fx = $align_content_inner = '';
 
 // Margins Paddings
-$margin = $padding = $margin_inner = $padding_inner = '';
+$margin = $padding = '';
 
 $output = '';
-$inner_s = $inner_e = '';
+$inner_s = $inner_e = $aligner_s = $aligner_e = '';
 
 $atts = vc_map_get_attributes( $this->getShortcode(), $atts );
 extract( $atts );
 
 $width = '_lap-and-up-'.wps_wpb_translateColumnWidthToSpan( $width );
-
-$eqh = $col_equal_height ? wps_getExtraClass('equal-height') : '';
 
 $css_classes = array(
 	'col',
@@ -48,10 +46,10 @@ $inner_class  = wps_getExtraClass( array(
 				$inner_class,
 				$margin_inner,
 				$padding_inner,
+				$inner_img_behave,
 				$inner_img_pos,
 				$inner_bg_fx,
-				$align_content_inner,
-				$eqh
+				$align_content_inner
 				)
 			);
 
@@ -64,7 +62,6 @@ if( $inner_class !== '' ||  $style !== ''){
 	$inner_s = "<div class=\"col_inner{$inner_class}\"{$style}>";
 	$inner_e = "</div>";
 }
-
 
 $wrapper_attributes = array();
 

@@ -235,8 +235,7 @@ function wps_vc_row_inner_shortcode(){
             'std' => '',
             'group' => __( 'Outer Bg-Video', 'wps-prime' ),
             'description' => __('Add a background Image for the video. (only for self hosted video)', 'wps-prime')
-        ), 
-  
+        ),   
 
         array(
             'type' => 'checkbox',
@@ -245,7 +244,7 @@ function wps_vc_row_inner_shortcode(){
             'value' => array( __( 'Yes', 'wps-prime' ) => 'yes' ),
             'admin_label' => true,
             'group' => __( 'Advanced', 'wps-prime' ),
-            'description' => __('Once set this option on the row, must set equal height on each direct child columns as well.', 'wps-prime')
+            'description' => __('Make the columns inside equal their height to the tallest column.', 'wps-prime')
         ),
     );
 

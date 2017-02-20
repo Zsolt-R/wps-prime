@@ -268,6 +268,23 @@ if(!function_exists('wps_row_vertical_align')){
 }
 
 /**
+ * Column inner element vertical align
+ *
+ * @since 1.5.1
+ */
+if(!function_exists('wps_col_inner_element_vertical_align')){
+	function wps_col_inner_element_vertical_align() {
+		$position_list = array(
+	                __('Default','wps-prime')	  => '',
+                    __('Align Middle','wps-prime') 	  => 'col_inner--middle',
+                    __('Align Bottom','wps-prime') 	  => 'col_inner--bottom',
+	                );
+		return $position_list;
+	}
+}
+
+
+/**
  * Button Color
  *
  * @since 1.4.4

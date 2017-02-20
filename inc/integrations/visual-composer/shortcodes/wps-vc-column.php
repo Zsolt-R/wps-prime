@@ -69,12 +69,12 @@ function wps_vc_column_shortcodes(){
         ),
         array(
             'type' => 'dropdown',
-            'heading' => "Content align",
+            'heading' => "Vertical align elements",
             'param_name' => 'align_content_inner',
             'admin_label' => true,
-            'value' =>  wps_txt_align(),
+            'value' =>  wps_col_inner_element_vertical_align(),
             'group' => esc_html__( 'Inner element', 'wps-prime' ),
-            'description' => __('Align all the content in the element', 'wps-prime')
+            'description' => __('Vertical align all the elements in the column', 'wps-prime')
         ),
         // Only for VC UI functionality
         array(
@@ -182,6 +182,16 @@ function wps_vc_column_shortcodes(){
         ),
         array(
             'type' => 'dropdown',
+            'heading' => "Background image behavior",
+            'param_name' => 'inner_img_behave',
+            'admin_label' => true,
+            'value' => wps_bg_behavior(),
+            'std' => '',
+            'group' => __( 'Inner Bg / Image', 'wps-prime' ),
+            'description' => __('Background image behavior settings', 'wps-prime')
+        ),
+        array(
+            'type' => 'dropdown',
             'heading' => "Background position",
             'param_name' => 'inner_img_pos',
             'admin_label' => true,
@@ -189,17 +199,7 @@ function wps_vc_column_shortcodes(){
             'std' => '',
             'group' => __( 'Inner Bg / Image', 'wps-prime' ),
             'description' => __('Background Image Position', 'wps-prime')
-        ),
-        array(
-            'type' => 'checkbox',
-            'heading' => "Equal height columns",
-            'param_name' => 'col_equal_height',
-            'admin_label' => true,
-            'value' => array( __( 'Yes', 'wps-prime' ) => 'yes' ),
-            'group' => __( 'Advanced', 'wps-prime' ),
-            'description' => __('Once set equal height on the row, must set equal height on the column.', 'wps-prime')
-        ),
-        
+        ),        
         //'js_view' => 'VcColumnView',
     );
 
