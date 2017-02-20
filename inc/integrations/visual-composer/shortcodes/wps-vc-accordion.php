@@ -207,7 +207,6 @@ function wps_vc_accordion_item_shortcode() {
         'name' => __('WPS Accordion item', 'wps-prime'),
         'base' => 'wps_accordion_item',
         'content_element' => true,
-        'is_container'=>true,
         'as_child' => array('only' => 'wps_accordion'), // Use only|except attributes to limit parent (separate multiple values with comma)
         'icon' => 'vc_icon-vc-gitem-image',
         'params' => $attributes        

@@ -81,7 +81,6 @@ function wps_vc_wps_slider_item_shortcode() {
         'name' => __('WPS Anything slider slide', 'wps-prime'),
         'base' => 'wps_all_slider_item',
         'content_element' => true,
-        'is_container'=>true,
         'as_child' => array('only' => 'wps_all_slider'), // Use only|except attributes to limit parent (separate multiple values with comma)
         'icon' => 'vc_icon-vc-gitem-image',
         'params' => $attributes

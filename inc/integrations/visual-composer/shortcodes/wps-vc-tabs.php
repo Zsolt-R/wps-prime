@@ -149,7 +149,6 @@ function wps_vc_tab_item_shortcode() {
         'name' => __('WPS Tab item', 'wps-prime'),
         'base' => 'wps_tab_item',
         'content_element' => true,
-        'is_container'=>true,
         'as_child' => array('only' => 'wps_tab'), // Use only|except attributes to limit parent (separate multiple values with comma)
         'icon' => 'vc_icon-vc-gitem-image',
         'params' => $attributes

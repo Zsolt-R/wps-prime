@@ -957,7 +957,7 @@ function wps_slider_shortcode($atts,$content = null)
         'scrollbar' => false,
         'pagination' => false,
         'class' => ''
-        ), $atts, 'wps_slider' 
+        ), $atts 
     );
 
     $output = '';
@@ -990,7 +990,7 @@ function wps_slider_item_shortcode($atts,$content = null)
         'slide_img' => '',
         'img_size' => 'full',
         'img_size_small' => 'wps_prime_medium'
-        ), $atts, 'wps_slider_item'
+        ), $atts
     );
 
     $output = '';
