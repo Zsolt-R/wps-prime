@@ -2,6 +2,8 @@
 #### v.1.1.6
 * Change site disclaimer field to textarea (allow html)
 * Various bugfixes
+* Fix equal height column, inner content flex-column to flex-row
+* Add column background behaviour options
 
 #### v.1.1.5
 * Add icon option to buttons components
