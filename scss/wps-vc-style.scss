@@ -51,11 +51,6 @@ $breakpoints:(
 @import "project/settings/settings.global";
 
 
-
-
-
-
-
 // TOOLS
 @import "bower_components/inuitcss/tools/tools.rem";
 @import "bower_components/inuitcss/tools/tools.font-size";
@@ -63,22 +58,31 @@ $breakpoints:(
 @import "project/tools/tools.media-query-generator";
 @import "project/tools/tools.rgba-background";
 
+
+
 // COMPONENTS
-//
 // Build and include your project’s UI Compoments here.
 @import "project/components/components.buttons";
 @import "project/components/components.divider";
-
+@import "project/components/components.icons";
 
 
 
 // UTILITIES
-@import "project/utilities/utilities.typography";
-@import "project/utilities/utilities.backgrounds";
+
 $inuit-font-size-h1:  36px;
 $inuit-font-size-h2:  28px;
 $inuit-font-size-h3:  24px;
 $inuit-font-size-h4:  20px;
 $inuit-font-size-h5:  18px;
 $inuit-font-size-h6:  16px;
-@import "bower_components/inuitcss/utilities/utilities.headings";
+
+// make sure these elements render only in the preview area and not in the settings panel
+// If you render font size in options panel it meeses up the lein height of the select box
+
+.wpb_element_wrapper{ 
+	@import "project/utilities/utilities.typography";
+	@import "bower_components/inuitcss/utilities/utilities.headings";
+}
+
+@import "project/utilities/utilities.backgrounds";
