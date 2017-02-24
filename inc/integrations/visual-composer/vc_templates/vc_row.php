@@ -56,6 +56,7 @@ extract( $atts );
 
 	if( $has_tube_bg || $has_hosted_bg ){
 		$video_bg = $has_tube_bg ?  $tube_video : $hosted_video;
+		 wp_enqueue_script('wps_vc_video_bg');
 	}
 
 	// Layout Classes

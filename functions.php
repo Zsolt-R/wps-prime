@@ -413,7 +413,7 @@ class WPS_Theme_Setup
         /**
          * SWIPER 3.0.x
          */
-        wp_register_script('swiper_core', WPS_JS_DIR_URI .'/min/swiper.jquery.min.js', array( 'jquery' ), '', true);
+        wp_register_script('slider_core', WPS_JS_DIR_URI .'/min/swiper.jquery.min.js', array( 'jquery' ), '', true);
 
         /* Default main nav */
         wp_register_script('main_menu_core', WPS_JS_DIR_URI .'/min/navigation.min.js', array(), '', true);
@@ -434,12 +434,8 @@ class WPS_Theme_Setup
         wp_register_script('site_js', WPS_JS_DIR_URI .'/min/site.min.js', array( 'swiper_core' ), '', true);
 
 
-        /* Accordion */
-
-        wp_enqueue_script('swiper_core');
-        wp_enqueue_script('main_menu_core');
-        wp_enqueue_script('wps_vc_video_bg');
-        wp_enqueue_script('wps_fancybox_pack');        
+        wp_enqueue_script('main_menu_core');  
+        wp_enqueue_script('wps_fancybox_pack');       
         wp_enqueue_script('site_js');
         
 

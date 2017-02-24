@@ -36,6 +36,8 @@
 
 jQuery(document).ready(function($) { 
 
+  if (typeof Swiper != "undefined") {
+
   // Full width slider
   var mySwiper = new Swiper ('.swiper-container', {
     // Optional parameters
@@ -71,6 +73,7 @@ jQuery(document).ready(function($) {
     // And if we need scrollbar
     scrollbar: '.swiper-scrollbar'   
    });
+ }
 
 
   //Youtube Video

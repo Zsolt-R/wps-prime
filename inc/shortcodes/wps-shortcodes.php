@@ -157,6 +157,7 @@ function wps_row_shortcode( $atts, $content = null )
 
     if($has_tube_bg || $has_hosted_bg ) {
         $video_bg = $has_tube_bg ?  $tube_video : $hosted_video;
+        wp_enqueue_script('wps_vc_video_bg');
     }
 
     // Layout Classes
@@ -332,6 +333,8 @@ function wps_fw_slider_shortcode( $atts )
     $image_list_constructor = '';
     $constructor = '';
     $arrays = array();
+
+    wp_enqueue_script('slider_core');
 
     // Start ID Check.
     // Check for Images.
@@ -963,6 +966,8 @@ function wps_slider_shortcode($atts,$content = null)
     $output = '';
 
     $inner = '';
+
+    wp_enqueue_script('slider_core');
 
     $class =  wps_getExtraClass($options['class']);
 
