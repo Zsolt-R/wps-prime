@@ -3,10 +3,10 @@
 \*------------------------------------*/
 
 .c-list{
-	> ul{
-		list-style: none;
-		margin-left: 0;
-	}
+   > ul{
+      list-style: none;
+      margin-left: 0;
+   }
 }
 
 .c-list--bullet-one,
@@ -19,12 +19,14 @@
 .c-list--bullet-eight,
 .c-list--bullet-nine,
 .c-list--bullet-ten{
-	> ul > li{
-		&::before{
-			font-family:$brand-ico-family;
-			margin-right:0.4em;
-		}
-	}
+   > ul > li{
+      padding-left:1.4em;
+      &::before{
+         font-family:$brand-ico-family;
+         margin-right:0.4em;
+         margin-left: -1.4em;
+      }
+   }
 }
 
 .c-list--bullet-one > ul > li::before{ content:$bullet-one;}
@@ -39,9 +41,9 @@
 .c-list--bullet-ten > ul > li::before{ content:$bullet-ten;}
 
 .c-list--deco-lines{
-	> ul > li{
-		border-bottom:1px solid $color-gray-ui;
-	}
+   > ul > li{
+      border-bottom:1px solid $color-gray-ui;
+   }
 }
 
 .c-list--deco-dashes{
