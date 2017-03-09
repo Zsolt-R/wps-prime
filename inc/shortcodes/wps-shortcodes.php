@@ -993,6 +993,8 @@ function wps_slider_item_shortcode($atts,$content = null)
         'class' => '',
         'content_class' => '',
         'slide_img' => '',
+        'img_behave'=> '',
+        'img_pos'=> '',
         'img_size' => 'full',
         'img_size_small' => 'wps_prime_medium'
         ), $atts
@@ -1001,7 +1003,13 @@ function wps_slider_item_shortcode($atts,$content = null)
     $output = '';
     $style = '';
     $inner = '';
-    $class = wps_getExtraClass($options['class']);
+    $class = wps_getExtraClass(
+                array(
+                $options['class'],
+                $options['img_behave'],
+                $options['img_pos']
+                )
+            );
     $content_class = wps_getExtraClass($options['content_class']);
 
     if ($options['slide_img'] ) {
@@ -1128,7 +1136,12 @@ function wps_social_links_shortcode($atts)
         'link_class' => '',
         'label_class' => '',
         'target' => '',
-        'list_class' => ''
+        'list_class' => '',
+        'facebook_ico' =>'fa fa-facebook',
+        'googleplus_ico' => 'fa fa-google-plus',
+        'twitter_ico' => 'fa fa-twitter',
+        'linkedin_ico' => 'fa fa-linkedin',
+        'youtube_ico'  => 'fa fa-youtube'
         ), $atts
     );
 
@@ -1162,23 +1175,23 @@ function wps_social_links_shortcode($atts)
     
 
     if($facebook){
-       $output .= $listItemStart.'<a href="'.$facebook.'"'.$target.' class="'.$classLink.'"><i class="fa fa-facebook'.$classIco.'"></i><span class="'.$classLabel.'">Facebook</span></a>'.$listItemEnd;
+       $output .= $listItemStart.'<a href="'.$facebook.'"'.$target.' class="'.$classLink.'"><i class="'.$options['facebook_ico'].$classIco.'"></i><span class="'.$classLabel.'">Facebook</span></a>'.$listItemEnd;
     }
 
     if($gplus){
-       $output .= $listItemStart.'<a href="'.$gplus.'"'.$target.' class="'.$classLink.'"><i class="fa fa-google-plus'.$classIco.'"></i><span class="'.$classLabel.'">Google +</span></a>'.$listItemEnd;
+       $output .= $listItemStart.'<a href="'.$gplus.'"'.$target.' class="'.$classLink.'"><i class="'.$options['googleplus_ico'].$classIco.'"></i><span class="'.$classLabel.'">Google +</span></a>'.$listItemEnd;
     }
 
     if($twitter){
-       $output .= $listItemStart.'<a href="'.$twitter.'"'.$target.' class="'.$classLink.'"><i class="fa fa-twitter'.$classIco.'"></i><span class="'.$classLabel.'">Twitter</span></a>'.$listItemEnd;        
+       $output .= $listItemStart.'<a href="'.$twitter.'"'.$target.' class="'.$classLink.'"><i class="'.$options['twitter_ico'].$classIco.'"></i><span class="'.$classLabel.'">Twitter</span></a>'.$listItemEnd;        
     }
 
     if($linkedIn){
-       $output .= $listItemStart.'<a href="'.$linkedIn.'"'.$target.' class="'.$classLink.'"><i class="fa fa-linkedin'.$classIco.'"></i><span class="'.$classLabel.'">LinkedIn</span></a>'.$listItemEnd;
+       $output .= $listItemStart.'<a href="'.$linkedIn.'"'.$target.' class="'.$classLink.'"><i class="'.$options['linkedin_ico'].$classIco.'"></i><span class="'.$classLabel.'">LinkedIn</span></a>'.$listItemEnd;
     }
 
     if($youtube){
-       $output .= $listItemStart.'<a href="'.$youtube.'"'.$target.' class="'.$classLink.'"><i class="fa fa-youtube'.$classIco.'"></i><span class="'.$classLabel.'">Youtube</span></a>'.$listItemEnd;        
+       $output .= $listItemStart.'<a href="'.$youtube.'"'.$target.' class="'.$classLink.'"><i class="'.$options['youtube_ico'].$classIco.'"></i><span class="'.$classLabel.'">Youtube</span></a>'.$listItemEnd;        
     } 
 
 

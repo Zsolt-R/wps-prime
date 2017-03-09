@@ -69,6 +69,26 @@ function wps_vc_wps_slider_item_shortcode() {
             'description' => __('Set custom background image size ( Default: full)', 'wps-prime')
         ),
         array(
+            'type' => 'dropdown',
+            'heading' => "Background image behavior",
+            'param_name' => 'img_behave',
+            'admin_label' => true,
+            'value' => wps_bg_behavior(),
+            'std' => '',
+            'group' => __( 'Background image', 'wps-prime' ),
+            'description' => __('Background image behavior settings', 'wps-prime')
+        ),
+        array(
+            'type' => 'dropdown',
+            'heading' => "Background image position",
+            'param_name' => 'img_pos',
+            'admin_label' => true,
+            'value' => wps_bg_positions(),
+            'std' => '',
+            'group' => __( 'Background image', 'wps-prime' ),
+            'description' => __('Background Image Position', 'wps-prime')
+        ),
+        array(
             'type' => 'textarea_html',
             'holder' => 'div',
             'heading' => __( 'Slide Content', 'wps-prime' ),
