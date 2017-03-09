@@ -197,7 +197,7 @@ add_action( 'vc_after_init', 'wps_vc_mediabox_shortcode' );
 function wps_vc_admin_style(){
 
   // Check if we are on a page and we edit that page
-  if ( 'page' === get_post_type() && isset( $_GET['action'] ) ) {   
+  if ( get_post_meta(get_the_ID(), '_wpb_vc_js_status', true) && isset( $_GET['action'] ) ) {   
     if('edit' === $_GET['action']){
 
         wp_register_style( 'wps_vc_style', get_wps_file_location('wps-vc-style.css','/inc/integrations/visual-composer/css'), false, '1.0.0' );
