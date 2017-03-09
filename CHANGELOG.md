@@ -1,4 +1,10 @@
 ##WPS-Prime Changelog##
+#### v.1.1.7
+* Fix styled list editor shortcode - normalize css classes
+* Fix VC custom style loading. Change VC availability detection and custom style loading
+* Extend anything slider slide background image options
+* Change site microcopy wrapper html tag to div
+
 #### v.1.1.6
 * Change site disclaimer field to textarea (allow html)
 * Various bugfixes
