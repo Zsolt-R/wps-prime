@@ -27,7 +27,7 @@ if ( ! function_exists( 'wps_footer_micro' ) ) {
         ?>    
         <div class="page-micro">
             <div class="o-wrapper">
-                <small class="page-micro__copy"><?php echo wp_kses_post( $disclaimer ); ?> <?php echo esc_html( $name ); ?> <?php echo esc_html( $date ); ?> - <?php echo esc_html( date( 'Y' ) ); ?></small>
+                <div class="page-micro__copy"><?php echo wp_kses_post( $disclaimer ); ?> <?php echo esc_html( $name ); ?> <?php echo esc_html( $date ); ?> - <?php echo esc_html( date( 'Y' ) ); ?></div>
             </div><!-- o-wrapper -->
         </div><!-- page-micro -->    
         <?php
