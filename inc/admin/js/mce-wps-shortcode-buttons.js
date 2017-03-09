@@ -88,16 +88,16 @@
 
         var values = { listtypes: [
                             {text:'Style None',value:''},
-                            {text:'Style One',value:'u-list--style-one'},
-                            {text:'Style two',value:'u-list--style-two'},
-                            {text:'Style three',value:'u-list--style-three'},
-                            {text:'Style four',value:'u-list--style-four'},
-                            {text:'Style five',value:'u-list--style-five'},
-                            {text:'Style six',value:'u-list--style-six'},
-                            {text:'Style seven',value:'u-list--style-seven'},
-                            {text:'Style eight',value:'u-list--style-eight'},
-                            {text:'Style nine',value:'u-list--style-nine'},
-                            {text:'Style ten',value:'u-list--style-ten'}
+                            {text:'Style One',value:'c-list--bullet-one'},
+                            {text:'Style two',value:'c-list--bullet-two'},
+                            {text:'Style three',value:'c-list--bullet-three'},
+                            {text:'Style four',value:'c-list--bullet-four'},
+                            {text:'Style five',value:'c-list--bullet-five'},
+                            {text:'Style six',value:'c-list--bullet-six'},
+                            {text:'Style seven',value:'c-list--bullet-seven'},
+                            {text:'Style eight',value:'c-list--bullet-eight'},
+                            {text:'Style nine',value:'c-list--bullet-nine'},
+                            {text:'Style ten',value:'c-list--bullet-ten'}
                         ]
                     };
         return values;
