@@ -42,7 +42,7 @@ add_action('wps_enqueue_font_icon_element','wps_icon_element_fonts_enqueue');
  * @return string
  */
 function wps_getExtraClass( $class, $flush = false ) {
-	$output = '';
+	$output = $flush = '';
 	$space = $flush ? '':' ';
 
 	// Check is we get an array
