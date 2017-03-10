@@ -313,7 +313,7 @@ if ( ! function_exists( 'wps_theme_page_title_visibility_body_class' ) ) {
 
 /* Add content margin setting */
 add_filter('wps_site_content_class','wps_theme_page_margin_setup');
-add_filter('wps_post_class','wps_theme_page_margin_setup');
+add_filter('post_class','wps_theme_page_margin_setup');
 
 if ( ! function_exists( 'wps_theme_page_margin_setup' ) ) {
 
@@ -325,21 +325,22 @@ if ( ! function_exists( 'wps_theme_page_margin_setup' ) ) {
 				$get_mb = get_post_meta(get_the_ID(),'page_margin_bottom_reset',true);
 			
 				if( 'reset' === $get_mt && 'reset' !== $get_mb){
-					$classes[] = 'u-padding-top-none';
+					$classes[] = 'u-padding-top-none u-margin-top-none';
 				}
 		
 				if( 'reset' === $get_mb && 'reset' !== $get_mt){
-					$classes[] = 'u-padding-bottom-none';
+					$classes[] = 'u-padding-bottom-none u-padding-bottom-none';
 				}
 		
 				if( 'reset' === $get_mt && 'reset' === $get_mb){
-					$classes[] = 'u-padding-vertical-none';
+					$classes[] = 'u-padding-vertical-none u-margin-vertical-none';
 				}
 		}
 	
 		return $classes;
 	}	
 }
+
 
 /**
 *	Add spacing refference Enable/Disable to body
