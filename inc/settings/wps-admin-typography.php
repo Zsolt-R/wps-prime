@@ -74,6 +74,13 @@ $wpsMyFont->add_font('Muli',
 	'font-weight: 700'
 );
 
+$wpsMyFont->add_font('Montserrat',
+	'sans-serif',
+	'https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800,900',
+	'font-weight: 400',
+	'font-weight: 700'
+);
+
 $wpsMyFont->add_font('Rubik',
 	'sans-serif',
 	'https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900',
@@ -123,11 +130,24 @@ $wpsMyFont->add_font('Roboto Mono',
 	'font-weight: 700'
 );
 
-/* Cursive */
+$wpsMyFont->add_font('Titillium Web',
+	'sans-serif',
+	'https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600,700,900',
+	'font-weight: 400',
+	'font-weight: 700'
+);
 
+/* Cursive */
 $wpsMyFont->add_font('Expletus Sans',
 	'cursive',
 	'https://fonts.googleapis.com/css?family=Expletus+Sans:400,400i,500,600,700,700i',
+	'font-weight: 400',
+	'font-weight: 700'
+);
+
+$wpsMyFont->add_font('Dancing Script',
+	'cursive',
+	'https://fonts.googleapis.com/css?family=Dancing+Script:400,700',
 	'font-weight: 400',
 	'font-weight: 700'
 );
@@ -178,6 +198,13 @@ $wpsMyFont->add_font('Cormorant',
 $wpsMyFont->add_font('Arima Madurai',
 	'serif',
 	'https://fonts.googleapis.com/css?family=Arima+Madurai:100,200,300,400,500,700,800,900',
+	'font-weight: 400',
+	'font-weight: 700'
+);
+
+$wpsMyFont->add_font('Libre Baskerville',
+	'serif',
+	'https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700',
 	'font-weight: 400',
 	'font-weight: 700'
 );
