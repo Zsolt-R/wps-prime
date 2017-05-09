@@ -1,4 +1,8 @@
 ##WPS-Prime Changelog##
+#### v.1.1.9
+* Fix correct icon css loading location
+* Extend Font families
+
 #### v.1.1.8
 * Add SVG wordpress display fix
 
