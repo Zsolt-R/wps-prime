@@ -61,6 +61,9 @@ class WPS_Theme_Setup
         /* Enqueue main style. */
         add_action('wp_enqueue_scripts', array( $this, 'wps_theme_css' ));
 
+        /* Register Icons. Enqueue styles only when you use it. From shortcodes or components */
+        add_action('init', array( $this,'wps_theme_icons_css' ));
+
         /* Construct Theme Base (Start theme construction) */
         $this->theme_constants();
         $this->theme_options();
@@ -319,7 +322,7 @@ class WPS_Theme_Setup
          *    Theme configurations
          */
 
-        /* Custom image sizes. 	*/
+        /* Custom image sizes.  */
         include WPS_ENGINE_DIR .'/settings/wps-admin-image-sizes.php';
 
         /* Typography Settings */
@@ -384,7 +387,7 @@ class WPS_Theme_Setup
         include WPS_ENGINE_DIR .'/shortcodes/wps-shortcodes.php';
         include WPS_ENGINE_DIR .'/admin/wps-shortcodes-admin-buttons.php';
 
-        //WP Editor wps extension	
+        //WP Editor wps extension   
         include WPS_ENGINE_DIR .'/admin/wps-tinymce-extension.php';
 
         /* Run/Load theme fonts on front end */
@@ -452,6 +455,11 @@ class WPS_Theme_Setup
 
         /* Enque main style */
         wp_enqueue_style('wps_prime-style', WPS_THEME_STYLE_URI);
+        wp_enqueue_style('wps_prime-style');
+    }
+
+    public function wps_theme_icons_css()
+    {
 
         /* Register icon fonts */
         wp_register_style('wps_prime-font-awesome', WPS_CSS_URI .'/icons/wps-font-awesome/css/font-awesome.min.css');
@@ -459,6 +467,12 @@ class WPS_Theme_Setup
         wp_register_style('wps_prime-linecons', WPS_CSS_URI .'/icons/wps-linecons/linecons.css');
         wp_register_style('wps_prime-woo-ecom', WPS_CSS_URI .'/icons/wps-woothemes-e-commerce-icons/woothemes_ecommerce.css');
 
+        /* Enqueue styles only when you use it. From shortcodes or components */
+
+        //  wp_enqueue_style('wps_prime-font-awesome');
+        //  wp_enqueue_style('wps_prime-typicons');
+        //  wp_enqueue_style('wps_prime-linecons');
+        //  wp_enqueue_style('wps_prime-woo-ecom');
     }
 
     /**
