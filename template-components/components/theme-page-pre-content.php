@@ -1,6 +1,6 @@
 <?php
 /**
- * Global Content
+ * Page pre content
  *
  * @package wps_prime
  */
