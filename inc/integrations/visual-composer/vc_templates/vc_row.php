@@ -49,7 +49,7 @@ extract( $atts );
 
 	if( $has_hosted_bg ){
 		$hosted_video = '<div class="wps-bg-video-wrapper"><video playsinline autoplay muted loop ';
-		$hosted_video .= wp_get_attachment_url($v_placeholder) ? 'poster="'.wp_get_attachment_url($v_placeholder).'" ' : '';
+		$hosted_video .= wp_get_attachment_url($v_placeholder) ? 'poster="'.wp_get_attachment_url($v_placeholder).'" style="background-image:url('.wp_get_attachment_url($v_placeholder).')" ' : '';
 		$hosted_video .= 'class="wps-bg-video">';
 		$hosted_video .= '<source src="'.wp_get_attachment_url( $v_hosted ).'" type="video/mp4"></video></div>';		
 		}
