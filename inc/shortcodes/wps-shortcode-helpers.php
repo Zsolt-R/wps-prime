@@ -32,8 +32,6 @@ function wps_icon_element_fonts_enqueue( $font ) {
 			do_action( 'wps_enqueue_font_icon_element', $font ); // hook to custom do enqueue style
 	}
 }
-// Frontend embed
-add_action('wps_enqueue_font_icon_element','wps_icon_element_fonts_enqueue');
 
 
 /**
