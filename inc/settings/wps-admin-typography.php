@@ -137,6 +137,13 @@ $wpsMyFont->add_font('Titillium Web',
 	'font-weight: 700'
 );
 
+$wpsMyFont->add_font('Oswald',
+	'cursive',
+	'https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700',
+	'font-weight: 400',
+	'font-weight: 700'
+);
+
 /* Cursive */
 $wpsMyFont->add_font('Expletus Sans',
 	'cursive',
