@@ -45,6 +45,12 @@ class WPS_Theme_Setup
         /* Load theme typography generator */
         add_action('after_setup_theme', array( $this, 'theme_typography' ), 2);
 
+        /* Construct Theme Base (Start theme construction) */
+        $this->theme_constants();
+        $this->theme_options();
+        add_action('after_setup_theme', array( $this, 'wps_theme_base' ));
+
+
         /**
          * Load configuration
          * Must load first so it can use hooks defined in the classes
@@ -64,10 +70,6 @@ class WPS_Theme_Setup
         /* Register Icons. Enqueue styles only when you use it. From shortcodes or components */
         add_action('init', array( $this,'wps_theme_icons_css' ));
 
-        /* Construct Theme Base (Start theme construction) */
-        $this->theme_constants();
-        $this->theme_options();
-        add_action('after_setup_theme', array( $this, 'wps_theme_base' ));
 
         /* Load meta boxes */
         add_action('after_setup_theme', array( $this, 'theme_meta_boxes' ), 5);
@@ -434,7 +436,7 @@ class WPS_Theme_Setup
         wp_register_script('wps_fancybox_pack', WPS_JS_DIR_URI .'/min/jquery.fancybox.pack.js', array('jquery'), '', true); // Fancybox enable
 
         /* Site JS */
-        wp_register_script('site_js', WPS_JS_DIR_URI .'/min/site.min.js', array( 'swiper_core' ), '', true);
+        wp_register_script('site_js', WPS_JS_DIR_URI .'/min/site.min.js', array( 'jquery' ), '', true);
 
 
         wp_enqueue_script('main_menu_core');  
