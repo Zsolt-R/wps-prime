@@ -2,6 +2,7 @@
 #### v.1.2.0
 * Fix correct js loading / dependency
 * Extend Font families
+* Add footer disclaimer shortcode support
 
 #### v.1.1.9
 * Fix correct icon css loading location

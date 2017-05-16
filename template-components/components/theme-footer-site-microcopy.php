@@ -13,7 +13,7 @@
 
 if ( ! function_exists( 'wps_footer_micro' ) ) {
 
-   	/**
+    /**
      * Site footer closing data line
      */
     function wps_footer_micro() {
@@ -23,7 +23,7 @@ if ( ! function_exists( 'wps_footer_micro' ) ) {
         // If no option found set to Site Name!
         $name = wps_get_theme_option( 'company_name' ) ? wps_get_theme_option( 'company_name' ) : get_bloginfo( 'name' );
     
-        $disclaimer = wps_get_theme_option('site_disclaimer') ? wps_get_theme_option('site_disclaimer').' -' :''; 
+        $disclaimer = wps_get_theme_option('site_disclaimer') ? do_shortcode(wps_get_theme_option('site_disclaimer')).' -' :''; 
         ?>    
         <div class="page-micro">
             <div class="o-wrapper">
