@@ -142,14 +142,24 @@ if (!class_exists('Wps_Vc_Fallback_Shortcodes')) :
 			'align_content_inner' => ''
 		), $atts );
 	
-		$style = '';
+		$style = $width = '';
+
+
+
+		// If laptop screen width IS SET switch the default _lap-and-up to _desktop to avoid grid classes override
+		if($options['row_width'] !== '' && strpos($options['row_width'],'_lap') !== false){
+			$width = '_desktop-'.wps_wpb_translateColumnWidthToSpan( $options['width'] );
+		}else{
+			$width = $options['width'] ?  '_lap-and-up-'.wps_wpb_translateColumnWidthToSpan($options['width']) : '';
+		}
+				
 
 		// Stack Classes
 		$class = wps_getExtraClass( array(
-			$options['class'] ?  ' '.$options['class'] : '',
-			$options['width'] ?  ' _lap-and-up-'.wps_wpb_translateColumnWidthToSpan($options['width']) : '',
-			$options['margin'] ?  ' '.$options['margin'] : '',
-			$options['padding'] ?  ' '.$options['padding'] : ''
+			$options['class'] ?  $options['class'] : '',
+			$width,
+			$options['margin'] ?  $options['margin'] : '',
+			$options['padding'] ?  $options['padding'] : ''
 			)
 		);
 	
@@ -204,18 +214,31 @@ if (!class_exists('Wps_Vc_Fallback_Shortcodes')) :
 			'el_class' => '',
 			'margin'=>'',
 			'padding'=>'',
+			'bg_fx'=>'',
+			'txt_color'=>'',
+			'txt_align'=>''
 			), $atts );
 
 	// Stack Classes
-	$css_class = $options['el_class'] ?  $options['el_class'] : '';
-	$css_class .= $options['margin'] ?  ' '.$options['margin'] : '';
-	$css_class .= $options['padding'] ?  ' '.$options['padding'] : '';
+	$css_class = '';
+
+	$content = do_shortcode($content);
+
+
+	$css_class = wps_getExtraClass($options);
+ 
+
+	// Wrapperless output
+	// $output = sprintf('%1$s%2$s%3$s',
+	// 			$css_class !== '' ? "<div class=\"c-text-block{$css_class}\">" : '',	// %1$s
+	// 			do_shortcode($content), 									// %2$s
+	// 			$css_class !== '' ? '</div>' : ''  							// %3$s
+	// 	);
 
 	// Prepare Output
-	$output = sprintf('%1$s%2$s%3$s',
-				$css_class !== '' ? "<div class=\"{$css_class}\">" : '',	// %1$s
-				do_shortcode($content), 									// %2$s
-				$css_class !== '' ? '</div>' : ''  							// %3$s
+	$output = sprintf('%1$s%2$s%3$s',"<div class=\"c-text-block{$css_class}\">",	// %1$s
+				wps_remove_wpautop($content,true), 								// %2$s
+				"</div>"  												// %3$s
 		);
 
 	return  $output;

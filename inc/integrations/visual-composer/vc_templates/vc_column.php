@@ -31,7 +31,13 @@ $inner_s = $inner_e = $aligner_s = $aligner_e = '';
 $atts = vc_map_get_attributes( $this->getShortcode(), $atts );
 extract( $atts );
 
-$width = '_lap-and-up-'.wps_wpb_translateColumnWidthToSpan( $width );
+// If laptop screen width IS SET switch the default _lap-and-up to _desktop to avoid grid classes override
+if($row_width !== '' && strpos($row_width,'_lap') !== false){
+	$width = '_desktop-'.wps_wpb_translateColumnWidthToSpan( $width );
+}else{
+	$width = '_lap-and-up-'.wps_wpb_translateColumnWidthToSpan( $width );
+}
+
 
 $css_classes = array(
 	'col',
