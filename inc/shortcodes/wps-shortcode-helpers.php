@@ -40,19 +40,30 @@ function wps_icon_element_fonts_enqueue( $font ) {
  * @return string
  */
 function wps_getExtraClass( $class, $flush = false ) {
-	$output = $flush = '';
-	$space = $flush ? '':' ';
+	$output = '';
+	$space = $flush ? '' : ' ';	
 
 	// Check is we get an array
 	if(is_array($class)){
+
+		$isFirst = 0;
+		
 		foreach($class as $css_class){
+
+			$isFirst++;
+
+			// if we have multiple values flush only the first space
+			if( 1 === $isFirst && $flush){ $space = ''; }
+
 			 // Check if we have a valid value and field is not empty
-			 if ( '' !== $css_class ) { $output .= $space . str_replace( '.', '', $css_class ); }
+			 if ( '' !== $css_class ) { $output .= $space . $css_class; }			 
 		}
+
 	}else{	
 		// Check if we have a valid value and field is not empty
-		 if ( '' !== $class ) {	$output = $space . str_replace( '.', '', $class ); }
+		 if ( '' !== $class ) {	$output = $space . $class; }
 		}
+		
 	return $output;
 }
 
