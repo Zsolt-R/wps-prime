@@ -131,8 +131,8 @@ function wps_prime_settings_definition_list(){
 	);
 
 	$options[] = array(
-		'name' => __( 'Google+ link', 'wps-prime' ),
-		'id' => 'wps_social_link_gplus',
+		'name' => __( 'Instagram link', 'wps-prime' ),
+		'id' => 'wps_social_link_instagram',
 		'type' => 'text'
 	);
 
@@ -149,10 +149,17 @@ function wps_prime_settings_definition_list(){
 	);
 
 	$options[] = array(
+		'name' => __( 'Google+ link', 'wps-prime' ),
+		'id' => 'wps_social_link_gplus',
+		'type' => 'text'
+	);
+	
+	$options[] = array(
 		'name' => __( 'Youtube link', 'wps-prime' ),
 		'id' => 'wps_social_link_youtube',
 		'type' => 'text'
 	);
+
 
 
 	/**

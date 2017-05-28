@@ -1141,7 +1141,8 @@ function wps_social_links_shortcode($atts)
         'googleplus_ico' => 'fa fa-google-plus',
         'twitter_ico' => 'fa fa-twitter',
         'linkedin_ico' => 'fa fa-linkedin',
-        'youtube_ico'  => 'fa fa-youtube'
+        'youtube_ico'  => 'fa fa-youtube',
+        'instagram_ico'  => 'fa fa-instagram'
         ), $atts
     );
 
@@ -1159,11 +1160,11 @@ function wps_social_links_shortcode($atts)
     $target = $options['target'] ? ' target="_blank"' : '';
 
     $facebook = wps_get_theme_option( 'wps_social_link_facebook' );
-    $gplus = wps_get_theme_option( 'wps_social_link_gplus' );
+    $instagram = wps_get_theme_option( 'wps_social_link_instagram' );
     $twitter = wps_get_theme_option( 'wps_social_link_twitter' );
     $linkedIn = wps_get_theme_option( 'wps_social_link_linkedin' );
-    $youtube = wps_get_theme_option( 'wps_social_link_youtube' );
-
+    $gplus = wps_get_theme_option( 'wps_social_link_gplus' );
+    $youtube = wps_get_theme_option( 'wps_social_link_youtube' );  
    
 
     if($options['list']){
@@ -1178,16 +1179,20 @@ function wps_social_links_shortcode($atts)
        $output .= $listItemStart.'<a href="'.$facebook.'"'.$target.' class="'.$classLink.'"><i class="'.$options['facebook_ico'].$classIco.'"></i><span class="'.$classLabel.'">Facebook</span></a>'.$listItemEnd;
     }
 
-    if($gplus){
-       $output .= $listItemStart.'<a href="'.$gplus.'"'.$target.' class="'.$classLink.'"><i class="'.$options['googleplus_ico'].$classIco.'"></i><span class="'.$classLabel.'">Google +</span></a>'.$listItemEnd;
+    if($instagram){
+       $output .= $listItemStart.'<a href="'.$instagram.'"'.$target.' class="'.$classLink.'"><i class="'.$options['instagram_ico'].$classIco.'"></i><span class="'.$classLabel.'">Instagram</span></a>'.$listItemEnd;
     }
 
     if($twitter){
        $output .= $listItemStart.'<a href="'.$twitter.'"'.$target.' class="'.$classLink.'"><i class="'.$options['twitter_ico'].$classIco.'"></i><span class="'.$classLabel.'">Twitter</span></a>'.$listItemEnd;        
-    }
+    } 
 
     if($linkedIn){
        $output .= $listItemStart.'<a href="'.$linkedIn.'"'.$target.' class="'.$classLink.'"><i class="'.$options['linkedin_ico'].$classIco.'"></i><span class="'.$classLabel.'">LinkedIn</span></a>'.$listItemEnd;
+    }
+
+    if($gplus){
+       $output .= $listItemStart.'<a href="'.$gplus.'"'.$target.' class="'.$classLink.'"><i class="'.$options['googleplus_ico'].$classIco.'"></i><span class="'.$classLabel.'">Google +</span></a>'.$listItemEnd;
     }
 
     if($youtube){
