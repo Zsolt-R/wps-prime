@@ -1,4 +1,9 @@
 ##WPS-Prime Changelog##
+#### v.1.2.1
+* Add instagram to social media list
+* Helper getCssClass function update
+* Fix VC Column responsive css class output
+
 #### v.1.2.0
 * Fix correct js loading / dependency
 * Extend Font families
