@@ -29,8 +29,8 @@ if ( ! function_exists( 'wps_prime_paging_nav' ) ) :
 		if ( 'link' === $type ) {
 
 			$output .= '<nav class="navigation paging-navigation" role="navigation">';
-			$output .= '<h1 class="screen-reader-text">'. esc_html__( 'Posts navigation', 'wps-prime' ) .'</h1>';
-			$output .= '<div class="nav-links">';
+			$output .= '<a class="screen-reader-text" href="#post-navigation">'.esc_html_e( 'Post navigation', 'wps-child-david' ).'</a>';
+			$output .= '<div class="nav-links" id="post-navigation>';
 			$output .= get_next_posts_link() ? '<div class="nav-previous">'. get_next_posts_link( sprintf( esc_html__( '%1$s Older posts', 'wps-prime' ),'<span class="meta-nav">&larr;</span>' ) ).'</div>' : '';
 			$output .= get_previous_posts_link() ? '<div class="nav-next">'. get_previous_posts_link( sprintf( esc_html__( 'Newer posts %1$s', 'wps-prime' ),'<span class="meta-nav">&rarr;</span>' ) ) .'</div>' : '';
 			$output .= '</div><!-- .nav-links -->';
@@ -59,8 +59,8 @@ if ( ! function_exists( 'wps_prime_post_nav' ) ) :
 		}
 		?>
 		<nav class="navigation post-navigation" role="navigation">
-		<h1 class="screen-reader-text"><?php esc_html_e( 'Post navigation', 'wps-prime' ); ?></h1>
-        <div class="nav-links">
+		<a class="screen-reader-text" href="#post-navigation"><?php esc_html_e( 'Post navigation', 'wps-prime' ); ?></a>
+        <div class="nav-links" id="post-navigation">
 			<?php
 				previous_post_link( '<div class="nav-previous">%link</div>', _x( '<span class="meta-nav">&larr;</span>&nbsp;%title', 'Previous post link', 'wps-prime' ) );
 				next_post_link( '<div class="nav-next">%link</div>',     _x( '%title&nbsp;<span class="meta-nav">&rarr;</span>', 'Next post link',     'wps-prime' ) );
