@@ -423,6 +423,7 @@ function wps_buttons_shortcode( $atts )
         'class'   => '',
         'label'   => 'Please add label',
         'link'    => '',
+        'post_id' => false,
         'target'  => '',
         'align'   => '',
         'margin'  => '',
@@ -455,9 +456,16 @@ function wps_buttons_shortcode( $atts )
                    )
     );
 
+    $btnLink = '#';
+
+    // Post ID overwrites custom link
+    if($options['link'] && !$options['post_id']){
+        $btnLink = $options['link'];
+    }elseif($options['post_id']){
+        $btnLink = get_permalink($options['post_id']) ? get_permalink($options['post_id']) : '#';
+    }
 
     $btnInfotext = $options['label'] ? $options['label'] : '';
-    $btnLink = $options['link'] ? $options['link'] : '#';
     $btnTarget = $options['target'] ? ' target="'.$options['target'].'"' : '';
     $btnOnClick = $options['onclick'] ? ' onclick="'.$options['onclick'].'"' : '';
 
@@ -609,6 +617,7 @@ function wps_ico_shortcode( $atts, $content = null )
 {
     $options = shortcode_atts(
         array(
+        'wrap_class'=>'',
         'class' => '',
         'center'=> false,
         'icon_fontawesome' => '',         // default value to backend editor | param used by VC
@@ -643,6 +652,12 @@ function wps_ico_shortcode( $atts, $content = null )
         )
     );
 
+    
+    $wrap_class = wps_getExtraClass( 
+        array(
+         $options['wrap_class']
+        )
+    );
     $center = $options['center'] ? ' ico-wrap--center' : '';
 
     $tag = $options['html_tag'] ? $options['html_tag'] : 'div'; // Prevent empty.
@@ -658,7 +673,7 @@ function wps_ico_shortcode( $atts, $content = null )
     // If the wrapper is block element add the link inside 
     // Prevent the link going beyond the actual icon by wrapping it's block-level holder
     if('div' === $tag) {
-        $output = '<'.$tag.' class="ico-wrap'.esc_attr($center).'">'.$linkStart.'<i class="ico'. esc_attr($content) . esc_attr($ico_class) .'"></i>'.$linkEnd.'</'.$tag.'>';
+        $output = '<'.$tag.' class="ico-wrap'.esc_attr($center).$wrap_class.'">'.$linkStart.'<i class="ico'. esc_attr($content) . esc_attr($ico_class) .'"></i>'.$linkEnd.'</'.$tag.'>';
     }else{
         $output = $linkStart.'<'.$tag.' class="ico-wrap'.esc_attr($center).'"><i class="ico'. esc_attr($content) . esc_attr($ico_class) .'"></i></'.$tag.'>'.$linkEnd;
     }    
