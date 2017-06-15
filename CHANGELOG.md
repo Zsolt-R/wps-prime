@@ -1,4 +1,15 @@
 ##WPS-Prime Changelog##
+#### v.1.2.2
+* Show Post/Page id in list view admin column 
+* Add CF7 loader svg and extend CF7 Default CSS
+* Extend BUTTON component. Add post id field to allow link generation by using a post ID instead of cutom link
+* Extend ICON component. Add icon wrap class fiedl to allow adding custom css class to the icon wrapper
+* Cheange post navigation screen reader text html tag from H1 -> a
+* Small css fixes
+ - extend/finetune default form element css
+ - extend/finetune default form utilities css
+
+
 #### v.1.2.1
 * Add instagram to social media list
 * Helper getCssClass function update
