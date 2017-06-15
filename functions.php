@@ -320,6 +320,18 @@ class WPS_Theme_Setup
          */
         include WPS_ENGINE_DIR .'/admin/wps-admin-column-show-media-id.php';
 
+
+        /**
+         *    Add post id to post list admin column
+         */
+        include WPS_ENGINE_DIR .'/admin/wps-admin-column-show-post-id.php';
+
+
+        /**
+         *    Add page id to page list admin column
+         */
+        include WPS_ENGINE_DIR .'/admin/wps-admin-column-show-page-id.php';
+
         /**
          *    Theme configurations
          */
