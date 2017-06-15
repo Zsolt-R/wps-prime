@@ -104,7 +104,15 @@ function wps_vc_icon_shortcode() {
             'admin_label' => true,
             'value' => '',
             'description' => __('Add custom CSS class.', 'wps-prime')
-            ),  
+            ), 
+            array(
+            'type' => 'textfield',
+            'heading' => __('Icon Wrap Class', 'wps-prime'),
+            'param_name' => 'wrap_class',
+            'admin_label' => true,
+            'value' => '',
+            'description' => __('Add custom CSS class to the icon wrapper element.', 'wps-prime')
+            ),   
              array(
             'type' => 'textfield',
             'heading' => __('Link', 'wps-prime'),
