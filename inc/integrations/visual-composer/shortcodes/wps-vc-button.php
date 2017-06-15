@@ -14,6 +14,14 @@ function wps_vc_button_shortcode() {
         ),
         array(
             'type' => 'textfield',
+            'heading' => __('Button link by Post Id', 'wps-prime'),
+            'admin_label' => true,
+            'param_name' => 'post_id',
+            'value' => '',
+            'description' => __('Post ID will override custom link. Add any post/page/custom post type/media id ex: 123 ', 'wps-prime')
+        ),
+        array(
+            'type' => 'textfield',
             'heading' => __('Button label', 'wps-prime'),
             'admin_label' => true,
             'param_name' => 'label',
