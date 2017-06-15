@@ -29,7 +29,14 @@ textarea{
     border-radius: $global-radius;
     padding: $inuit-global-spacing-unit-small; 
     line-height: ($inuit-global-line-height)-2px; // input fields compensate border
+    &:focus{
+       outline: none;
+    }
 }
+input[type=checkbox], input[type=radio]{
+    margin-right: 0.3em;
+    width:auto;
+  }
 
 input[type="color"]{
   -webkit-appearance: none;
