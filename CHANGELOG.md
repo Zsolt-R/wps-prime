@@ -1,4 +1,10 @@
 ##WPS-Prime Changelog##
+#### v.1.2.3
+* Fix default pagination markup
+* Change H1 to screen reader text link in pagenavigation
+* Add comment author to comment list
+* Fix inner column responsive settings
+
 #### v.1.2.2
 * Show Post/Page id in list view admin column 
 * Add CF7 loader svg and extend CF7 Default CSS
