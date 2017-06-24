@@ -29,6 +29,7 @@ function wps_comment( $comment, $args, $depth ) {
     <?php if ( 'div' !== $args['style'] ) : ?>
     <div id="div-comment-<?php comment_ID() ?>" class="o-media u-margin-bottom">
     <?php endif; ?>
+    <?php echo comment_author(); ?>
     <div class="comment-author vcard o-media__img">
     <?php if ( 0 !== $args['avatar_size'] ) { echo get_avatar( $comment, $args['avatar_size'] ); } ?>    
     </div>
