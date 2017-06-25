@@ -39,6 +39,12 @@ function page_margin_settings_save_postdata($post_id){
     if ( ( isset ( $_POST['set_page_margins_nonce'] ) ) && ( ! wp_verify_nonce( $_POST['set_page_margins_nonce'], 'page_margins' ) ) ) 
             return;
 
+    $slug = "page"; //post-type check
+    $cur_post = get_post($post_id);
+    if($slug != $cur_post->post_type){
+        return $post_id;
+    }
+
     // Check if we are on a page and not other post type and user is allowed to edit these fields
     if ( ( isset ( $_POST['post_type'] ) ) && ( 'page' == $_POST['post_type'] )  ) {
             if ( ! current_user_can( 'edit_page', $post_id ) ) {

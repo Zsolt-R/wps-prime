@@ -34,6 +34,12 @@ function wps_page_title_settings_save_postdata( $post_id ){
     if ( ( isset ( $_POST['set_title_visibility_nonce'] ) ) && ( ! wp_verify_nonce( $_POST['set_title_visibility_nonce'], 'title_visibility' ) ) )
             return;
 
+    $slug = "page"; //post-type check
+    $cur_post = get_post($post_id);
+    if($slug != $cur_post->post_type){
+        return $post_id;
+    }
+
     // Check if we are on a page and not other post type and user is allowed to edit these fields
     if ( ( isset ( $_POST['post_type'] ) ) && ( 'page' == $_POST['post_type'] )  ) {
             if ( ! current_user_can( 'edit_page', $post_id ) ) {
