@@ -73,6 +73,8 @@ vc_remove_element("vc_icon_element");
 vc_remove_element("vc_btn");
 vc_remove_element("vc_cta");
 vc_remove_element("vc_section");
+vc_remove_element("vc_hoverbox");
+vc_remove_element("vc_zigzag");
 
 /* Structure */
 vc_remove_element("vc_widget_sidebar");
