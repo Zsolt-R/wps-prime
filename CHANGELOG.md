@@ -1,10 +1,14 @@
 ##WPS-Prime Changelog##
+#### v.1.2.4
+* Remove new VC elements (VC - v.5.2)
+
 #### v.1.2.3
 * Fix default pagination markup
 * Change H1 to screen reader text link in pagenavigation
 * Add comment author to comment list
 * Fix inner column responsive settings
 * Restrict page meta settings to page post type
+* Add Fancybox V 3.x.x
 
 #### v.1.2.2
 * Show Post/Page id in list view admin column 
