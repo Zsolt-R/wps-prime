@@ -445,8 +445,7 @@ class WPS_Theme_Setup
         wp_register_script('wps_vc_video_bg', WPS_JS_DIR_URI .'/min/wps-video-bg.min.js', array('jquery'), '', true); // Handle video backgrounds
 
         /* Fancybox pack */
-        wp_register_script('wps_fancybox_pack', WPS_JS_DIR_URI .'/min/jquery.fancybox.pack.js', array('jquery'), '', true); // Fancybox enable
-
+        wp_register_script('wps_fancybox_pack', WPS_JS_DIR_URI .'/min/jquery.fancybox.min.js', array('jquery'), '', true); // Fancybox enable
         /* Site JS */
         wp_register_script('site_js', WPS_JS_DIR_URI .'/min/site.min.js', array( 'jquery' ), '', true);
 

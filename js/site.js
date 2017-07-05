@@ -104,13 +104,14 @@ jQuery(document).ready(function($) {
 
   // Fancybox
   /* Create gallery items alt data */
-  $('.gallery').each(function () {
-  var id = $(this).attr('id');
-  
-    $('.gallery-icon a', this).attr('rel', function (i, attr) {
-         return id + ' gallery--hover';
-    });
+  jQuery('.gallery').each(function () {
+    var id = jQuery(this).attr('id');
+    
+      jQuery('.gallery-icon a', this).attr('data-fancybox', function (i, attr) {
+           return id;
+      });
   });
+
 
   // Fancybox wp galery
   $(".gallery-icon a").fancybox({
