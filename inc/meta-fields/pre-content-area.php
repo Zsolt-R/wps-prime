@@ -45,7 +45,7 @@ function wps_page_pre_content_save_postdata( $post_id ){
     $slug = "page"; //post-type check
     $cur_post = get_post($post_id);
     if($slug != $cur_post->post_type){
-        return $post_id;
+        return;
     }
 
     // Check if we are on a page and not other post type and user is allowed to edit these fields
