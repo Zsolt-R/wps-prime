@@ -200,8 +200,8 @@ class WpsGetThemeFonts{
 			$style .= $select_h.'{font-family:\''. esc_attr( $theme_fonts[ $font_second ][0] ) . '\','.esc_attr( $theme_fonts[ $font_second ][1]).';'. $theme_fonts[ $font_second ][4] .';}';
 
 			//Font Family selectors without font weight
-			$style .= $font_one.'{font-family:\''. esc_attr( $theme_fonts[ $font_main ][0] ) . '\','.esc_attr( $theme_fonts[ $font_main ][1]).';}';
-			$style .= $font_two.'{font-family:\''. esc_attr( $theme_fonts[ $font_second ][0] ) . '\','.esc_attr( $theme_fonts[ $font_second ][1]).';}';
+			$style .= $font_one.'{font-family:\''. esc_attr( $theme_fonts[ $font_main ][0] ) . '\','.esc_attr( $theme_fonts[ $font_main ][1]).';}:root {--main-font-one:\''. esc_attr( $theme_fonts[ $font_main ][0] ) . '\'}';
+			$style .= $font_two.'{font-family:\''. esc_attr( $theme_fonts[ $font_second ][0] ) . '\','.esc_attr( $theme_fonts[ $font_second ][1]).';}:root {--main-font-two:\''. esc_attr( $theme_fonts[ $font_second ][0] ) . '\'}';
 		}
 
 		return $style;
