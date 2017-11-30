@@ -49,7 +49,7 @@ class Theme_Menu_Object extends Walker_Nav_Menu {
 
 		$classes = empty( $item->classes ) ? array() : (array) $item->classes;
 
-		$class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item ) );
+		$class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item, $args, $depth ) );
 		$class_names = ' class="' . esc_attr( $class_names ) . ' site-nav__item"';
 
 		$output .= $indent . '<li id="main-menu-item-'. $item->ID . '"' . $value . $class_names .'>';
@@ -130,7 +130,7 @@ class Theme_Mobile_Menu_Object extends Walker_Nav_Menu {
 
 		$classes = empty( $item->classes ) ? array() : (array) $item->classes;
 
-		$class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item ) );
+		$class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item, $args, $depth ) );
 		$class_names = ' class="' . esc_attr( $class_names ) . ' site-nav__item"';
 
 		$output .= $indent . '<li id="main-mobile-menu-item-'. $item->ID . '"' . $value . $class_names .'>';
