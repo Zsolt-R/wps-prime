@@ -1,6 +1,13 @@
 ##WPS-Prime Changelog##
+
+#### v.1.2.5
+* Add selected font families to css variables ( --main-font-one | --main-font-two ). Only for scenario when the font families for heading and body are different. In css you should declare a fallback var(--main-font-one, 'fallback')
+* Fix walkers error (missing arguments on css class filter function)
+* Limit font two menu aply only to primary menu
+
 #### v.1.2.4
 * Remove new VC elements (VC - v.5.2)
+* Add post id option to heading link (set the link using a post ID instead of direct link)
 
 #### v.1.2.3
 * Fix default pagination markup
