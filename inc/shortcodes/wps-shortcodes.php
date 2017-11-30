@@ -568,6 +568,7 @@ function wps_heading_shortcode( $atts, $content = null )
                 'margin'   =>'',
                 'padding'  =>'',
                 'link'     => false,
+                'post_id'  => false,
                 'target'   => false,
                 'class'       => '',
                 'text_align' =>'',
@@ -575,7 +576,8 @@ function wps_heading_shortcode( $atts, $content = null )
         ), $atts 
     );
 
-    $output = '';    
+    $output = '';
+    $heading_link = false;      
 
     $class_list = wps_getExtraClass(
         array(
@@ -594,10 +596,18 @@ function wps_heading_shortcode( $atts, $content = null )
 
     $html_tag = $options['html_tag'] ? $options['html_tag'] : 'h3';    
 
+    // Post ID overwrites custom link
+    if($options['link'] && !$options['post_id']){
+        $heading_link = $options['link'];
+    }elseif($options['post_id']){
+        $pid = get_permalink($options['post_id']);
+        $heading_link = $pid ? $pid : '#';
+    }
+
     $target = $options['target'] ? ' target="'.$options['target'].'"':'';
 
-    $link_open  = $options['link'] ? '<a href="'.$options['link'].'"'.$target.'>':'';
-    $link_close = $options['link'] ? '</a>':'';
+    $link_open  = $heading_link ? '<a href="'.$heading_link.'"'.$target.'>':'';
+    $link_close = $heading_link ? '</a>':'';
 
     $output .= $options['text'] ? '<'.$html_tag.$classes.$id.'>'.$link_open.$options['text'].$link_close.'</'.$html_tag.'>' : '';
 

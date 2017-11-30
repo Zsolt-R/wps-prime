@@ -41,6 +41,15 @@
             'description' => __('link address ex: http://yourlink.com/yourpage', 'wps-prime')
         ), 
         array(
+            'type' => 'textfield',
+            'heading' => __('Link by Post Id', 'wps-prime'),
+            'admin_label' => true,
+            'param_name' => 'post_id',
+            'value' => '',
+            'group' => __( 'Link', 'wps-prime' ),
+            'description' => __('Post ID will override custom link. Add any post/page/custom post type/media id ex: 123 ', 'wps-prime')
+        ), 
+        array(
             'type' => 'dropdown',
             'heading' => 'Link target',
             'param_name' => 'target',
@@ -50,7 +59,8 @@
                             ),
             'group' => __( 'Link', 'wps-prime' ),
             'description' => __('<small>Link target specifies where to open the linked document.</small> <br/> _blank (Opens the linked document in a new tab)', 'wps-prime')
-        ),       
+        ),
+
         array(
             'type' => 'dropdown',
             'heading' => 'Color',
