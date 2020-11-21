@@ -1,5 +1,5 @@
 module.exports = function(grunt) {
-	const sass = require('sass');
+	const sass = require('node-sass');
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 		sass: {
