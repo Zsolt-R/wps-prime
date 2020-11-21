@@ -11,23 +11,21 @@
  * Site footer closing data line
  */
 
+function wps_site_disclaimer(){
+    $option = get_option('wps_site_disclaimer');
+    if(!$option) return false;      
+    return '<div class="site-disclaimer">'.do_shortcode($option).'</div>';
+}
+
 if ( ! function_exists( 'wps_footer_micro' ) ) {
 
     /**
      * Site footer closing data line
      */
-    function wps_footer_micro() {
-    
-        $date = wps_get_theme_option( 'company_launch_date' ) ? wps_get_theme_option( 'company_launch_date' ) : '';
-    
-        // If no option found set to Site Name!
-        $name = wps_get_theme_option( 'company_name' ) ? wps_get_theme_option( 'company_name' ) : get_bloginfo( 'name' );
-    
-        $disclaimer = wps_get_theme_option('site_disclaimer') ? do_shortcode(wps_get_theme_option('site_disclaimer')).' -' :''; 
-        ?>    
+    function wps_footer_micro() { ?>    
         <div class="page-micro">
             <div class="o-wrapper">
-                <div class="page-micro__copy"><?php echo wp_kses_post( $disclaimer ); ?> <?php echo esc_html( $name ); ?> <?php echo esc_html( $date ); ?> - <?php echo esc_html( date( 'Y' ) ); ?></div>
+                <div class="page-micro__copy"><?php echo wps_site_disclaimer(); ?></div>
             </div><!-- o-wrapper -->
         </div><!-- page-micro -->    
         <?php

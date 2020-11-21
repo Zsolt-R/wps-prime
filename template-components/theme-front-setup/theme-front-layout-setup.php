@@ -194,7 +194,7 @@ if ( ! function_exists( 'wps_site_footer_layout' ) ) {
 /**
  * HTML Page Content Wrappers.
  */
-add_action( 'wps_content_start' , 'wps_page_top',0 );
+add_action( 'wps_content_start' , 'wps_page_top',1 );
 
 if ( ! function_exists( 'wps_page_top' ) ) {
 
@@ -218,7 +218,7 @@ if ( ! function_exists( 'wps_page_top' ) ) {
 /**
  * HTML Page Content Wrappers.
  */
-add_action( 'wps_content_end' , 'wps_page_end',0 );
+add_action( 'wps_content_end' , 'wps_page_end',1 );
 
 if ( ! function_exists( 'wps_page_end' ) ) {
 
@@ -319,17 +319,21 @@ if ( ! function_exists( 'wps_theme_page_margin_setup' ) ) {
 
 	function wps_theme_page_margin_setup($classes){
 						
-		if(is_page()){
+		if(is_page() || is_404() ){
+
+			$pageID = get_option('wps_404_custom_page');
 		
-				$get_mt = get_post_meta(get_the_ID(),'page_margin_top_reset',true);
-				$get_mb = get_post_meta(get_the_ID(),'page_margin_bottom_reset',true);
+			$pid = get_the_ID() ? get_the_ID() : $pageID;
+							
+			$get_mt = get_post_meta($pid,'page_margin_top_reset',true);
+			$get_mb = get_post_meta($pid,'page_margin_bottom_reset',true);
 			
 				if( 'reset' === $get_mt && 'reset' !== $get_mb){
 					$classes[] = 'u-padding-top-none u-margin-top-none';
 				}
 		
 				if( 'reset' === $get_mb && 'reset' !== $get_mt){
-					$classes[] = 'u-padding-bottom-none u-padding-bottom-none';
+					$classes[] = 'u-padding-bottom-none u-margin-bottom-none';
 				}
 		
 				if( 'reset' === $get_mt && 'reset' === $get_mb){
@@ -352,11 +356,16 @@ add_filter('body_class','wps_theme_page_spacing_body_classes');
 if ( ! function_exists( 'wps_theme_page_spacing_body_classes' ) ) {
 
 	function wps_theme_page_spacing_body_classes($classes){	
-				
-		if(is_page()){
+
 		
-				$get_mt = get_post_meta(get_the_ID(),'page_margin_top_reset',true);
-				$get_mb = get_post_meta(get_the_ID(),'page_margin_bottom_reset',true);
+						
+		if(is_page() || is_404() ){
+			$pageID = get_option('wps_404_custom_page');
+
+				$pid = get_the_ID() ? get_the_ID() : $pageID;
+							
+				$get_mt = get_post_meta($pid,'page_margin_top_reset',true);
+				$get_mb = get_post_meta($pid,'page_margin_bottom_reset',true);
 			
 				if( 'reset' === $get_mt && 'reset' !== $get_mb){
 					$classes[] = 'reset-space-top';

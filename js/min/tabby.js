@@ -1,5 +1,6 @@
-/* ----------------
+/** ----------------
 Tabby.js 1.2.0
+@link https://gist.github.com/KZeni/1d7e360b561c6e8bfdbd
 
 based on ResponsiveTabs.js 1.10
 by Pete Love

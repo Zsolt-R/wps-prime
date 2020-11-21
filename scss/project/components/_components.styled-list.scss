@@ -3,101 +3,73 @@
 \*------------------------------------*/
 
 .c-list{
-   > ul{
-      list-style: none;
-      margin-left: 0;
-   }
-}
-
-.c-list--bullet-one,
-.c-list--bullet-two,
-.c-list--bullet-three,
-.c-list--bullet-four,
-.c-list--bullet-five,
-.c-list--bullet-six,
-.c-list--bullet-seven,
-.c-list--bullet-eight,
-.c-list--bullet-nine,
-.c-list--bullet-ten{
-   > ul > li{
-      padding-left:1.4em;
-      &::before{
-         font-family:$brand-ico-family;
+    > ul{
+       list-style: none;
+       margin-left: 0;
+    }
+    li{
+         padding-left:0.8em;
+    }
+    
+ }
+ 
+ .c-list__icon{
+         display: inline-block;
          margin-right:0.4em;
-         margin-left: -1.4em;
-      }
-   }
+         margin-left:-1.4em;
+ 
+ }
+ 
+ .c-list--deco-lines{
+    > ul > li{
+       border-bottom:1px solid $color-gray-ui;
+    }
+ }
+ 
+ .c-list--deco-dashes{
+    > ul > li{
+       border-bottom:1px dashed $color-gray-ui;
+    }
+ }
+ 
+ .c-list--deco-dots{
+    > ul > li{
+       border-bottom:1px dotted $color-gray-ui;
+    }
+ }
+ 
+ .c-list--color-one .c-list__icon{
+        @include var(color,background-color-one);
+ }
+ .c-list--color-two .c-list__icon{
+        @include var(color,background-color-two);
+ }
+ .c-list--color-three .c-list__icon{
+        @include var(color,background-color-three);
+ }
+ .c-list--color-four .c-list__icon{
+        @include var(color,background-color-four);
 }
-
-.c-list--bullet-one > ul > li::before{ content:$bullet-one;}
-.c-list--bullet-two > ul > li::before{ content:$bullet-two;}
-.c-list--bullet-three > ul > li::before{ content:$bullet-three;}
-.c-list--bullet-four > ul > li::before{ content:$bullet-four;}
-.c-list--bullet-five > ul > li::before{ content:$bullet-five;}
-.c-list--bullet-six > ul > li::before{ content:$bullet-six;}
-.c-list--bullet-seven > ul > li::before{ content:$bullet-seven;}
-.c-list--bullet-eight > ul > li::before{ content:$bullet-eight;}
-.c-list--bullet-nine > ul > li::before{ content:$bullet-nine;}
-.c-list--bullet-ten > ul > li::before{ content:$bullet-ten;}
-
-.c-list--deco-lines{
-   > ul > li{
-      border-bottom:1px solid $color-gray-ui;
-   }
-}
-
-.c-list--deco-dashes{
-   > ul > li{
-      border-bottom:1px dashed $color-gray-ui;
-   }
-}
-
-.c-list--deco-dots{
-   > ul > li{
-      border-bottom:1px dotted $color-gray-ui;
-   }
-}
-
-.c-list--color-one{
-   > ul > li{
-      &::before{
-         color: $color-theme-1;
-      }
-   }
-}
-.c-list--color-two{
-   > ul > li{
-      &::before{
-         color: $color-theme-2;
-      }
-   }
-}
-.c-list--color-three{
-   > ul > li{
-      &::before{
-         color: $color-theme-3;
-      }
-   }
-}
-.c-list--color-four{
-   > ul > li{
-      &::before{
-         color: $color-theme-4;
-      }
-   }
-}
-.c-list--color-five{
-   > ul > li{
-      &::before{
-         color: $color-theme-5;
-      }
-   }
-}
-
-.c-list--color-six{
-   > ul > li{
-      &::before{
-         color: $color-theme-6;
-      }
-   }
-}
+ .c-list--color-five .c-list__icon{
+        @include var(color,background-color-five);
+ }
+ 
+ .c-list--color-six .c-list__icon{
+        @include var(color,background-color-six);
+ }
+ 
+ .c-list--margin-small{
+    > ul > li{
+       margin-bottom: $inuit-global-spacing-unit-small;
+    }
+ }
+ .c-list--margin{
+    > ul > li{
+       margin-bottom: $inuit-global-spacing-unit;
+    }
+ }
+ .c-list--margin-large{
+    > ul > li{
+       margin-bottom: $inuit-global-spacing-unit-large;
+    }
+ }

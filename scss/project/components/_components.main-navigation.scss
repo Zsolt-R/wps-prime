@@ -31,7 +31,7 @@
     .site-nav-mobile__menu-container{
         position: absolute;
         width: 100%;        
-        background-color: $color-body;
+        @include var(background-color,background-color-body);
         z-index: 99999;
     }
     /* Subnav */
@@ -71,11 +71,11 @@
 }
 
 .site-mobile-nav-icon {
+  display:block;
   width: 30px;
   height: 24px;
   position: relative;
   margin: 0px auto;
-  display: block;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);

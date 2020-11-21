@@ -15,7 +15,7 @@ function wps_vc_column_shortcodes(){
     vc_remove_param('vc_column','content_placement');
     vc_remove_param('vc_column','video_bg');
     vc_remove_param('vc_column','parallax');
-    vc_remove_param('vc_column','el_id');    
+    //vc_remove_param('vc_column','el_id');    
     vc_remove_param('vc_column','video_bg_url');
     vc_remove_param('vc_column','video_bg_parallax');
     vc_remove_param('vc_column','parallax_image');
@@ -75,7 +75,7 @@ function wps_vc_column_shortcodes(){
             'value' =>  wps_col_inner_element_vertical_align(),
             'group' => esc_html__( 'Inner element', 'wps-prime' ),
             'description' => __('Vertical align all the elements in the column', 'wps-prime')
-        ),
+        ),   
         // Only for VC UI functionality
         array(
             'type' => 'checkbox',
@@ -199,7 +199,16 @@ function wps_vc_column_shortcodes(){
             'std' => '',
             'group' => __( 'Inner Bg / Image', 'wps-prime' ),
             'description' => __('Background Image Position', 'wps-prime')
-        ),        
+        ),   
+        array(
+            'type' => 'textfield',
+            'heading' => 'Animation data CSS class',
+            'param_name' => 'anim_data',
+            'admin_label' => true,
+            'value' => '',
+            'group' => esc_html__( 'Animation', 'wps-prime' ),
+            'description' => __('Add custom animation data (css class) to element. ex. animated bounce | https://github.com/daneden/animate.css', 'wps-prime')
+        ),     
         //'js_view' => 'VcColumnView',
     );
 

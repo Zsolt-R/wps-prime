@@ -28,13 +28,15 @@ $holder_margin = $holder_padding = $holder_img_pos = $holder_bg_fx = $row_v_alig
 $v_bg = $v_youtube = $v_hosted = $v_placeholder = $video_bg = $hosted_video = $tube_video = '';
 
 $holder_start = $holder_end =  $imagepath = $background = '';
-$wrapper_start = $wrapper_end = '';
+$wrapper_start = $wrapper_end = $anim_data = '';
 $output = '';
 
 $css_classes = array();
 
 $atts = vc_map_get_attributes( $this->getShortcode(), $atts );
 extract( $atts );
+
+	$anim = $anim_data ? ' data-animate="'.$anim_data.'"' :false;
 
 	$has_tube_bg = ( ! empty( $v_bg ) && ! empty( $v_youtube) && wps_extract_youtube_id( $v_youtube ) );
 	$has_hosted_bg = ( ! empty( $v_bg ) && ! empty( $v_hosted ) );
@@ -111,8 +113,8 @@ extract( $atts );
 	
 		
 
-	if ( $background || $class_h || $row_id || $video_bg) {
-		$holder_start = '<div '.$row_id.'class="o-holder'.$class_h.'"'.$background.'>'.$video_bg;
+	if ( $background || $class_h || $row_id || $video_bg || $anim) {
+		$holder_start = '<div '.$row_id.'class="o-holder'.$class_h.'"'.$background.$anim.'>'.$video_bg;
 		$holder_end = '</div>';
 	}
 

@@ -1,0 +1,103 @@
+/*------------------------------------*\
+    #COMPONENTS WP-POSTS Page Nav
+\*------------------------------------*/
+
+
+/* Page navigation */
+.nav-links{
+	@include inuit-clearfix();
+    padding: round($inuit-global-spacing-unit/2) 0;
+    margin-bottom: $inuit-global-spacing-unit;
+    //border-top: 1px solid $color-gray-ui;
+}
+.paging-navigation{
+	a:hover{
+		 @include var(color,background-color-body);
+	}
+	.nav-next{
+		text-align: right;
+	}
+}
+
+.nav-previous,
+.nav-next{
+	background-color: $color-gray-light;	
+	border:1px solid var(--background-color-body, map-get($vars, background-color-body));
+	.nav__item-link{
+	display: block;
+	}
+	&:hover{
+		background-color: $color-brand;
+		.nav__item-title,
+		.nav__item-link{
+			 @include var(color,background-color-body);
+		}
+	}
+	a{
+		padding:$inuit-global-spacing-unit-small;
+		display: block;
+	}
+}
+.nav-next .nav__item-link{
+	text-align: right;
+}
+.nav__item-title{
+	font-weight: 500;
+}
+@include media-query(lap-and-up){
+	.nav-links{
+		a:hover{
+			text-decoration: none;
+
+		}
+		display:flex;
+		align-items: strech;
+		.nav-previous,
+		.nav-next{
+			flex: 2;	
+					
+		}	
+	}
+}
+
+
+
+
+/* Post Navigation */
+.post-navigation{		
+    //border-bottom: 1px solid $color-gray-ui;
+}
+.nav-fig{
+    margin-bottom:$inuit-global-spacing-unit-small;
+    img{
+    	width: 45px;
+    	height: 45px;
+    }
+}
+.nav__item-title{
+	@include inuit-font-size(14px);
+}
+
+.paging-numbered-navigation{
+	text-align:center;
+	//padding:$spacing-unit 0;
+	//border-top:1px solid $color-gray-ui;
+
+}
+
+.page-numbers{
+	@include inuit-font-size(14px);
+	padding:0.2em 0.7em;
+	border:1px solid $color-white;
+	&.current{
+		font-weight: 600;
+		background-color: $color-brand;
+		color:$color-white;
+		border-color: $color-brand;
+	}
+	&:hover{
+		border-color: $color-brand;
+		text-decoration: none;
+
+	}
+}

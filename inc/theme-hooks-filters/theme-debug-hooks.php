@@ -13,6 +13,9 @@ function wps_debug_hook(){
 
 function wps_display_hooks_location(){ 
 
+  if(!get_option('wps_display_wps_hooks'))
+  return;
+
   $hooks = wps_get_hook_list();
   
   if(!$hooks)return;
@@ -22,6 +25,4 @@ function wps_display_hooks_location(){
   }
 }
 // If checked in theme options display hooks
-if(wps_get_theme_option('display_wps_hooks')){
-	add_action('wp_head','wps_display_hooks_location');
-}
+add_action('wp_head','wps_display_hooks_location');

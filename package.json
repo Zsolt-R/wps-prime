@@ -1,0 +1,29 @@
+{
+  "name": "wps-prime-evo",
+  "version": "1.0.0",
+  "description": "A lightweight WPS-Prime WordPress child theme to speed up child theme customization.\r Use this child theme as a base for your custom WPS-Prime project.",
+  "main": "index.js",
+  "scripts": {
+    "start": "grunt watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://ZsoltR@bitbucket.org/ZsoltR/wps-prime-evo.git"
+  },
+  "author": "Zsolt Revay",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/ZsoltR/wps-prime-evo#readme",
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "grunt": "^1.0.4",
+    "grunt-autoprefixer": "^3.0.4",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-uglify": "^4.0.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-sass": "^3.0.2",
+    "load-grunt-tasks": "^4.0.0",
+    "node-sass": "^4.12.0"
+  },
+  "dependencies": {}
+}

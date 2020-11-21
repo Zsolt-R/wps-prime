@@ -33,8 +33,10 @@
  * @return string
  *
  */
+if ( get_option( 'wps_remove_assets_version_numbers' ) ) {
 add_filter( 'script_loader_src', 'wps_prime_remove_wp_ver_css_js', 15, 1 );
 add_filter( 'style_loader_src', 'wps_prime_remove_wp_ver_css_js', 15, 1 );
+}
 
 function wps_prime_remove_wp_ver_css_js( $src ) {
 	$parts = explode( '?ver', $src );
@@ -233,12 +235,11 @@ add_action( 'wp', 'wps_prime_setup_author' );
  * Disable WP default dashicons
  * disabled only for logged out users
  */
-if ( wps_get_theme_option( 'front_dashicons_use' ) ) {
+if ( get_option( 'wps_front_dashicons_use' ) ) {
 	add_action( 'wp_enqueue_scripts','wps_prime_disable_wp_styles' );
 }
 
 function wps_prime_disable_wp_styles() {
-
 	if ( ! is_user_logged_in() && ! in_array( $_SERVER['PHP_SELF'], array( '/wp-login.php', '/wp-register.php' ) ) ) {
 		wp_deregister_style( 'dashicons' );
 		wp_deregister_style( 'editor' );
@@ -249,7 +250,7 @@ function wps_prime_disable_wp_styles() {
  * 11
  * Disable WP default emoji
  */
-if ( wps_get_theme_option( 'front_emoji_use' ) ) {
+if ( get_option( 'wps_front_emoji_use' ) ) {
 	add_action( 'init','wps_disable_wp_emojicons' );
 }
 
@@ -274,7 +275,7 @@ function wps_disable_wp_emojicons() {
 /**
  * 12
  * We will need the following filter function to disable TinyMCE emojicons
- * Settinmg controlled by option 11
+ * Setting controlled by option 11
  */
 
 function wps_disable_emojicons_tinymce( $plugins ) {
@@ -300,12 +301,13 @@ function wps_disable_emojis_remove_dns_prefetch( $urls, $relation_type ) {
 	return $urls;
 }
 
+
 /**
  * 13
  *	Disable Comment form URL
  */
 
-if ( wps_get_theme_option( 'disable_comment_url' ) ) {
+if ( get_option( 'wps_disable_comment_url' ) ) {
 	add_filter('comment_form_default_fields','wps_unset_url_field_in_comment');
 }
 
@@ -395,3 +397,34 @@ function wps_fix_svg_size_attributes( $out, $id ) {
     return array( $image_url, null, null, false );
 }
 add_filter( 'image_downsize', 'wps_fix_svg_size_attributes', 10, 2 ); 
+
+
+// Apparently custom nav menu walkers are not supported though they were supposed to be.
+add_filter( 'wp_nav_menu_args', function( $args ) {
+    if ( isset( $args['walker'] ) && is_string( $args['walker'] ) && class_exists( $args['walker'] ) ) {
+        $args['walker'] = new $args['walker'];
+    }
+    return $args;
+}, 1001 ); // 1001 because \WP_Customize_Nav_Menus::filter_wp_nav_menu_args() runs at 1000.
+
+/**
+ * 19 Disable jquery migrate
+ */
+
+if ( get_option( 'wps_front_jquery_migrate_use' ) ) {
+	add_action( 'wp_default_scripts','wps_remove_jquery_migrate' );
+}
+
+function wps_remove_jquery_migrate($scripts)
+{
+    if (!is_admin() && isset($scripts->registered['jquery'])) {
+        $script = $scripts->registered['jquery'];
+        
+        if ($script->deps) { // Check whether the script has any dependencies
+            $script->deps = array_diff($script->deps, array(
+                'jquery-migrate'
+            ));
+        }
+    }
+}
+

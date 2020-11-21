@@ -246,6 +246,15 @@ function wps_vc_row_inner_shortcode(){
             'group' => __( 'Advanced', 'wps-prime' ),
             'description' => __('Make the columns inside equal their height to the tallest column.', 'wps-prime')
         ),
+        array(
+            'type' => 'textfield',
+            'heading' => 'Animation data CSS class',
+            'param_name' => 'anim_data',
+            'admin_label' => true,
+            'value' => '',
+            'group' => esc_html__( 'Animation', 'wps-prime' ),
+            'description' => __('Add custom animation data (css class) to element. ex. animated bounce | https://github.com/daneden/animate.css', 'wps-prime')
+        ), 
     );
 
 

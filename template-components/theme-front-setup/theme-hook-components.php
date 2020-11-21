@@ -17,10 +17,10 @@
  *
  *  - wps_before_header
  *  - wps_mast_head_start
- *   	- wps_theme_header
- *   	  - wps_header-left
- *   	  - wps_header-right
- *	- wps_mast_head_start
+ *      - wps_theme_header
+ *        - wps_header-left
+ *        - wps_header-right
+ *  - wps_mast_head_start
  *
  *  INTERMEDIATE Hooks after header before content
  *
@@ -36,7 +36,7 @@
  *   - wps_after_content
  *
  *  MAIN SIDEBAR Hooks layout
- * 
+ *
  *   - wps_sidebar_start
  *   - wps_sidebar_end
  *
@@ -63,21 +63,24 @@ add_action( 'wps_theme_header_left', 'wps_theme_site_logo' );
  * Modified by filter and removed on custom page template
  * See: add_filter('body_start','conditional_remove_site_nav');
  */
-add_action( 'wps_theme_header_right', 'wps_main_site_mobile_nav_toggler' );
+add_action( 'wps_theme_header_right', 'wps_main_site_mobile_nav_toggler', 99 );
 add_action( 'wps_theme_header_right', 'wps_main_site_nav' );
 add_action( 'wps_after_header', 'wps_main_site_nav_mobile' );
 
 /**
- * Page pre content 
+ * Page pre content
  */
-add_action('wps_before_content','wps_theme_page_pre_content' );
+add_action( 'wps_before_content', 'wps_theme_page_pre_content' );
 
 /**
- * Add Global Content Object 
+ * Add Global Content Object
  */
-add_action( 'wps_before_footer', 'wps_theme_global_content_area' );
+add_action( 'wps_before_header', 'wps_theme_global_content_start_area' );
+add_action( 'wps_before_content', 'wps_theme_global_after_header_area' );
+add_action( 'wps_content_start', 'wps_theme_global_main_content_start_area', 0 );
+add_action( 'wps_before_footer', 'wps_theme_global_content_end_area' );
 
 /**
  *  Footer Parts
  */
-add_action( 'wps_after_footer','wps_footer_micro' );
+add_action( 'wps_after_footer', 'wps_footer_micro' );

@@ -199,6 +199,15 @@ function wps_vc_column_inner_shortcode(){
             'group' => __( 'Inner Bg / Image', 'wps-prime' ),
             'description' => __('Background Image Position', 'wps-prime')
         ),
+        array(
+            'type' => 'textfield',
+            'heading' => 'Animation data CSS class',
+            'param_name' => 'anim_data',
+            'admin_label' => true,
+            'value' => '',
+            'group' => esc_html__( 'Animation', 'wps-prime' ),
+            'description' => __('Add custom animation data (css class) to element. ex. animated bounce | https://github.com/daneden/animate.css', 'wps-prime')
+        ),
     );
 
     vc_add_params('vc_column_inner',$attributes);

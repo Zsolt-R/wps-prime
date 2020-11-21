@@ -23,8 +23,8 @@ function wps_add_button() {
 		return;
 	}
 	// verify the post type
-	//if ( ! in_array( $typenow, array( 'post', 'page' ) ) ) { return; }
-	
+	// if ( ! in_array( $typenow, array( 'post', 'page' ) ) ) { return; }
+
 	// check if WYSIWYG is enabled
 	if ( get_user_option( 'rich_editing' ) == 'true' ) {
 		add_filter( 'mce_external_plugins', 'wps_add_tinymce_plugin' );
@@ -38,7 +38,7 @@ function wps_add_button() {
  *  because the value of the icon is automatically appended to the mce-i- prefix
  */
 function wps_tc_css() {
-	wp_enqueue_style( 'wps-tc', WPS_THEME_URI. '/inc/admin/css/style.css' );
+	wp_enqueue_style( 'wps-tc', WPS_THEME_URI . '/inc/admin/css/style.css' );
 }
 
 add_action( 'admin_enqueue_scripts', 'wps_tc_css' );
@@ -54,7 +54,7 @@ add_filter( 'mce_external_languages', 'wps_add_button_lang' );
 
 /* Specify the path to the script with our plugin for TinyMCE: */
 function wps_add_tinymce_plugin( $plugin_array ) {
-	$plugin_array['wps_shortcode_buttons'] = WPS_THEME_URI. '/inc/admin/js/mce-wps-shortcode-buttons.js';
+	$plugin_array['wps_shortcode_buttons'] = WPS_THEME_URI . '/inc/admin/js/mce-wps-shortcode-buttons.js';
 	return $plugin_array;
 }
 

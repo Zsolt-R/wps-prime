@@ -6,7 +6,7 @@
  */
 
 /* Get option from settings */
-if ( wps_get_theme_option( 'widget_class' ) ) {
+if ( get_option( 'wps_theme_widget_class' ) ) {
 
     //Add input fields(priority 5, 3 parameters)
     add_action('in_widget_form', 'wps_in_widget_form',5,3);

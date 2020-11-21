@@ -2,34 +2,34 @@
     #BG-HIGHLIGHTS
 \*------------------------------------*/
 
-.u-background-color-one{
-	background-color: $color-bg-1;
+.u-background-color-one{	
+	@include var(background-color,background-color-one);
 }
 .u-background-color-two{
-	background-color: $color-bg-2;
+	@include var(background-color,background-color-two);
 }
 .u-background-color-three{
-	background-color: $color-bg-3;
+	@include var(background-color,background-color-three);
 }
 .u-background-color-four{
-	background-color: $color-bg-4;
+	@include var(background-color,background-color-four);
 }
 .u-background-color-five{
-	background-color: $color-bg-5;
+	@include var(background-color,background-color-five);
 }
 .u-background-color-six{
-	background-color: $color-bg-6;
+	@include var(background-color,background-color-six);
 }
 
 
-.u-background-light{
-	background-color: $color-bg-light;
+.u-background-light{	
+	@include var(background-color,background-color-light);
 }
 .u-background-dark{
-	background-color: $color-bg-dark;
+	@include var(background-color,background-color-dark);
 }
 .u-background-body{
-	background-color: $color-bg-body;
+	@include var(background-color,background-color-body);
 }
 
 /* Transpearent Backgrounds */

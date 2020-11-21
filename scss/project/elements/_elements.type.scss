@@ -2,11 +2,11 @@
     #BASE TYPE
 \*------------------------------------*/
 
-html { }
+html,body,.u-font-body,input{}
 
-h1,h2,h3,h4,h5,h6{
-
-	color:$color-headings;
+h1,h2,h3,h4,h5,h6,.u-font-heading{
+    @include var(color,text-color-heading);
+    font-weight: 900;
 }
 
 
@@ -16,7 +16,7 @@ h1,h2,h3,h4,h5,h6{
 
 strong, b,
 dt{
-	font-weight:600;
+	font-weight:900;
 }
 
 /**
@@ -55,9 +55,9 @@ hr {
 /*
 * Beak superlong text
 */
-p,a,td {
-    @include contain-text();
-}
+//p,a,td {
+//    @include contain-text();
+//}
 
 
 /**
@@ -80,8 +80,6 @@ blockquote{
     font-style: italic;  
     position: relative;     
     padding:$inuit-global-spacing-unit $inuit-global-spacing-unit*1.5;
-    // border-top:1px solid $color-gray-ui;
-    // border-bottom:1px solid $color-gray-ui;
 
         &:after,
         &:before{

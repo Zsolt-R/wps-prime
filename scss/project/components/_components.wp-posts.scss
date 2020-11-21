@@ -4,3 +4,23 @@
 .sticky{
     border-bottom:3px solid $color-gray-ui;
 }
+
+
+.cat-links,
+.tags-links {
+    .icon{
+        color:$color-gray;
+    }
+}
+.entry-meta-content .tags-links a{
+     &:before {
+        content: '#';  
+        margin: 0 .2em 0 .4em;
+    }
+}
+.tags-links{
+	a{
+		margin-bottom: $inuit-global-spacing-unit-tiny;
+		display: inline-block;
+	}
+}

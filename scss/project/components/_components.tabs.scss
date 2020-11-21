@@ -77,7 +77,7 @@
     display: inline;
     cursor: pointer;
     background-color: lighten($color-gray-dark,5);
-    color:$color-body;
+     @include var(color,background-color-body);
 }
 
 .c-responsive-tabs-wrapper {
@@ -118,7 +118,7 @@
     -o-transition: background-color 0.2s ease-in-out;
     transition: background-color 0.2s ease-in-out;
     border-width: 1px 1px 0px 1px;
-    border-color: $color-body;
+     @include var(border-color,background-color-body);
     border-style: solid;
     padding: round($spacing-unit/4) round($spacing-unit/2);
     white-space: nowrap;
@@ -138,24 +138,24 @@
 
 .c-responsive-tabs .c-responsive-tabs__list__item:hover {
     background-color:$color-gray;
-    color:$color-body;
+     @include var(color,background-color-body);
 }
 
 .c-responsive-tabs .c-responsive-tabs__list__item--active{
-    background-color: $color-body;
+    @include var(background-color,background-color-body);
     border-color: #ddd;
-    color: $color-text;
+    @include var(color,text-color-body);
     top: 1px;
-
 }
+
 .c-responsive-tabs .c-responsive-tabs__list__item--active:hover{
-    background: $color-body;
-    color: $color-text;
+    @include var(background-color,background-color-body);
+    @include var(color,text-color-body);
 }
 
 
 .c-responsive-tabs .c-responsive-tabs__panel {
-    background: $color-body;
+    @include var(background-color,background-color-body);
     border: 1px solid #ddd;
     border-top: 1px solid #ddd;
     -webkit-border-radius: 0px;
@@ -185,7 +185,7 @@
 .c-responsive-tabs__list__item,
 .c-responsive-tabs .c-responsive-tabs__heading {
         @include inuit-font-size(16px); 
-        background: $color-body;
+        @include var(background-color,background-color-body);
         border: 1px solid $color-gray;
         border-top: none;
         color: $color-gray-dark;
@@ -203,7 +203,7 @@
 .c-responsive-tabs .c-responsive-tabs__heading--active,
 .c-responsive-tabs .c-responsive-tabs__heading--active:hover {
     background: $color-gray;
-    color: $color-body;
+    @include var(color,background-color-body);
 }
 
 
@@ -252,13 +252,13 @@
 
     .c-responsive-tabs .c-responsive-tabs__heading--active:after,
     .c-responsive-tabs .c-responsive-tabs__heading--active:hover:after {
-        border-bottom: 6px solid $color-body;
+        border-bottom: 6px solid var(--background-color-body, map-get($vars, background-color-body));
         border-top: 0;
         top: 18px;
     }
 
     .c-responsive-tabs .c-responsive-tabs__panel {
-        background: $color-body;
+        @include var(background-color,background-color-body);
         border: 1px solid $color-gray;
         -webkit-border-radius: 0;
         -moz-border-radius: 0;

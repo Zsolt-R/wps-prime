@@ -5,3 +5,66 @@
 .widget{
     margin-bottom:$inuit-global-spacing-unit;
 }
+
+.widget-title{	
+	margin-bottom:$inuit-global-spacing-unit-small;
+	
+}
+
+.site-footer {
+	.widget-title{
+	@include inuit-font-size(18px);
+	font-family:var(--font-family-two);
+	}
+	.widget-area{
+		height:100%;
+		margin-bottom:$inuit-global-spacing-unit-small;
+	}
+}
+
+.widget_nav_menu{
+	ul{
+		list-style:none;
+		margin:0;
+	}
+}
+
+
+.widget_recent_entries,
+.widget_categories,
+.widget_archive{
+	ul{
+		list-style: none;
+		margin:0;
+
+	}
+	li:first-child{
+		border-top: 1px solid $color-gray-ui;
+	}
+
+	li{
+		border-bottom: 1px solid $color-gray-ui;		
+		&:hover{
+			background-color: $color-dark;
+			a{
+				font-weight: 600;
+				color:$color-white;
+				padding-left: 1rem;
+				text-indent: 1rem;
+				&:before{
+					left: 0;
+				}
+			}
+		}
+	}
+	a{		
+		transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+		text-decoration: none;
+		display:block;
+		@include var(color,text-color-body);		
+		position: relative;
+		overflow: hidden;
+		padding:0.5em 1rem;
+	}
+	
+}

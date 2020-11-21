@@ -1,8 +1,16 @@
 /* ==========================================================================
    #OBJECT WRAPPER
    ========================================================================== */
-$project-wrapper-width-slim: 800px !default;
-
-.o-wrapper--slim{
-   max-width: $project-wrapper-width-slim;
-}
+   $project-wrapper-width-slim: 800px;
+   $project-wrapper-width-slimmer: 600px;
+   $project-wrapper-width-wide: 1600px;
+   
+   .o-wrapper--slimmer{
+       max-width: $project-wrapper-width-slimmer;
+   }
+   .o-wrapper--slim{
+      max-width: $project-wrapper-width-slim;
+   }
+   .o-wrapper--wide{
+       max-width: $project-wrapper-width-wide;
+    }

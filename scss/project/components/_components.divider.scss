@@ -2,17 +2,43 @@
     #COMPONENTS DIVIDER
 \*------------------------------------*/
 
+.c-divider-text{
+	position: relative;
+	z-index:2;	
+	display: inline-block;	
+	@include var(background-color,background-color-body);
+	margin:0 $inuit-global-spacing-unit-small;	
+	padding: 0.5em;
+}
+
 .c-divider{
+	position: relative;
+	margin-bottom: $inuit-global-spacing-unit;
+	&.c-divider-has-text:after{
+		content:'';
+		position: absolute;
+		display: block;
+		width:100%;
+		top:50%;
+		z-index:1;
+		border-top: 1px solid rgba(000, 000, 000, .2);
+		-webkit-background-clip: padding-box; /* for Safari */
+		background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
+	}
+	&.c-divider-has-text.c-divider--dashed:after{
+		border-top-style:dashed;
+	}
+	&.c-divider-has-text.c-divider--dotted:after{
+		border-top-style:dotted;
+	}
+}
+
+.c-divider:not(.c-divider-has-text){
 	border-top: 1px solid rgba(000, 000, 000, .2);
-	border-bottom: 1px solid rgba(255, 255, 255, .1);
-    -webkit-background-clip: padding-box; /* for Safari */
-    background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
 }
-.c-divider--dashed{
+.c-divider--dashed:not(.c-divider-has-text){
 	border-top-style:dashed;
-	border-bottom-style:dashed;
 }
-.c-divider--dotted{
+.c-divider--dotted:not(.c-divider-has-text){
 	border-top-style:dotted;
-	border-bottom-style:dotted;
 }

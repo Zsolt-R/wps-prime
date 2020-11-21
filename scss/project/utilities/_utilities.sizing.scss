@@ -1,0 +1,16 @@
+/*------------------------------------*\
+    #UTILITIES SIZING
+\*------------------------------------*/
+
+.u-table-overflow-h > table{    
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    @include media-query('portable'){
+        display: block;
+        width:100%;
+    }
+}
+.u-nowrap{
+    white-space: nowrap;
+}

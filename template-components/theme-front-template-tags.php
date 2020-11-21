@@ -7,6 +7,24 @@
  * @package WPS_Prime_2
  */
 
+function wps_prime_posted_on_time(){
+
+	$meta_u_time_visibility = get_option( 'wps_meta_u_time_visibility' );
+	$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
+	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) && $meta_u_time_visibility ) {
+		$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time> | <time class="updated" datetime="%3$s">%4$s %5$s</time>';
+	}
+
+	$output = sprintf( $time_string,
+	esc_attr( get_the_date( 'c' ) ),
+	esc_html( get_the_date() ),
+	esc_attr( get_the_modified_date( 'c' ) ),
+	__('Updated','wps-prime'),
+	esc_html( get_the_modified_date() )
+);
+	return $output;
+}
+
 if ( ! function_exists( 'wps_prime_paging_nav' ) ) :
 
 	/**
@@ -29,7 +47,7 @@ if ( ! function_exists( 'wps_prime_paging_nav' ) ) :
 		if ( 'link' === $type ) {
 
 			$output .= '<nav class="navigation paging-navigation" role="navigation">';
-		    $output .= '<a class="screen-reader-text" href="#post-navigation">'.esc_html__( 'Post navigation', 'wps-child-david' ).'</a>';
+		$output .= '<a class="screen-reader-text" href="#post-navigation">'.esc_html__( 'Post navigation', 'wps-child-david' ).'</a>';
 			$output .= '<div class="nav-links" id="post-navigation">';
 			$output .= get_next_posts_link() ? '<div class="nav-previous">'. get_next_posts_link( sprintf( esc_html__( '%1$s Older posts', 'wps-prime' ),'<span class="meta-nav">&larr;</span>' ) ).'</div>' : '';
 			$output .= get_previous_posts_link() ? '<div class="nav-next">'. get_previous_posts_link( sprintf( esc_html__( 'Newer posts %1$s', 'wps-prime' ),'<span class="meta-nav">&rarr;</span>' ) ) .'</div>' : '';
@@ -77,26 +95,14 @@ if ( ! function_exists( 'wps_prime_posted_on' ) ) :
 	 */
 	function wps_prime_posted_on() {
 
-		$meta_setting = wps_get_theme_option( 'article_meta_visibility' );
-
-		$meta_u_time_visibility = wps_get_theme_option( 'u_time_visibility' );
+		$meta_setting = get_option( 'wps_article_meta_visibility' );		
 		if ( $meta_setting ) {
 			return;
 		}
 
 		echo '<div class="entry-meta-content">';
 
-		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
-		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) && 'show' === $meta_u_time_visibility ) {
-			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time> | <time class="updated" datetime="%3$s">%4$s</time>';
-		}
-
-		$time_string = sprintf( $time_string,
-			esc_attr( get_the_date( 'c' ) ),
-			esc_html( get_the_date() ),
-			esc_attr( get_the_modified_date( 'c' ) ),
-			esc_html( get_the_modified_date() )
-		);
+		$time_string = wps_prime_posted_on_time();
 
 		$posted_on = sprintf(
 			esc_html_x( 'Posted on %s', 'post date','wps-prime' ),
@@ -121,7 +127,7 @@ if ( ! function_exists( 'wps_prime_entry_footer' ) ) :
 	 */
 	function wps_prime_entry_footer() {
 
-		$meta_setting = wps_get_theme_option( 'article_meta_visibility' );
+		$meta_setting = get_option( 'wps_article_meta_visibility' );
 		if ( $meta_setting ) {
 			return;
 		}

@@ -19,6 +19,9 @@
     font-weight: $font-weight-bolder;
 }
 
+.u-text-italic{
+    font-style: italic;
+}
 
 //Test Align
 .u-text-center{
@@ -34,55 +37,64 @@
 
 //  Text Colors
 .u-text-color-invert{
-    color:$color-text-invert; // invert text color to body color //
+    @include var(color,text-color-invert);
     h1,h2,h3,h4,h5,h6,a{
-       color:$color-text-invert; // invert text color to body color // 
+        @include var(color,text-color-invert);
+    }       
+}
+
+//  Text Colors
+.u-text-color-text{
+    @include var(color,text-color-body);
+    h1,h2,h3,h4,h5,h6,a{
+        @include var(color,text-color-body);
     }       
 }
 
 .u-text-color-light{
-    color:$color-text-light;
+    @include var(color,text-color-light);
     h1,h2,h3,h4,h5,h6,a{
-    color:$color-text-light;
+        @include var(color,text-color-light);
     }
 }
 
 .u-text-color-primary{
-    color:$color-text-primary; 
+    @include var(color,text-color-primary);   
     h1,h2,h3,h4,h5,h6,a{
-        color:$color-text-primary;
+        @include var(color,text-color-primary);       
     } 
 }
 
 .u-text-color-secondary{
-    color:$color-text-secondary;
+    @include var(color,text-color-secondary);   
     h1,h2,h3,h4,h5,h6,a{
-    color:$color-text-secondary;
+        @include var(color,text-color-secondary);
+   
     }
 }
 
 .u-text-color-tertiary{
-    color:$color-text-tertiary; 
+    @include var(color,text-color-tertiary); 
     h1,h2,h3,h4,h5,h6,a{
-        color:$color-text-tertiary;
+        @include var(color,text-color-tertiary);    
     }   
 }
 
 /* Text Sizes */
 .u-text-small{
-    @include inuit-font-size(12px);    
+    @include inuit-font-size(14px);    
 } 
 
 .u-text-large{
-    @include inuit-font-size(28px);
+    @include inuit-font-size(36px);
     @include media-query(lap-and-up){
-        @include inuit-font-size(48px);
+        @include inuit-font-size(62px);
     }
 }   
 
 .u-text-huge{
     @include inuit-font-size(42px);
     @include media-query(lap-and-up){
-        @include inuit-font-size(84px);
+        @include inuit-font-size(78px);
     }
 }

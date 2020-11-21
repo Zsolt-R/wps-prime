@@ -9,6 +9,7 @@ function wps_vc_column_text_shortcode(){
     vc_remove_param('vc_column_text','css_animation');
 	vc_remove_param('vc_column_text','css');
 
+
 	$attributes = array(
 		
 	    // Only for VC UI functionality
@@ -77,7 +78,16 @@ function wps_vc_column_text_shortcode(){
             'std' => '',
             'group' => __( 'Bg FX / Text FX & Align', 'wps-prime' ),
             'description' => __('Align all the content in this block', 'wps-prime')
-        ),    
+        ),
+        array(
+            'type' => 'textfield',
+            'heading' => 'Animation data CSS class',
+            'param_name' => 'anim_data',
+            'admin_label' => true,
+            'value' => '',
+            'group' => esc_html__( 'Animation', 'wps-prime' ),
+            'description' => __('Add custom animation data (css class) to element. ex. animated bounce | https://github.com/daneden/animate.css', 'wps-prime')
+        ),  
         );
 	vc_add_params('vc_column_text',$attributes);
 

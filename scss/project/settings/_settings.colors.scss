@@ -9,6 +9,8 @@
 // Ref: http://www.flatuicolorpicker.com/
 // Ref: http://bootflat.github.io/color-picker.html
 
+// Assign colors to more meaningful variables.
+// Quick use color palette
 $color-turquoise:     #1abc9c;
 $color-green-sea:     #16a085;
 $color-sun-flower:    #f1c40f;
@@ -30,6 +32,13 @@ $color-midnight-blue: #2c3e50;
 $color-concrete:      #95a5a6;
 $color-asbestos:      #7f8c8d;
 
+
+// Main brand color
+$color-brand:	$color-peter-river;
+
+
+// Dark,Light / shades
+// Used on dropshadows, UI borders etc...
 $color-gray:        #444;
 $color-white:       #fff;
 $color-dark:        #222;
@@ -38,32 +47,6 @@ $color-gray-light:  #f7f6f6;
 $color-gray-ui:     #ddd;
 $color-gray-ui-dark:     darken($color-gray-ui,15);
 
-// Assign colors to more meaningful variables.
-
-// Theme Pallete
-$color-brand:	$color-peter-river;
-$color-theme-1: $color-midnight-blue;
-$color-theme-2: $color-alizarin;
-$color-theme-3: $color-orange;
-$color-theme-4: $color-peter-river;
-$color-theme-5: $color-amethyst;
-$color-theme-6: $color-nephritis;
-$color-theme-7: $color-clouds;
-
-// Theme context variables
-$color-body:		#fff;
-$color-text:		#333;
-
-//Background text adjustments
-$color-bg-1:			$color-theme-1;
-$color-bg-2:			$color-theme-2;
-$color-bg-3:			$color-theme-3;
-$color-bg-4:			$color-theme-4;
-$color-bg-5:			$color-theme-5;
-$color-bg-6:			$color-theme-6;
-$color-bg-dark:			$color-dark;
-$color-bg-body:			$color-body;
-$color-bg-light:		$color-gray-ui;
 $color-bg-opaq-dark:		 $color-dark;
 $color-bg-opaq-dark-opacity: 0.7;
 $color-bg-opaq-light:		 $color-white;
@@ -71,76 +54,70 @@ $color-bg-opaq-light-opacity: 0.7;
 
 // Slider Colors
 $color-arrow: '333333'; //Use hex color without # value is interpolated in svg
-$color-bullet: $color-text;
+$color-bullet: #333;
 
 // Navigation colors
-$color-nav-link:        $color-text;
+// Page navigation
+$color-nav-link:        #333;
 
-// Text Colors
-$color-text-invert: 	$color-body;  // Invert text from black to white
-$color-text-light:		$color-gray-ui;
-$color-text-primary:	$color-brand;
-$color-text-secondary:  $color-theme-2;
-$color-text-tertiary:	$color-theme-3;
-
-$color-positive:		$color-theme-6;
-$color-negative:		$color-theme-2;
-
-// Heading colors
-$color-headings:        $color-text;
-
-// Link-color
-$color-text-links:      $color-belize-hole;
+// Colors used for alterts
+//ex. CF7 success / error
+$color-positive:		$color-nephritis;
+$color-negative:		$color-pomegrante;
 
 // Button Colors
-$color-button-default: 			$color-theme-1;
-$color-button-default-hover:	darken($color-theme-1,10);
+$color-button-white-text:		#333;
 
-
-$color-button-primary: 			$color-brand;
-$color-button-primary-hover:	darken($color-brand,10);
-
-
-
-$color-button-secondary:		$color-theme-2;
-$color-button-secondary-hover:	darken($color-theme-2,10);
-
-
-$color-button-tertiary:			$color-theme-3;
-$color-button-tertiary-hover:	darken($color-theme-3,10);
-
-
-$color-button-negative: 		$color-theme-4;
-$color-button-negative-hover: 	darken($color-theme-4,10);
-
-
-$color-button-positive:			$color-theme-5;
-$color-button-positive-hover:	darken($color-theme-5,10);
-
-
-$color-button-neutral:			$color-theme-6;
-$color-button-neutral-hover:	darken($color-theme-6,10);
-
-$color-button-light:			$color-gray-ui-dark;
-$color-button-light-hover:		darken($color-gray-ui-dark,10);
-
-$color-button-white:			$color-white;
-$color-button-white-hover:		darken($color-white,2);
-$color-button-white-text:		$color-text;
-
-$color-button-ghost:				$color-brand;
-$color-button-ghost-hover:	    	$color-brand;
-$color-button-ghost-hover-text:     $color-white;
-
-$color-button-ghost-l:		    	$color-theme-6;
-$color-button-ghost-l-hover:    	$color-theme-6;
-$color-button-ghost-l-hover-text:   $color-white;
-
-//Cards
+// Flat UI Cards
 $color-card-bg-1:				$color-gray-ui;
 $color-card-bg-2:				$color-gray-light;
 
-// Code
+// Code <pre>..</pre>
 $color-text-code:       $color-nephritis;
 $color-pre-background:  $color-gray;
-$color-pre:				$color-white;
+$color-pre:				      $color-white;
+
+$vars: (
+  primary: #309bd4,
+  navbg: rgba(#309bd4,0.8),
+  secondary: #00B0D0,  
+  invert-color: #fff,
+  bg-color-one:#309bd4,
+  color-bg-opaq-dark: $color-bg-opaq-dark,
+  color-bg-opaq-light: $color-white,
+  text-color-invert: #fff,
+  text-color-body: #000000,
+  text-color-link: #2980b9,
+  text-color-light: #dddddd,
+  text-color-heading: #000000,
+  text-color-primary: #309bd4,
+  text-color-secondary:#e74c3c,
+  text-color-tertiary: #FAFA26,  
+  background-color-one: #2c3e50,
+  background-color-two:	#e74c3c,
+  background-color-three:	#FAFA26,
+  background-color-four:	#3498db,
+  background-color-five:	#9b59b6,
+  background-color-six:	#27ae60,
+  background-color-dark: #0C1516,
+  background-color-body: #ffffff,
+  background-color-light:#F7F5ED,
+  button-color-default: #1E1E1C,  
+  button-color-primary: #20638f,  
+  button-color-secondary: #e67e22,
+  button-color-tertiary: #00B0D0,
+  button-color-negative: #e74c3c,
+  button-color-positive: #2ecc71,
+  button-color-neutral: #505050,
+  button-color-light: #999999,
+  button-color-white: #ffffff,  
+  button-color-default-h: darken(#1E1E1C,10),
+  button-color-primary-h: darken(#20638f,10),
+  button-color-secondary-h: darken(#e67e22,10),
+  button-color-tertiary-h: darken(#00B0D0,10),
+  button-color-negative-h: darken(#e74c3c,10),
+  button-color-positive-h: darken(#2ecc71,10),
+  button-color-neutral-h: darken(#505050,10),
+  button-color-light-h: darken(#999999,10),
+  button-color-white-h: darken(#ffffff,10),
+);

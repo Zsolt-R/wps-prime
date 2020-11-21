@@ -33,4 +33,4 @@
 	<?php wps_after_header(); ?>
 	<?php wps_before_content(); ?>
 	<div id="content"<?php echo wps_site_content_class(); ?>>
-	<?php wps_content_start(); ?>
+	<?php wps_content_start(); ?>	

@@ -1,10 +1,20 @@
 /*------------------------------------*\
     #COMPONENTS WP-PAGE
 \*------------------------------------*/
-
+body{
+    @include var(background-color,background-color-body);
+    @include var(color,text-color-body);
+}
 /*------------------------------------*\
     #PAGE-HEAD
 \*------------------------------------*/
+
+.reset-space-vertical,
+.reset-space-bottom{
+    .entry-content{
+        margin-bottom: 0;
+    }
+}
 
 .site-header{
     padding: $inuit-global-spacing-unit 0;
@@ -45,21 +55,43 @@
 }
 .entry-title>a{
     font-weight:300;
+    @include var(color,text-color-body);
+    &:hover{
+        text-decoration: none;
+        @include var(color,text-color-primary);
+    }
 }
 .entry-meta-content{
 	margin-bottom: round($inuit-global-spacing-unit/2);
-	@include inuit-font-size(14px,1);
+    @include inuit-font-size(14px,1);
+    border-width:1px 0px 1px 0px;
+    border-style: solid;
+    border-color: $color-gray-light;
+    padding: $inuit-global-spacing-unit-small 0;
+    font-weight: 500;
+    a{      
+        color:darken($color-gray-ui,30);
+        @include media-query(lap-and-up){
+            .archive & {
+            color:$color-gray-ui;
+            }
+         }
+      }
+      .tag-links,
+      .cat-links{
+        margin-right:$inuit-global-spacing-unit;
+      }
 }
 
 .entry-header__entry-title{
 
     @include inuit-font-size(22px);
 
-    @include media-query(lap-and-up) {
+    @include media-query('lap-and-up') {
         @include inuit-font-size(28px);
     }
 
-    @include media-query(desk) {
+    @include media-query('desktop') {
         @include inuit-font-size(36px);
     }
 
@@ -74,11 +106,27 @@
     margin-bottom: $inuit-global-spacing-unit;
    border-top: 1px solid $color-gray-ui;
 }
-@include media-query(lap-and-up){
+@include media-query('lap-and-up'){
 	.nav-previous{
 		float:left;
 	}
 	.nav-next{
 		float:right;
 	}
+}
+
+/*------------------------------------*\
+    #FOOTER
+\*------------------------------------*/
+.site-footer{
+    background:$color-dark;
+    padding: $inuit-global-spacing-unit 0 ;
+     @include var(color,background-color-body);
+    h1,h2,h3,h4,h5,h6{
+         @include var(color,background-color-body);
+    }
+}
+.page-micro{
+     background: lighten($color-dark,5);
+     color:darken($color-gray-ui,15);
 }

@@ -46,33 +46,50 @@ jQuery(document).ready(function($) {
     autoplay: 4000,
     slidesPerView: 1,    
     // Navigation arrows
-    nextButton: '.swiper-button-next',
-    prevButton: '.swiper-button-prev',
+    navigation: {
+      nextEl: '.wps-anything-swiper-button-next',
+      prevEl: '.wps-anything-swiper-button-prev',
+    },
 
     // If we need pagination
-    pagination: '.swiper-pagination',
-    paginationClickable:true,    
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true
+      },
     // And if we need scrollbar
-    scrollbar: '.swiper-scrollbar'   
+    //scrollbar: {
+    //  el: '.swiper-scrollbar',
+    //  draggable: true,
+    //} 
    }) ;
   
   // Anything Slider
   var wpsAnySwiper = new Swiper ('.wps-anything-swiper-container', {
     // Optional parameters
     loop: true,
-    autoplayDisableOnInteraction:false,
+    autoplayDisableOnInteraction: false,
+    disableOnInteraction:false,
     autoplay: 4000,
     slidesPerView: 1,    
     // Navigation arrows
-    nextButton: '.wps-anything-swiper-button-next',
-    prevButton: '.wps-anything-swiper-button-prev',
+    navigation: {
+      nextEl: '.wps-anything-swiper-button-next',
+      prevEl: '.wps-anything-swiper-button-prev',
+    },
   
     // If we need pagination
-    pagination: '.swiper-pagination',
-    paginationClickable:true,
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true
+      },
     // And if we need scrollbar
-    scrollbar: '.swiper-scrollbar'   
-   });
+    //scrollbar: {
+    //  el: '.swiper-scrollbar',
+    //  draggable: true,
+    //} 
+  });
  }
 
 
@@ -105,23 +122,10 @@ jQuery(document).ready(function($) {
   // Fancybox
   /* Create gallery items alt data */
   jQuery('.gallery').each(function () {
-    var id = jQuery(this).attr('id');
-    
+    var id = jQuery(this).attr('id');    
       jQuery('.gallery-icon a', this).attr('data-fancybox', function (i, attr) {
            return id;
       });
-  });
-
-
-  // Fancybox wp galery
-  $(".gallery-icon a").fancybox({
-    beforeShow : function() {
-        var alt = this.element.find('img').attr('alt');
-        
-        this.inner.find('img').attr('alt', alt);
-        
-        this.title = alt;
-    }
   });
 
   // Initialize the Lightbox automatically for any links to images with extensions .jpg, .jpeg, .png or .gif

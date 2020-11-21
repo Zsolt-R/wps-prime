@@ -1,17 +1,43 @@
 ##WPS-Prime Changelog##
+#### v.1.4.3
+* Fix loading of default regular Fontawesome if there is no type set to [wps_icon]
+#### v.1.4.2
+* Update Fontawesome to version 5.6.1
+* Update Swiper to version 4.4.6 (from 4.3.0)
+* Update Fancybox to version 3.5.6 (from 3.2.10)
+* Remove root placed favicon functionality (use WP customizer Favicon manager)
 
-#### v.1.2.5
-* Add selected font families to css variables ( --main-font-one | --main-font-two ). Only for scenario when the font families for heading and body are different. In css you should declare a fallback var(--main-font-one, 'fallback')
-* Fix walkers error (missing arguments on css class filter function)
-* Limit font two menu aply only to primary menu
+#### v.1.4.1
+* Fix button hover opacity settings
+
+#### v.1.4.0
+* Migrate Theme options to WP customizer (breaking change must resave all theme settings | migrate child theme options to customizer)
+* Extend customizable options
+* Add color settings
+* Update Fontawesome to version 5.0.13
+* Upgrade Accordion Fontawesome option to FA5 
+* Cleanup color settings SCSS
+
+#### v.1.3.2
+* Added option to disable/eable scripts version number. Allow version numbers to ease view of updated scripts and styles in development phase.
+* Add id field to columns
+
+#### v.1.3.1
+* Divider component functionality extended
+
+#### v.1.3.0
+* Added FA5 fontawesome 5
+* Added animation framework / Upgrade components with animation field
+* Fix custom 404 page meta field functionality
+* Refactor all components that used :after to add icon. Now all components contain coded <i> tag
 
 #### v.1.2.4
 * Remove new VC elements (VC - v.5.2)
-* Add post id option to heading link (set the link using a post ID instead of direct link)
+* Add post id option to heading link
 
 #### v.1.2.3
 * Fix default pagination markup
-* Change H1 to screen reader text link in pagenavigation
+* Change H1 to screen reader text link in page navigation
 * Add comment author to comment list
 * Fix inner column responsive settings
 * Restrict page meta settings to page post type
@@ -26,7 +52,6 @@
 * Small css fixes
  - extend/finetune default form element css
  - extend/finetune default form utilities css
-
 
 #### v.1.2.1
 * Add instagram to social media list

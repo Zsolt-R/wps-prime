@@ -11,7 +11,7 @@
 .wpcf7-not-valid-tip{	
 	padding:0.5em;
 	background-color:$color-negative;
-	color:$color-body;
+	@include var(color,background-color-body);
 }
 .wpcf7{
 	position: relative;
@@ -49,7 +49,7 @@
 }
 
 .wpcf7-response-output{
-	background-color:$color-body;
+	@include var(background-color,background-color-body);
 	font-weight: 600;
 	@include inuit-font-size(14px);	
 }
@@ -57,14 +57,17 @@
 .wpcf7-validation-errors{
 	padding:0.5em;
 	background-color:$color-negative;
-	color:$color-body;	
+	 @include var(color,background-color-body);	
 }
 .wpcf7-mail-sent-ok{
 	padding:0.5em;
 	background-color:$color-positive;
-	color:$color-body;
+	 @include var(color,background-color-body);
 }
 .wpcf7-list-item{
 	display: block;
 	margin-right:round($inuit-global-spacing-unit/2);
+}
+.wpcf7-recaptcha{
+	display:inline-block;
 }

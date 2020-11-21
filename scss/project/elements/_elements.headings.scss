@@ -1,0 +1,53 @@
+/* ==========================================================================
+   #HEADINGS
+   ========================================================================== */
+
+/**
+ * Simple default styles for headings 1 through 6. Anything more opinionated
+ * than simple font-size changes should likely be applied via classes (see:
+ * http://csswizardry.com/2016/02/managing-typography-on-large-apps/).
+ */
+
+
+// We have all of our heading font sizes defined here. Passing these pixel
+// values into our `inuit-font-size()` mixin will generate a rem-based
+// `font-size` with a pixel fallback, as well as generating a `line-height` that
+// will sit on our baseline grid.
+
+$inuit-font-size-h1:  62px !default;
+$inuit-font-size-h2:  56px !default;
+$inuit-font-size-h3:  48px !default;
+$inuit-font-size-h4:  36px !default;
+$inuit-font-size-h5:  18px !default;
+$inuit-font-size-h6:  16px !default;
+
+$inuit-line-height-h1: 1.2 !default;
+$inuit-line-height-h2: 1.2 !default;
+$inuit-line-height-h3: 1.2 !default;
+$inuit-line-height-h4: 1.2 !default;
+$inuit-line-height-h5: 1.2 !default;
+$inuit-line-height-h6: 1.2 !default;
+
+h1 {
+  @include inuit-font-size($inuit-font-size-h1,$inuit-line-height-h1);
+}
+
+h2 {
+  @include inuit-font-size($inuit-font-size-h2,$inuit-line-height-h2);
+}
+
+h3 {
+  @include inuit-font-size($inuit-font-size-h3,$inuit-line-height-h3);
+}
+
+h4 {
+  @include inuit-font-size($inuit-font-size-h4,$inuit-line-height-h4);
+}
+
+h5 {
+  @include inuit-font-size($inuit-font-size-h5,$inuit-line-height-h5);
+}
+
+h6 {
+  @include inuit-font-size($inuit-font-size-h6,$inuit-line-height-h6);
+}

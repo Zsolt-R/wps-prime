@@ -2,6 +2,7 @@
    INUITCSS
    ========================================================================== */
 
+
 // Gridlex vars
 $gl-palm:          "screen and (max-width: 44.9375em)";                       // 719px
 $gl-lap:           "screen and (min-width: 45em) and (max-width: 63.9375em)"; // 720px <-> 1023px
@@ -18,8 +19,79 @@ $breakpoints:(
 "desktop"    $gl-desktop
 );
 
+// SETTINGS
+@import "project/settings/settings.core";
+@import "project/tools/tools.css-var";
+@import "project/settings/settings.colors";
+@import "project/settings/settings.font-weight";
+@import "project/settings/settings.global";
+
+
+
+// TOOLS
+@import "project/tools/tools.rem";
+@import "project/tools/tools.font-size";
+@import "project/tools/tools.contain-text";
+@import "project/tools/tools.media-query-generator";
+@import "project/tools/tools.rgba-background";
+
+@import "theme-root";
+
+// COMPONENTS
+// Build and include your project’s UI Compoments here.
+@import "project/components/components.buttons";
+@import "project/components/components.divider";
+@import "project/components/components.icons";
+
+
+
+// UTILITIES
+
+$inuit-font-size-h1:  48px;
+$inuit-font-size-h2:  36px;
+$inuit-font-size-h3:  28px;
+$inuit-font-size-h4:  22px;
+$inuit-font-size-h5:  18px;
+$inuit-font-size-h6:  16px;
+
+// make sure these elements render only in the preview area and not in the settings panel
+// If you render font size in options panel it meeses up the lein height of the select box
+
+.wpb_element_wrapper{ 
+	@import "project/utilities/utilities.typography";
+	@import "project/utilities/utilities.headings";
+}
+.wpb-select{
+	.u-text-color-invert{
+		@include var(background-color,invert-color);      
+	}
+
+	//  Text Colors
+	.u-text-color-text{
+		@include var(background-color,color-text);   
+	}
+
+	.u-text-color-light{
+		@include var(background-color,color-text-light);
+	}
+
+	.u-text-color-primary{
+		@include var(background-color,color-text-primary);   
+	}
+
+	.u-text-color-secondary{
+		@include var(background-color,color-text-secondary);   
+	}
+
+	.u-text-color-tertiary{
+		@include var(background-color,color-text-tertiary); 
+	}
+}
+
+@import "project/utilities/utilities.backgrounds";
+
 .wps_vc_screen-size .wps_vc_icon{
-	background-image: url('../images/width-sprite.png');
+	background-image: url('images/width-sprite.png');
 	background-repeat: no-repeat;
 	width:30px;
 	height:25px;
@@ -41,47 +113,3 @@ $breakpoints:(
 .wps_vc_screen-size-_palm- .wps_vc_icon{
 	background-position: 0px -100px;
 }
-
-// SETTINGS
-@import "bower_components/inuitcss/settings/settings.core";
-@import "project/settings/settings.colors";
-@import "project/settings/settings.font-weight";
-@import "project/settings/settings.styled-list";
-@import "project/settings/settings.global";
-
-
-// TOOLS
-@import "bower_components/inuitcss/tools/tools.rem";
-@import "bower_components/inuitcss/tools/tools.font-size";
-@import "project/tools/tools.contain-text";
-@import "project/tools/tools.media-query-generator";
-@import "project/tools/tools.rgba-background";
-
-
-
-// COMPONENTS
-// Build and include your project’s UI Compoments here.
-@import "project/components/components.buttons";
-@import "project/components/components.divider";
-@import "project/components/components.icons";
-
-
-
-// UTILITIES
-
-$inuit-font-size-h1:  36px;
-$inuit-font-size-h2:  28px;
-$inuit-font-size-h3:  24px;
-$inuit-font-size-h4:  20px;
-$inuit-font-size-h5:  18px;
-$inuit-font-size-h6:  16px;
-
-// make sure these elements render only in the preview area and not in the settings panel
-// If you render font size in options panel it meeses up the lein height of the select box
-
-.wpb_element_wrapper{ 
-	@import "project/utilities/utilities.typography";
-	@import "bower_components/inuitcss/utilities/utilities.headings";
-}
-
-@import "project/utilities/utilities.backgrounds";

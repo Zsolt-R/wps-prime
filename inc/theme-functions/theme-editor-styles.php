@@ -31,4 +31,3 @@ function wps_editor_styles() {
 	}
 }
 add_action( 'init','wps_editor_styles' );
-

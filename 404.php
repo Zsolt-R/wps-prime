@@ -11,9 +11,8 @@ get_header(); ?>
 
 	<div id="primary" <?php echo wps_main_content_class(); ?>>
 		<main id="main" class="site-main" role="main">
-
-		<?php wps_get_theme_option('404_custom_page_use', true); ?>
-        <?php if( wps_get_theme_option('404_custom_page_use') ): ?>
+	
+        <?php if( get_option('wps_404_custom_page') ): ?>
         	<?php get_template_part( 'template-parts/content', 'custom-404' ); ?>           
 
         <?php else: ?>

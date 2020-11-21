@@ -11,29 +11,45 @@
  * Creates inline style for main font
  */
 function wps_add_theme_fonts() {
-	$fonts = new WpsGetThemeFonts;
 
-	$font_main = wps_get_theme_option( 'main_font_family' ); // Get selected font family option.
+	if ( get_theme_mod( 'wps_custom_font_family_status' ) ) {
+		return false;
+	}
+
+	$fonts_api = new WpsGetThemeFonts();
+
+	$font_main = get_theme_mod( 'wps_main_font_family' ); // Get selected font family option.
 
 	/* If no font is set return */
-	if ( ! isset( $font_main ) ) {
+	if ( ! $font_main ) {
 		return;
 	} else {
 
-		wp_register_style( 'wps_theme_main_font',  $fonts->get_theme_fonts_link() );
-		wp_enqueue_style( 'wps_theme_main_font' );
+		$fonts = $fonts_api->get_theme_fonts_link();
+		$count = 0;
+		foreach ( $fonts as $link ) {
+			wp_register_style( 'wps_theme_main_font_' . $count, $link );
+			wp_enqueue_style( 'wps_theme_main_font_' . $count );
+			$count++;
+		}
 
-		wp_add_inline_style( 'wps_theme_main_font',  $fonts->get_theme_font_style() );
+		wp_add_inline_style( 'wps_theme_main_font_0', $fonts_api->get_theme_font_style() );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'wps_add_theme_fonts', 99 ); // Add last in style chain.
 
 
-function wps_filter_handler( $classes ){ 	
+function wps_filter_handler( $classes ) {
 
-	// Custom Navigation font	
-	if ( wps_get_theme_option( 'nav_custom_font' ) ) $classes[] = 'u-font-two';
-	
+	if ( get_theme_mod( 'wps_custom_font_family_status' ) ) {
+		return $classes;
+	}
+
+	// Custom Navigation font
+	if ( get_theme_mod( 'wps_nav_custom_font' ) ) {
+		$classes[] = 'u-font-two';
+	}
+
 	return $classes;
 }
-add_filter( 'nav_menu_css_class', 'wps_filter_handler', 10, 4 ); 
+add_filter( 'nav_menu_css_class', 'wps_filter_handler', 10, 4 );

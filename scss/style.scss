@@ -78,7 +78,7 @@
  */
 // Grid Setups
 // Gridlex
-// Sass MQ
+
 
 // Gridlex vars
 $gl-palm:          "screen and (max-width: 44.9375em)";                       // 719px
@@ -95,18 +95,6 @@ $breakpoints:(
 "desktop"    $gl-desktop
 );
 
-// Sass MQ
-// Tweakpoints
-// desktopAd: 810px,
-// mobileLandscape: 480px
-//$mq-breakpoints: (
-//    mobile:  300px,
-//    tablet:  740px,
-//    laptop:  1024px,
-//    desktop: 1200px,
-//    wide:    1300px,
-//);
-//$mq-show-breakpoints: (mobile, tablet, desktop, wide);
 
 // THEME DATA 
 @import "theme-data";
@@ -114,7 +102,8 @@ $breakpoints:(
 // SETTINGS
 $inuit-global-font-size:    16px;
 $inuit-global-line-height:  24px;
-@import "bower_components/inuitcss/settings/settings.core";
+@import "project/settings/settings.core";
+@import "project/tools/tools.css-var";
 
 
 $spacing-unit: $inuit-global-spacing-unit;
@@ -123,30 +112,27 @@ $gl-col-bottom: 0;
 @import "project/settings/settings.gridlex";
 @import "project/settings/settings.colors";
 @import "project/settings/settings.font-weight";
-@import "project/settings/settings.styled-list";
 @import "project/settings/settings.global";
 
-
-
 // TOOLS
-@import "bower_components/inuitcss/tools/tools.rem";
-@import "bower_components/inuitcss/tools/tools.font-size";
-@import "bower_components/inuitcss/tools/tools.clearfix";
+@import "project/tools/tools.rem";
+@import "project/tools/tools.font-size";
+@import "project/tools/tools.clearfix";
 @import "project/tools/tools.rgba-background";
 @import "project/tools/tools.hide";
 @import "project/tools/tools.box-shadow";
 @import "project/tools/tools.contain-text";
 @import "project/tools/tools.media-query-generator";
 @import "project/tools/tools.generate-responsive-classes";
-//@import "bower_components/sass-mq/mq";
 
 
+@import "theme-root";
 
 // GENERIC
-@import "bower_components/inuitcss/generic/generic.box-sizing";
-@import "bower_components/inuitcss/generic/generic.normalize";
-@import "bower_components/inuitcss/generic/generic.reset";
-@import "bower_components/inuitcss/generic/generic.shared";
+@import "project/generic/generic.box-sizing";
+@import "project/generic/generic.normalize";
+@import "project/generic/generic.reset";
+@import "project/generic/generic.shared";
 
 
 
@@ -159,16 +145,14 @@ $inuit-font-size-h3:  24px;
 $inuit-font-size-h4:  20px;
 $inuit-font-size-h5:  18px;
 $inuit-font-size-h6:  16px;
-@import "bower_components/inuitcss/elements/elements.page";
-@import "bower_components/inuitcss/elements/elements.headings";
+@import "project/elements/elements.page";
+@import "project/elements/elements.headings";
 @import "project/elements/elements.type";
 @import "project/elements/elements.links";
 @import "project/elements/elements.images";
 @import "project/elements/elements.table";
 @import "project/elements/elements.lists";
 @import "project/elements/elements.form";
-@import "bower_components/inuitcss/elements/elements.tables";
-
 
 
 
@@ -178,20 +162,17 @@ $inuit-font-size-h6:  16px;
 // Uncomment and add to this section as necessary.
 $inuit-wrapper-width: 1300px;
 $project-wrapper-width-slim: 1000px;
-@import "bower_components/inuitcss/objects/objects.wrapper";
+@import "project/objects/objects.wrapper";
 @import "project/objects/objects.wrapper-extend";
 @import "project/objects/objects.col-inner";
-@import "bower_components/inuitcss/objects/objects.media";
-@import "bower_components/inuitcss/objects/objects.flag";
-//@import "bower_components/inuitcss/objects/objects.list-bare";
-//@import "bower_components/inuitcss/objects/objects.list-inline";
-@import "bower_components/inuitcss/objects/objects.box";
-@import "bower_components/inuitcss/objects/objects.block";
-@import "bower_components/inuitcss/objects/objects.ratio";
-@import "bower_components/inuitcss/objects/objects.crop";
-@import "bower_components/inuitcss/objects/objects.tables";
+@import "project/objects/objects.media";
+@import "project/objects/objects.flag";
+@import "project/objects/objects.box";
+@import "project/objects/objects.block";
+@import "project/objects/objects.ratio";
+@import "project/objects/objects.crop";
+@import "project/objects/objects.tables";
 @import "project/objects/objects.table-extend";
-//@import "bower_components/inuitcss/objects/objects.pack";
 @import "project/objects/objects.media-flag-responsive";
 @import "project/objects/objects.holder";
 @import "project/objects/objects.responsive-video";
@@ -215,20 +196,19 @@ $project-wrapper-width-slim: 1000px;
 @import "project/components/components.wp-widget";
 @import "project/components/components.wp-galleries";
 @import "project/components/components.wp-comments";
+@import "project/components/components.post-page-navigation";
 
 //Custom Components
 @import "project/components/components.buttons";
 @import "project/components/components.divider";
 @import "project/components/components.heading";
 @import "project/components/components.styled-list";
-@import "project/components/components.swiper-slider";
 @import "project/components/components.tabs";
 @import "project/components/components.accordion";
 @import "project/components/components.main-navigation";
 @import "project/components/components.page-micro";
 @import "project/components/components.icons";
 @import "project/components/components.highlight";
-@import "project/components/components.fancybox";
 @import "project/components/components.mediabox";
 @import "project/components/components.vc-text-block";
 @import "project/components/components.cf7";
@@ -236,14 +216,15 @@ $project-wrapper-width-slim: 1000px;
 
 
 // UTILITIES
-@import "bower_components/inuitcss/utilities/utilities.clearfix";
+@import "project/utilities/utilities.clearfix";
 @import "project/utilities/utilities.alignments";
 @import "project/utilities/utilities.show-hide";
 @import "project/utilities/utilities.form";
+@import "project/utilities/utilities.sizing";
 
 
-@import "bower_components/inuitcss/utilities/utilities.headings";
-@import "bower_components/inuitcss/utilities/utilities.spacing";
+@import "project/utilities/utilities.headings";
+@import "project/utilities/utilities.spacing";
 @import "project/utilities/utilities.typography";
 
 
@@ -254,4 +235,4 @@ $project-wrapper-width-slim: 1000px;
 @import "project/utilities/utilities.shadow";
 @import "project/utilities/utilities.borders";
 @import "project/utilities/utilities.border-rounds";
-@import "bower_components/inuitcss/utilities/utilities.print";
+@import "project/utilities/utilities.print";

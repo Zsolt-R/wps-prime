@@ -36,23 +36,24 @@
 
 
 .ico--color-one{
-	color: $color-theme-1;
+	@include var(color,background-color-one);
 }
 .ico--color-two{
-	color: $color-theme-2;
+	@include var(color,background-color-two);
+	
 }
 .ico--color-three{
-	color: $color-theme-3;
+	@include var(color,background-color-three);	
 }
 .ico--color-four{
-	color: $color-theme-4;
+	@include var(color,background-color-four);
 }
 .ico--color-five{
-	color: $color-theme-5;
+	@include var(color,background-color-five);
 }
 .ico--color-six{
-	color: $color-theme-6;	
+	@include var(color,background-color-six);	
 }
 .ico--color-white{
-	color: $color-body;	
+	@include var(color,background-color-body);
 }

@@ -5,11 +5,11 @@
  * @package wps_prime
  */
 
-$pageID = wps_get_theme_option('404_custom_page');
+$pageID = get_option('wps_404_custom_page');
 $title_vis = true;
-?>
 
-<?php if( 'page' === get_post_type( $pageID ) ): // Safety check 
+
+if( 'page' === get_post_type( $pageID ) ): // Safety check 
 
 	/* Query the 404 page selected from the theme options panel */
 	$new_query = new WP_Query(array('page_id' => $pageID)); 
